@@ -162,21 +162,7 @@
 
             
 
-            <div id="gitment"></div>
-<link rel="stylesheet" href="https://ecwuuuuu.com/css/default.css">
-<script src="https://ecwuuuuu.com/js/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: 'Barrelfish OS 和多内核操作系统', 
-  owner: 'ecwu',
-  repo: 'ecwu.github.io',
-  oauth: {
-    client_id: '68a2807017b110b15ecb',
-    client_secret: '4659267ce76852aac4bbbdd66e1646b9f20a0b69',
-  },
-})
-gitment.render('gitment')
-</script>
+            <div id="vcomments"></div>
 
             
 
@@ -209,6 +195,8 @@ gitment.render('gitment')
 <script src="https://ecwuuuuu.com/js/main.js"></script>
 <script src="https://ecwuuuuu.com/js/highlight.min.js"></script>
 <script src="https://ecwuuuuu.com/js/pagemap-0.4.0.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <script>
   pagemap(document.querySelector('#map'));
 </script>
@@ -220,5 +208,12 @@ gitment.render('gitment')
 
 
 
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'uDGEO1UU2Rrqucepbf781tOG-gzGzoHsz',
+        appKey: 'ituTB2E1U842WUXpIGToDBOc'
+    })
+</script>
     </body>
 </html>
