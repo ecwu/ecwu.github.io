@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://ecwu.github.ioimages/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Barrelfish OS 和多内核操作系统"/>
+  <meta name="twitter:description" content="Barrelfish OS and Multi-kernel Operating System"/>
+  
+    <meta name="twitter:site" content="@your_twitter_id"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Zhenghao Wu"/>
+  
+
+
+
+		
+		<meta name="author" content="Zhenghao Wu">
+		<meta name="description" content="My website &amp; blog">
+		<meta name="generator" content="Hugo 0.50" />
+		<title>Barrelfish OS 和多内核操作系统 &middot; ECWU - Zhenghao Wu</title>
+		<link rel="shortcut icon" href="https://ecwu.github.ioimages/favicon.ico">
+		<link rel="stylesheet" href="https://ecwu.github.iocss/style.css">
+		<link rel="stylesheet" href="https://ecwu.github.iocss/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://ecwu.github.iocss/font-awesome.min.css">
+		
+
+		
+		<link href="https://ecwu.github.io/index.xml" rel="alternate" type="application/rss+xml" title="ECWU - Zhenghao Wu" />
+		
+
+		
+		<style type="text/css">
+		#map {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            z-index: 100;
+        }
+        @media only screen and (max-width: 1026px) {
+            #map {
+                display: none;
+            }
+        }
+		</style>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://ecwu.github.io'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://ecwu.github.ioposts'>Archive</a>
+	<a href='https://ecwu.github.iotags'>Tags</a>
+	<a href='https://ecwu.github.ioabout'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://ecwu.github.io/index.xml">RSS</a>
+	
+</nav>
+
+      <canvas id="map"></canvas>
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Barrelfish OS 和多内核操作系统
+                    </h1>
+                    <h2 class="headline">
+                    Jan 9, 2019 00:00
+                    · 429 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://ecwu.github.iotags/os">OS</a>
+                          
+                              <a href="https://ecwu.github.iotags/barrelfish-os">Barrelfish OS</a>
+                          
+                              <a href="https://ecwu.github.iotags/eth-zurich">ETH Zurich</a>
+                          
+                              <a href="https://ecwu.github.iotags/uic">UIC</a>
+                          
+                              <a href="https://ecwu.github.iotags/computer-science">Computer Science</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#什么是-barrelfish-os">什么是 Barrelfish OS</a></li>
+<li><a href="#多内核架构-multikernel-architecture">多内核架构（Multikernel Architecture）</a></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    <p>大三的上学期有一门专业课叫操作系统（Operating System），它的课程小组项目是对某个操作系统进行研究。我们组抽到了 Barrelfish Operating System。</p>
+
+<p></p>
+
+<p><img src="/barrelfish-logo.jpg" alt="Barrelfish OS Logo" /></p>
+
+<p>因为这是一个试验性操作系统，而且提出了许多全新的概念。因此虽然官方网站上给出了许多文档，我们依然花了许多时间来理解这个系统的架构。</p>
+
+<h1 id="什么是-barrelfish-os">什么是 Barrelfish OS</h1>
+
+<p>Barrelfish OS 是由苏黎世联邦理工大学系统小组（ETH Zurich Systems Group）与微软剑桥研究院（Microsoft Research Cambridge）于 2007 年开始研究开发的实验操作系统（这种操作系统主要被研究者用于实践提出的新概念或想法）。</p>
+
+<p>系统到目前为止依然有更新，最新的一次更新是在 2018 年 10 月 4 日发布的版本（添加了对 Ubuntu 18.04 LTS 作为构建环境的支持）。</p>
+
+<p>虽然经过了十多年的开发，这个系统远达不到可用的地步，运行需要 QEMU，而且操作几下就会崩溃。</p>
+
+<blockquote>
+<p>我构建安装的 Barrelfish OS，运行提供的 <code>demo</code> 演示程序就会崩溃 🤨</p>
+</blockquote>
+
+<p>Barrelfish OS 最大的特点就是多内核（Multikernel），研究者为了解决</p>
+
+<h1 id="多内核架构-multikernel-architecture">多内核架构（Multikernel Architecture）</h1>
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fecwu.github.io%2fposts%2fbarrelfishos%2f - Barrelfish%20OS%20%e5%92%8c%e5%a4%9a%e5%86%85%e6%a0%b8%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f by @your_twitter_id"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+
+            <div id="gitment"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: 'Barrelfish OS 和多内核操作系统', 
+  owner: 'ecwu',
+  repo: 'ecwu.github.io',
+  oauth: {
+    client_id: '68a2807017b110b15ecb',
+    client_secret: '4659267ce76852aac4bbbdd66e1646b9f20a0b69',
+  },
+})
+gitment.render('gitment')
+</script>
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/ecwu">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 - Zhenghao Wu
+    
+    </p>
+
+</footer>
+
+        </section>
+
+        <script src="https://ecwu.github.iojs/jquery-3.3.1.min.js"></script>
+<script src="https://ecwu.github.iojs/main.js"></script>
+<script src="https://ecwu.github.iojs/highlight.min.js"></script>
+<script src="https://ecwu.github.iojs/pagemap-0.4.0.min.js"></script>
+<script>
+  pagemap(document.querySelector('#map'));
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>
