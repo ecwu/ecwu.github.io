@@ -82,25 +82,25 @@
   </url>
   
   <url>
-    <loc>https://ecwuuuuu.com/categories/os/</loc>
-    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ecwuuuuu.com/tags/os/</loc>
     <lastmod>2019-01-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ecwuuuuu.com/categories/photography/</loc>
-    <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+    <loc>https://ecwuuuuu.com/categories/os/</loc>
+    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ecwuuuuu.com/tags/photography/</loc>
+    <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ecwuuuuu.com/categories/photography/</loc>
     <lastmod>2018-07-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
