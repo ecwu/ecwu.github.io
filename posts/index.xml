@@ -6,10 +6,21 @@
     <description>Recent content in Posts on ECWU - Zhenghao Wu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ecwuuuuu.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>初尝胶片</title>
+      <link>https://ecwuuuuu.com/posts/first-time-film/</link>
+      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ecwuuuuu.com/posts/first-time-film/</guid>
+      <description>&lt;p&gt;Color Negative Film&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Barrelfish OS 和多内核操作系统</title>
