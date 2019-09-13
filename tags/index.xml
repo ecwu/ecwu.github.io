@@ -1,149 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on ECWU - Zhenghao Wu</title>
-    <link>https://ecwuuuuu.com/tags/</link>
-    <description>Recent content in Tags on ECWU - Zhenghao Wu</description>
+    <title>Σ&lt;VV⋃</title>
+    <link>/tags/</link>
+    <description>Recent content on Σ&lt;VV⋃</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Sep 2019 00:07:01 +0800</lastBuildDate>
     
-	<atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title></title>
-      <link>https://ecwuuuuu.com/tags/</link>
-      <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/</guid>
-      <description></description>
-    </item>
     
     <item>
-      <title>Academy of Film Hkbu</title>
-      <link>https://ecwuuuuu.com/tags/academy-of-film-hkbu/</link>
-      <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
+      <title>Hong Kong Flashback</title>
+      <link>/post/photographs-took-in-hong-konng/</link>
+      <pubDate>Mon, 30 Jul 2018 13:56:01 +0800</pubDate>
       
-      <guid>https://ecwuuuuu.com/tags/academy-of-film-hkbu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Agfaphoto</title>
-      <link>https://ecwuuuuu.com/tags/agfaphoto/</link>
-      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/agfaphoto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Barrelfish Os</title>
-      <link>https://ecwuuuuu.com/tags/barrelfish-os/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/barrelfish-os/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Computer Science</title>
-      <link>https://ecwuuuuu.com/tags/computer-science/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/computer-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Eth Zurich</title>
-      <link>https://ecwuuuuu.com/tags/eth-zurich/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/eth-zurich/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Film</title>
-      <link>https://ecwuuuuu.com/tags/film/</link>
-      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/film/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fujifilm</title>
-      <link>https://ecwuuuuu.com/tags/fujifilm/</link>
-      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/fujifilm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hkbu Summer Program</title>
-      <link>https://ecwuuuuu.com/tags/hkbu-summer-program/</link>
-      <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/hkbu-summer-program/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hong Kong</title>
-      <link>https://ecwuuuuu.com/tags/hong-kong/</link>
-      <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/hong-kong/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kodak</title>
-      <link>https://ecwuuuuu.com/tags/kodak/</link>
-      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/kodak/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Os</title>
-      <link>https://ecwuuuuu.com/tags/os/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/os/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Photography</title>
-      <link>https://ecwuuuuu.com/tags/photography/</link>
-      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/photography/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Television Studio Production</title>
-      <link>https://ecwuuuuu.com/tags/television-studio-production/</link>
-      <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/television-studio-production/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Uic</title>
-      <link>https://ecwuuuuu.com/tags/uic/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/uic/</guid>
-      <description></description>
+      <guid>/post/photographs-took-in-hong-konng/</guid>
+      <description>&lt;p&gt;一些我 2018 年暑假在香港期间拍摄的一些照片&lt;/p&gt;</description>
     </item>
     
   </channel>
