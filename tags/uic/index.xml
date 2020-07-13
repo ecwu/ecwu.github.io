@@ -6,10 +6,19 @@
     <description>Recent content in UIC on Σ&lt;VV⋃</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Jan 2019 12:56:01 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2020 21:43:01 +0800</lastBuildDate>
     
 	<atom:link href="https://ecwuuuuu.com/tags/uic/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>UIC night</title>
+      <link>https://ecwuuuuu.com/photography/uic-night/</link>
+      <pubDate>Mon, 13 Jul 2020 21:43:01 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/photography/uic-night/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Barrelfish OS 和多内核操作系统</title>
