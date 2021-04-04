@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Σ&lt;VV⋃</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Mar 2021 16:42:10 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Apr 2021 10:01:01 +0800</lastBuildDate>
     
 	<atom:link href="https://ecwuuuuu.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Note</title>
       <link>https://ecwuuuuu.com/categories/note/</link>
-      <pubDate>Wed, 03 Mar 2021 16:42:10 +0800</pubDate>
+      <pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/categories/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Website</title>
+      <link>https://ecwuuuuu.com/categories/website/</link>
+      <pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/categories/website/</guid>
       <description></description>
     </item>
     
