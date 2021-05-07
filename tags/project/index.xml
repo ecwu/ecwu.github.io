@@ -6,7 +6,7 @@
     <description>Recent content in project on Σ&lt;VV⋃</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Feb 2021 19:13:30 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 May 2021 00:13:30 +0800</lastBuildDate>
     
 	<atom:link href="https://ecwuuuuu.com/tags/project/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,19 +14,12 @@
     <item>
       <title>NLP related stuff</title>
       <link>https://ecwuuuuu.com/project/nlp/</link>
-      <pubDate>Mon, 15 Feb 2021 19:13:30 +0800</pubDate>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/project/nlp/</guid>
-      <description>Under Construction&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>SemEval 2019</title>
-      <link>https://ecwuuuuu.com/project/offeneval/</link>
-      <pubDate>Mon, 15 Feb 2021 19:13:30 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/project/offeneval/</guid>
-      <description>Under Construction&amp;hellip;</description>
+      <description>I started to learn NLP-related stuff in mid-2018. And gradually start to some serious research. My focus mainly on Natural Language Generation (NLG).
+Beginning: SemEval2019 By the end of 2018, members of the AI learning group  Lead by Prof. Weifeng Su decide to take part in the SemEval 2019. To study and learning more about NLP.
+Our group chose task 6: Identifying and Categorizing Offensive Language in Social Media (OffensEval).</description>
     </item>
     
     <item>

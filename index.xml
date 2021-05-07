@@ -6,10 +6,21 @@
     <description>Recent content on Σ&lt;VV⋃</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Apr 2021 10:01:01 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 May 2021 00:13:30 +0800</lastBuildDate>
     
 	<atom:link href="https://ecwuuuuu.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NLP related stuff</title>
+      <link>https://ecwuuuuu.com/project/nlp/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/project/nlp/</guid>
+      <description>I started to learn NLP-related stuff in mid-2018. And gradually start to some serious research. My focus mainly on Natural Language Generation (NLG).
+Beginning: SemEval2019 By the end of 2018, members of the AI learning group  Lead by Prof. Weifeng Su decide to take part in the SemEval 2019. To study and learning more about NLP.
+Our group chose task 6: Identifying and Categorizing Offensive Language in Social Media (OffensEval).</description>
+    </item>
     
     <item>
       <title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title>
@@ -29,24 +40,6 @@
       
       <guid>https://ecwuuuuu.com/post/list_of_stuff_i_enjoy/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>NLP related stuff</title>
-      <link>https://ecwuuuuu.com/project/nlp/</link>
-      <pubDate>Mon, 15 Feb 2021 19:13:30 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/project/nlp/</guid>
-      <description>Under Construction&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>SemEval 2019</title>
-      <link>https://ecwuuuuu.com/project/offeneval/</link>
-      <pubDate>Mon, 15 Feb 2021 19:13:30 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/project/offeneval/</guid>
-      <description>Under Construction&amp;hellip;</description>
     </item>
     
     <item>
@@ -129,8 +122,11 @@ Haven’t thought about making it into a series or project since the beginning.<
       <pubDate>Tue, 18 Feb 2020 23:57:58 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/page/about/</guid>
-      <description>Contact me: ecwu@protonmail.com
-More: LinkedIn</description>
+      <description>Me  Postgraduate Student, Hong Kong University of Science and Technology Graduated with First-Class Honours, BNU-HKBU UIC  Tech, Photography (Analog and Digital), Music
+Contact me: ecwu@protonmail.com
+CV: Coming soon
+More: LinkedIn
+This site  Write with static site generator Hugo  hugo-tufte theme with custom modifications   Build with GitHub Actions Host by GitHub Pages Cloudflare &amp;amp; Qiniu for distributing files  </description>
     </item>
     
     <item>
