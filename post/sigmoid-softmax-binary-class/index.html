@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+<title>Sigmoid or Softmax for Binary Classification - ECWU&#39;s Notebook</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Σ&lt;VV⋃">
+
+  
+  
+
+  
+
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+    });
+    MathJax.Hub.Queue(function() {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+
+    MathJax.Hub.Config({
+    
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+</script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/pure-min.css" integrity="sha256-l8LBIT/hSUv+lPB5sCHme+XoztA5gysT4rV/kDYas/c=" crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.2/grids-responsive-min.css" integrity="sha256-M1X+0yr4YpVrD2OAwiadUc6oYOlcT4juQcmbjP/MjW4=" crossorigin="anonymous" />
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/tufte.css">
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/hugo-tufte.css">
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/hugo-tufte-override.css">
+
+</head>
+<body>
+<div id="layout" class="pure-g">
+  <article class="pure-u-1">
+  <header class="brand">
+  <h1>Σ&lt;VV⋃</h1>
+  <h2>ECWU&#39;s Notebook</h2>
+  <nav class="menu">
+    <ul>
+    
+        <li><a href="https://ecwuuuuu.com/"><i class='fa fa-home fa-lg'></i> Home</a></li>
+    
+        <li><a href="https://ecwuuuuu.com/post"><i class='fa fa-book fa-lg'></i> Posts</a></li>
+    
+        <li><a href="https://ecwuuuuu.com/photography"><i class='fa fa-camera-retro fa-lg'></i> Photography</a></li>
+    
+        <li><a href="https://ecwuuuuu.com/project"><i class='fa fa-file-text-o fa-lg'></i> Project</a></li>
+    
+        <li><a href="https://ecwuuuuu.com/page/about"><i class='fa fa-user fa-lg'></i> About</a></li>
+    
+    </ul>
+</nav>
+
+</header>
+
+  
+  <section>
+<h1 class="content-title">
+  
+  <a href="https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/">Sigmoid or Softmax for Binary Classification</a>
+  
+</h1>
+
+
+
+  <span class="content-meta">
+    
+       <i class="fa fa-user">&nbsp;</i><span class="author">
+         &nbsp;Zhenghao Wu</span> <br>
+    
+
+
+    
+      <i class="fa fa-calendar"></i>
+      &nbsp;2021-06-07
+    
+
+    
+      &nbsp;<i class="fa fa-clock-o"></i>
+      &nbsp;2 min read
+    
+
+    
+      <br>
+      <i class="fa fa-tags"> </i>
+      
+        <a  href="https://ecwuuuuu.com/categories/note">Note</a>
+      
+        <a  href="https://ecwuuuuu.com/categories/machine-learning">Machine Learning</a>
+      
+    
+  </span>
+
+
+</section>
+
+  
+
+<section class=article><p>Recently, been asked a question on using neural networks for binary classification.</p>
+<blockquote>
+<p>The output layer of the network can be &hellip; <strong>One output neuron with sigmoid activation function</strong> or <strong>Two neurons and then apply a softmax activation function</strong>. But what is the difference between these two?</p>
+</blockquote>
+<p>Let start with the equations of the two functions.</p>
+<p>Sigmoid Activation Function
+$$
+S(x) = \frac{1}{ 1+e^{-x}}
+$$</p>
+<p>We input the value of the last layer $x$, and we can get a value in the range 0 to 1 as shown in the figure. If the value is greater than 0.5, we consider the model output as one class, or the other class if the value is less than 0.5.
+
+
+
+
+  <label for="sigmoid-graph" class="margin-toggle">⊕</label>
+  <input type="checkbox" id="sigmoid-graph" class="margin-toggle">
+  <span class="marginnote">
+  
+    
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" >
+    
+  
+
+  <strong>The logistic sigmoid function </strong>
+  
+  <a href="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg">
+  Wikimedia Commons
+  </a>
+
+  </span>
+
+
+
+
+</p>
+<p>Softmax Activation Function
+$$
+\sigma(z)_i = \frac{e^{z_i}}{ \sum_{j=1}^K e^{z_j}}
+$$</p>
+<p>Softmax usually use on multi-classes classification. We have multiple output neurons, and each one represents one class. With the values of these neurons as input. We can get the probabilities of each class. The sum of the probabilities is equal to 1. After give such probabilities distribution of the classes, we then use Argmax <label for="sidenote-9c127312f5660db42226e79410c82652-1" class="margin-toggle sidenote-number"></label>
+<input type="checkbox" id="sidenote-9c127312f5660db42226e79410c82652-1" class="margin-toggle"/>
+<span class="sidenote">Argmax: The operation that finds the argument with maximum value. Usually for finding the class with the largest probability.</span>
+to get the model output.</p>
+<h2 id="comparison">Comparison</h2>
+<p>From a mathematical point of view, these two methods are the same.</p>
+<p>$$
+\frac{1}{ 1+e^{-x}} = \frac{1}{ 1+\frac{1}{e^{x}}}  = \frac{1}{\frac{e^{x}+1}{e^{x}}} = \frac{e^{x}}{1+e^{x}} = \frac{e^{x}}{e^0+e^{x}}
+$$</p>
+<p>We can transform the sigmoid function into softmax form<label for="sidenote-9c127312f5660db42226e79410c82652-2" class="margin-toggle sidenote-number"></label>
+<input type="checkbox" id="sidenote-9c127312f5660db42226e79410c82652-2" class="margin-toggle"/>
+<span class="sidenote">Retrived from: <a href="https://stats.stackexchange.com/a/207067/302706">Neural Network: For Binary Classification use 1 or 2 output neurons?</a></span>
+. So sigmoid activation can consider as a special case of softmax activation with one of the two nodes have no weight given to it (just one node is working).</p>
+<p>From the architectural point of view, they are clearly different. Although there is no empirical result to show which one is better. It is clear to show that if the softmax way is chosen, the model will have more parameters that need to learn. So I think that is why people usually use one output neuron and the sigmoid activation function for binary classification.</p>
+<h2 id="reference">Reference:</h2>
+<ol>
+<li><a href="https://stats.stackexchange.com/questions/207049/neural-network-for-binary-classification-use-1-or-2-output-neurons">https://stats.stackexchange.com/questions/207049/neural-network-for-binary-classification-use-1-or-2-output-neurons</a></li>
+<li><a href="https://machinelearningmastery.com/argmax-in-machine-learning/">https://machinelearningmastery.com/argmax-in-machine-learning/</a></li>
+<li><a href="https://stats.stackexchange.com/questions/485551/1-neuron-bce-loss-vs-2-neurons-ce-loss">https://stats.stackexchange.com/questions/485551/1-neuron-bce-loss-vs-2-neurons-ce-loss</a></li>
+<li><a href="https://stats.stackexchange.com/questions/233658/softmax-vs-sigmoid-function-in-logistic-classifier">https://stats.stackexchange.com/questions/233658/softmax-vs-sigmoid-function-in-logistic-classifier</a></li>
+</ol>
+</section>
+<section>
+
+
+</section>
+<section>
+  <footer class="page-footer">
+		<hr>
+		<ul class="page-footer-menu">
+		
+      <li><a href="https://github.com/ecwu"><i class='fa fa-github fa-2x'></i> </a></li>
+		
+      <li><a href="https://www.researchgate.net/profile/Zhenghao_Wu2"><i class='fa fa-book fa-2x'></i> </a></li>
+		
+      <li><a href="https://www.linkedin.com/in/zhenghaowu/"><i class='fa fa-linkedin-square fa-2x'></i> </a></li>
+		
+      <li><a href="https://www.instagram.com/ecwuuuuu/"><i class='fa fa-instagram fa-2x'></i> </a></li>
+		
+      <li><a href="https://space.bilibili.com/509461"><i class='fa fa-video-camera fa-2x'></i> </a></li>
+		
+		</ul>
+
+  
+    <p>
+      Powered by <a href="https://gohugo.io">Hugo</a>, Build by <a href="https://github.com/features/actions">GitHub Action</a>.
+    </p>
+  
+
+	<div class="copyright">
+	<p>
+    
+      &copy; 2021
+    ECWU.
+    All rights reserved.
+    
+    
+  </p>
+  
+    <p>
+      <a href="http://beian.miit.gov.cn/">粤 ICP 备 17015575 号 - 1</a>
+    </p>
+  
+</div>
+</footer>
+
+
+
+</section>
+</article>
+</div>
+</body>
+</html>
