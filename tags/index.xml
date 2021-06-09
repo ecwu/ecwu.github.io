@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Σ&lt;VV⋃</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Jun 2021 13:06:14 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jun 2021 11:47:10 +0800</lastBuildDate>
     
 	<atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>summary</title>
+      <link>https://ecwuuuuu.com/tags/summary/</link>
+      <pubDate>Wed, 09 Jun 2021 11:47:10 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/summary/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Activation Function</title>
@@ -134,15 +143,6 @@
       <pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/synology/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>summary</title>
-      <link>https://ecwuuuuu.com/tags/summary/</link>
-      <pubDate>Wed, 03 Mar 2021 16:42:10 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/summary/</guid>
       <description></description>
     </item>
     

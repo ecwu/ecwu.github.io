@@ -6,10 +6,19 @@
     <description>Recent content in Note on Σ&lt;VV⋃</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Jun 2021 13:06:14 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jun 2021 11:47:10 +0800</lastBuildDate>
     
 	<atom:link href="https://ecwuuuuu.com/categories/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>List of stuff I enjoy</title>
+      <link>https://ecwuuuuu.com/page/keep/</link>
+      <pubDate>Wed, 09 Jun 2021 11:47:10 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/keep/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Sigmoid or Softmax for Binary Classification</title>
@@ -33,15 +42,6 @@ We input the value of the last layer $x$, and we can get a value in the range 0 
       <description>Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)
   Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.
  Some Background I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy.</description>
-    </item>
-    
-    <item>
-      <title>List of stuff I enjoy</title>
-      <link>https://ecwuuuuu.com/post/list_of_stuff_i_enjoy/</link>
-      <pubDate>Wed, 03 Mar 2021 16:42:10 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/post/list_of_stuff_i_enjoy/</guid>
-      <description></description>
     </item>
     
     <item>
