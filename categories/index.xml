@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Σ&lt;VV⋃</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Aug 2021 11:20:01 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Aug 2021 13:57:20 +0800</lastBuildDate>
     
 	<atom:link href="https://ecwuuuuu.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Life</title>
+      <link>https://ecwuuuuu.com/categories/life/</link>
+      <pubDate>Wed, 18 Aug 2021 13:57:20 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/categories/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photograph</title>
+      <link>https://ecwuuuuu.com/categories/photograph/</link>
+      <pubDate>Wed, 18 Aug 2021 13:57:20 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/categories/photograph/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Note</title>
@@ -26,24 +44,6 @@
       <pubDate>Wed, 11 Aug 2021 11:20:01 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/categories/website/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Life</title>
-      <link>https://ecwuuuuu.com/categories/life/</link>
-      <pubDate>Tue, 20 Jul 2021 22:57:20 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/categories/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Photograph</title>
-      <link>https://ecwuuuuu.com/categories/photograph/</link>
-      <pubDate>Tue, 20 Jul 2021 22:57:20 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/categories/photograph/</guid>
       <description></description>
     </item>
     
