@@ -2,10 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ecwuuuuu.com/tags/.xyz/</loc>
-    <lastmod>2021-09-01T14:40:01+08:00</lastmod>
-  </url><url>
     <loc>https://ecwuuuuu.com/categories/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/hugo/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/note/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/new-theme-for-blog/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/tailwind/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/theme/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/website/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/website/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/</loc>
+    <lastmod>2021-12-23T00:35:45+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/.xyz/</loc>
     <lastmod>2021-09-01T14:40:01+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/cloudflare/</loc>
@@ -21,24 +51,6 @@
     <lastmod>2021-09-01T14:40:01+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/post/new-domain/</loc>
-    <lastmod>2021-09-01T14:40:01+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/note/</loc>
-    <lastmod>2021-09-01T14:40:01+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/post/</loc>
-    <lastmod>2021-09-01T14:40:01+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/</loc>
-    <lastmod>2021-09-01T14:40:01+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/website/</loc>
-    <lastmod>2021-09-01T14:40:01+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/website/</loc>
-    <lastmod>2021-09-01T14:40:01+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/</loc>
     <lastmod>2021-09-01T14:40:01+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/photography/drag/</loc>
