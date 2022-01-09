@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Σ&lt;VV⋃</title>
+    <title>Pages on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/page/</link>
-    <description>Recent content in Pages on Σ&lt;VV⋃</description>
+    <description>Recent content in Pages on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 31 Jul 2021 10:59:30 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/page/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>List of stuff I enjoy</title>
-      <link>https://ecwuuuuu.com/page/keep/</link>
-      <pubDate>Sat, 31 Jul 2021 10:59:30 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/page/keep/</guid>
-      <description></description>
-    </item>
-    
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2020 23:57:58 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About (Curriculum Vitæ)</title>
       <link>https://ecwuuuuu.com/page/about/</link>
@@ -30,13 +21,21 @@ This site  Write with static site generator Hugo  hugo-tufte theme with custom m
     </item>
     
     <item>
+      <title>List of stuff I enjoy</title>
+      <link>https://ecwuuuuu.com/page/keep/</link>
+      <pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/keep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Friends</title>
       <link>https://ecwuuuuu.com/page/friends/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ecwuuuuu.com/page/friends/</guid>
-      <description>For now, I just post these links here, will complete the description when I have time :)
-  Junde Yhi Terence Lau Renjie Deng Junru Zhong Laurence Luo Frank Ng KirinBaka 黑墨水鱼  Propose New Link If you want me to append you to the friend page, just create a reply under this issue page!</description>
+      <description>For now, I just post these links here, will complete the description when I have time :) Junde Yhi Terence Lau Renjie Deng Junru Zhong Laurence Luo Frank Ng KirinBaka 黑墨水鱼 小田 Propose New Link If you want me to append you to the friend page, just comment below!</description>
     </item>
     
   </channel>

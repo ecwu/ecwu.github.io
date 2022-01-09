@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on Σ&lt;VV⋃</title>
+    <title>Series on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/series/</link>
-    <description>Recent content in Series on Σ&lt;VV⋃</description>
+    <description>Recent content in Series on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Dec 2021 16:35:45 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Website Note</title>
+      <link>https://ecwuuuuu.com/series/website-note/</link>
+      <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
+      
+      <guid>https://ecwuuuuu.com/series/website-note/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://ecwuuuuu.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning</title>
+      <link>https://ecwuuuuu.com/series/machine-learning/</link>
+      <pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/series/machine-learning/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>Film Photography</title>
+      <link>https://ecwuuuuu.com/series/film-photography/</link>
+      <pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/series/film-photography/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

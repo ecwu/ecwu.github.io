@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hobby on ECWUUUUU</title>
+    <link>https://ecwuuuuu.com/tags/hobby/</link>
+    <description>Recent content in Hobby on ECWUUUUU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Apr 2019 16:23:05 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/hobby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>List of stuff I enjoy</title>
+      <link>https://ecwuuuuu.com/page/keep/</link>
+      <pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/keep/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,45 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Σ&lt;VV⋃</title>
+    <title>Categories on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/categories/</link>
-    <description>Recent content in Categories on Σ&lt;VV⋃</description>
+    <description>Recent content in Categories on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 23 Dec 2021 00:35:45 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Dec 2021 16:35:45 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Note</title>
-      <link>https://ecwuuuuu.com/categories/note/</link>
-      <pubDate>Thu, 23 Dec 2021 00:35:45 +0800</pubDate>
+      <title>Tech</title>
+      <link>https://ecwuuuuu.com/categories/tech/</link>
+      <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
       
-      <guid>https://ecwuuuuu.com/categories/note/</guid>
+      <guid>https://ecwuuuuu.com/categories/tech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Website</title>
       <link>https://ecwuuuuu.com/categories/website/</link>
-      <pubDate>Thu, 23 Dec 2021 00:35:45 +0800</pubDate>
+      <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
       
       <guid>https://ecwuuuuu.com/categories/website/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Life</title>
-      <link>https://ecwuuuuu.com/categories/life/</link>
-      <pubDate>Wed, 18 Aug 2021 13:57:20 +0800</pubDate>
+      <title>Photography</title>
+      <link>https://ecwuuuuu.com/categories/photography/</link>
+      <pubDate>Tue, 20 Jul 2021 13:57:20 +0800</pubDate>
       
-      <guid>https://ecwuuuuu.com/categories/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Photograph</title>
-      <link>https://ecwuuuuu.com/categories/photograph/</link>
-      <pubDate>Wed, 18 Aug 2021 13:57:20 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/categories/photograph/</guid>
+      <guid>https://ecwuuuuu.com/categories/photography/</guid>
       <description></description>
     </item>
     
@@ -53,29 +44,20 @@
     </item>
     
     <item>
+      <title>Note</title>
+      <link>https://ecwuuuuu.com/categories/note/</link>
+      <pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/categories/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Project</title>
       <link>https://ecwuuuuu.com/categories/project/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/categories/project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Instagram</title>
-      <link>https://ecwuuuuu.com/categories/instagram/</link>
-      <pubDate>Fri, 25 Dec 2020 21:30:01 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/categories/instagram/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Photography</title>
-      <link>https://ecwuuuuu.com/categories/photography/</link>
-      <pubDate>Thu, 16 Jul 2020 15:20:01 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/categories/photography/</guid>
       <description></description>
     </item>
     
@@ -89,11 +71,11 @@
     </item>
     
     <item>
-      <title>Story</title>
-      <link>https://ecwuuuuu.com/categories/story/</link>
+      <title>Life</title>
+      <link>https://ecwuuuuu.com/categories/life/</link>
       <pubDate>Mon, 20 Aug 2018 02:56:01 +0800</pubDate>
       
-      <guid>https://ecwuuuuu.com/categories/story/</guid>
+      <guid>https://ecwuuuuu.com/categories/life/</guid>
       <description></description>
     </item>
     

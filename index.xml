@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Σ&lt;VV⋃</title>
+    <title>ECWUUUUU</title>
     <link>https://ecwuuuuu.com/</link>
-    <description>Recent content on Σ&lt;VV⋃</description>
+    <description>Recent content on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 23 Dec 2021 00:35:45 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Dec 2021 16:35:45 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Switching to a new theme ... I guess</title>
       <link>https://ecwuuuuu.com/post/new-theme-for-blog/</link>
-      <pubDate>Thu, 23 Dec 2021 00:35:45 +0800</pubDate>
+      <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
       
       <guid>https://ecwuuuuu.com/post/new-theme-for-blog/</guid>
       <description>This blogsite has been using hugo-tufte theme (with some customization) for a while. I choose the theme because I appreciate the aesthetic look of the original Tufte $\LaTeX$ template. Using a dedicated area on the right side of the page for sidenotes, supplements images, or thoughts. Diversify the layout of an article, and make the article fun to read.
@@ -32,21 +32,12 @@ Currently, I am don&amp;rsquo;t have a concrete plan for how to utilize these tw
     <item>
       <title>Drag</title>
       <link>https://ecwuuuuu.com/photography/drag/</link>
-      <pubDate>Wed, 18 Aug 2021 13:57:20 +0800</pubDate>
+      <pubDate>Tue, 20 Jul 2021 13:57:20 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/photography/drag/</guid>
       <description>Hang out with friends in Shenzhen. In the evening, we saw a nice sunset in OH BAY.
 On the way back home, I saw more breathtaking scenery. And I captured it with my camera.
 The images are shot using a slow shutter speed, and the shape of the objects is dragged by the movement of the cabin. I arrange the image in a linear (both in time and space) manner. Along with intertwined artificial lights, urban buildings, and twilight sky in the frame.</description>
-    </item>
-    
-    <item>
-      <title>List of stuff I enjoy</title>
-      <link>https://ecwuuuuu.com/page/keep/</link>
-      <pubDate>Sat, 31 Jul 2021 10:59:30 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/page/keep/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -69,8 +60,8 @@ We input the value of the last layer $x$, and we can get a value in the range 0 
       
       <guid>https://ecwuuuuu.com/project/nlp/</guid>
       <description>I started to learn NLP-related stuff in mid-2018. And gradually start to some serious research. My focus mainly on Natural Language Generation (NLG).
-Beginning: SemEval2019 By the end of 2018, members of the AI learning group  Lead by Prof. Weifeng Su decide to take part in the SemEval 2019. To study and learning more about NLP.
-Our group chose task 6: Identifying and Categorizing Offensive Language in Social Media (OffensEval).</description>
+Beginning: SemEval2019 By the end of 2018, members of the AI learning group Lead by Prof. Weifeng Su decide to take part in the SemEval 2019. To study and learning more about NLP.
+Our group chose task 6: Identifying and Categorizing Offensive Language in Social Media (OffensEval). Which the input text is users&#39; tweets and we need to classify it.</description>
     </item>
     
     <item>
@@ -79,9 +70,7 @@ Our group chose task 6: Identifying and Categorizing Offensive Language in Socia
       <pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid>
-      <description>Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)
-  Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.
- Some Background I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy.</description>
+      <description>Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-) Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW. Some Background I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U</description>
     </item>
     
     <item>
@@ -155,7 +144,7 @@ Haven’t thought about making it into a series or project since the beginning.<
       <pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/post/120-film-and-rb67/</guid>
-      <description>In my last photography-related post: Try the Film For the First Time. I have lots of fun with negatives. This makes me want to have my own camera to experience this medium that has existed for nearly 200 years.  The film we are still using today was invented by Kodak in 1888, but photosensitive material that uses in photography can date back to 1835. ⊕ View from the Window at Le Gras  Jonnychiwa [CC BY-SA 4.</description>
+      <description>In my last photography-related post: Try the Film For the First Time. I have lots of fun with negatives. This makes me want to have my own camera to experience this medium that has existed for nearly 200 years. The film we are still using today was invented by Kodak in 1888, but photosensitive material that uses in photography can date back to 1835. View from the Window at Le</description>
     </item>
     
     <item>
@@ -178,6 +167,15 @@ This site  Write with static site generator Hugo  hugo-tufte theme with custom m
       
       <guid>https://ecwuuuuu.com/post/try-the-film-for-the-first-time/</guid>
       <description>&lt;p&gt;The story starts from a disposable camera sent to me by &lt;a href=&#34;https://github.com/russelloop&#34;&gt;Root&lt;/a&gt; in 2017.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>List of stuff I enjoy</title>
+      <link>https://ecwuuuuu.com/page/keep/</link>
+      <pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/keep/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -213,8 +211,7 @@ This site  Write with static site generator Hugo  hugo-tufte theme with custom m
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ecwuuuuu.com/page/friends/</guid>
-      <description>For now, I just post these links here, will complete the description when I have time :)
-  Junde Yhi Terence Lau Renjie Deng Junru Zhong Laurence Luo Frank Ng KirinBaka 黑墨水鱼  Propose New Link If you want me to append you to the friend page, just create a reply under this issue page!</description>
+      <description>For now, I just post these links here, will complete the description when I have time :) Junde Yhi Terence Lau Renjie Deng Junru Zhong Laurence Luo Frank Ng KirinBaka 黑墨水鱼 小田 Propose New Link If you want me to append you to the friend page, just comment below!</description>
     </item>
     
   </channel>
