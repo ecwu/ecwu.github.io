@@ -6,9 +6,18 @@
     <description>Recent content on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2021 16:35:45 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jan 2022 14:49:18 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Switching to a new theme ... I guess</title>
+      <title>Changelog</title>
+      <link>https://ecwuuuuu.com/page/changelog/</link>
+      <pubDate>Sun, 09 Jan 2022 14:49:18 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/changelog/</guid>
+      <description>About this site  Write with static site generator Hugo  Uses ecwu-theme from Jan 2022, Theme introduction: TBA   Build with GitHub Actions Site preview build with Cloudflare Pages  https://ecwu-github-io-source.pages.dev/   Host by GitHub Pages Cloudflare &amp;amp; Qiniu for distributing files Comment Plugin: utterances Site Analytics: Google Analytics v4  Changelog 2022 January 2022  Enable the new ecwu-theme, Written in Tailwind CSS 3 Adding Comment Plugin utterances Adding Site Analytics Google Analytics v4 New Terms, Series View and Pages.</description>
+    </item>
+    
+    <item>
+      <title>(Switched!) Switching to a new theme ... I guess</title>
       <link>https://ecwuuuuu.com/post/new-theme-for-blog/</link>
       <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
       
@@ -148,16 +157,12 @@ Haven’t thought about making it into a series or project since the beginning.<
     </item>
     
     <item>
-      <title>About (Curriculum Vitæ)</title>
+      <title>About Me</title>
       <link>https://ecwuuuuu.com/page/about/</link>
       <pubDate>Tue, 18 Feb 2020 23:57:58 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/page/about/</guid>
-      <description>Me  Postgraduate Student, Hong Kong University of Science and Technology Graduated with First-Class Honours, BNU-HKBU UIC  Tech, Photography (Analog and Digital), Music
-Contact me: ecwu@protonmail.com
-CV: Coming soon
-More: LinkedIn
-This site  Write with static site generator Hugo  hugo-tufte theme with custom modifications   Build with GitHub Actions Host by GitHub Pages Cloudflare &amp;amp; Qiniu for distributing files  </description>
+      <description>Zhenghao Wu, 伍正豪, Jack, ECWU Postgraduate Student, Hong Kong University of Science and Technology, MSc. Big Data Technology Graduated with First-Class Honours, BNU-HKBU UIC, BSc. Computer Science and Technology (Honours) Hobbies: Tech, Photography (Analog and Digital), Music Contact me: ecwu@protonmail.com More: LinkedIn; check social links in footer.</description>
     </item>
     
     <item>
