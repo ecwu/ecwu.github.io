@@ -2,13 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ecwuuuuu.com/categories/</loc>
-    <lastmod>2022-01-10T15:55:20+08:00</lastmod>
+    <loc>https://ecwuuuuu.com/tags/anime/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</loc>
-    <lastmod>2022-01-10T15:55:20+08:00</lastmod>
+    <loc>https://ecwuuuuu.com/categories/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/figure/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/photography/hinata-shoyo/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/flash/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/hinata-shoyo/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/photography/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/photography/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/</loc>
+    <lastmod>2022-01-10T22:14:05+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</loc>
     <lastmod>2022-01-10T15:55:20+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/git/</loc>
@@ -30,9 +54,6 @@
     <lastmod>2022-01-10T15:55:20+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/series/</loc>
-    <lastmod>2022-01-10T15:55:20+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/</loc>
     <lastmod>2022-01-10T15:55:20+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/technique-share/</loc>
@@ -100,12 +121,6 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/metro/</loc>
     <lastmod>2021-08-18T13:57:20+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/photography/</loc>
-    <lastmod>2022-01-09T14:08:54+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/photography/</loc>
-    <lastmod>2022-01-09T14:08:54+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/set/</loc>
     <lastmod>2021-08-18T13:57:20+08:00</lastmod>
@@ -238,9 +253,6 @@
   </url><url>
     <loc>https://ecwuuuuu.com/post/try-the-film-for-the-first-time/</loc>
     <lastmod>2022-01-09T14:08:54+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/anime/</loc>
-    <lastmod>2021-07-31T10:59:30+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/article/</loc>
     <lastmod>2021-07-31T10:59:30+08:00</lastmod>
