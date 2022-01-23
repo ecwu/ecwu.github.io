@@ -2,11 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ecwuuuuu.com/tags/3d-printing/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/arduino/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
     <loc>https://ecwuuuuu.com/categories/</loc>
-    <lastmod>2022-01-11T23:54:16+08:00</lastmod>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/</loc>
-    <lastmod>2022-01-11T23:54:16+08:00</lastmod>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/fingerprint/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/microphone/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/series/project/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/project/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/rfid/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/robotic/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/series/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/smart-lock/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/robotics-project/</loc>
+    <lastmod>2022-01-23T14:56:51+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/series/keep-list/</loc>
     <lastmod>2022-01-11T23:54:16+08:00</lastmod>
@@ -23,13 +62,7 @@
     <loc>https://ecwuuuuu.com/tags/recommendation/</loc>
     <lastmod>2022-01-11T23:54:16+08:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/series/</loc>
-    <lastmod>2022-01-11T23:54:16+08:00</lastmod>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/summary/</loc>
-    <lastmod>2022-01-11T23:54:16+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/</loc>
     <lastmod>2022-01-11T23:54:16+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/video/</loc>
@@ -78,9 +111,6 @@
     <lastmod>2022-01-11T23:54:16+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/github/</loc>
-    <lastmod>2022-01-11T23:54:16+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/post/</loc>
     <lastmod>2022-01-11T23:54:16+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/repository/</loc>
@@ -159,10 +189,10 @@
     <lastmod>2022-01-09T14:08:54+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/classification/</loc>
-    <lastmod>2022-01-09T14:08:54+08:00</lastmod>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/machine-learning/</loc>
-    <lastmod>2022-01-09T14:08:54+08:00</lastmod>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/series/machine-learning/</loc>
     <lastmod>2022-01-09T14:08:54+08:00</lastmod>
@@ -181,6 +211,39 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/softmax/</loc>
     <lastmod>2022-01-09T14:08:54+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/controllable-text-generation/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/cross-modal/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/dialogue/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/nlp/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/natural-language-processing/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/nlp/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/offensive-detection/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/pre-trained-language-model/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/summarization/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/text-generation/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/transformer/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/ddns/</loc>
     <lastmod>2022-01-09T14:08:54+08:00</lastmod>

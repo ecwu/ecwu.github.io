@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fingerprint on ECWUUUUU</title>
+    <link>https://ecwuuuuu.com/tags/fingerprint/</link>
+    <description>Recent content in Fingerprint on ECWUUUUU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jan 2022 22:44:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/fingerprint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【记录】智能门锁 -  Introduction to Robotics 课程项目</title>
+      <link>https://ecwuuuuu.com/post/robotics-project/</link>
+      <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/robotics-project/</guid>
+      <description>整体构思 项目构思时浏览了很多网络上的 Arduino 项目建议。但列表中大多不够有趣，或时太复杂不容易实现。但其中遇到了一篇来自 Grathio Labs 的文章描述了使用敲门节奏</description>
+    </item>
+    
+  </channel>
+</rss>

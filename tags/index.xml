@@ -6,7 +6,70 @@
     <description>Recent content in Tags on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Jan 2022 21:58:05 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jan 2022 22:44:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D Printing</title>
+      <link>https://ecwuuuuu.com/tags/3d-printing/</link>
+      <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/3d-printing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arduino</title>
+      <link>https://ecwuuuuu.com/tags/arduino/</link>
+      <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fingerprint</title>
+      <link>https://ecwuuuuu.com/tags/fingerprint/</link>
+      <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/fingerprint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microphone</title>
+      <link>https://ecwuuuuu.com/tags/microphone/</link>
+      <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/microphone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RFID</title>
+      <link>https://ecwuuuuu.com/tags/rfid/</link>
+      <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/rfid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Robotic</title>
+      <link>https://ecwuuuuu.com/tags/robotic/</link>
+      <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/robotic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smart Lock</title>
+      <link>https://ecwuuuuu.com/tags/smart-lock/</link>
+      <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/smart-lock/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>List</title>
       <link>https://ecwuuuuu.com/tags/list/</link>
@@ -301,6 +364,96 @@
       <pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/softmax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Controllable Text Generation</title>
+      <link>https://ecwuuuuu.com/tags/controllable-text-generation/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/controllable-text-generation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cross Modal</title>
+      <link>https://ecwuuuuu.com/tags/cross-modal/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/cross-modal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dialogue</title>
+      <link>https://ecwuuuuu.com/tags/dialogue/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/dialogue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Natural Language Processing</title>
+      <link>https://ecwuuuuu.com/tags/natural-language-processing/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/natural-language-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NLP</title>
+      <link>https://ecwuuuuu.com/tags/nlp/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Offensive Detection</title>
+      <link>https://ecwuuuuu.com/tags/offensive-detection/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/offensive-detection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pre-trained Language Model</title>
+      <link>https://ecwuuuuu.com/tags/pre-trained-language-model/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/pre-trained-language-model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Summarization</title>
+      <link>https://ecwuuuuu.com/tags/summarization/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/summarization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Generation</title>
+      <link>https://ecwuuuuu.com/tags/text-generation/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/text-generation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformer</title>
+      <link>https://ecwuuuuu.com/tags/transformer/</link>
+      <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/transformer/</guid>
       <description></description>
     </item>
     
