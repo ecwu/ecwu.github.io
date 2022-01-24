@@ -270,13 +270,19 @@
 <p>Currently, I am don&rsquo;t have a concrete plan for how to utilize these two domains. But I will probably migrate all my info page and service to the new domain. The domain email and blog will still keep in the old one. I will keep thinking about this, and sync the progress on this page in the future.</p>
 <p>Update log:</p>
 <ul>
+<li>2022.01.24: Multiple services are deployed under the domain, most of the services are used privately and host on Tencent Cloud; I recently go through a personal homepage project called <a href="https://github.com/pawelmalak/flame">flame</a>, I tend to replace it with the current landing page built with Netlify.</li>
+<li>2022.01.22: <a href="https://blog.cloudflare.com/introducing-email-routing/">Cloudflare Email Routing</a> Service is enabled, you can use <code>hi@ecwu.xyz</code> to sent me email.</li>
 <li>2021.09.01: A Landing page is setup for the site, CI with <a href="https://www.netlify.com/">Netlify</a>.</li>
 <li>2021.08.11: Accessing the <a href="https://ecwu.xyz">root</a> and <a href="https://www.ecwu.xyz">www</a> subdomain of the new domain will 302 redirect to <a href="https://ecwuuuuu.com">ecwuuuuu.com</a> via a URL forwarding rule using Cloudflare.</li>
 </ul>
 <p>More info:</p>
 <ul>
 <li>This domain is register at Gandi.com</li>
-<li>I launch a new subdomain <a href="https://foto.ecwuuuuu.com">foto.ecwuuuuu.com</a> <del><a href="https://chaos.ecwuuuuu.com">chaos.ecwuuuuu.com</a></del> with <a href="https://github.com/TryGhost/Ghost">Ghost</a> as backend. I tend to use it as a more friendly and more good-looking site for my photo project. But I don&rsquo;t guarantee the service will run without termination in the future.</li>
+<li><del>I launch a new subdomain <a href="https://foto.ecwuuuuu.com">foto.ecwuuuuu.com</a> <a href="https://chaos.ecwuuuuu.com">chaos.ecwuuuuu.com</a></del> with <a href="https://github.com/TryGhost/Ghost">Ghost</a> as backend. I tend to use it as a more friendly and more good-looking site for my photo project. But I don&rsquo;t guarantee the service will run without termination in the future.
+<ul>
+<li>2022.01.24: A problem with Nginx and Ghost (running in Docker) causing redirect loop and showing an <code>ERR_TOO_MANY_REDIRECTS</code> error. Taking down the site till further notice.</li>
+</ul>
+</li>
 </ul>
 
 </article>
@@ -312,7 +318,7 @@
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2021-09-01 - <abbr title="Date of last major modification to this page">2022-01-09</abbr></td>
+                2021-09-01 - <abbr title="Date of last major modification to this page">2022-01-24</abbr></td>
             </tr>
             
             
@@ -385,7 +391,7 @@
   </ul>
 </div><p>
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>. Build by <a href="https://github.com/features/actions">GitHub
-        Action</a> at: 2022-01-23 06:57 UTC.
+        Action</a> at: 2022-01-24 04:14 UTC.
     </p>
     <p>
       
