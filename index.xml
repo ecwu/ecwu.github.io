@@ -6,7 +6,115 @@
     <description>Recent content on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Jan 2022 22:44:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Feb 2022 15:30:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithm Completion Project</title>
+      <link>https://ecwuuuuu.com/post/algorithm-completion-project/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/algorithm-completion-project/</guid>
+      <description>Checkout Algorithm Series, questions are arranged by categories (-) Problem List Retrived from Leetcode Top 100 Liked (2022.01.25) 编号 难度 标签 题解 1. 两数之和 简单 数组 Py 2. 两数相加 中等 链表 / 递归 Py 3. 无重复字符的最长子串 中等 字符串 Py 4. 寻找两</description>
+    </item>
+    
+    <item>
+      <title>Array</title>
+      <link>https://ecwuuuuu.com/page/algorithm/array/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/array/</guid>
+      <description>1. 两数之和 https://leetcode-cn.com/problems/two-sum 给定一个整数数组 nums，目标是找出数组中的两个整数，算数和为 target，返回数组下标（只有一个答案，不能元素重复使用）。其中</description>
+    </item>
+    
+    <item>
+      <title>Binary</title>
+      <link>https://ecwuuuuu.com/page/algorithm/binary/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/binary/</guid>
+      <description>TBA</description>
+    </item>
+    
+    <item>
+      <title>Dynamic Programming</title>
+      <link>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</guid>
+      <description>TBA</description>
+    </item>
+    
+    <item>
+      <title>Graph</title>
+      <link>https://ecwuuuuu.com/page/algorithm/graph/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/graph/</guid>
+      <description>TBA</description>
+    </item>
+    
+    <item>
+      <title>Heap</title>
+      <link>https://ecwuuuuu.com/page/algorithm/heap/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/heap/</guid>
+      <description>TBA</description>
+    </item>
+    
+    <item>
+      <title>Interval</title>
+      <link>https://ecwuuuuu.com/page/algorithm/interval/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/interval/</guid>
+      <description>TBA</description>
+    </item>
+    
+    <item>
+      <title>Linked List</title>
+      <link>https://ecwuuuuu.com/page/algorithm/linked-list/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/linked-list/</guid>
+      <description>2. 两数相加 https://leetcode-cn.com/problems/add-two-numbers 给两个非空链表，每个节点储存一位数字，按逆序排序。返回一个相同形式的链表，表示两个链表的和。 数据在链表中是倒序的，这非常的便于处</description>
+    </item>
+    
+    <item>
+      <title>Matrix</title>
+      <link>https://ecwuuuuu.com/page/algorithm/matrix/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/matrix/</guid>
+      <description>TBA</description>
+    </item>
+    
+    <item>
+      <title>Misc</title>
+      <link>https://ecwuuuuu.com/page/algorithm/misc/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/misc/</guid>
+      <description>TBA</description>
+    </item>
+    
+    <item>
+      <title>String</title>
+      <link>https://ecwuuuuu.com/page/algorithm/string/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/string/</guid>
+      <description>3. 无重复字符的最长子串 https://leetcode-cn.com/problems/longest-substring-without-repeating-characters 给定一个字符串 s ，请你找出其中不含有重复字符的最长子串的长度。 这个得出的字符串中不能存在存在的字符，且返回只需要返回</description>
+    </item>
+    
+    <item>
+      <title>Tree</title>
+      <link>https://ecwuuuuu.com/page/algorithm/tree/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/page/algorithm/tree/</guid>
+      <description>TBA</description>
+    </item>
+    
     <item>
       <title>【记录】智能门锁 -  Introduction to Robotics 课程项目</title>
       <link>https://ecwuuuuu.com/post/robotics-project/</link>

@@ -1,0 +1,592 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+    integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+    integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+    crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+    crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true },
+                { left: "\\begin{equation}", right: "\\end{equation}", display: true },
+                { left: "\\begin{align}", right: "\\end{align}", display: true },
+                { left: "\\begin{alignat}", right: "\\end{alignat}", display: true },
+                { left: "\\begin{gather}", right: "\\end{gather}", display: true },
+                { left: "\\begin{CD}", right: "\\end{CD}", display: true },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            
+            throwOnError: false,
+            trust: (context) => ['\\htmlId', '\\href'].includes(context.command),
+            macros: {
+                "\\eqref": "\\href{###1}{(\\text{#1})}",
+                "\\ref": "\\href{###1}{\\text{#1}}",
+                "\\label": "\\htmlId{#1}{}"
+            }
+        });
+    });
+</script>
+
+
+
+
+    
+    
+    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.00c87e4b47dc98d81244d47089e13e469b89e228485fb36d4971489e9da0ba32.css" integrity="sha256-AMh&#43;S0fcmNgSRNRwieE&#43;RpuJ4ihIX7NtSXFInp2gujI=">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>String -  ECWU&#39;s Notebook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Homepage and Blog of ECWU">
+<meta name="keywords" content="Placeholder,">
+<meta name="author" content="ECWUUUUU"><script>
+  if (localStorage.getItem("current-theme") === null) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      localStorage.setItem("current-theme", "dark");
+      document.documentElement.classList.add('dark')
+      change_utt_color_mode();
+    } else {
+      localStorage.setItem("current-theme", "light");
+      change_utt_color_mode();
+    }
+  } else {
+    if (localStorage.getItem('current-theme') === 'dark') {
+      document.documentElement.classList.add('dark')
+    }
+  }
+
+  function change_color_mode(){
+    if (localStorage.getItem('current-theme') === 'light') {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('current-theme', 'dark');
+      change_utt_color_mode();
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('current-theme', 'light');
+      change_utt_color_mode();
+    }
+  }
+
+  function change_utt_color_mode(){
+    
+    console.log('utteranc.es is not enabled.')
+    
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    
+
+    document
+      .getElementById("header-theme-button")
+      .addEventListener("click", change_color_mode);
+  });
+
+</script></head>
+    <body class="transition-colors duration-300"><div class="pt-6">
+    <h1>
+
+<a href="https://ecwuuuuu.com/">
+    <svg class="w-36 fill-gray-900 dark:fill-gray-200" fill="currentColor" viewBox="0 0 204.24 43.44" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,43.08V0.36h18.24v5.76H6.12v12.54h10.56v5.76H6.12v12.54h12.12v6.12H0z"/>
+        <path d="M41.64,30.9v2.64c0,1.32-0.25,2.57-0.75,3.75c-0.5,1.18-1.19,2.23-2.07,3.15c-0.88,0.92-1.91,1.65-3.09,2.19  c-1.18,0.54-2.45,0.81-3.81,0.81c-1.16,0-2.34-0.16-3.54-0.48c-1.2-0.32-2.28-0.88-3.24-1.68s-1.75-1.83-2.37-3.09  c-0.62-1.26-0.93-2.87-0.93-4.83V9.84c0-1.4,0.24-2.7,0.72-3.9c0.48-1.2,1.16-2.24,2.04-3.12c0.88-0.88,1.93-1.57,3.15-2.07  C28.97,0.25,30.32,0,31.8,0c2.88,0,5.22,0.94,7.02,2.82c0.88,0.92,1.57,2.01,2.07,3.27c0.5,1.26,0.75,2.63,0.75,4.11v2.4h-6.12  v-2.04c0-1.2-0.34-2.24-1.02-3.12c-0.68-0.88-1.6-1.32-2.76-1.32c-1.52,0-2.53,0.47-3.03,1.41c-0.5,0.94-0.75,2.13-0.75,3.57v21.84  c0,1.24,0.27,2.28,0.81,3.12s1.51,1.26,2.91,1.26c0.4,0,0.83-0.07,1.29-0.21c0.46-0.14,0.89-0.37,1.29-0.69  c0.36-0.32,0.66-0.76,0.9-1.32c0.24-0.56,0.36-1.26,0.36-2.1v-2.1H41.64z"/>
+        <path d="M78.36,0.36L72,43.08h-5.76l-4.68-27.72h-0.12l-4.62,27.72h-5.76L44.7,0.36h6.48l3.06,27.12h0.12l4.8-27.12h4.68l4.98,27.78  h0.12l2.94-27.78H78.36z"/>
+        <path d="M102,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H102z"/>
+        <path d="M127.56,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  s-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H127.56z"/>
+        <path d="M153.12,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H153.12z"/>
+        <path d="M178.68,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36H165v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H178.68z"/>
+        <path d="M204.24,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H204.24z"/>
+    </svg>
+    <p class="sr-only">ECWU Homepage</p>
+</a></h1>
+<nav aria-label="navbar" class="mb-3 mr-8">
+    <ol role="list" class="flex flex-wrap">
+        
+        
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Home</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/post/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Posts</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/photography/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Photos</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/series/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Series</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/about/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>About</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/friends/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Friends</a>
+            
+            
+        </div>
+        </li>
+        
+    </ol>
+</nav><div  class="flex items-center space-x-2">
+    <div class="w-6 h-6 inline-flex items-center justify-center rounded-lg bg-white dark:bg-black shadow-inner ring-1 ring-black/5">
+        <i id="header-theme-button" data-feather="sun" class="site-header-navlink rounded cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden dark:block fill-gray-900 dark:fill-gray-200" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 block dark:hidden fill-gray-900 dark:fill-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+        </i>
+    </div>
+    <span class="dark:hidden text-sm">To Dark Mode</span>
+    <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
+</div></div>
+  <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
+    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/VQMszEo0x9c/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mzl8fHJvcGV8ZW58MHx8fHwxNjQzODczODk4&amp;force=true&amp;w=2400" alt="Featured Images">
+    
+    <figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">
+      Photo by Nick Fewings on Unsplash
+    </figcaption>
+    
+  </figure>
+<div class="mb-12 mt-16 w-content">
+  <h1 class="text-gray-900 dark:text-gray-200">String</h1>
+  
+
+  
+  <div class="text-gray-700 dark:text-gray-400">
+    <span>
+      
+      <p><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg> Zhenghao Wu</p>
+      
+
+
+      
+      <p>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg> 2022-02-09
+        
+
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg> 4 min read
+        
+      </p>
+      
+
+      
+      <p>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        </svg>
+        Status: In Progress
+        
+        
+        
+      </p>
+      
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+        </svg> <a href="#article-info-card">Post Details</a>
+      </p>
+      
+      
+    </span>
+  </div>
+  
+</div>
+<div class="w-content bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400 px-5 py-3">
+     
+     
+     
+         
+        
+     
+         
+        
+     
+         
+        
+     
+         
+        
+     
+         
+        
+     
+         
+        
+     
+         
+        
+     
+         
+        
+     
+         
+        
+     
+         
+        
+     
+         
+        
+    
+     
+        
+        
+     
+        
+        
+     
+        
+        
+     
+        
+        
+     
+        
+        
+     
+        
+        
+     
+        
+        
+     
+        
+        
+     
+        
+        
+     
+        
+        
+     
+        
+        
+    
+    
+    <p>This post is part of the <b>algorithm</b> series.</p>
+    <p>
+    
+  </div>
+<article>
+    
+<section class="mb-8">
+  <details closed class="toc">
+    <summary>Table of Contents</summary>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#3-无重复字符的最长子串">3. 无重复字符的最长子串</a></li>
+        <li><a href="#5-最长回文子串">5. 最长回文子串</a></li>
+        <li><a href="#17-电话号码的字母组合">17. 电话号码的字母组合</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </details>
+</section>
+
+    <h2 id="3-无重复字符的最长子串">3. 无重复字符的最长子串</h2>
+<p><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters</a></p>
+<p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的<strong>最长子串</strong>的<em>长度</em>。</p>
+<p>这个得出的字符串中不能存在存在的字符，且返回只需要返回最长的长度，所以我们可以使用双指针，来指向不含重复字符的字串。其中：</p>
+<ul>
+<li>右指针遍历字符串，使用一个字典来储存一个新出现字符的位置</li>
+<li>如果右指针遍历的字符曾经出现过，则左指针根据下标跳转至字符上一次出现位置的下一位（保证指针区域内字符串不存在重复字符串）</li>
+<li>左指针移动后，更新字典内字符的位置，以便处理下一次字符重复</li>
+<li>判断左右指针框选范围字符串的长度、如果超过过去的长度，则更新。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+    <span style="color:#719e07">def</span> <span style="color:#268bd2">lengthOfLongestSubstring</span>(<span style="color:#268bd2">self</span>, s: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">int</span>:
+        appear <span style="color:#719e07">=</span> <span style="color:#b58900">dict</span>()
+        l <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+        longest <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;&#34;</span>
+        <span style="color:#719e07">for</span> c <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(s)):
+            <span style="color:#719e07">if</span> s[c] <span style="color:#719e07">in</span> appear:
+                <span style="color:#719e07">if</span> appear[s[c]] <span style="color:#719e07">&gt;=</span> l:  <span style="color:#586e75"># index not allow go backward</span>
+                    l <span style="color:#719e07">=</span> appear[s[c]] <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>
+                appear[s[c]] <span style="color:#719e07">=</span> c  <span style="color:#586e75"># update index</span>
+            <span style="color:#719e07">else</span>:
+                appear[s[c]] <span style="color:#719e07">=</span> c
+            <span style="color:#719e07">if</span> <span style="color:#b58900">len</span>(longest) <span style="color:#719e07">&lt;</span> c<span style="color:#719e07">+</span><span style="color:#2aa198">1</span><span style="color:#719e07">-</span>l:  <span style="color:#586e75"># Update string length</span>
+                longest <span style="color:#719e07">=</span> s[l:c<span style="color:#719e07">+</span><span style="color:#2aa198">1</span>]
+        <span style="color:#719e07">return</span> <span style="color:#b58900">len</span>(longest)
+</code></pre></div><p>这种方法，主要的时间复杂度在右指针的遍历，因为右指针只遍历字符串一次，算法时间复杂度为 $\mathcal{O}(n)$, $n$ 为字符串长度。</p>
+<h2 id="5-最长回文子串">5. 最长回文子串</h2>
+<p><a href="https://leetcode-cn.com/problems/longest-palindromic-substring">https://leetcode-cn.com/problems/longest-palindromic-substring</a></p>
+<p>回文串指从正序与倒序字串内容一致。</p>
+<p>首先能想到一个最简单的方法是中心扩散：遍历每个字符，从每个字符的位置开始，向两侧扩散并判断字符是否一致，直到遇到不匹配。</p>
+<p>其中，回文长度为单数和双数的情况需要分别处理。拿到回文区段后，判断长度是否是最长。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+    <span style="color:#719e07">def</span> <span style="color:#268bd2">longestPalindrome</span>(<span style="color:#268bd2">self</span>, s: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">str</span>:
+        start, end <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>
+        <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(s)):
+            l1, r1 <span style="color:#719e07">=</span> i, i
+            <span style="color:#719e07">while</span> l1 <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">0</span> <span style="color:#719e07">and</span> r1 <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(s) <span style="color:#719e07">and</span> s[l1] <span style="color:#719e07">==</span> s[r1]:
+                l1 <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
+                r1 <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
+            l1, r1 <span style="color:#719e07">=</span> l1 <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>, r1 <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
+            l2, r2 <span style="color:#719e07">=</span> i, i<span style="color:#719e07">+</span><span style="color:#2aa198">1</span>
+            <span style="color:#719e07">while</span> l2 <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">0</span> <span style="color:#719e07">and</span> r2 <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(s) <span style="color:#719e07">and</span> s[l2] <span style="color:#719e07">==</span> s[r2]:
+                l2 <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
+                r2 <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
+            l2, r2 <span style="color:#719e07">=</span> l2 <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>, r2 <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
+            <span style="color:#719e07">if</span> r1 <span style="color:#719e07">-</span> l1 <span style="color:#719e07">&gt;</span> end <span style="color:#719e07">-</span> start:
+                start, end <span style="color:#719e07">=</span> l1, r1
+            <span style="color:#719e07">if</span> r2 <span style="color:#719e07">-</span> l2 <span style="color:#719e07">&gt;</span> end <span style="color:#719e07">-</span> start:
+                start, end <span style="color:#719e07">=</span> l2, r2
+        <span style="color:#719e07">return</span> s[start:end <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>]
+</code></pre></div><p>时间复杂度为 $\mathcal{O}(n^2)$。</p>
+<p>除了暴力解法，还有许多其他的方法，但是时间复杂度上都没有明显的优势。有一个专门针对回文字串的算法 <a href="https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher.27s_algorithm">Manacher&rsquo;s Algorithm</a>（<del>马拉车算法</del>），将时间复杂度降低到了 $\mathcal{O}(n)$，这里只讨论算法思想。</p>
+<p>算法的做法是，维护数组 $P[]$ 用来记录字符串在 $i$ 位置为中心，存在的回文子串的个数，这个数其实也就是回文子串的“半径”。构建这个数组的方法可以根据中心扩散法的基础上修改。但是很明显，这样时间复杂度并没有下降。</p>
+<p>Manacher 算法，充分利用了对称性，将寻找字符回文串个数的时间降到了线性。</p>
+<p>设想一个字符串内容为 <code>cbacabac</code>, 我们记录这样一个结构。其中 T 代表的是原字符串。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">   0  1  2  3  4  5  6  7  8
+T  a  b  a  b  a  b  a  b  c
+P  0  1  2  3  3  3  1  0  0
+</code></pre></div><p>如位置 <code>4</code> 的字符 <code>a</code>，符合条件的子串就包括 <code>bab</code>，<code>ababa</code>，和 <code>bababab</code>，则 $P[4]=3$。</p>
+<p>如果现在要获得位置 <code>6</code> 字符的 $P$，经过观察会发现，因为已知位置 <code>4</code> 的 $P$，位置 <code>6</code> 字符包含在位置 <code>4</code> 的回文串中。根据镜面对称的特点，对应的，位置 <code>2</code> 在位置 <code>4</code> 字符的回文串中，所能拓展的范围 (<code>a</code>) 与位置 <code>6</code> 字符在相同回文串区间 (<code>+</code>) 内的扩展的范围 (<code>b</code>) 一致（例子中为 <code>1-3</code> 和 <code>5-7</code>）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">   0  1  2  3  4  5  6  7  8
+T  a  b  a  b  a  b  a  b  c
+P  0  1  2  3  3  3  1  0  0
+      -------     -------
+         a           b
+      ~~~~~~~~~~~~~~~~~~~
+               +
+</code></pre></div><p>如果位置 <code>2</code> 的回文串在 <code>1-3</code> 区间就结束了，那么位置 <code>6</code> 的回文串在 <code>5-7</code> 区间也会结束。如果没有结束，则会给位置 <code>6</code> 的中心扩散提供信息：字符串范围的<strong>下限</strong>是 <code>5-7</code> （至少两侧有一对回文字符）。</p>
+<p>通过这种对称性，我们避免了不必要的重复搜索。上面的方法，在单双数长度的回文串的情况下，会有不同的结果，这时候会使用在字符间插入一个特殊字符（不存在原题中使用的字符集的字符，在英文字母的情况下，可以用 <code>#</code>）。这样所有的字符串都可以视为单数长度的字符串。还有一些细节，可见题解 <a href="https://leetcode-cn.com/problems/longest-palindromic-substring/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-bao-gu/#%E8%A7%A3%E6%B3%95-5-manachers-algorithm-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95%E3%80%82">详细通俗的思路分析，多解法-windliang</a>。</p>
+<h2 id="17-电话号码的字母组合">17. 电话号码的字母组合</h2>
+<p><a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number">https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number</a></p>
+<p>题目根据给出的数字组合，对应<a href="https://baike.baidu.com/item/%E4%B9%9D%E5%AE%AB%E6%A0%BC%E8%BE%93%E5%85%A5%E6%B3%95">九宫格输入法</a>的数字英文对照。输出所有可能的字符组合。其中一种方式就是维护一个映射表，然后循环的将所有的组合输出。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+    <span style="color:#719e07">def</span> <span style="color:#268bd2">letterCombinations</span>(<span style="color:#268bd2">self</span>, digits: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> List[<span style="color:#b58900">str</span>]:
+        mapping <span style="color:#719e07">=</span> {
+            <span style="color:#2aa198">&#39;2&#39;</span>: [<span style="color:#2aa198">&#39;a&#39;</span>, <span style="color:#2aa198">&#39;b&#39;</span>, <span style="color:#2aa198">&#39;c&#39;</span>],
+            <span style="color:#2aa198">&#39;3&#39;</span>: [<span style="color:#2aa198">&#39;d&#39;</span>, <span style="color:#2aa198">&#39;e&#39;</span>, <span style="color:#2aa198">&#39;f&#39;</span>],
+            <span style="color:#2aa198">&#39;4&#39;</span>: [<span style="color:#2aa198">&#39;g&#39;</span>, <span style="color:#2aa198">&#39;h&#39;</span>, <span style="color:#2aa198">&#39;i&#39;</span>],
+            <span style="color:#2aa198">&#39;5&#39;</span>: [<span style="color:#2aa198">&#39;j&#39;</span>, <span style="color:#2aa198">&#39;k&#39;</span>, <span style="color:#2aa198">&#39;l&#39;</span>],
+            <span style="color:#2aa198">&#39;6&#39;</span>: [<span style="color:#2aa198">&#39;m&#39;</span>, <span style="color:#2aa198">&#39;n&#39;</span>, <span style="color:#2aa198">&#39;o&#39;</span>],
+            <span style="color:#2aa198">&#39;7&#39;</span>: [<span style="color:#2aa198">&#39;p&#39;</span>, <span style="color:#2aa198">&#39;q&#39;</span>, <span style="color:#2aa198">&#39;r&#39;</span>, <span style="color:#2aa198">&#39;s&#39;</span>],
+            <span style="color:#2aa198">&#39;8&#39;</span>: [<span style="color:#2aa198">&#39;t&#39;</span>, <span style="color:#2aa198">&#39;u&#39;</span>, <span style="color:#2aa198">&#39;v&#39;</span>],
+            <span style="color:#2aa198">&#39;9&#39;</span>: [<span style="color:#2aa198">&#39;w&#39;</span>, <span style="color:#2aa198">&#39;x&#39;</span>, <span style="color:#2aa198">&#39;y&#39;</span>, <span style="color:#2aa198">&#39;z&#39;</span>]
+            }
+        <span style="color:#719e07">if</span> digits <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;&#39;</span>:
+            <span style="color:#719e07">return</span> []
+        ans <span style="color:#719e07">=</span> [<span style="color:#2aa198">&#39;&#39;</span>]
+        <span style="color:#719e07">for</span> num <span style="color:#719e07">in</span> digits:
+            ans <span style="color:#719e07">=</span> [ec <span style="color:#719e07">+</span> ac <span style="color:#719e07">for</span> ec <span style="color:#719e07">in</span> ans <span style="color:#719e07">for</span> ac <span style="color:#719e07">in</span> mapping[num]]
+        <span style="color:#719e07">return</span> ans
+</code></pre></div><p>其中， `ans = [ec + ac for ec in ans for ac in mapping[num]] 可以展开：</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">for</span> num <span style="color:#719e07">in</span> digits:
+    new_ans <span style="color:#719e07">=</span> <span style="color:#b58900">list</span>()
+    <span style="color:#719e07">for</span> ec <span style="color:#719e07">in</span> ans:
+        <span style="color:#719e07">for</span> ac <span style="color:#719e07">in</span> mapping[num]:
+            new_ans<span style="color:#719e07">.</span>append(ec <span style="color:#719e07">+</span> ac)
+    ans <span style="color:#719e07">=</span> new_ans
+</code></pre></div><p>时间复杂度为 $\mathcal{O}(3^m\times 4^n)$，其中 $m$为映射中有三个字母的数字个数，$m$为映射中有四个字母的数字个数。</p>
+
+</article>
+<div class="pb-10 w-content">
+  <div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 sm:px-6">
+      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+        <a id="article-info-card"></a>
+        Article Card
+      </h3>
+      <p class="mt-1 text-sm text-gray-500">
+        For "<span class="italic">String</span>"
+      </p>
+    </div>
+    <div class="border-t border-gray-200 dark:border-gray-700">
+      <dl>
+        <table class="border-collapse table-fixed w-full">
+          <tbody class="bg-white dark:bg-gray-800">
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Author</td>
+              <td
+                class="border-b font-bold border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm ">
+                Zhenghao Wu</td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Publish & Update Date</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                2022-02-09 - <abbr title="Date of last major modification to this page">2022-02-09</abbr></td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Tags</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/placeholder">Placeholder</a>
+                
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+            
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="mb-10">
+<hr>
+<h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2>
+<ul class="list-disc list-inside text-gray-900 dark:text-gray-200">
+    
+    <li><a href="https://ecwuuuuu.com/page/algorithm/linked-list/">Linked List</a></li>
+    
+    <li><a href="https://ecwuuuuu.com/page/algorithm/graph/">Graph</a></li>
+    
+    <li><a href="https://ecwuuuuu.com/page/algorithm/misc/">Misc</a></li>
+    
+</ul>
+</section>
+
+<div>
+  <footer class="relative mb-6 text-gray-900 dark:text-gray-200">
+    <hr class="pb-5"><div class="flex justify-begin w-full mx-auto mb-2">
+  <ul class="flex flex-row justify-begin text-lg space-x-2">
+          
+
+      
+      <li>
+          <a href="https://ecwuuuuu.com/index.xml" aria-label="RSS"
+              class="round-button social-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 fill-gray-700 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-200" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+          </a>
+      </li>
+  </ul>
+</div><p>
+      Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>. Build by <a href="https://github.com/features/actions">GitHub
+        Action</a> at: 2022-02-09 07:33 UTC.
+    </p>
+    <p>
+      
+      &copy;2022
+      ECWU.
+      All rights reserved.
+      
+
+    </p>
+    
+    <p>
+      <a href="http://beian.miit.gov.cn/"> 粤 ICP 备 17015575 号 - 1</a>
+    </p>
+    
+    <p class="text-sm my-4">
+       Google Analytics enabled;   <a href="https://ecwuuuuu.com/page/changelog">site changelog</a>.
+    </p>
+  </footer>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
+}
+</script>
+
+
+    </body>
+</html>

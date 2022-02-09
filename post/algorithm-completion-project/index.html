@@ -1,0 +1,961 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+
+
+
+
+    
+    
+    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.00c87e4b47dc98d81244d47089e13e469b89e228485fb36d4971489e9da0ba32.css" integrity="sha256-AMh&#43;S0fcmNgSRNRwieE&#43;RpuJ4ihIX7NtSXFInp2gujI=">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Algorithm Completion Project -  ECWU&#39;s Notebook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Homepage and Blog of ECWU">
+<meta name="keywords" content="">
+<meta name="author" content="ECWUUUUU"><script>
+  if (localStorage.getItem("current-theme") === null) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      localStorage.setItem("current-theme", "dark");
+      document.documentElement.classList.add('dark')
+      change_utt_color_mode();
+    } else {
+      localStorage.setItem("current-theme", "light");
+      change_utt_color_mode();
+    }
+  } else {
+    if (localStorage.getItem('current-theme') === 'dark') {
+      document.documentElement.classList.add('dark')
+    }
+  }
+
+  function change_color_mode(){
+    if (localStorage.getItem('current-theme') === 'light') {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('current-theme', 'dark');
+      change_utt_color_mode();
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('current-theme', 'light');
+      change_utt_color_mode();
+    }
+  }
+
+  function change_utt_color_mode(){
+    
+    console.log('utteranc.es is not enabled.')
+    
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    
+
+    document
+      .getElementById("header-theme-button")
+      .addEventListener("click", change_color_mode);
+  });
+
+</script></head>
+    <body class="transition-colors duration-300"><div class="pt-6">
+    <h1>
+
+<a href="https://ecwuuuuu.com/">
+    <svg class="w-36 fill-gray-900 dark:fill-gray-200" fill="currentColor" viewBox="0 0 204.24 43.44" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,43.08V0.36h18.24v5.76H6.12v12.54h10.56v5.76H6.12v12.54h12.12v6.12H0z"/>
+        <path d="M41.64,30.9v2.64c0,1.32-0.25,2.57-0.75,3.75c-0.5,1.18-1.19,2.23-2.07,3.15c-0.88,0.92-1.91,1.65-3.09,2.19  c-1.18,0.54-2.45,0.81-3.81,0.81c-1.16,0-2.34-0.16-3.54-0.48c-1.2-0.32-2.28-0.88-3.24-1.68s-1.75-1.83-2.37-3.09  c-0.62-1.26-0.93-2.87-0.93-4.83V9.84c0-1.4,0.24-2.7,0.72-3.9c0.48-1.2,1.16-2.24,2.04-3.12c0.88-0.88,1.93-1.57,3.15-2.07  C28.97,0.25,30.32,0,31.8,0c2.88,0,5.22,0.94,7.02,2.82c0.88,0.92,1.57,2.01,2.07,3.27c0.5,1.26,0.75,2.63,0.75,4.11v2.4h-6.12  v-2.04c0-1.2-0.34-2.24-1.02-3.12c-0.68-0.88-1.6-1.32-2.76-1.32c-1.52,0-2.53,0.47-3.03,1.41c-0.5,0.94-0.75,2.13-0.75,3.57v21.84  c0,1.24,0.27,2.28,0.81,3.12s1.51,1.26,2.91,1.26c0.4,0,0.83-0.07,1.29-0.21c0.46-0.14,0.89-0.37,1.29-0.69  c0.36-0.32,0.66-0.76,0.9-1.32c0.24-0.56,0.36-1.26,0.36-2.1v-2.1H41.64z"/>
+        <path d="M78.36,0.36L72,43.08h-5.76l-4.68-27.72h-0.12l-4.62,27.72h-5.76L44.7,0.36h6.48l3.06,27.12h0.12l4.8-27.12h4.68l4.98,27.78  h0.12l2.94-27.78H78.36z"/>
+        <path d="M102,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H102z"/>
+        <path d="M127.56,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  s-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H127.56z"/>
+        <path d="M153.12,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H153.12z"/>
+        <path d="M178.68,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36H165v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H178.68z"/>
+        <path d="M204.24,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H204.24z"/>
+    </svg>
+    <p class="sr-only">ECWU Homepage</p>
+</a></h1>
+<nav aria-label="navbar" class="mb-3 mr-8">
+    <ol role="list" class="flex flex-wrap">
+        
+        
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Home</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/post/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Posts</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/photography/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Photos</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/series/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Series</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/about/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>About</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/friends/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Friends</a>
+            
+            
+        </div>
+        </li>
+        
+    </ol>
+</nav><div  class="flex items-center space-x-2">
+    <div class="w-6 h-6 inline-flex items-center justify-center rounded-lg bg-white dark:bg-black shadow-inner ring-1 ring-black/5">
+        <i id="header-theme-button" data-feather="sun" class="site-header-navlink rounded cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden dark:block fill-gray-900 dark:fill-gray-200" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 block dark:hidden fill-gray-900 dark:fill-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+        </i>
+    </div>
+    <span class="dark:hidden text-sm">To Dark Mode</span>
+    <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
+</div></div>
+  <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
+    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/vXInUOv1n84/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8Y29kZXx8MHx8fHwxNjQzMDQ2NjA1&amp;force=true&amp;w=2400" alt="Featured Images">
+    
+    <figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">
+      Photo by Roman Synkevych on Unsplash
+    </figcaption>
+    
+  </figure>
+<div class="mb-12 mt-16 w-content">
+  <h1 class="text-gray-900 dark:text-gray-200">Algorithm Completion Project</h1>
+  <h2 class="text-gray-700 dark:text-gray-400">Leetcode Journal</h2>
+
+  
+  <div class="text-gray-700 dark:text-gray-400">
+    <span>
+      
+      <p><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg> Zhenghao Wu</p>
+      
+
+
+      
+      <p>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg> 2022-02-09
+        
+
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg> 3 min read
+        
+      </p>
+      
+
+      
+      <p>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        </svg>
+        Status: In Progress
+        
+        
+        
+      </p>
+      
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+        </svg> <a href="#article-info-card">Post Details</a>
+      </p>
+      
+      
+    </span>
+  </div>
+  
+</div><article>
+    
+    <p>Checkout <a href="https://ecwuuuuu.com/series/algorithm">Algorithm Series</a>, questions are arranged by categories (-)</p>
+<h2 id="problem-list">Problem List</h2>
+<blockquote>
+<p>Retrived from <a href="https://leetcode-cn.com/problemset/all/?listId=2cktkvj&amp;page=1">Leetcode Top 100 Liked</a> (2022.01.25)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>编号</strong></th>
+<th style="text-align:center"><strong>难度</strong></th>
+<th><strong>标签</strong></th>
+<th style="text-align:center"><strong>题解</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/two-sum">1. 两数之和</a></td>
+<td style="text-align:center">简单</td>
+<td>数组</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/array/#1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C">Py</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/add-two-numbers">2. 两数相加</a></td>
+<td style="text-align:center">中等</td>
+<td>链表 / 递归</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/linked-list/#2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0">Py</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters">3. 无重复字符的最长子串</a></td>
+<td style="text-align:center">中等</td>
+<td>字符串</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/string/#3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2">Py</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays">4. 寻找两个正序数组的中位数</a></td>
+<td style="text-align:center">困难</td>
+<td>数组</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/array/#4-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0">Py</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/longest-palindromic-substring">5. 最长回文子串</a></td>
+<td style="text-align:center">中等</td>
+<td>字符串</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/string/#5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2">Py</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/regular-expression-matching">10. 正则表达式匹配</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/container-with-most-water">11. 盛最多水的容器</a></td>
+<td style="text-align:center">中等</td>
+<td>数组</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/array/#11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8">Py</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/3sum">15. 三数之和</a></td>
+<td style="text-align:center">中等</td>
+<td>数组</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/array/#15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C">Py</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number">17. 电话号码的字母组合</a></td>
+<td style="text-align:center">中等</td>
+<td>字符串 / 回溯</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/string/#17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88">Py</a></td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list">19. 删除链表的倒数第 N 个结点</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/valid-parentheses">20. 有效的括号</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists">21. 合并两个有序链表</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/generate-parentheses">22. 括号生成</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/merge-k-sorted-lists">23. 合并 K 个升序链表</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/next-permutation">31. 下一个排列</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/longest-valid-parentheses">32. 最长有效括号</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array">33. 搜索旋转排序数组</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array">34. 在排序数组中查找元素的第一个和最后一个位置</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/combination-sum">39. 组合总和</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/trapping-rain-water">42. 接雨水</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/permutations">46. 全排列</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/rotate-image">48. 旋转图像</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/group-anagrams">49. 字母异位词分组</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/maximum-subarray">53. 最大子数组和</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/jump-game">55. 跳跃游戏</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/merge-intervals">56. 合并区间</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/unique-paths">62. 不同路径</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/minimum-path-sum">64. 最小路径和</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/climbing-stairs">70. 爬楼梯</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/edit-distance">72. 编辑距离</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/sort-colors">75. 颜色分类</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/minimum-window-substring">76. 最小覆盖子串</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/subsets">78. 子集</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/word-search">79. 单词搜索</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram">84. 柱状图中最大的矩形</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/maximal-rectangle">85. 最大矩形</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal">94. 二叉树的中序遍历</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/unique-binary-search-trees">96. 不同的二叉搜索树</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/validate-binary-search-tree">98. 验证二叉搜索树</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/symmetric-tree">101. 对称二叉树</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/binary-tree-level-order-traversal">102. 二叉树的层序遍历</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree">104. 二叉树的最大深度</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal">105. 从前序与中序遍历序列构造二叉树</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list">114. 二叉树展开为链表</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock">121. 买卖股票的最佳时机</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/binary-tree-maximum-path-sum">124. 二叉树中的最大路径和</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/longest-consecutive-sequence">128. 最长连续序列</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/single-number">136. 只出现一次的数字</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/word-break">139. 单词拆分</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/linked-list-cycle">141. 环形链表</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/linked-list-cycle-ii">142. 环形链表 II</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/lru-cache">146. LRU 缓存</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/sort-list">148. 排序链表</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/maximum-product-subarray">152. 乘积最大子数组</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/min-stack">155. 最小栈</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists">160. 相交链表</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/majority-element">169. 多数元素</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/house-robber">198. 打家劫舍</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/number-of-islands">200. 岛屿数量</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/reverse-linked-list">206. 反转链表</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/course-schedule">207. 课程表</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/implement-trie-prefix-tree">208. 实现 Trie (前缀树)</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/kth-largest-element-in-an-array">215. 数组中的第 K 个最大元素</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/maximal-square">221. 最大正方形</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/invert-binary-tree">226. 翻转二叉树</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/palindrome-linked-list">234. 回文链表</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree">236. 二叉树的最近公共祖先</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/product-of-array-except-self">238. 除自身以外数组的乘积</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/sliding-window-maximum">239. 滑动窗口最大值</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/search-a-2d-matrix-ii">240. 搜索二维矩阵 II</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/meeting-rooms-ii">253. 会议室 II</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/perfect-squares">279. 完全平方数</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/move-zeroes">283. 移动零</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/find-the-duplicate-number">287. 寻找重复数</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree">297. 二叉树的序列化与反序列化</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/longest-increasing-subsequence">300. 最长递增子序列</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/remove-invalid-parentheses">301. 删除无效的括号</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown">309. 最佳买卖股票时机含冷冻期</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/burst-balloons">312. 戳气球</a></td>
+<td style="text-align:center">困难</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/coin-change">322. 零钱兑换</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/house-robber-iii">337. 打家劫舍 III</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/counting-bits">338. 比特位计数</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/top-k-frequent-elements">347. 前 K 个高频元素</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/decode-string">394. 字符串解码</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/evaluate-division">399. 除法求值</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/queue-reconstruction-by-height">406. 根据身高重建队列</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/partition-equal-subset-sum">416. 分割等和子集</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/path-sum-iii">437. 路径总和 III</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/find-all-anagrams-in-a-string">438. 找到字符串中所有字母异位词</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array">448. 找到所有数组中消失的数字</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/hamming-distance">461. 汉明距离</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/target-sum">494. 目标和</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/convert-bst-to-greater-tree">538. 把二叉搜索树转换为累加树</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/diameter-of-binary-tree">543. 二叉树的直径</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/subarray-sum-equals-k">560. 和为 K 的子数组</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray">581. 最短无序连续子数组</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/merge-two-binary-trees">617. 合并二叉树</a></td>
+<td style="text-align:center">简单</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/task-scheduler">621. 任务调度器</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/palindromic-substrings">647. 回文子串</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td><a href="https://leetcode-cn.com/problems/daily-temperatures">739. 每日温度</a></td>
+<td style="text-align:center">中等</td>
+<td>-</td>
+<td style="text-align:center">-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="题解形式">题解形式</h2>
+<h3 id="888-题目昵称">888. 题目昵称</h3>
+<p><a href="https://leetcode-cn.com/problems/">https://leetcode-cn.com/problems/</a>题目的Leetcode链接</p>
+<p>题目重点的描述，可以提供理解</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+    <span style="color:#719e07">def</span> <span style="color:#268bd2">someProblem</span>(<span style="color:#268bd2">self</span>, arg1: List[<span style="color:#b58900">int</span>], arg2: <span style="color:#b58900">int</span>) <span style="color:#719e07">-&gt;</span> List[<span style="color:#b58900">int</span>]:
+        <span style="color:#586e75"># Some solution</span>
+</code></pre></div><p>一些解释、和对时间复杂度的分析 $\mathcal{O}(n!)$</p>
+
+</article>
+<div class="pb-10 w-content">
+  <div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 sm:px-6">
+      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+        <a id="article-info-card"></a>
+        Article Card
+      </h3>
+      <p class="mt-1 text-sm text-gray-500">
+        For "<span class="italic">Algorithm Completion Project</span>"
+      </p>
+    </div>
+    <div class="border-t border-gray-200 dark:border-gray-700">
+      <dl>
+        <table class="border-collapse table-fixed w-full">
+          <tbody class="bg-white dark:bg-gray-800">
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Author</td>
+              <td
+                class="border-b font-bold border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm ">
+                Zhenghao Wu</td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Publish & Update Date</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                2022-02-09 - <abbr title="Date of last major modification to this page">2022-02-09</abbr></td>
+            </tr>
+            
+            
+            
+            
+            
+            
+            
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div>
+  <footer class="relative mb-6 text-gray-900 dark:text-gray-200">
+    <hr class="pb-5"><div class="flex justify-begin w-full mx-auto mb-2">
+  <ul class="flex flex-row justify-begin text-lg space-x-2">
+          
+
+      
+      <li>
+          <a href="https://ecwuuuuu.com/index.xml" aria-label="RSS"
+              class="round-button social-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 fill-gray-700 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-200" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+          </a>
+      </li>
+  </ul>
+</div><p>
+      Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>. Build by <a href="https://github.com/features/actions">GitHub
+        Action</a> at: 2022-02-09 07:33 UTC.
+    </p>
+    <p>
+      
+      &copy;2022
+      ECWU.
+      All rights reserved.
+      
+
+    </p>
+    
+    <p>
+      <a href="http://beian.miit.gov.cn/"> 粤 ICP 备 17015575 号 - 1</a>
+    </p>
+    
+    <p class="text-sm my-4">
+       Google Analytics enabled;   <a href="https://ecwuuuuu.com/page/changelog">site changelog</a>.
+    </p>
+  </footer>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
+}
+</script>
+
+
+    </body>
+</html>

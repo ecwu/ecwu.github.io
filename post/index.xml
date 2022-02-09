@@ -6,7 +6,16 @@
     <description>Recent content in Posts on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Jan 2022 22:44:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Feb 2022 15:30:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorithm Completion Project</title>
+      <link>https://ecwuuuuu.com/post/algorithm-completion-project/</link>
+      <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/algorithm-completion-project/</guid>
+      <description>Checkout Algorithm Series, questions are arranged by categories (-) Problem List Retrived from Leetcode Top 100 Liked (2022.01.25) 编号 难度 标签 题解 1. 两数之和 简单 数组 Py 2. 两数相加 中等 链表 / 递归 Py 3. 无重复字符的最长子串 中等 字符串 Py 4. 寻找两</description>
+    </item>
+    
     <item>
       <title>【记录】智能门锁 -  Introduction to Robotics 课程项目</title>
       <link>https://ecwuuuuu.com/post/robotics-project/</link>
