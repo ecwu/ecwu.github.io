@@ -42,7 +42,13 @@
 
   function change_utt_color_mode(){
     
-    console.log('utteranc.es is not enabled.')
+    const theme = localStorage.getItem('current-theme') === 'light' ? 'github-light' : 'github-dark'
+    const message = {
+      type: 'set-theme',
+      theme: theme
+    };
+    const iframe = document.querySelector('.utterances-frame');
+    iframe.contentWindow.postMessage(message, 'https://utteranc.es');
     
   }
 
@@ -161,7 +167,12 @@
     </div>
     <span class="dark:hidden text-sm">To Dark Mode</span>
     <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
-</div></div><div class="mb-12 mt-16 w-content">
+</div></div>
+  <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
+    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/d53ZooI5TtM/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8bmFzfGVufDB8fHx8MTY0NDczNDU2OA&amp;force=true&amp;w=2400" alt="Featured Images">
+    
+  </figure>
+<div class="mb-12 mt-16 w-content">
   <h1 class="text-gray-900 dark:text-gray-200">Making Synology NAS accessible from the Internet using IPv6 and DDNS</h1>
   <h2 class="text-gray-700 dark:text-gray-400">IPv6 Yes! :-)</h2>
 
@@ -212,7 +223,39 @@
     </span>
   </div>
   
-</div><article>
+</div>
+<div class="w-content bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400 px-5 py-3">
+     
+     
+     
+         
+        
+     
+         
+        
+    
+     
+        
+        
+            
+            
+        
+     
+        
+        
+    
+     
+        <p>This post is part 1 of 2
+            in the <b>Home Networking</b> series.</p>
+        <p>
+        
+        
+        
+            <a href="https://ecwuuuuu.com/post/more-on-ipv6-firewall/">Next:More on IPv6 Firewall - EUI-64</i></a></p>
+        
+    
+  </div>
+<article>
     
 <section class="mb-8">
   <details closed class="toc">
@@ -283,6 +326,9 @@ Ministry of Industry and Information Technology</span> already pushing IPv6 land
 <p>Usually, you just need to set <code>Local IP</code> and <code>Port Range</code>.</p>
 <h4 id="a1-local-ip">A.1. <code>Local IP</code></h4>
 <p>Assuming the IPv6 IP for the NAS is <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>, you can fill in <code>::0000:8a2e:0370:7334/::ffff:ffff:ffff:ffff</code> in the <code>Local IP</code> field.</p>
+<blockquote>
+<p>An errata and supplements on this &ldquo;mask&rdquo; like Local IP input stuff is posted on <a href="https://ecwuuuuu.com/post/more-on-ipv6-firewall/">here</a>.</p>
+</blockquote>
 <h4 id="a2-port-range">A.2. <code>Port Range</code></h4>
 <p>Just fill in the port of the service you want to allow access to. Here are some of the ports on the Synology NAS.</p>
 <ul>
@@ -412,7 +458,7 @@ Domain Name System Security Extensions</span> uses public-key cryptography to en
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2021-04-04 - <abbr title="Date of last major modification to this page">2022-01-09</abbr></td>
+                2021-04-04 - <abbr title="Date of last major modification to this page">2022-02-13</abbr></td>
             </tr>
             
             
@@ -461,6 +507,16 @@ Domain Name System Security Extensions</span> uses public-key cryptography to en
   </div>
 </div>
 
+<div class="pb-10 w-content ">
+  <script src="https://utteranc.es/client.js"
+  repo="ecwu/ecwu.github.io"
+  issue-term="url"
+  theme='github-light'
+  crossorigin="anonymous"
+  async>
+</script>
+</div>
+
 
 
 <div>
@@ -481,7 +537,7 @@ Domain Name System Security Extensions</span> uses public-key cryptography to en
   </ul>
 </div><p>
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>. Build by <a href="https://github.com/features/actions">GitHub
-        Action</a> at: 2022-02-09 07:56 UTC.
+        Action</a> at: 2022-02-13 06:45 UTC.
     </p>
     <p>
       
