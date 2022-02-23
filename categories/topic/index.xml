@@ -13,7 +13,7 @@
       <pubDate>Sun, 09 Jan 2022 14:49:18 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/page/changelog/</guid>
-      <description>About this site  Write with static site generator Hugo  Uses ecwu-theme from Jan 2022, Theme introduction: TBA   Build with GitHub Actions Site preview build with Cloudflare Pages  https://ecwu-github-io-source.pages.dev/   Host by GitHub Pages Cloudflare &amp;amp; Qiniu for distributing files Comment Plugin: utterances Site Analytics: Google Analytics v4  Changelog 2022 February 2022  Adding shortcode for PDF (Tailwind Aspect-ratio plugin) Refines and adding labels for Draft post  January 2022  Enable the new ecwu-theme, Written in Tailwind CSS 3 Adding Comment Plugin utterances Adding Site Analytics Google Analytics v4 New Terms, Series View and Pages.</description>
+      <description>About this site  Write with static site generator Hugo  Uses ecwu-theme from Jan 2022, Theme introduction: TBA   Build with GitHub Actions Site preview build with Cloudflare Pages  https://ecwu-github-io-source.pages.dev/   Host by GitHub Pages Cloudflare &amp;amp; Qiniu for distributing files Comment Plugin: utterances Site Analytics: Google Analytics v4  Changelog 2022 February 2022  Adding shortcode for PDF (Tailwind Aspect-ratio plugin) Refines and adding labels for Draft post Adding shortcode for embeds html file Adding video looping args for video shortcode Fix a bug in article time and read time metadata display  January 2022  Enable the new ecwu-theme, Written in Tailwind CSS 3 Adding Comment Plugin utterances Adding Site Analytics Google Analytics v4 New Terms, Series View and Pages.</description>
     </item>
     
     <item>

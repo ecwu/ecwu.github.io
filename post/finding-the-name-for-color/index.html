@@ -1,0 +1,966 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+    integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
+    integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
+    crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+    crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true },
+                { left: "\\begin{equation}", right: "\\end{equation}", display: true },
+                { left: "\\begin{align}", right: "\\end{align}", display: true },
+                { left: "\\begin{alignat}", right: "\\end{alignat}", display: true },
+                { left: "\\begin{gather}", right: "\\end{gather}", display: true },
+                { left: "\\begin{CD}", right: "\\end{CD}", display: true },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            
+            throwOnError: false,
+            trust: (context) => ['\\htmlId', '\\href'].includes(context.command),
+            macros: {
+                "\\eqref": "\\href{###1}{(\\text{#1})}",
+                "\\ref": "\\href{###1}{\\text{#1}}",
+                "\\label": "\\htmlId{#1}{}"
+            }
+        });
+    });
+</script>
+
+
+
+
+    
+    
+    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.70a0351ba7de6ca9656fe19ec192b9ad53fe78266ef2c99ee1d2c81fba9651b1.css" integrity="sha256-cKA1G6febKllb&#43;GewZK5rVP&#43;eCZu8sme4dLIH7qWUbE=">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Finding the Name for Color -  ECWU&#39;s Notebook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Homepage and Blog of ECWU">
+<meta name="keywords" content="Color,Design,Programming,Art,Color Space,Color Differences,Perception,HSV,HSL,CIELAB,RGB,">
+<meta name="author" content="ECWUUUUU"><script>
+  if (localStorage.getItem("current-theme") === null) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      localStorage.setItem("current-theme", "dark");
+      document.documentElement.classList.add('dark')
+      change_utt_color_mode();
+    } else {
+      localStorage.setItem("current-theme", "light");
+      change_utt_color_mode();
+    }
+  } else {
+    if (localStorage.getItem('current-theme') === 'dark') {
+      document.documentElement.classList.add('dark')
+    }
+  }
+
+  function change_color_mode(){
+    if (localStorage.getItem('current-theme') === 'light') {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('current-theme', 'dark');
+      change_utt_color_mode();
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('current-theme', 'light');
+      change_utt_color_mode();
+    }
+  }
+
+  function change_utt_color_mode(){
+    
+    const theme = localStorage.getItem('current-theme') === 'light' ? 'github-light' : 'github-dark'
+    const message = {
+      type: 'set-theme',
+      theme: theme
+    };
+    const iframe = document.querySelector('.utterances-frame');
+    iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    
+
+    document
+      .getElementById("header-theme-button")
+      .addEventListener("click", change_color_mode);
+  });
+
+</script>
+<style>
+  .hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+</head>
+    <body class="transition-colors duration-300"><div class="pt-6">
+    <h1>
+
+<a href="https://ecwuuuuu.com/">
+    <svg class="w-36 fill-gray-900 dark:fill-gray-200" fill="currentColor" viewBox="0 0 204.24 43.44" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,43.08V0.36h18.24v5.76H6.12v12.54h10.56v5.76H6.12v12.54h12.12v6.12H0z"/>
+        <path d="M41.64,30.9v2.64c0,1.32-0.25,2.57-0.75,3.75c-0.5,1.18-1.19,2.23-2.07,3.15c-0.88,0.92-1.91,1.65-3.09,2.19  c-1.18,0.54-2.45,0.81-3.81,0.81c-1.16,0-2.34-0.16-3.54-0.48c-1.2-0.32-2.28-0.88-3.24-1.68s-1.75-1.83-2.37-3.09  c-0.62-1.26-0.93-2.87-0.93-4.83V9.84c0-1.4,0.24-2.7,0.72-3.9c0.48-1.2,1.16-2.24,2.04-3.12c0.88-0.88,1.93-1.57,3.15-2.07  C28.97,0.25,30.32,0,31.8,0c2.88,0,5.22,0.94,7.02,2.82c0.88,0.92,1.57,2.01,2.07,3.27c0.5,1.26,0.75,2.63,0.75,4.11v2.4h-6.12  v-2.04c0-1.2-0.34-2.24-1.02-3.12c-0.68-0.88-1.6-1.32-2.76-1.32c-1.52,0-2.53,0.47-3.03,1.41c-0.5,0.94-0.75,2.13-0.75,3.57v21.84  c0,1.24,0.27,2.28,0.81,3.12s1.51,1.26,2.91,1.26c0.4,0,0.83-0.07,1.29-0.21c0.46-0.14,0.89-0.37,1.29-0.69  c0.36-0.32,0.66-0.76,0.9-1.32c0.24-0.56,0.36-1.26,0.36-2.1v-2.1H41.64z"/>
+        <path d="M78.36,0.36L72,43.08h-5.76l-4.68-27.72h-0.12l-4.62,27.72h-5.76L44.7,0.36h6.48l3.06,27.12h0.12l4.8-27.12h4.68l4.98,27.78  h0.12l2.94-27.78H78.36z"/>
+        <path d="M102,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H102z"/>
+        <path d="M127.56,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  s-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H127.56z"/>
+        <path d="M153.12,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H153.12z"/>
+        <path d="M178.68,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36H165v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H178.68z"/>
+        <path d="M204.24,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H204.24z"/>
+    </svg>
+    <p class="sr-only">ECWU Homepage</p>
+</a></h1>
+<nav aria-label="navbar" class="mb-3 mr-8">
+    <ol role="list" class="flex flex-wrap">
+        
+        
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Home</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/post/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Posts</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/photography/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Photos</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/series/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Series</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/about/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>About</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/friends/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Friends</a>
+            
+            
+        </div>
+        </li>
+        
+    </ol>
+</nav><div  class="flex items-center space-x-2">
+    <div class="w-6 h-6 inline-flex items-center justify-center rounded-lg bg-white dark:bg-black shadow-inner ring-1 ring-black/5">
+        <i id="header-theme-button" data-feather="sun" class="site-header-navlink rounded cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden dark:block fill-gray-900 dark:fill-gray-200" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 block dark:hidden fill-gray-900 dark:fill-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+        </i>
+    </div>
+    <span class="dark:hidden text-sm">To Dark Mode</span>
+    <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
+</div></div>
+  <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
+    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/PtabTe6iJ_8/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8cGFudG9uZXxlbnwwfHx8fDE2NDQ4NDIwMDU&amp;force=true&amp;w=2400" alt="Featured Images">
+    
+    <figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">
+      Photo by Mika Baumeister on Unsplash
+    </figcaption>
+    
+  </figure>
+<div class="mb-12 mt-16 w-content">
+  <h1 class="text-gray-900 dark:text-gray-200">Finding the Name for Color</h1>
+  
+
+  
+  <div class="text-gray-700 dark:text-gray-400">
+    <span>
+      
+      <p><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg> Zhenghao Wu</p>
+      
+
+
+      
+      <p>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg> 2022-02-23
+        
+
+        
+      </p>
+      
+
+      
+      <p>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        </svg>
+        Status: Finished
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+        Confidence: likely
+        
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+        </svg>
+        Importance: 8
+        
+        
+      </p>
+      
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+        </svg> <a href="#article-info-card">Post Details</a>
+      </p>
+      
+      
+    </span>
+  </div>
+  
+</div>
+<div class="w-content bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400 px-5 py-3">
+     
+     
+     
+         
+         
+             
+            
+              
+        
+     
+         
+         
+             
+            
+              
+        
+     
+         
+        
+    
+     
+        
+        
+     
+        
+        
+     
+        
+        
+    
+     
+        <p>This post is part 3 of 3
+            in the <b>Project</b> series.</p>
+        <p>
+        
+            
+                <a href="https://ecwuuuuu.com/post/nlp/">Goto: First Post</a>
+                    |
+            
+            
+                <a href="https://ecwuuuuu.com/post/robotics-project/">Prev: 【记录】智能门锁 -  Introduction to Robotics 课程项目</a>
+            
+        
+        
+        
+    
+  </div>
+<article>
+    
+<section class="mb-8">
+  <details closed class="toc">
+    <summary>Table of Contents</summary>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#understand-color-1">Understand Color (1)</a></li>
+    <li><a href="#color-naming">Color Naming</a></li>
+    <li><a href="#distance-between-colors">Distance Between Colors</a>
+      <ul>
+        <li><a href="#problem">Problem</a></li>
+      </ul>
+    </li>
+    <li><a href="#understand-color-2">Understand Color (2)</a>
+      <ul>
+        <li><a href="#rgb-to-hsv-converstion">RGB to HSV Converstion</a></li>
+      </ul>
+    </li>
+    <li><a href="#color-distance-under-hsv-color-space">Color Distance under HSV color space</a></li>
+    <li><a href="#perceptually-uniform-color-space">Perceptually-uniform Color Space</a>
+      <ul>
+        <li><a href="#color-distance-in-cielab-color-space">Color Distance in CIELAB Color Space</a></li>
+      </ul>
+    </li>
+    <li><a href="#epilogue">Epilogue</a></li>
+    <li><a href="#reference-materials">Reference Materials</a></li>
+  </ul>
+</nav>
+  </details>
+</section>
+
+    <p>This topic first came to my mind when I was in college as a freshman. I don&rsquo;t quite remember what application I am going to embed this. But the goal is clear: for color in HEX or RGB format, find a name to describe it accurately.</p>
+<p>Recently, I saw a forum thread. A color-blind person is looking for a solution to identifying the color. I immediately recall the experience I had almost five years ago.</p>
+<p>But after I did some prototype coding, I found the result was not as good as I expected, which drove me to learn more about the topic.</p>
+<p>And the result is this article.</p>
+<h2 id="understand-color-1">Understand Color (1)</h2>
+<blockquote>
+<p>We won&rsquo;t discuss the basal stuff. Just the numeric representation of the RGB color model. You can learn more about color @ <a href="https://en.wikipedia.org/wiki/Color">Wikipedia</a></p>
+</blockquote>
+<p>First, we need to know how to represent a color in the computer. The RGB color model describes the color as a mixture of three primary colors: <strong>R</strong>ed, <strong>G</strong>reen, and <strong>B</strong>lue. Each color has an integer intensity value between 0 and 255 (0 means no such color, 255 means such color has maximum intensity). So, having these three numbers, we can indicate a color.</p>
+<p>
+<figure class="w-full">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/RGB_illumination.jpg" alt="alt" class="rounded-lg">
+
+  <figcaption>
+  <strong>A representation of RGB color mixing. Projection of primary color (Red, Green, Blue) lights on a white wall show secondary colors where two overlap; the combination of all three in equal intensities makes white. </strong>
+  Wikimedia Commons, by
+  <a href="https://en.wikipedia.org/wiki/File:RGB_illumination.jpg">
+  User:Bb3cxv
+  </a>
+  </figcaption>
+</figure>
+
+
+
+  </section>
+
+</p>
+<p>In HTML, pure white color under such a model is <code>RGB(255,255,255)</code>. comma-separated values match the Red, Green, and Blue colors in order. By converting each color value from decimal to hexadecimal, we have a tidier form, <code>RGB(#FFFFFF)</code>. I provide an interactive slider below, so you play with the intensity of each primary color and see the mixing result.</p>
+
+<hr>
+<p class="text-2xl">Interactive: Color Mixing</p>
+<div class="w-full flex-none lg:flex space-x-5 items-center">
+  <div class="flex-1">
+    <label for="red-slider" class="form-label">Red Intensity<span id="red-intensity"></span></label>
+    <input type="range"
+      class="form-range w-full h-6 p-0 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none"
+      id="red-slider"
+      min="0"
+      max="255"
+      step="1"
+      value="0"/>
+    <label for="green-slider" class="form-label">Green Intensity<span id="green-intensity"></span></label>
+    <input type="range"
+      class="form-range w-full h-6 p-0 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none"
+      id="green-slider"
+      min="0"
+      max="255"
+      step="1"
+      value="0"/>
+    <label for="blue-slider" class="form-label">Blue Intensity<span id="blue-intensity"></span></label>
+    <input type="range"
+      class="form-range w-full h-6 p-0 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none"
+      id="blue-slider"
+      min="0"
+      max="255"
+      step="1"
+      value="0"/>
+  </div>
+  <div class="flex-1 flex justify-center">
+    <canvas id="mixing-result" class="rounded-lg" height="200px" width="200px"></canvas>
+  </div>
+</div>
+
+<script>
+  const redSlider = document.getElementById('red-slider');
+  const greenSlider = document.getElementById('green-slider');
+  const blueSlider = document.getElementById('blue-slider');
+  const redIntensity = document.getElementById('red-intensity');
+  const greenIntensity = document.getElementById('green-intensity');
+  const blueIntensity = document.getElementById('blue-intensity');
+  const canvas = document.getElementById('mixing-result');
+  const ctx = canvas.getContext('2d');
+
+  redSlider.addEventListener('input', () => {
+    redIntensity.innerHTML = ": " + redSlider.value;
+    updateCanvas();
+  });
+
+  greenSlider.addEventListener('input', () => {
+    greenIntensity.innerHTML = ": " + greenSlider.value;
+    updateCanvas();
+  });
+
+  blueSlider.addEventListener('input', () => {
+    blueIntensity.innerHTML = ": " + blueSlider.value;
+    updateCanvas();
+  });
+
+  function updateCanvas() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    const red = redSlider.value;
+    const green = greenSlider.value;
+    const blue = blueSlider.value;
+
+    ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // write hex color text with reverse color to canvas center
+    ctx.fillStyle = `rgb(${255 - red}, ${255 - green}, ${255 - blue})`;
+    ctx.font = 'bold 24px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(`#${(red << 16 | green << 8 | blue).toString(16).toUpperCase().padStart(6, '0')}`, canvas.width / 2, canvas.height / 2);
+  }
+
+  updateCanvas();
+</script>
+<hr>
+<h2 id="color-naming">Color Naming</h2>
+<p>Consider three primary colors, each with 256 different intensities. We have $256^3 = 16777216$ possible colors. But our commonsense tells us that we don&rsquo;t have such an enormous number of names for colors. But we can take several dominant color naming schemes that provide various names.</p>
+<p>Two easy-to-access examples are the <a href="https://en.wikipedia.org/wiki/X11_color_names">X11 color names</a> and <a href="https://www.w3.org/TR/css-color-3/">CSS Color Module Level 3</a> (<a href="https://www.w3.org/TR/css-color-3/#html4">Basic</a>, <a href="https://www.w3.org/TR/css-color-3/#svg-color">Extended</a>). Especially the CSS Color Module Level 3, which you can directly use when writing web pages.</p>
+<p>The <a href="https://www.pantone.com/">PANTONE Color</a> is a more proprietary and well-known color naming system. They put effort on standardize the color, and their color matching system are used all around the world. The general public gets to sound them by the annual “Color of the year” published since 2000. In 2022, the color of the year is <strong>PANTONE 17-3938</strong> Very Peri.</p>
+<p>
+<figure class="w-full">
+  <img src="https://www.pantone.com/media/wysiwyg/color-of-the-year/2022/pantone-color-of-the-year-2022-very-peri-banner.jpg" alt="alt" class="rounded-lg">
+
+  <figcaption>
+  <strong>Pantone Color of the Year 2022:  </strong>
+  
+  <a href="https://www.pantone.com/color-of-the-year-2022">
+  PANTONE 17-3938 Very Peri
+  </a>
+  </figcaption>
+</figure>
+
+
+
+  </section>
+
+</p>
+<p>In our case, we need the color name and its corresponding RGB value, so I made a Chinese color <a href="https://gist.github.com/ecwu/d7534ef90c936e034c68b68281d9ad88">name mapping file</a> using <a href="https://zh.wikipedia.org/wiki/%E9%A2%9C%E8%89%B2%E5%88%97%E8%A1%A8">the list from Wikipedia</a>, I also made an English one which I stored <a href="https://gist.github.com/ecwu/d7534ef90c936e034c68b68281d9ad88">here</a>.</p>
+<blockquote>
+<p>In the mapping files I create, there are 248 colors named in Chinese and 977 colors named in English. Personally, I thought some color names used in English were less intuitive. And as a native Chinese speaker, I am more familiar with those Chinese color names, So in the following examples on color naming, I will use the Chinese name mapping file (I will provide translation or description).</p>
+</blockquote>
+<h2 id="distance-between-colors">Distance Between Colors</h2>
+<p>Consider the RGB color space. If we set each color intensity as the axis of the rectangular coordinates, we can form a $255^3$ size cube. Points inside the cube represent different colors (consider only the integer value).</p>
+<p>
+<figure class="w-full">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/RGB_color_solid_cube.png/1024px-RGB_color_solid_cube.png" alt="alt" class="rounded-lg">
+
+  <figcaption>
+  <strong>The RGB color model mapped to a cube. The horizontal x-axis as red values increasing to the left, y-axis as blue increasing to the lower right and the vertical z-axis as green increasing towards the top. The origin, black is the vertex hidden from view. </strong>
+  Wikimedia Commons, by
+  <a href="https://commons.wikimedia.org/wiki/File:RGB_color_solid_cube.png">
+  SharkD
+  </a>
+  </figcaption>
+</figure>
+
+
+
+  </section>
+
+</p>
+<p>When we find a name for a color, if there is no exact match in the naming mapping, we can find a similar match by calculating the “distance” and finding the color and its name with the slightest distance difference.</p>
+<p>The distance here is the $L_2$ distance (<a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidean distance</a>). For $C_1: [R_1, G_1, B_1]$ and $C_2: [R_2, G_2, B_2]$:</p>
+<p>$$d([R_1, G_1, B_1], [R_2, G_2, B_2]) = \sqrt{(R_1-R_2)^2+(G_1-G_2)^2+(B_1-B_2)^2}$$</p>
+<p>The algorithm will traverse and calculate the distance between the query color $C_1$ all colors $C_k$ in the list and uses the color with minimum distance $min(d([R_1, G_1, B_1], [R_k, G_k, B_k]))$ as the closest match.</p>
+<p>I create these codes to do the procedure above.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> pandas <span style="color:#719e07">as</span> pd
+<span style="color:#719e07">import</span> math
+
+<span style="color:#719e07">def</span> <span style="color:#268bd2">hex_to_rgb</span>(<span style="color:#b58900">hex</span>):
+    h <span style="color:#719e07">=</span> <span style="color:#b58900">hex</span><span style="color:#719e07">.</span>lstrip(<span style="color:#2aa198">&#39;#&#39;</span>)
+    <span style="color:#719e07">return</span> <span style="color:#b58900">tuple</span>(<span style="color:#b58900">int</span>(h[i:i<span style="color:#719e07">+</span><span style="color:#2aa198">2</span>], <span style="color:#2aa198">16</span>) <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> (<span style="color:#2aa198">0</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">4</span>))
+
+<span style="color:#719e07">def</span> <span style="color:#268bd2">calculate_distance</span>(cor1, cor2):
+    c1 <span style="color:#719e07">=</span> hex_to_rgb(cor1)
+    c2 <span style="color:#719e07">=</span> hex_to_rgb(cor2)
+    <span style="color:#719e07">return</span> math<span style="color:#719e07">.</span>sqrt((c1[<span style="color:#2aa198">0</span>]<span style="color:#719e07">-</span>c2[<span style="color:#2aa198">0</span>])<span style="color:#719e07">**</span><span style="color:#2aa198">2</span><span style="color:#719e07">+</span>(c1[<span style="color:#2aa198">1</span>]<span style="color:#719e07">-</span>c2[<span style="color:#2aa198">1</span>])<span style="color:#719e07">**</span><span style="color:#2aa198">2</span><span style="color:#719e07">+</span>(c1[<span style="color:#2aa198">2</span>]<span style="color:#719e07">-</span>c2[<span style="color:#2aa198">2</span>])<span style="color:#719e07">**</span><span style="color:#2aa198">2</span>)
+
+<span style="color:#719e07">def</span> <span style="color:#268bd2">closest_n_color</span>(c_list, candidate, n<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>):
+    distance_dict <span style="color:#719e07">=</span> <span style="color:#b58900">dict</span>()
+    <span style="color:#719e07">for</span> name, _hex <span style="color:#719e07">in</span> c_list:
+        distance_dict[name] <span style="color:#719e07">=</span> calculate_distance(candidate, _hex)
+    <span style="color:#719e07">return</span> [[k, v] <span style="color:#719e07">for</span> k, v <span style="color:#719e07">in</span> <span style="color:#b58900">sorted</span>(distance_dict<span style="color:#719e07">.</span>items(), key<span style="color:#719e07">=</span><span style="color:#719e07">lambda</span> c: c[<span style="color:#2aa198">1</span>])][:n]
+
+<span style="color:#719e07">if</span> __name__ <span style="color:#719e07">==</span> <span style="color:#2aa198">&#34;__main__&#34;</span>:
+    match_list <span style="color:#719e07">=</span> pd<span style="color:#719e07">.</span>read_csv(<span style="color:#2aa198">&#39;color-name-mapping-cn.csv&#39;</span>)<span style="color:#719e07">.</span>values<span style="color:#719e07">.</span>tolist()
+    source <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;#FFFFFF&#39;</span>
+    <span style="color:#b58900">print</span>(closest_n_color(match_list, source))
+</code></pre></div><p>Use <code>#FFFFFF</code> (white) color for a try, the program return the top three matches: <code>[['白色 (White)', 0.0], ['雪色 (Snow White)', 7.0710678118654755], ['幽灵白 (Ghost White)', 9.899494936611665]]</code>. We can see that except for the exact match, the other two matches pretty much refer to the same color: White. So, it seem that our little program has been working perfectly!</p>
+<h3 id="problem">Problem</h3>
+<p>But when I tried another color, like <code>#6A4764</code>. Seeing it with my eye, the color belongs to dark magenta and dark purple. But the program&rsquo;s result is not as close. It returns <em>iron-gray</em>, <em>dust gray</em>, and <em>dark rock blue</em>. When we look closer at the color distance. The dark magenta (<code>#8B008B</code>) has a $d = 87.46$ but the others is way less ($[25.15, 34.38, 52.69]$).</p>
+<p><img src="rgb-color-match-problem.png" alt="Program Generated Top three matches"></p>
+<blockquote>
+<p>Please hover the picture to see the original color in dark mode.</p>
+</blockquote>
+<p>Why this happens?</p>
+<h2 id="understand-color-2">Understand Color (2)</h2>
+<p>I try to visualize the named colors in 3d space. Those colors aren&rsquo;t uniformly distributed. Some are clustered together, and some are relatively sparse with almost no named color. This means some of the colors may not be easy to describe.</p>
+<p><img src="color-name-cn-visual.png" alt="Named Colors in 3D space"></p>
+<blockquote>
+<p>Please hover the picture to see the original color in dark mode.</p>
+</blockquote>
+<p>The other problem is that such a color model is hard to understand. When manipulating a color, how to make it to some color or “more that color&quot; (hue, saturation; not just red, green, or blue); How to make it brighter or darker.</p>
+<p>The HSV color model is preferred instead of the RGB color model, in which the HSV color space is converted from the RGB color space.</p>
+<video controls loop autoplay class="rounded-lg">
+  <source src="https://upload.wikimedia.org/wikipedia/commons/5/59/RGB_2_HSV_conversion_with_grid.ogg" type="video/mp4"/>
+  Your browser does not support the video tag 你的浏览器不支持视频.
+</video>
+<blockquote>
+<p>Visualisation for conversion between color models RGB and HSV. video from <a href="https://commons.wikimedia.org/w/index.php?title=File%3ARGB_2_HSV_conversion_with_grid.ogg">Wikimedia Commons</a>, by VerbaGleb.</p>
+</blockquote>
+<p>As shown in the video, the original color cube of the RGB color model is converted into a cylinder object. At the cylinder’s cap, we can easily see distinguishable colors. And color at the top is the brightest, and it gets darker at the bottom. Slice out a layer of cylinder horizontally, the color inside is more faded, and the exterior color is more vivid.</p>
+<p>My verbal description of the HSV color cylinder is actually its three variables: <strong>H</strong>ue, <strong>S</strong>aturation and <strong>V</strong>alue (Or Brightness). Here are their definitions:</p>
+<ul>
+<li>Hue: The “attribute of a visual sensation according to which an area appears to be similar to one of the perceived colors: red, yellow, green, and blue, or to a combination of two of them”.</li>
+<li>Saturation: The “colorfulness of a stimulus relative to its own brightness.”</li>
+<li>Value: The “attribute of a visual sensation according to which an area appears to emit more or less light.”</li>
+</ul>
+<p>The hue in the HSV color model could help distinguish color, which you can try with the following interactive tool.</p>
+
+<hr>
+<p class="text-2xl">Interactive: HSV Color Mixing</p>
+<div class="w-full flex-none lg:flex space-x-5 items-center">
+  <div class="flex-1">
+    <label for="hue-slider" class="form-label">Hue<span id="hsv-hue"></span></label>
+    <input type="range"
+      class="form-range w-full h-6 p-0 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none"
+      id="hue-slider"
+      min="0"
+      max="359"
+      step="1"
+      value="250"/>
+    <label for="saturation-slider" class="form-label">Saturation<span id="hsv-saturation"></span></label>
+    <input type="range"
+      class="form-range w-full h-6 p-0 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none"
+      id="saturation-slider"
+      min="0"
+      max="1"
+      step="0.01"
+      value="1"/>
+    <label for="value-slider" class="form-label">Value<span id="hsv-value"></span></label>
+    <input type="range"
+      class="form-range w-full h-6 p-0 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none"
+      id="value-slider"
+      min="0"
+      max="1"
+      step="0.01"
+      value="1"/>
+  </div>
+  <div class="flex-1 flex justify-center">
+    <canvas id="hsv-result" class="rounded-lg" height="200px" width="200px"></canvas>
+  </div>
+</div>
+
+<script>
+  // Read the color HSV values from the sliders
+  const hueSlider = document.getElementById('hue-slider');
+  const saturationSlider = document.getElementById('saturation-slider');
+  const valueSlider = document.getElementById('value-slider');
+  const hueIntensity = document.getElementById('hsv-hue');  
+  const saturationIntensity = document.getElementById('hsv-saturation');
+  const valueIntensity = document.getElementById('hsv-value');
+  const hslcanvas = document.getElementById('hsv-result');
+  const hslctx = hslcanvas.getContext('2d');
+
+  // monitor slider changes
+  hueSlider.addEventListener('input', () => {
+    hueIntensity.innerText = ': ' + hueSlider.value + '°';
+    updateHSVColor();
+  });
+  saturationSlider.addEventListener('input', () => {
+    saturationIntensity.innerText = ': ' + Number(saturationSlider.value).toFixed(4) * 100 + '%';
+    updateHSVColor();
+  });
+  valueSlider.addEventListener('input', () => {
+    valueIntensity.innerText = ': ' + Number(valueSlider.value).toFixed(4) * 100 + '%';
+    updateHSVColor();
+  });
+
+  // convert hsv to hsl
+  function hsvToHsl(h, s, v) {
+    var l = (2 - s) * v / 2;
+    if (l != 0) {
+      if (l == 1) s = 0;
+      else if (l < 0.5) s = s * v / (l * 2);
+      else s = s * v / (2 - l * 2);
+    }
+    return [h, s * 100, l * 100];
+  }
+
+  // red the hsv value and convert to hsl, then update the canvas
+  function updateHSVColor() {
+    const hue = hueSlider.value;
+    const saturation = saturationSlider.value;
+    const value = valueSlider.value;
+    const hsl = hsvToHsl(hue, saturation, value);
+    const h = hsl[0];
+    const s = hsl[1];
+    const l = hsl[2];
+    hslctx.fillStyle = `hsl(${h}, ${s}%, ${l}%)`;
+    hslctx.fillRect(0, 0, hslcanvas.width, hslcanvas.height);
+  }
+
+  updateHSVColor()
+</script>
+<hr>
+<h3 id="rgb-to-hsv-converstion">RGB to HSV Converstion</h3>
+<p>First, scale the range for $R, G, B$ to 0 and 1 by dividing 255 to each color channel and getting $R', G', and B'$.</p>
+<p>$$M=\max(R',G',B')$$</p>
+<p>$$m=\min(R',G',B')$$</p>
+<p>$$C= M - m$$</p>
+<blockquote>
+<p>$C$ is also call <a href="https://en.wikipedia.org/wiki/Colorfulness#Chroma">Chroma</a>.</p>
+</blockquote>
+<p>Then, we can calculate H, S, L with the equations.</p>
+<h4 id="hue">Hue</h4>
+<p>$$H=\begin{cases}
+0\degree, &amp; \text{if } C = 0 \\
+60\degree\times(\frac{G'-B'}{C} \mod 6), &amp; \text{if } M = R' \\
+60\degree\times(\frac{B'-R'}{C} + 2), &amp; \text{if } M = G' \\
+60\degree\times(\frac{R'-G'}{C} + 4), &amp; \text{if } M = B'
+\end{cases}$$</p>
+<h4 id="saturation">Saturation</h4>
+<p>$$S=\begin{cases}
+0, &amp; \text{if } M = 0 \\
+\frac{C}{M}, &amp; \text{if } M \neq 0
+\end{cases}$$</p>
+<h4 id="lightness">Lightness</h4>
+<p>$$V= M$$</p>
+<h2 id="color-distance-under-hsv-color-space">Color Distance under HSV color space</h2>
+<p>Apparently, the shape of the HSV color space is a cylinder, and it is not a good idea to use $L_2$ distance here. I found this <a href="https://stackoverflow.com/a/1678497/6804791">solution from SO</a> for comparing the colors under HSV space.</p>
+<p>First, create a weighted function to convert vector-like HSV to a value.</p>
+<p>$$f(H,S,V) = \sqrt{a\times H^2+b\times S^2+c\times V^2}$$</p>
+<p>Then compare the color by the closeness of the values. The weights $a, b, c$ should be on par with human perception when deciding color differences. Suggested weights are $a=b=1.0$ and $c=0.5$.</p>
+<h2 id="perceptually-uniform-color-space">Perceptually-uniform Color Space</h2>
+<p>The distance function for RGB and HSV color space can partially solve our problems. But it still leaves the fundamental problem unsolved. The problem with RGB and HSV is that it does not model how humans perceive color. Specifically, color perception is non-linear and not exactly orthogonal.</p>
+<p>The scientist then tries to model the way humans see colors and create some relatively perceptually-uniform color space. Like CIELAB and CIELUV.</p>
+<video controls loop autoplay class="rounded-lg">
+  <source src="https://upload.wikimedia.org/wikipedia/commons/a/a4/SRGB_gamut_within_CIELAB_color_space_mesh.webm" type="video/mp4"/>
+  Your browser does not support the video tag 你的浏览器不支持视频.
+</video>
+<p>The CIELAB color space is the one I want to introduce. It represents color using three values: <strong>L</strong>ightness, and <strong>a</strong> for Green and Red color channel and <strong>b</strong> for Blue and Yellow color channel. These two color channels are in such a way because it is set according to the opponent&rsquo;s color model of human vision.</p>
+<blockquote>
+<p>How CIE modeled CIELAB color space is quite complicated; I suggest checking out <a href="https://en.wikipedia.org/wiki/CIELAB_color_space">Wikipedia</a> or <a href="https://www.researchgate.net/publication/229712679_The_Development_of_the_CIE_1976_Lab_Uniform_Colour-Space_and_Colour-Difference_Formula">related papers</a>.</p>
+</blockquote>
+<p>For more intuitive visualization for the color spaces, please try the following 3D color space visualization. You can switch between color spaces and manipulate the model.</p>
+
+<hr>
+<script type="module" crossorigin src="./assets/index.c272eaf3.js"></script>
+<link rel="modulepreload" href="./assets/vendor.5f1a2d6e.js">
+<p class="text-2xl">Interactive: Color Space in 3D <span class="text-sm">Powered by <a href="https://github.com/afc163/color3d">afc163/color3d</a></span></p>
+<p class="text-md"></p>
+<div class="object-cover mb-6 w-full" id="color-container" style="height: 50vh;"></div>
+<div>
+    Switch to Color Space:
+    <button class="py-1 px-2 text-sm font-medium text-center text-gray-200 dark:text-gray-900 bg-blue-700 dark:bg-orange-500 dark:hover:bg-orange-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-orange-800 visited:text-white dark:visited:text-gray-900" id="rgb">RGB</button>
+    <button class="py-1 px-2 text-sm font-medium text-center text-gray-200 dark:text-gray-900 bg-blue-700 dark:bg-orange-500 dark:hover:bg-orange-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-orange-800 visited:text-white dark:visited:text-gray-900" id="hsv">HSV</button>
+    <button class="py-1 px-2 text-sm font-medium text-center text-gray-200 dark:text-gray-900 bg-blue-700 dark:bg-orange-500 dark:hover:bg-orange-600 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-orange-800 visited:text-white dark:visited:text-gray-900" id="lab">CIELAB</button>
+</div>
+<hr>
+<h3 id="color-distance-in-cielab-color-space">Color Distance in CIELAB Color Space</h3>
+<p>The relations between the L, a, and b are non-linear to mimic the human&rsquo;s non-linear response to color. But the model itself is uniform to measure it with a simple $L_2$ distance. But before doing the calculation, you need to convert the RGB color to CIELAB color space.</p>
+<p>The way to do it is an <code>RGB -&gt; CIEXYZ -&gt; CIELAB</code> conversion.</p>
+<p>After you have the CIELAB values, calculates the “perceptual color distance” should be easy.</p>
+<p>$$\Delta E([L_1, a_1, b_1], [L_2, a_2, a_2]) = \sqrt{(L_1-L_2)^2+(a_1-a_2)^2+(b_1-b_2)^2}$$</p>
+<blockquote>
+<p>sqrt is unnecessary if you only need to find the closest color.</p>
+</blockquote>
+<p>Such distance is usually called $\Delta E$ in color science. Stand for the color difference. When you buy some electronics with a screen, the claim for the screen with $\Delta E$ is less than a certain number. It is what it means. (It is an average of multiple colors measurements differences). A $\Delta E \leq 1$ is hard for humans to distinguish; a good monitor should have a $\Delta E \leq 3$.</p>
+<h2 id="epilogue">Epilogue</h2>
+<p>This article is the first academic work I finished without outer pushes (like school or work). Initially, I was not entirely familiar with the topic (I still do not fully understand the complete picture after my research, like how the CIELAB converted and modeled). But I was having a lot of fun when writing the text and creating the visualization and interactive modules.</p>
+<p>Back to the color naming problem. I could give a good enough solution from what I have learned, but there exists more that I have not covered so that we can improve. Like:</p>
+<ul>
+<li>How humans see color does not solely depend on the object that reflects or emits lights. The environment that the people are in is also important. So <a href="https://en.wikipedia.org/wiki/Standard_illuminant">Illuminations condition</a> should also be considered</li>
+<li>Color naming is not complete; naming schemes with more names can improve the accuracy in color matching.</li>
+<li>The CIELAB color space is approximately uniform; a more accurate and complex model should include (the CAM16-UCS model).</li>
+<li>The understanding of color is also changing for people with different backgrounds and languages. In some languages, there only exist three different colors. You can learn more via <a href="https://www.youtube.com/watch?v=gMqZR3pqMjg">this Vox video</a>.</li>
+<li>There definitely exist some colors that are hard to give a certain name. In such a case, tolerance should introduce. Manually decided color range or uses <a href="https://en.wikipedia.org/wiki/MacAdam_ellipse">MacAdam ellipse</a>. Only the color inside the area will get a definite name for a more accurate color naming.</li>
+</ul>
+<p>I am not professional in this area, hope I have not messed up too much knowledge. And hope you learn something just like I do. Welcome to leave a comment.</p>
+<h2 id="reference-materials">Reference Materials</h2>
+<p>Color Distance Tools</p>
+<ul>
+<li><a href="https://github.com/insomnious0x01/ntc-js">https://github.com/insomnious0x01/ntc-js</a></li>
+<li><a href="https://lynan.cn/static/random_color.html">https://lynan.cn/static/random_color.html</a></li>
+</ul>
+<p>Solutions</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/1678457/best-algorithm-for-matching-colours/1678498#1678498">https://stackoverflow.com/questions/1678457/best-algorithm-for-matching-colours/1678498#1678498</a></li>
+<li><a href="https://www.image-engineering.de/library/technotes/958-how-to-convert-between-srgb-and-ciexyz">https://www.image-engineering.de/library/technotes/958-how-to-convert-between-srgb-and-ciexyz</a></li>
+</ul>
+<p>Color Distances</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Color_difference">https://en.wikipedia.org/wiki/Color_difference</a></li>
+<li><a href="https://stackoverflow.com/questions/4754506/color-similarity-distance-in-rgba-color-space">https://stackoverflow.com/questions/4754506/color-similarity-distance-in-rgba-color-space</a></li>
+<li><a href="https://www.compuphase.com/cmetric.htm">https://www.compuphase.com/cmetric.htm</a></li>
+<li><a href="https://cubicspot.blogspot.com/2019/05/designing-better-terminal-text-color.html">https://cubicspot.blogspot.com/2019/05/designing-better-terminal-text-color.html</a></li>
+</ul>
+<p>Color Naming List</p>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E9%A2%9C%E8%89%B2%E5%88%97%E8%A1%A8">https://zh.wikipedia.org/wiki/%E9%A2%9C%E8%89%B2%E5%88%97%E8%A1%A8</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lists_of_colors">https://en.wikipedia.org/wiki/Lists_of_colors</a></li>
+</ul>
+<p>Explanations</p>
+<ul>
+<li><a href="https://www.quora.com/What-are-the-differences-between-RGB-HSV-and-CIE-Lab">https://www.quora.com/What-are-the-differences-between-RGB-HSV-and-CIE-Lab</a></li>
+<li><a href="https://www.youtube.com/watch?v=rY413t5fArw">https://www.youtube.com/watch?v=rY413t5fArw</a></li>
+</ul>
+
+</article>
+<div class="pb-10 w-content">
+  <div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 sm:px-6">
+      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+        <a id="article-info-card"></a>
+        Article Card
+      </h3>
+      <p class="mt-1 text-sm text-gray-500">
+        For "<span class="italic">Finding the Name for Color</span>"
+      </p>
+    </div>
+    <div class="border-t border-gray-200 dark:border-gray-700">
+      <dl>
+        <table class="border-collapse table-fixed w-full">
+          <tbody class="bg-white dark:bg-gray-800">
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Author</td>
+              <td
+                class="border-b font-bold border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm ">
+                Zhenghao Wu</td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Publish & Update Date</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                2022-02-23 - <abbr title="Date of last major modification to this page">2022-02-23</abbr></td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Tags</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/color">Color</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/design">Design</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/programming">Programming</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/art">Art</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/color-space">Color Space</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/color-differences">Color Differences</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/perception">Perception</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/hsv">HSV</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/hsl">HSL</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/cielab">CIELAB</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/rgb">RGB</a>
+                
+              </td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Extra Materials</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  <ul role="list"
+                    class="border border-gray-200 dark:border-gray-700 rounded-md divide-y divide-gray-200 dark:divide-gray-700">
+                    
+                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                      <div class="w-0 flex-1 flex items-center">
+                        
+                        
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+
+                        
+                        
+                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
+                          Reference Materials
+                        </span>
+                      </div>
+                      <div class="ml-4 flex-shrink-0">
+                        <a href="#reference-materials" class="font-medium text-indigo-600 hover:text-indigo-500">
+                          Check
+                        </a>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </dd>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+<div class="pb-10 w-content ">
+  <script src="https://utteranc.es/client.js"
+  repo="ecwu/ecwu.github.io"
+  issue-term="url"
+  theme='github-light'
+  crossorigin="anonymous"
+  async>
+</script>
+</div>
+
+
+
+<div>
+  <footer class="relative mb-6 text-gray-900 dark:text-gray-200">
+    <hr class="pb-5"><div class="flex justify-begin w-full mx-auto mb-2">
+  <ul class="flex flex-row justify-begin text-lg space-x-2">
+          
+
+      
+      <li>
+          <a href="https://ecwuuuuu.com/index.xml" aria-label="RSS"
+              class="round-button social-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 fill-gray-700 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-200" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+          </a>
+      </li>
+  </ul>
+</div><p>
+      Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>. Build by <a href="https://github.com/features/actions">GitHub
+        Action</a> at: 2022-02-23 12:58 UTC.
+    </p>
+    <p>
+      
+      &copy;2022
+      ECWU.
+      All rights reserved.
+      
+
+    </p>
+    
+    <p>
+      <a href="http://beian.miit.gov.cn/"> 粤 ICP 备 17015575 号 - 1</a>
+    </p>
+    
+    <p class="text-sm my-4">
+       Google Analytics enabled;   <a href="https://ecwuuuuu.com/page/changelog">site changelog</a>.
+    </p>
+  </footer>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
+}
+</script>
+
+
+    </body>
+</html>
