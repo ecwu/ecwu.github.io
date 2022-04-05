@@ -43,7 +43,7 @@
 
     
     
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.70a0351ba7de6ca9656fe19ec192b9ad53fe78266ef2c99ee1d2c81fba9651b1.css" integrity="sha256-cKA1G6febKllb&#43;GewZK5rVP&#43;eCZu8sme4dLIH7qWUbE=">
+    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.6e44dddbcf71046661e59834b7ffcfd90c55eec3629131cd88561e108bc918ef.css" integrity="sha256-bkTd289xBGZh5Zg0t//P2QxV7sNikTHNiFYeEIvJGO8=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Algorithm Completion Project -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,10 +54,10 @@
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       localStorage.setItem("current-theme", "dark");
       document.documentElement.classList.add('dark')
-      change_utt_color_mode();
+      change_discussion_color_mode();
     } else {
       localStorage.setItem("current-theme", "light");
-      change_utt_color_mode();
+      change_discussion_color_mode();
     }
   } else {
     if (localStorage.getItem('current-theme') === 'dark') {
@@ -69,19 +69,21 @@
     if (localStorage.getItem('current-theme') === 'light') {
       document.documentElement.classList.add('dark')
       localStorage.setItem('current-theme', 'dark');
-      change_utt_color_mode();
+      change_discussion_color_mode();
     } else {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('current-theme', 'light');
-      change_utt_color_mode();
+      change_discussion_color_mode();
     }
   }
+  
 
-  function change_utt_color_mode(){
+  function change_discussion_color_mode(){
     
     console.log('utteranc.es is not enabled.')
     
   }
+  
 
   document.addEventListener("DOMContentLoaded", () => {
     
@@ -322,19 +324,19 @@
 <td><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list">19. 删除链表的倒数第 N 个结点</a></td>
 <td style="text-align:center">中等</td>
 <td>链表</td>
-<td style="text-align:center">-</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/linked-list/#19-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC-n-%E4%B8%AA%E7%BB%93%E7%82%B9">Py</a></td>
 </tr>
 <tr>
 <td><a href="https://leetcode-cn.com/problems/valid-parentheses">20. 有效的括号</a></td>
 <td style="text-align:center">简单</td>
-<td>-</td>
-<td style="text-align:center">-</td>
+<td>字符串 / 栈</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/string/#20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7">Py</a></td>
 </tr>
 <tr>
 <td><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists">21. 合并两个有序链表</a></td>
 <td style="text-align:center">简单</td>
-<td>-</td>
-<td style="text-align:center">-</td>
+<td>链表</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/linked-list/#21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8">Py</a></td>
 </tr>
 <tr>
 <td><a href="https://leetcode-cn.com/problems/generate-parentheses">22. 括号生成</a></td>
@@ -405,8 +407,8 @@
 <tr>
 <td><a href="https://leetcode-cn.com/problems/maximum-subarray">53. 最大子数组和</a></td>
 <td style="text-align:center">简单</td>
-<td>-</td>
-<td style="text-align:center">-</td>
+<td>数组 / 动态规划</td>
+<td style="text-align:center"><a href="https://ecwuuuuu.com/page/algorithm/array/#53-%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C">Py</a></td>
 </tr>
 <tr>
 <td><a href="https://leetcode-cn.com/problems/jump-game">55. 跳跃游戏</a></td>
@@ -908,7 +910,7 @@
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2022-02-09 - <abbr title="Date of last major modification to this page">2022-02-13</abbr></td>
+                2022-02-09 - <abbr title="Date of last major modification to this page">2022-04-05</abbr></td>
             </tr>
             
             
@@ -922,6 +924,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 
@@ -943,7 +947,7 @@
   </ul>
 </div><p>
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>. Build by <a href="https://github.com/features/actions">GitHub
-        Action</a> at: 2022-04-04 10:11 UTC.
+        Action</a> at: 2022-04-05 11:29 UTC.
     </p>
     <p>
       
@@ -964,6 +968,7 @@
   </footer>
 </div>
 
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
 <script>
 var doNotTrack = false;
@@ -974,6 +979,7 @@ if (!doNotTrack) {
 	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
 }
 </script>
+
 
 
     </body>

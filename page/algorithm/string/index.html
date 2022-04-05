@@ -43,7 +43,7 @@
 
     
     
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.70a0351ba7de6ca9656fe19ec192b9ad53fe78266ef2c99ee1d2c81fba9651b1.css" integrity="sha256-cKA1G6febKllb&#43;GewZK5rVP&#43;eCZu8sme4dLIH7qWUbE=">
+    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.6e44dddbcf71046661e59834b7ffcfd90c55eec3629131cd88561e108bc918ef.css" integrity="sha256-bkTd289xBGZh5Zg0t//P2QxV7sNikTHNiFYeEIvJGO8=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>String -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,10 +54,10 @@
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       localStorage.setItem("current-theme", "dark");
       document.documentElement.classList.add('dark')
-      change_utt_color_mode();
+      change_discussion_color_mode();
     } else {
       localStorage.setItem("current-theme", "light");
-      change_utt_color_mode();
+      change_discussion_color_mode();
     }
   } else {
     if (localStorage.getItem('current-theme') === 'dark') {
@@ -69,19 +69,21 @@
     if (localStorage.getItem('current-theme') === 'light') {
       document.documentElement.classList.add('dark')
       localStorage.setItem('current-theme', 'dark');
-      change_utt_color_mode();
+      change_discussion_color_mode();
     } else {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('current-theme', 'light');
-      change_utt_color_mode();
+      change_discussion_color_mode();
     }
   }
+  
 
-  function change_utt_color_mode(){
+  function change_discussion_color_mode(){
     
     console.log('utteranc.es is not enabled.')
     
   }
+  
 
   document.addEventListener("DOMContentLoaded", () => {
     
@@ -334,6 +336,7 @@
     <li><a href="#3-无重复字符的最长子串">3. 无重复字符的最长子串</a></li>
     <li><a href="#5-最长回文子串">5. 最长回文子串</a></li>
     <li><a href="#17-电话号码的字母组合">17. 电话号码的字母组合</a></li>
+    <li><a href="#20-有效的括号">20. 有效的括号</a></li>
   </ul>
 </nav>
   </details>
@@ -437,6 +440,27 @@ P  0  1  2  3  3  3  1  0  0
             new_ans<span style="color:#719e07">.</span>append(ec <span style="color:#719e07">+</span> ac)
     ans <span style="color:#719e07">=</span> new_ans
 </code></pre></div><p>时间复杂度为 $\mathcal{O}(3^m\times 4^n)$，其中 $m$为映射中有三个字母的数字个数，$m$为映射中有四个字母的数字个数。</p>
+<h2 id="20-有效的括号">20. 有效的括号</h2>
+<p><a href="https://leetcode-cn.com/problems/valid-parentheses">https://leetcode-cn.com/problems/valid-parentheses</a></p>
+<p>比较经典的利用栈的题目，遇到左括弧则推入栈中，遇到又括弧则抛出栈内元素进行比对。因为栈这一数据结构是先进先出（<a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">FIFO</a>)，则满足情况的阔号串满足：遍历完字符串后所有的堆栈为空。阔号的对则使用字典进行储存，方便进行压栈和抛出时比对。</p>
+<p>其中不满足的情况：</p>
+<ol>
+<li>抛出的阔号对不匹配：直接返回 <code>False</code></li>
+<li>左括号数量大于右括号数量：栈长度不为0，返回 <code>False</code></li>
+<li>右括号数量大于左括弧数量：栈已经不存在更多元素，继续抛出栈顶元素会出错。</li>
+</ol>
+<p>针对第三个问题，使用到一个 trick 是，在初始化栈时，塞入一个不为阔号的元素：例如 <code>$</code>，则第三种情况发生时，一定无法匹配，触发第一个条件结束判断并返回结果。但是符合情况的字符串也发生了改变，如果栈的长度为1（只剩下<code>$</code>），则括号串满足条件。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+    <span style="color:#719e07">def</span> <span style="color:#268bd2">isValid</span>(<span style="color:#268bd2">self</span>, s: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">bool</span>:
+        dic <span style="color:#719e07">=</span> {<span style="color:#2aa198">&#39;{&#39;</span>: <span style="color:#2aa198">&#39;}&#39;</span>,  <span style="color:#2aa198">&#39;[&#39;</span>: <span style="color:#2aa198">&#39;]&#39;</span>, <span style="color:#2aa198">&#39;(&#39;</span>: <span style="color:#2aa198">&#39;)&#39;</span>, <span style="color:#2aa198">&#39;?&#39;</span>: <span style="color:#2aa198">&#39;?&#39;</span>}
+        stack <span style="color:#719e07">=</span> [<span style="color:#2aa198">&#39;?&#39;</span>]
+        <span style="color:#719e07">for</span> c <span style="color:#719e07">in</span> s:
+            <span style="color:#719e07">if</span> c <span style="color:#719e07">in</span> dic:
+                stack<span style="color:#719e07">.</span>append(c)
+            <span style="color:#719e07">elif</span> dic[stack<span style="color:#719e07">.</span>pop()] <span style="color:#719e07">!=</span> c:
+                <span style="color:#719e07">return</span> <span style="color:#cb4b16">False</span> 
+        <span style="color:#719e07">return</span> <span style="color:#b58900">len</span>(stack) <span style="color:#719e07">==</span> <span style="color:#2aa198">1</span>
+</code></pre></div><p>遍历一次，时间复杂度为 $O(n)$。</p>
 
 </article>
 <div class="pb-10 w-content">
@@ -471,7 +495,7 @@ P  0  1  2  3  3  3  1  0  0
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2022-02-09 - <abbr title="Date of last major modification to this page">2022-02-13</abbr></td>
+                2022-02-09 - <abbr title="Date of last major modification to this page">2022-04-05</abbr></td>
             </tr>
             
             
@@ -501,16 +525,18 @@ P  0  1  2  3  3  3  1  0  0
 
 
 
+
+
 <section class="mb-10">
 <hr>
 <h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2>
 <ul class="list-disc list-inside text-gray-900 dark:text-gray-200">
     
-    <li><a href="https://ecwuuuuu.com/page/algorithm/misc/">Misc</a></li>
-    
-    <li><a href="https://ecwuuuuu.com/page/algorithm/linked-list/">Linked List</a></li>
+    <li><a href="https://ecwuuuuu.com/page/algorithm/array/">Array</a></li>
     
     <li><a href="https://ecwuuuuu.com/page/algorithm/dynamic-programming/">Dynamic Programming</a></li>
+    
+    <li><a href="https://ecwuuuuu.com/page/algorithm/tree/">Tree</a></li>
     
 </ul>
 </section>
@@ -533,7 +559,7 @@ P  0  1  2  3  3  3  1  0  0
   </ul>
 </div><p>
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>. Build by <a href="https://github.com/features/actions">GitHub
-        Action</a> at: 2022-04-04 10:11 UTC.
+        Action</a> at: 2022-04-05 11:29 UTC.
     </p>
     <p>
       
@@ -554,6 +580,7 @@ P  0  1  2  3  3  3  1  0  0
   </footer>
 </div>
 
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
 <script>
 var doNotTrack = false;
@@ -564,6 +591,7 @@ if (!doNotTrack) {
 	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
 }
 </script>
+
 
 
     </body>

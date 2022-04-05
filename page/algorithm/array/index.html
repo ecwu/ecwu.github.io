@@ -43,7 +43,7 @@
 
     
     
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.70a0351ba7de6ca9656fe19ec192b9ad53fe78266ef2c99ee1d2c81fba9651b1.css" integrity="sha256-cKA1G6febKllb&#43;GewZK5rVP&#43;eCZu8sme4dLIH7qWUbE=">
+    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.6e44dddbcf71046661e59834b7ffcfd90c55eec3629131cd88561e108bc918ef.css" integrity="sha256-bkTd289xBGZh5Zg0t//P2QxV7sNikTHNiFYeEIvJGO8=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Array -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,10 +54,10 @@
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       localStorage.setItem("current-theme", "dark");
       document.documentElement.classList.add('dark')
-      change_utt_color_mode();
+      change_discussion_color_mode();
     } else {
       localStorage.setItem("current-theme", "light");
-      change_utt_color_mode();
+      change_discussion_color_mode();
     }
   } else {
     if (localStorage.getItem('current-theme') === 'dark') {
@@ -69,19 +69,21 @@
     if (localStorage.getItem('current-theme') === 'light') {
       document.documentElement.classList.add('dark')
       localStorage.setItem('current-theme', 'dark');
-      change_utt_color_mode();
+      change_discussion_color_mode();
     } else {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('current-theme', 'light');
-      change_utt_color_mode();
+      change_discussion_color_mode();
     }
   }
+  
 
-  function change_utt_color_mode(){
+  function change_discussion_color_mode(){
     
     console.log('utteranc.es is not enabled.')
     
   }
+  
 
   document.addEventListener("DOMContentLoaded", () => {
     
@@ -335,6 +337,7 @@
     <li><a href="#4-寻找两个正序数组的中位数">4. 寻找两个正序数组的中位数</a></li>
     <li><a href="#11-盛最多水的容器">11. 盛最多水的容器</a></li>
     <li><a href="#15-三数之和">15. 三数之和</a></li>
+    <li><a href="#53-最大子数组和">53. 最大子数组和</a></li>
   </ul>
 </nav>
   </details>
@@ -429,6 +432,25 @@
                         j <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
         <span style="color:#719e07">return</span> results
 </code></pre></div><p>对 n 元素搜索，再使用双指针来搜索，最差情况会将所有 n 右侧元素遍历一次，复杂度为 $\mathcal{O}(n^2)$。</p>
+<h2 id="53-最大子数组和">53. 最大子数组和</h2>
+<p><a href="https://leetcode-cn.com/problems/maximum-subarray">https://leetcode-cn.com/problems/maximum-subarray</a></p>
+<p>寻找最大数组和是一道经典的的算法题，返回数组中，最大子序列的和。最暴力的思路是遍历所有的子数组和。如果使用三个指针，时间复杂度会达到$O(n^3)$。但可以通过前缀和来优化，将复杂度降至$O(n^2)$。
+但这里，使用动态规划的思路。只需要遍历一次，维护前缀和（<code>pre</code>）和最大和（<code>max</code>）两个变量。在每个元素遍历时，先在“前缀和加当前元素”（<code>pre</code> + <code>i</code>）与当前元素（<code>i</code>）中取更大值作为新的前缀和（<code>pre</code>）。然后再比较目前最大值（<code>pre</code>）与全局最大和（<code>max</code>）作为新的全局最大和。</p>
+<p>这里最重要的思路是前缀和（<code>pre</code>）：</p>
+<ol>
+<li>如果当前元素为正数，则新前缀和会是一个更大的数。</li>
+<li>如果当前元素为负数，一种情况是加和后，前缀大于当前元素，之后遇到更多正数元素后，子序列可能和会达到全局最大。</li>
+<li>如果当前元素为负数，另种情况是加和后新前缀小于当前元素，这情况则不需要继续考虑之前的子序列（将前缀和设为当前元素），因为在这种情况下之前的前缀和已经为负数，如果继续考虑之前的子序列，如果存在更大的子序列，则无法发现。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+    <span style="color:#719e07">def</span> <span style="color:#268bd2">maxSubArray</span>(<span style="color:#268bd2">self</span>, nums: List[<span style="color:#b58900">int</span>]) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">int</span>:
+        _max <span style="color:#719e07">=</span> nums[<span style="color:#2aa198">0</span>]
+        temp <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+        <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> nums:
+            temp <span style="color:#719e07">=</span> <span style="color:#b58900">max</span>(i, temp <span style="color:#719e07">+</span> i)
+            _max <span style="color:#719e07">=</span> <span style="color:#b58900">max</span>(_max, temp)
+        <span style="color:#719e07">return</span> _max
+</code></pre></div><p>因为只涉及一次数组遍历，时间复杂度为$O(n)$</p>
 
 </article>
 <div class="pb-10 w-content">
@@ -463,7 +485,7 @@
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2022-02-09 - <abbr title="Date of last major modification to this page">2022-02-09</abbr></td>
+                2022-02-09 - <abbr title="Date of last major modification to this page">2022-04-05</abbr></td>
             </tr>
             
             
@@ -531,16 +553,18 @@
 
 
 
+
+
 <section class="mb-10">
 <hr>
 <h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2>
 <ul class="list-disc list-inside text-gray-900 dark:text-gray-200">
     
-    <li><a href="https://ecwuuuuu.com/page/algorithm/dynamic-programming/">Dynamic Programming</a></li>
-    
     <li><a href="https://ecwuuuuu.com/page/algorithm/tree/">Tree</a></li>
     
-    <li><a href="https://ecwuuuuu.com/page/algorithm/interval/">Interval</a></li>
+    <li><a href="https://ecwuuuuu.com/page/algorithm/matrix/">Matrix</a></li>
+    
+    <li><a href="https://ecwuuuuu.com/page/algorithm/binary/">Binary</a></li>
     
 </ul>
 </section>
@@ -563,7 +587,7 @@
   </ul>
 </div><p>
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>. Build by <a href="https://github.com/features/actions">GitHub
-        Action</a> at: 2022-04-04 10:11 UTC.
+        Action</a> at: 2022-04-05 11:29 UTC.
     </p>
     <p>
       
@@ -584,6 +608,7 @@
   </footer>
 </div>
 
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
 <script>
 var doNotTrack = false;
@@ -594,6 +619,7 @@ if (!doNotTrack) {
 	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
 }
 </script>
+
 
 
     </body>
