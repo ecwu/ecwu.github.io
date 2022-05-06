@@ -1,0 +1,628 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+
+<link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
+
+
+    
+    
+    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.73765ef99d60d8850fc7e980627cf87e7cb93a888d63b8b8735f503ca5c79857.css" integrity="sha256-c3Ze&#43;Z1g2IUPx&#43;mAYnz4fny5OoiNY7i4c19QPKXHmFc=">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>自建 GitLab 踩坑实录 -  ECWU&#39;s Notebook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Homepage and Blog of ECWU">
+<meta name="keywords" content="git,self-host,gitlab,nginx,gitlab-ce,baota,cloud,">
+<meta name="author" content="ECWUUUUU"><script>
+  if (localStorage.getItem("current-theme") === null) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      localStorage.setItem("current-theme", "dark");
+      document.documentElement.classList.add('dark')
+      change_discussion_color_mode();
+    } else {
+      localStorage.setItem("current-theme", "light");
+      change_discussion_color_mode();
+    }
+  } else {
+    if (localStorage.getItem('current-theme') === 'dark') {
+      document.documentElement.classList.add('dark')
+    }
+  }
+
+  function change_color_mode(){
+    if (localStorage.getItem('current-theme') === 'light') {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('current-theme', 'dark');
+      change_discussion_color_mode();
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('current-theme', 'light');
+      change_discussion_color_mode();
+    }
+  }
+  
+
+  function change_discussion_color_mode(){
+    
+    const theme = localStorage.getItem('current-theme') === 'light' ? 'light' : 'dark'
+    const message = {
+  setConfig: {
+    theme: theme,
+  }
+};
+    
+    const iframe = document.querySelector('iframe.giscus-frame');
+    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    
+  }
+  
+
+  document.addEventListener("DOMContentLoaded", () => {
+    
+
+    document
+      .getElementById("header-theme-button")
+      .addEventListener("click", change_color_mode);
+  });
+
+</script>
+<style>
+  .hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+</head>
+    <body class="transition-colors duration-300"><div class="pt-6">
+    <h1>
+
+<a href="https://ecwuuuuu.com/">
+    <svg class="w-36 fill-gray-900 dark:fill-gray-200" fill="currentColor" viewBox="0 0 204.24 43.44" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,43.08V0.36h18.24v5.76H6.12v12.54h10.56v5.76H6.12v12.54h12.12v6.12H0z"/>
+        <path d="M41.64,30.9v2.64c0,1.32-0.25,2.57-0.75,3.75c-0.5,1.18-1.19,2.23-2.07,3.15c-0.88,0.92-1.91,1.65-3.09,2.19  c-1.18,0.54-2.45,0.81-3.81,0.81c-1.16,0-2.34-0.16-3.54-0.48c-1.2-0.32-2.28-0.88-3.24-1.68s-1.75-1.83-2.37-3.09  c-0.62-1.26-0.93-2.87-0.93-4.83V9.84c0-1.4,0.24-2.7,0.72-3.9c0.48-1.2,1.16-2.24,2.04-3.12c0.88-0.88,1.93-1.57,3.15-2.07  C28.97,0.25,30.32,0,31.8,0c2.88,0,5.22,0.94,7.02,2.82c0.88,0.92,1.57,2.01,2.07,3.27c0.5,1.26,0.75,2.63,0.75,4.11v2.4h-6.12  v-2.04c0-1.2-0.34-2.24-1.02-3.12c-0.68-0.88-1.6-1.32-2.76-1.32c-1.52,0-2.53,0.47-3.03,1.41c-0.5,0.94-0.75,2.13-0.75,3.57v21.84  c0,1.24,0.27,2.28,0.81,3.12s1.51,1.26,2.91,1.26c0.4,0,0.83-0.07,1.29-0.21c0.46-0.14,0.89-0.37,1.29-0.69  c0.36-0.32,0.66-0.76,0.9-1.32c0.24-0.56,0.36-1.26,0.36-2.1v-2.1H41.64z"/>
+        <path d="M78.36,0.36L72,43.08h-5.76l-4.68-27.72h-0.12l-4.62,27.72h-5.76L44.7,0.36h6.48l3.06,27.12h0.12l4.8-27.12h4.68l4.98,27.78  h0.12l2.94-27.78H78.36z"/>
+        <path d="M102,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H102z"/>
+        <path d="M127.56,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  s-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H127.56z"/>
+        <path d="M153.12,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H153.12z"/>
+        <path d="M178.68,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36H165v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H178.68z"/>
+        <path d="M204.24,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H204.24z"/>
+    </svg>
+    <p class="sr-only">ECWU Homepage</p>
+</a></h1>
+<nav aria-label="navbar" class="mb-3 mr-8">
+    <ol role="list" class="flex flex-wrap">
+        
+        
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Home</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/post/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Posts</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/photography/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Photos</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/series/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Series</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/about/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>About</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/friends/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Friends</a>
+            
+            
+        </div>
+        </li>
+        
+    </ol>
+</nav><div  class="flex items-center space-x-2">
+    <div class="w-6 h-6 inline-flex items-center justify-center rounded-lg bg-white dark:bg-black shadow-inner ring-1 ring-black/5">
+        <i id="header-theme-button" data-feather="sun" class="site-header-navlink rounded cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden dark:block fill-gray-900 dark:fill-gray-200" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 block dark:hidden fill-gray-900 dark:fill-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+        </i>
+    </div>
+    <span class="dark:hidden text-sm">To Dark Mode</span>
+    <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
+</div></div>
+  <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
+    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/ZV_64LdGoao/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8Z2l0fGVufDB8fHx8MTY1MDY4NDUzNw&amp;force=true&amp;w=2400" alt="Featured Images">
+    
+    <figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">
+      Photo by Pankaj Patel on Unsplash
+    </figcaption>
+    
+  </figure>
+<div class="mb-12 mt-16 w-content">
+  <h1 class="text-gray-900 dark:text-gray-200">自建 GitLab 踩坑实录</h1>
+  
+
+  
+  <div class="text-gray-700 dark:text-gray-400">
+    <span>
+      
+      <p><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg> Zhenghao Wu</p>
+      
+
+
+      
+
+      
+      <p>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        </svg>
+        Status: Finished
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+        Confidence: likely
+        
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+        </svg>
+        Importance: 8
+        
+        
+      </p>
+      
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+        </svg> <a href="#article-info-card">Post Details</a>
+      </p>
+      
+      
+    </span>
+  </div>
+  
+</div>
+<div class="w-content bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400 px-5 py-3">
+     
+     
+     
+         
+         
+             
+            
+              
+        
+     
+         
+         
+             
+            
+              
+        
+     
+         
+         
+             
+            
+              
+        
+     
+         
+        
+    
+     
+        
+        
+     
+        
+        
+     
+        
+        
+     
+        
+        
+    
+     
+        <p>This post is part 4 of 4
+            in the <b>Website Note</b> series.</p>
+        <p>
+        
+            
+                <a href="https://ecwuuuuu.com/post/new-domain/">Goto: First Post</a>
+                    |
+            
+            
+                <a href="https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/">Prev: Cleaning Up Git Repo For My Blog</a>
+            
+        
+        
+        
+    
+  </div>
+<article>
+    
+<section class="mb-8">
+  <details closed class="toc">
+    <summary>Table of Contents</summary>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#巨无霸-gitlab">“巨无霸” GitLab</a></li>
+    <li><a href="#安装方法">安装方法</a></li>
+    <li><a href="#进一步配置">进一步配置</a>
+      <ul>
+        <li><a href="#使用自定义域名访问配置文件部分">使用自定义域名访问（配置文件部分）</a></li>
+        <li><a href="#使用自定义域名访问nginx-配置部分">使用自定义域名访问（Nginx 配置部分）</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置-runner">配置 Runner</a></li>
+  </ul>
+</nav>
+  </details>
+</section>
+
+    <p>之前自建了一个 Git 服务来托管自己的非公开代码。考虑要轻量，所以选择了 <a href="https://gitea.io/en-us/">Gitea</a> 并通过 Docker + Nginx 的方式进行部署。</p>
+<p>前段时间腾讯云免费提供了轻量服务器配置升级的活动，配置提升到了 4 核心 + 4G 内存。机器性能是一个过剩的状态，为了充分利用，所以我考虑将服务从 Gitea 换到 <a href="https://about.gitlab.com/install/">GitLab</a>。这里把我的部署过程进行记录。</p>
+<blockquote>
+<p>Gitea 也提供了不错的体验，如果只需要一个轻量的 Git 服务，可以尝试。</p>
+</blockquote>
+<h2 id="巨无霸-gitlab">“巨无霸” GitLab</h2>
+<p>单从 Docker 库的大小来看，Gitea <code>1.16.6</code> 的<a href="https://hub.docker.com/layers/gitea/gitea/1.16.6/images/sha256-01e0b118c1c9ebf16c0549d9bf3d12fe0eb31513a25e31007d0d08295e825e33?context=explore">镜像</a>大小为 102.05MB。而 GitLab <code>14.10.0-ce.0</code> 的<a href="https://hub.docker.com/layers/gitlab/gitlab-ce/14.10.0-ce.0/images/sha256-1b0dcf05260c37986fc40022f6298be9f28b3a65e92ea10af94e14815eb272ca?context=explore">镜像</a>大小有 1.02GB。这十倍的差异直接体现在了 GitLab 庞大的功能。就像自建的 GitLab 首页的描述：</p>
+<blockquote>
+<p><strong>A complete DevOps platform</strong></p>
+<p>GitLab is a single application for the entire software development lifecycle. From project planning and source code management to CI/CD, monitoring, and security.</p>
+<p>&hellip;</p>
+</blockquote>
+<p>安装好的 GitLab 就是一个完整的 DevOps（开发+运维）平台，包括了项目管理、源代码管理、持续构建和集成、监控和安全的功能。更具体的体现是，GitLab 除了支持其网站运行的服务，还集成了用于数据上报和监控的工具（Exporter + Prometheus + Grafana）。</p>
+<p>GitLab 庞大的系统也注定了需要比较多的资源，特别是内存：要求至少 <code>2 核 4G 内存</code>，而 Gitea 只需要 <code>2 核 1G 内存</code>。GitLab 和 Gitea 官方都提供了横向对比，可以进一步了解。</p>
+<ul>
+<li>Gitea: <a href="https://docs.gitea.io/zh-cn/comparison/">横向对比 Gitea 与其它 Git 托管工具</a></li>
+<li>GitLab: <a href="https://about.gitlab.cn/devops-tools/gitea-vs-gitlab/">GitLab vs. Gitea</a></li>
+</ul>
+<h2 id="安装方法">安装方法</h2>
+<p>GitLab 的官方文档属于很详细的类型，官方给出的安装方法有六七种，其中比较典型的是：</p>
+<ul>
+<li>官方的软件包：Omnibus GitLab</li>
+<li>Docker Image 安装</li>
+<li>安装在 Kubernetes （通过 Helm charts）</li>
+<li>从源代码构建</li>
+</ul>
+<p>我的服务器使用了宝塔面板，在内带的软件市场有 GitLab 的安装选择，本质上和官方的软件包安装一致。之前也尝试过使用 Docker 进行部署，但是 Nginx 的反向代理没成功，最后放弃了 Docker 的方案。</p>
+<p>如果使用官方的软件包，只需要在<a href="https://about.gitlab.com/install">安装指南</a>选择对应的的系统版本，会有很详细的逐步指南。以 CentOS 7为例，步骤为：</p>
+<ol>
+<li>启用 OpenSSH，防火墙添加 HTTP 和 HTTPS 服务</li>
+<li>安装 Postfix 用来发送邮件</li>
+<li>添加 GitLab 的软件包源</li>
+<li>配置环境变量来定义访问用的 URL</li>
+<li>等待安装完成</li>
+<li>安装完成后，获取自动生成的 root 用户密码，登录</li>
+</ol>
+<h2 id="进一步配置">进一步配置</h2>
+<blockquote>
+<p>这部分是这篇文章的重点内容，我在配置自己的 GitLab 时，重复安装了很多次，主要是无法通过自定义域名（不带端口号）访问域名。解决后复盘时会发现，一方面是自己比较心急，没有认真读文档；另外是网络上许多教程没有写的很清楚。</p>
+</blockquote>
+<h3 id="使用自定义域名访问配置文件部分">使用自定义域名访问（配置文件部分）</h3>
+<p>GitLab 的软件包中集成了 Nginx，安装后就可以通过 IP + 端口号的方式访问搭建好的 GitLab 实例（在云服务器上还有配置防火墙允许相应的端口）。但在自己试错的过程中，我尝试了：改配置中的URL、使用 Docker 安装再用 Docker 外的 Nginx 做反向代理，都没有成功。</p>
+<p>最后使用的方案是关闭 GitLab 自带的 Nginx，然后利用宝塔的 Nginx 来处理请求。</p>
+<ol>
+<li>第一步是将 GitLab 的 Nginx 关闭：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ruby" data-lang="ruby"><span style="color:#586e75"># from</span>
+nginx<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;enable&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#719e07">true</span>
+<span style="color:#586e75"># to</span>
+nginx<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;enable&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#719e07">false</span>
+</code></pre></div><ol start="2">
+<li>设置 Nginx 用户</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ruby" data-lang="ruby"><span style="color:#586e75"># www is the user.</span>
+web_server<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;external_users&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#719e07">[</span><span style="color:#2aa198">&#39;www&#39;</span><span style="color:#719e07">]</span>
+</code></pre></div><p>如果不知道 Nginx 的用户，可以查看 Nginx 的配置文件 <code>nginx.conf</code>，用户会直接写在第一行（<code>user www www;</code> 则用户为 <code>www</code>）。如果不知道 nginx 配置文件的位置，可以用运行 <code>nginx -t</code> 查看。</p>
+<ol start="3">
+<li>修改 <code>external_url</code> 到你的个人域名</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ruby" data-lang="ruby">external_url <span style="color:#2aa198">&#39;http://git.yourdomain.com&#39;</span>
+<span style="color:#586e75"># type `https` if you want https SSL.</span>
+external_url <span style="color:#2aa198">&#39;https://git.yourdomain.com&#39;</span>
+</code></pre></div><p>需要注意，如果要使用 https，url 中需要将 http 改为 https。</p>
+<p>到这，你已经修改了 GitLab 的配置文件，运行 <code>gitlab-ctl reconfigure</code> 应用配置。</p>
+<h3 id="使用自定义域名访问nginx-配置部分">使用自定义域名访问（Nginx 配置部分）</h3>
+<p>官方其实已经提供了 <a href="https://gitlab.com/gitlab-org/gitlab-recipes/-/tree/master/web-server/nginx">Nginx Vhost 的配置文件</a>，你只需要稍微的修改，就可以运用在自己的服务器上（有两个版本，根据是否启用 SSL 进行选择）。</p>
+<p>我在配置时，为了能和宝塔的面板联动，所以进行了如下的修改。</p>
+<ol start="0">
+<li>
+<p>前提：在宝塔中创建好网站，解析已经配置</p>
+</li>
+<li>
+<p>在创建好的站点，进行配置：在<code>配置文件</code>选项卡，先粘贴覆盖官方提供的配置文件（以 SSL 版本为例）</p>
+</li>
+<li>
+<p>修改 server_name</p>
+</li>
+</ol>
+<p>在 38 行和 49 行的位置，将原配置中的 <code>YOUR_SERVER_FQDN</code> 换成你的域名，不需要带 http 或 https</p>
+<ol start="3">
+<li>配置 SSL</li>
+</ol>
+<ul>
+<li>将 55 行的 <code>ssl on;</code> 删去（在 Nginx 1.12 版本之后已经遗弃这一指令）</li>
+<li>将 56-57 行的 <code>ssl_certificate</code> 进行修改。下面的位置与宝塔的 SSL 配置联动，在站点设置的 SSL 设置中，部署的证书会放置在下面列出的位置。如果不确定宝塔会放置证书的位置，在第 1 步覆盖前，可以先在原配置中找到（前提是站点已经配置并启用 SSL）</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">  ssl_certificate        /www/server/panel/vhost/cert/git.yourdomain.com/fullchain.pem;
+  ssl_certificate_key    /www/server/panel/vhost/cert/git.yourdomain.com/privkey.pem;
+</code></pre></div><ol start="4">
+<li>修改 log 的位置</li>
+</ol>
+<p>在配置文件的 41-42 行、90-91 行，定义了日志的输出位置，根据自己的情况进行修改。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">  access_log  /www/wwwlogs/git.yourdomain.com.log;
+  error_log   /www/wwwlogs/git.yourdomain.com.error.log;
+</code></pre></div><p>至此，使用自定义域名访问自建 GitLab 的配置已经完成，你应该应该可以通过域名访问自建的 GitLab 实例。</p>
+<h2 id="配置-runner">配置 Runner</h2>
+<p>虽然前面提到 GitLab 是完整的 DevOps 平台，但是要支持 CI/CD 等功能还需要进一步的配置。为了支持自动构建仓库，我尝试配置了一个 GitLab Runner。使用 Docker 进行安装和注册。官方对于 Docker 安装 Runner 已经给出了详细的教程（<a href="https://docs.gitlab.com/runner/install/docker.html">安装</a>/<a href="https://docs.gitlab.com/runner/register/index.html#docker">注册</a>）。</p>
+<p>注册完就可以在管理后台的 Runner Tab 看到自建的 Runner 了。但是会发现项目还是无法使用 Runner 进行构建。排查后发现，虽然 Runner 是 Shared 的，但是还是只允许指定的项目，所以你需要在 Runner 的 <code>Restrict projects for this runner</code> 配置中，指定需要 CI 的项目。（这并不是一个治本的解决方案，需要待我继续熟悉下 GitLab）。</p>
+<hr>
+<p>这就是目前我自建 GitLab 的情况，目前的使用已经达到我比较满意的状态。未来也会尝试配置配置其他功能。个人对于服务器运维方面开始小白，欢迎大家留言交流。</p>
+
+</article>
+<div class="pb-10 w-content">
+  <div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 sm:px-6">
+      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+        <a id="article-info-card"></a>
+        Article Card
+      </h3>
+      <p class="mt-1 text-sm text-gray-500">
+        For "<span class="italic">自建 GitLab 踩坑实录</span>"
+      </p>
+    </div>
+    <div class="border-t border-gray-200 dark:border-gray-700">
+      <dl>
+        <table class="border-collapse table-fixed w-full">
+          <tbody class="bg-white dark:bg-gray-800">
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Author</td>
+              <td
+                class="border-b font-bold border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm ">
+                Zhenghao Wu</td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Publish & Update Date</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                2022-05-06 - <abbr title="Date of last major modification to this page">2022-05-06</abbr></td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Tags</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/git">git</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/self-host">self-host</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/gitlab">gitlab</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/nginx">nginx</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/gitlab-ce">gitlab-ce</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/baota">baota</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/cloud">cloud</a>
+                
+              </td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Extra Materials</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  <ul role="list"
+                    class="border border-gray-200 dark:border-gray-700 rounded-md divide-y divide-gray-200 dark:divide-gray-700">
+                    
+                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                      <div class="w-0 flex-1 flex items-center">
+                        
+                        
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+
+                        
+                        
+                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
+                          ECGit
+                        </span>
+                      </div>
+                      <div class="ml-4 flex-shrink-0">
+                        <a href="https://git.ecwuuuuu.com" class="font-medium text-indigo-600 hover:text-indigo-500">
+                          Check
+                        </a>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </dd>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+
+<div class="pb-10 w-content ">
+  <script src="https://giscus.app/client.js"
+          data-repo="ecwu/ecwu.github.io"
+          data-repo-id="MDEwOlJlcG9zaXRvcnkxNjQzMzE1NjY="
+          data-category="Blog Post Discussion"
+          data-category-id="DIC_kwDOCcuALs4CObNl"
+          data-mapping="pathname"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="botton"
+          data-theme="light"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+
+
+
+<section class="mb-10">
+<hr>
+<h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2>
+<ul class="list-disc list-inside text-gray-900 dark:text-gray-200">
+    
+    <li><a href="https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/">Cleaning Up Git Repo For My Blog</a></li>
+    
+</ul>
+</section>
+
+<div>
+  <footer class="relative mb-6 text-gray-900 dark:text-gray-200">
+    <hr class="pb-5"><div class="flex justify-begin w-full mx-auto mb-2">
+  <ul class="flex flex-row justify-begin text-lg space-x-2">
+          
+
+      
+      <li>
+          <a href="https://ecwuuuuu.com/index.xml" aria-label="RSS"
+              class="round-button social-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 fill-gray-700 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-200" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+          </a>
+      </li>
+  </ul>
+</div><p>
+      Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>. Build by <a href="https://github.com/features/actions">GitHub
+        Action</a> at: 2022-05-06 15:47 UTC.
+    </p>
+    <p>
+      
+      &copy;2022
+      ECWU.
+      All rights reserved.
+      
+
+    </p>
+    
+    <p>
+      <a href="http://beian.miit.gov.cn/"> 粤 ICP 备 17015575 号 - 1</a>
+    </p>
+    
+    <p class="text-sm my-4">
+       Google Analytics enabled;   <a href="https://ecwuuuuu.com/page/changelog">site changelog</a>.
+    </p>
+  </footer>
+</div>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+    </body>
+</html>
