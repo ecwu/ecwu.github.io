@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DDNS on ECWUUUUU</title>
+    <title>ddns on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/tags/ddns/</link>
-    <description>Recent content in DDNS on ECWUUUUU</description>
+    <description>Recent content in ddns on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Apr 2021 10:01:01 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/ddns/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Oct 2022 22:43:40 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/ddns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab：我的赛博积木 (1)</title>
+      <link>https://ecwuuuuu.com/post/homelab-journey-1/</link>
+      <pubDate>Tue, 04 Oct 2022 22:43:40 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/homelab-journey-1/</guid>
+      <description>HomeLab 直译是在家里的实验室，赛博语境下指网络、计算设备组成的实验沙盒。可以用来学习计算机技术和部署自用的服务。个人感觉 HomeLab 这个概念更多是在国外使用</description>
+    </item>
+    
     <item>
       <title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title>
       <link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link>

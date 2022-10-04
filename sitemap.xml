@@ -2,17 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ecwuuuuu.com/categories/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/cloud/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/container/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/ddns/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/docker/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/frp/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/series/homelab/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/homelab/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/homelab-journey-1/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/j4125/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/network/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/networking/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/series/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/synology/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/tech/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/tencent-cloud/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/website/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/%E7%BB%84%E7%BD%91/</loc>
+    <lastmod>2022-10-04T14:52:22+00:00</lastmod>
+  </url><url>
     <loc>https://ecwuuuuu.com/tags/baota/</loc>
     <lastmod>2022-07-13T02:20:49+00:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/categories/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/cloud/</loc>
     <lastmod>2022-07-13T02:20:49+00:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/</loc>
-    <lastmod>2022-09-24T20:44:04+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/git/</loc>
     <lastmod>2022-07-13T02:20:49+00:00</lastmod>
@@ -29,20 +86,8 @@
     <loc>https://ecwuuuuu.com/tags/nginx/</loc>
     <lastmod>2022-07-13T02:20:49+00:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/post/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/self-host/</loc>
     <lastmod>2022-07-13T02:20:49+00:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/series/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/website/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/series/website-note/</loc>
     <lastmod>2022-07-13T02:20:49+00:00</lastmod>
@@ -122,25 +167,10 @@
     <loc>https://ecwuuuuu.com/tags/firewall/</loc>
     <lastmod>2022-08-28T06:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/series/homelab/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/linksys/</loc>
     <lastmod>2022-08-28T06:32:40+00:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/network/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/networking/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/synology/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/tech/</loc>
     <lastmod>2022-08-28T06:32:40+00:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/algorithm/</loc>
@@ -397,9 +427,6 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/transformer/</loc>
     <lastmod>2022-01-23T14:24:00+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/ddns/</loc>
-    <lastmod>2022-08-28T06:32:40+00:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/ds918&#43;/</loc>
     <lastmod>2022-08-28T06:32:40+00:00</lastmod>
