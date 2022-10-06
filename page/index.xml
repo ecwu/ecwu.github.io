@@ -121,7 +121,7 @@
       <pubDate>Sun, 09 Jan 2022 14:49:18 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/page/changelog/</guid>
-      <description>About this site  Write with static site generator Hugo  Uses ecwu-theme from Jan 2022, Theme introduction: TBA   Build with GitHub Actions Site preview build with Cloudflare Pages  https://ecwu-github-io-source.pages.dev/   Host by GitHub Pages Cloudflare &amp;amp; Qiniu for distributing files Comment Plugin: giscus Site Analytics: Google Analytics v4 LaTeX Render: KaTeX  Changelog 2022 April 2022  Replace comment plugins: utterances -&amp;gt; giscus Migrate legacy comments from GitHub Issues to GitHub Discussion  February 2022  Adding shortcode for PDF (Tailwind Aspect-ratio plugin) Refines and adding labels for Draft post Adding shortcode for embeds html file Adding video looping args for video shortcode Fix a bug in article time and read time metadata display  January 2022  Enable the new ecwu-theme, Written in Tailwind CSS 3 Adding Comment Plugin utterances Adding Site Analytics Google Analytics v4 New Terms, Series View and Pages.</description>
+      <description>About this site  Write with static site generator Hugo  Uses ecwu-theme from Jan 2022, Theme introduction: TBA   Build with GitHub Actions Site preview build with Cloudflare Pages  https://ecwu-github-io-source.pages.dev/   Host by GitHub Pages Cloudflare &amp;amp; Qiniu for distributing files Comment Plugin: giscus Site Analytics: Google Analytics v4 LaTeX Render: KaTeX  Changelog 2022 October 2022  Warp the main content with &amp;lt;main&amp;gt; tags, improving RSS scraping results.</description>
     </item>
     
     <item>
@@ -148,7 +148,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ecwuuuuu.com/page/friends/</guid>
-      <description>For now, I just post these links here, will complete the description when I have time :) Junde Yhi Terence Lau Renjie Deng Junru Zhong Laurence Luo Frank Ng KirinBaka 黑墨水鱼 小田 Max Gu Propose New Link If you want me to append you to the friend page, just comment below!</description>
+      <description>Junde Yhi: Proficient in computer tech (specializing in IoT), open source evangelist. Terence Lau: A typical statistic student, a quasi-computer-science-expert. Renjie Deng: Software development guru, good at rapid prototyping. Junru Zhong: Ph.D. candidate studying medical imaging; Tech and transportation enthusiast. Laurence Luo: Tech enthusiast. Frank Ng: A plane. KirinBaka: Big shot. 黑墨水鱼: Highly skilled non-CS students, Miku fan. 小田: Top student. Max Gu: Engineer</description>
     </item>
     
   </channel>
