@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Images on ECWUUUUU</title>
+    <link>https://ecwuuuuu.com/tags/images/</link>
+    <description>Recent content in Images on ECWUUUUU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Oct 2022 12:07:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/images/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab：我的赛博积木 - 内网服务</title>
+      <link>https://ecwuuuuu.com/post/homelab-journey-intranet/</link>
+      <pubDate>Sat, 15 Oct 2022 12:07:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/homelab-journey-intranet/</guid>
+      <description>我的计算设施中，云服务器和本地设备各占一半，本地设备无公网 IPv4。这样的情况使得我的服务是分地部署、内外网隔离的（但不是做到严格隔离，这部</description>
+    </item>
+    
+  </channel>
+</rss>
