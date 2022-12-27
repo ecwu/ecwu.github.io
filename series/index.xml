@@ -6,7 +6,16 @@
     <description>Recent content in Series on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Oct 2022 12:07:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Dec 2022 23:52:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Keep List</title>
+      <link>https://ecwuuuuu.com/series/keep-list/</link>
+      <pubDate>Tue, 27 Dec 2022 23:52:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/series/keep-list/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>HomeLab</title>
       <link>https://ecwuuuuu.com/series/homelab/</link>
@@ -40,15 +49,6 @@
       <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/series/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Keep List</title>
-      <link>https://ecwuuuuu.com/series/keep-list/</link>
-      <pubDate>Tue, 11 Jan 2022 21:58:05 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/series/keep-list/</guid>
       <description></description>
     </item>
     
