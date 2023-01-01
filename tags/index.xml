@@ -6,7 +6,61 @@
     <description>Recent content in Tags on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 00:20:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jan 2023 22:55:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>homelab</title>
+      <link>https://ecwuuuuu.com/tags/homelab/</link>
+      <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/homelab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>List</title>
+      <link>https://ecwuuuuu.com/tags/list/</link>
+      <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opensource</title>
+      <link>https://ecwuuuuu.com/tags/opensource/</link>
+      <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/opensource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selfhost</title>
+      <link>https://ecwuuuuu.com/tags/selfhost/</link>
+      <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/selfhost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>server</title>
+      <link>https://ecwuuuuu.com/tags/server/</link>
+      <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>summary</title>
+      <link>https://ecwuuuuu.com/tags/summary/</link>
+      <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/summary/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Container</title>
       <link>https://ecwuuuuu.com/tags/container/</link>
@@ -22,15 +76,6 @@
       <pubDate>Fri, 30 Dec 2022 00:20:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Homelab</title>
-      <link>https://ecwuuuuu.com/tags/homelab/</link>
-      <pubDate>Fri, 30 Dec 2022 00:20:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/homelab/</guid>
       <description></description>
     </item>
     
@@ -62,29 +107,11 @@
     </item>
     
     <item>
-      <title>List</title>
-      <link>https://ecwuuuuu.com/tags/list/</link>
-      <pubDate>Tue, 27 Dec 2022 23:52:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/list/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Music</title>
       <link>https://ecwuuuuu.com/tags/music/</link>
       <pubDate>Tue, 27 Dec 2022 23:52:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/music/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>summary</title>
-      <link>https://ecwuuuuu.com/tags/summary/</link>
-      <pubDate>Tue, 27 Dec 2022 23:52:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/summary/</guid>
       <description></description>
     </item>
     

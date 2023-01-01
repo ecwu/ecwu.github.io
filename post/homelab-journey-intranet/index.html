@@ -309,17 +309,17 @@
     <li><a href="#半自动媒体中心">半自动媒体中心</a></li>
     <li><a href="#dsm-以外的文件--多媒体管理">DSM 以外的文件 / 多媒体管理</a>
       <ul>
-        <li><a href="#filebrowser">Filebrowser</a></li>
-        <li><a href="#komga">Komga</a></li>
-        <li><a href="#paperless-ngx">Paperless-NGX</a></li>
+        <li><a href="#在线文件浏览器filebrowser">在线文件浏览器：Filebrowser</a></li>
+        <li><a href="#漫画阅读器komga">漫画阅读器：Komga</a></li>
+        <li><a href="#文档数字化管理paperless-ngx">文档数字化管理：Paperless-NGX</a></li>
       </ul>
     </li>
     <li><a href="#容器管理和系统状态监控">容器管理和系统状态监控</a>
       <ul>
-        <li><a href="#portainer">Portainer</a></li>
-        <li><a href="#liberspeed">Liberspeed</a></li>
-        <li><a href="#homarr">Homarr</a></li>
-        <li><a href="#dashdot">DashDot</a></li>
+        <li><a href="#容器管理portainer">容器管理：Portainer</a></li>
+        <li><a href="#测速服务端liberspeed">测速服务端：Liberspeed</a></li>
+        <li><a href="#服务门户homarr">服务门户：Homarr</a></li>
+        <li><a href="#系统实时信息dashdot">系统实时信息：DashDot</a></li>
       </ul>
     </li>
     <li><a href="#排版渲染矢量图绘图">排版渲染、矢量图绘图</a></li>
@@ -335,7 +335,6 @@
 <h2 id="半自动媒体中心">半自动媒体中心</h2>
 <blockquote>
 <p>涉及的自建服务：Emby, Jellyfin, Jackett, Sonarr, Radarr, Chinesesubfinder, Flaresolverr, qBittorrent, Aria2</p>
-<p>部署区域：广州</p>
 </blockquote>
 <p>大多人买 NAS 都会下载收藏电影和电视剧。刚买 918+ 使用的方案是使用群晖 DSM 带的 <a href="https://www.synology.com/en-global/dsm/feature/video_station">Video Station</a>。这个工具的优势是自带基本的内容刮削（新版本需要申请一个 <a href="https://www.themoviedb.org/">The Movie Database</a> 的 API 密钥），能通过官方的 Quick Connect 访问到。首次使用只需添加媒体目录的位置+等待内容索引后，就可以获得网页串流媒体文件的体验。</p>
 <p>但 Video Station 的缺点也很明显：</p>
@@ -353,7 +352,7 @@
 <blockquote>
 <p>涉及的服务：filebrowser, komga, paperless-ngx</p>
 </blockquote>
-<h3 id="filebrowser">Filebrowser</h3>
+<h3 id="在线文件浏览器filebrowser">在线文件浏览器：Filebrowser</h3>
 <p>自己现在是 iOS 设备和 Android 双持，macOS 与 Windows 兼修。再加上之前下定决心不在 macOS 上安装微信。因此想分享一个设备上的图片或文件，可能需要中转好几个设备和服务。</p>
 <blockquote>
 <p>macOS 要分享一个文件到微信里：macOS 上通过 OneDrive 传输到云端，安卓手机上用客户端下载下来，最后发送到微信里。（林檎牌设备可以使用 AirDrop，但曾经我还没拥有 iOS 手机）</p>
@@ -373,7 +372,7 @@
   </figcaption>
 </figure>
 
-<h3 id="komga">Komga</h3>
+<h3 id="漫画阅读器komga">漫画阅读器：Komga</h3>
 <p>自己不怎么看漫画，但还是有喜欢的作品<span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md">(《BLEACH》，《排球少年》)</span>并收藏了电子化的漫画。这些大量图片的形式浏览不方便。所以想部署一个在线的漫画阅读器。一开始调研时，会发现电子书的阅读平台有很多，但是都不适合直接用于整理多图片的漫画。针对漫画有优化的工具有 Ubooquity，Komga，Kavita，Comixed。</p>
 <p>最后选择了 Komga，因为 GitHub 上 Star 比较多，界面也比较的简洁。</p>
 
@@ -389,7 +388,7 @@
   </figcaption>
 </figure>
 
-<h3 id="paperless-ngx">Paperless-NGX</h3>
+<h3 id="文档数字化管理paperless-ngx">文档数字化管理：Paperless-NGX</h3>
 <p>这个服务其实我也没有硬需求，只是想了解下就部署了（部署后，使用率也比较低）。之所以叫这个名字是因为最初的项目是 <a href="https://github.com/the-paperless-project/paperless">Paperless</a>，原作者疲于维护，开源社区 Fork 出了一个新版本 <a href="https://github.com/jonaswinkler/paperless-ng">Paperless-ng</a>，然后又因为缺少维护，有了现在最新的这个叉出 <a href="https://github.com/paperless-ngx/paperless-ngx">Paperless-ngx</a>。</p>
 
 <figure class="w-full">
@@ -411,7 +410,7 @@
 <blockquote>
 <p>涉及的服务：portainer, liberspeed, homarr, dashdot</p>
 </blockquote>
-<h3 id="portainer">Portainer</h3>
+<h3 id="容器管理portainer">容器管理：Portainer</h3>
 <p>我这套 Homelab 的服务，绝大多数都是使用 Docker 进行部署的。<a href="https://github.com/portainer/portainer">Portainer</a> 就提供了一个 Web UI 可以对 Docker 环境进行简单的管理（也支持 Docker Swarm 集群，Kubernetes 集群）。创建容器可以直接在 Web UI 里以填表的形式，选择镜像、添加环境变量和绑定存储。也支持在页面上直接应用一个 Docker-compose yaml 文件。拉起一个多个容器的栈（Stack）。部署了 Portainer 就不需要打命令，直接点击就可以操作容器或者调整配置。</p>
 
 <figure class="w-full">
@@ -426,7 +425,7 @@
   </figcaption>
 </figure>
 
-<h3 id="liberspeed">Liberspeed</h3>
+<h3 id="测速服务端liberspeed">测速服务端：Liberspeed</h3>
 <p>Speedtest 的社区开源版本，部署来是用来测试内网链路的速度的。<a href="https://github.com/librespeed/speedtest">Liberspeed</a> 并不是只用来内网测速，现在也有在线的测速网站在用这套方案。</p>
 
 <figure class="w-full">
@@ -442,7 +441,7 @@
 </figure>
 
 <p>使用了这个工具会发现，有线千兆内网其实跑不到 1000M 的速度、也能看看无线设备能到多少速度。</p>
-<h3 id="homarr">Homarr</h3>
+<h3 id="服务门户homarr">服务门户：Homarr</h3>
 <p>部署的服务太多，会记不住服务的访问入口（无论是域名还是端口）。这时候就可以部署一个内网门户。在这个系列中，在外网服务中我介绍了 Authentik，他的应用列表可以作为服务的门户。也介绍了 Flame，可以添加应用的列表和书签列表。但是内网中，我选择的是 Homarr。</p>
 
 <figure class="w-full">
@@ -459,7 +458,7 @@
 
 <p><a href="https://github.com/ajnart/homarr">Homarr</a> 没有鉴权，直接按组把服务的卡片显示在页面中。你不需要下载应用的图标，主流的服务它可以依赖 <a href="https://github.com/walkxcode/dashboard-icons">walkxcode / Dashboard-Icons</a> 获取到图标。它除了加入服务的卡片，还支持容器、日历、搜索、Torrent、天气等模块，可以绑定下载软件、媒体库、系统状态等信息显示在页面中。</p>
 <p>这种设计就非常适合内网 Homelab 的环境：不鉴权，卡片方便访问各种服务，将自己软件、硬件的状态显示在页面上。</p>
-<h3 id="dashdot">DashDot</h3>
+<h3 id="系统实时信息dashdot">系统实时信息：DashDot</h3>
 
 <figure class="w-full">
   <img src="//cdn.ecwuuuuu.com/blog/image/homelab/dashdot-ui.png" alt="alt" class="rounded-lg">
@@ -643,11 +642,11 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2022-12-29 16:21 UTC.
+      Build by GitHub Actions at: 2023-01-01 15:28 UTC.
     </p>
     <p>
       
-      &copy;2022
+      &copy;2023
       ECWUUUUU.
       All rights reserved.
       

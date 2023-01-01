@@ -309,10 +309,21 @@
         <li><a href="#rsshub">RSSHub</a></li>
       </ul>
     </li>
-    <li><a href="#代码托管">代码托管</a></li>
-    <li><a href="#门户辅助工具">门户、辅助工具</a></li>
+    <li><a href="#代码托管与持续构建">代码托管与持续构建</a>
+      <ul>
+        <li><a href="#代码托管gitea">代码托管：Gitea</a></li>
+        <li><a href="#持续构建平台drone">持续构建平台：Drone</a></li>
+      </ul>
+    </li>
     <li><a href="#密码管理">密码管理</a></li>
     <li><a href="#知识库团队工具">知识库，团队工具</a></li>
+    <li><a href="#辅助工具">辅助工具</a>
+      <ul>
+        <li><a href="#简易导航栏flame">简易导航栏：Flame</a></li>
+        <li><a href="#服务状态监控uptime-kuma">服务状态监控：Uptime Kuma</a></li>
+        <li><a href="#万能的数据可视化面板grafana">万能的数据可视化面板：Grafana</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </details>
@@ -346,10 +357,10 @@
 <p>我觉得 Authentik 最可玩的是 Flows/Stages/Policies，基于这三个工具，可以创建流程，来实现邀请注册、多因素认证登录、邮箱验证等功能，但这部分比较复杂，未来会考虑单独写一篇文章介绍。</p>
 <h2 id="资讯获取">资讯获取</h2>
 <blockquote>
-<p>涉及的服务：miniflux，RSSHub。舍去方案：Tiny Tiny RSS</p>
+<p>涉及的服务：miniflux，RSSHub。已淘汰方案：Tiny Tiny RSS</p>
 </blockquote>
 <p>我对 RSS 并没有特别的情感，但是为了逃离推荐算法构建的茧房。用 RSS 这一工具，信息的来源从以往的被动接受转变为我主动选择。</p>
-<p>最初使用了 Tiny Tiny RSS(TTRSS) 的 <a href="https://ttrss.henry.wang/">Docker 方案</a>，它插件、主题众多，有不少优秀的移动端 APP(第三方)，整体体验良好，使用了将近一年的时间。当 22 年 10 月份的时候，接触到 <a href="https://miniflux.app/">Miniflux</a> 项目，它界面上更加简洁，而且是用 Go 实现的，应该会比用 PHP 实现的 TTRSS 更加的轻量，这些优势促使我切换了阅读器。</p>
+<p>最初使用了 Tiny Tiny RSS (TTRSS) 的 <a href="https://ttrss.henry.wang/">Docker 方案</a>，它插件、主题众多，有不少优秀的移动端 APP(第三方)，整体体验良好，使用了将近一年的时间。当 22 年 10 月份的时候，接触到 <a href="https://miniflux.app/">Miniflux</a> 项目，它界面上更加简洁，而且是用 Go 实现的，应该会比用 PHP 实现的 TTRSS 更加的轻量，这些优势促使我切换了阅读器。</p>
 
 <figure class="w-full">
   <img src="//cdn.ecwuuuuu.com/blog/image/homelab/miniflux-ui.png" alt="alt" class="rounded-lg">
@@ -364,44 +375,29 @@
 </figure>
 
 <h3 id="rsshub">RSSHub</h3>
-<p>除了阅读器，一起配套的服务是 RSSHub，这是一个 RSS 生成器，理论上可以为任意内容生成 RSS 订阅源；随着 RSS 式微，很多媒体/信息来源都不再提供 RSS 订阅的途径，而使用 RSSHub 就可以为这些途径生成一个可以订阅的链接。但如果你不想自建，你也可以使用<a href="https://rsshub.app/">官方部署的 Instance</a> 或是 <a href="https://rssforever.com/">RSS Forever</a> 提供的 Instance。</p>
-<h2 id="代码托管">代码托管</h2>
+<p>除了阅读器，一起配套的服务是 RSSHub，这是一个 RSS 生成器，理论上可以为任意内容生成 RSS 订阅源；随着 RSS 式微，很多媒体/信息来源都不再提供 RSS 订阅的途径，而使用 RSSHub 就可以为这些途径生成一个可以订阅的链接，目前已经支持的信息源和可以从<a href="https://docs.rsshub.app/">官方文档</a>中查看。但如果你不想自建，你也可以使用<a href="https://rsshub.app/">官方部署的 Instance</a> 或是 <a href="https://rssforever.com/">RSS Forever</a> 提供的 Instance。后者还附带了一些抓取要求的 API Key (比如 Twitter)，轻量需求下简单好用。</p>
+<h2 id="代码托管与持续构建">代码托管与持续构建</h2>
 <blockquote>
-<p>涉及的服务：Gitea</p>
+<p>涉及的服务：Gitea, Drone</p>
 </blockquote>
-<p>见 <a href="https://ecwuuuuu.com/post/self-host-gitlab-instance/">自建 GitLab 踩坑实录</a> 和 <a href="https://ecwuuuuu.com/post/gitlab-updates/">自建 GitLab 配置 SSH 和后续</a>。2022 年其实也写了一些小项目自娱自乐，学习了 Go 语言，但都只上传到了自建的 Gitea 上。</p>
-<h2 id="门户辅助工具">门户、辅助工具</h2>
-<blockquote>
-<p>涉及的服务：Flame，Uptime Kuma，Grafana</p>
-</blockquote>
-<p><a href="https://github.com/pawelmalak/flame">https://github.com/pawelmalak/flame</a></p>
-<p><a href="https://github.com/louislam/uptime-kuma">https://github.com/louislam/uptime-kuma</a></p>
+<p>从 16 年开始使用 Git 之后，写代码几乎都会用利用 Git 进行版本控制。但很多半成品、学习新东西的产物并没有上传到 GitHub 上，而更多的是去了自建的 Git。</p>
+<h3 id="代码托管gitea">代码托管：Gitea</h3>
 
 <figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/flame-ui.png" alt="alt" class="rounded-lg">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/gitea-ui.png" alt="alt" class="rounded-lg">
 
   <figcaption>
-  
-  简洁的自建开始界面
+  <strong>自建 Gitea </strong>
+  界面上挺像 GitHub
   
   
   
   </figcaption>
 </figure>
 
-
-<figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/uptime-kuma-ui.png" alt="alt" class="rounded-lg">
-
-  <figcaption>
-  
-  服务状态页
-  
-  
-  
-  </figcaption>
-</figure>
-
+<p>至于用什么自建 Git，现在已经有非常多的选择，GitLab/Gitea/Gogs 比较主流也各有优劣。我之前尝试过 GitLab（见 <a href="https://ecwuuuuu.com/post/self-host-gitlab-instance/">自建 GitLab 踩坑实录</a> 和 <a href="https://ecwuuuuu.com/post/gitlab-updates/">自建 GitLab 配置 SSH 和后续</a>）。最新是部署了 Gitea ，因为它功能齐全的情况下，比较的轻量。</p>
+<h3 id="持续构建平台drone">持续构建平台：Drone</h3>
+<p>以前一直有听说 GitOps 中的 CI/CD (Continuous Integration and Continuous Delivery/Continuous Deployment 持续集成和持续构建)，但一直没有实践过。但完成将博客和 <a href="https://uichcc.com">HCC 的主页</a> 利用 GitHub Actions 进行自动构建的改造后，开始体验到它的魔力。自己构建的 CI 是利用了 <a href="https://www.drone.io/">Drone</a>，如果你使用的是 Gitea，官方提供了<a href="https://docs.drone.io/server/provider/gitea/">安装教程</a>。我目前使用持续构建主要是进行 Docusaurus 的构建和一些软件的 Docker 镜像构建。CD 部分，因为架构上还没有用到 Kubernetes，加上 Portainer 的 Web Hook 功能需要付费，所以暂时还没有涉足。</p>
 <h2 id="密码管理">密码管理</h2>
 <blockquote>
 <p>涉及的服务：VaultWarden</p>
@@ -419,6 +415,7 @@
   </figcaption>
 </figure>
 
+<p>TBA</p>
 <h2 id="知识库团队工具">知识库，团队工具</h2>
 <blockquote>
 <p>涉及的服务：Outline, YouTrack</p>
@@ -436,6 +433,60 @@
   </figcaption>
 </figure>
 
+<p>TBA</p>
+<h2 id="辅助工具">辅助工具</h2>
+<blockquote>
+<p>涉及的服务：Flame，Uptime Kuma，Grafana</p>
+</blockquote>
+<h3 id="简易导航栏flame">简易导航栏：Flame</h3>
+<p>目前内外网提到的服务就有十几种，如果使用的是端口，那很难全部记住（就算是域名也不容易）。那么一个类似 Hao123 的门户导航站是有必要的。之前在内网，我使用的是 Homarr，但 Homarr 没有鉴权、可以随意修改页面的内容。这种形式是不适合部署在公网的。这种情况下，我就选用了 <a href="https://github.com/pawelmalak/flame">Flame</a></p>
+
+<figure class="w-full">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/flame-ui.png" alt="alt" class="rounded-lg">
+
+  <figcaption>
+  
+  简洁的自建开始界面
+  
+  
+  
+  </figcaption>
+</figure>
+
+<p>Flame 有 Application 和 Bookmark 的概念，显示上，Application会显示在页面的上半部分，且显示尺寸比较大。Bookmarks 显示在页面下半部分，可以归类。两种类似都可以设定名字和一个 <a href="https://materialdesignicons.com/">MDI</a> 图标。每个链接都可以设定为私有或公开。设定管理员密码，只有输入密码后，才可以修改页面上的内容并查看私有链接。</p>
+<p>页面上还有附加功能，可以直接进行搜索和显示当地天气，很适合做内网的主页。</p>
+<h3 id="服务状态监控uptime-kuma">服务状态监控：Uptime Kuma</h3>
+<p>各大互联网公司提供的服务状态页，使用 <a href="https://github.com/louislam/uptime-kuma">Uptime Kuma</a> 你也可以获得同款。Uptime Kuma 部署后，可以定期（默认 60 秒）的帮你检查你监控的网页（也允许监控 TCP，UDP），并提供一个状态页进行展示。在服务出现故障时，它还能通过提醒服务告知你（比如 Telegram Bot）。</p>
+<p>但除了自建，还有一种“滥用” GitHub 的方式实现服务的状态监控，通过 <a href="https://github.com/upptime/upptime">upptime/upptime</a> 项目，利用 GitHub Actions 定期检查服务状态，用 GitHub Repository 储存历史信息，用 GitHub Pages 来展示状态页，是无成本的一种监控服务状态的方式。但需要注意的是，因为 GitHub Actions 的因素，服务并无法保证准确的一个固定的监控时间间隔，也就是说服务无法访问时，可能无法第一时间感知（但是个人用，也完全是够了）。</p>
+
+<figure class="w-full">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/uptime-kuma-ui.png" alt="alt" class="rounded-lg">
+
+  <figcaption>
+  
+  服务状态页
+  
+  
+  
+  </figcaption>
+</figure>
+
+<h3 id="万能的数据可视化面板grafana">万能的数据可视化面板：Grafana</h3>
+<p>这个服务使用的并不多，但是部署了还是可以提一下。Grafana 主要是用于数据的可视化并允许你方便的制作出一个可视化的面板。使用时它连接数据源（可以是传统基于 SQL 的，也可以是时间序列数据库如 <a href="https://prometheus.io/">Prometheus</a>）然后面板中编辑数据的检索语句（Query），然后利用它自带（比如折线图、散点图、文本、列表）或是第三方的插件进行可视化。通过这种方式，可以很方便的生成出一个美观的可视化大屏。</p>
+
+<figure class="w-full">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/grafana-ui.png" alt="alt" class="rounded-lg">
+
+  <figcaption>
+  <strong>Grafana </strong>
+  可视化服务器 Docker 带宽和流量的状态
+  
+  
+  
+  </figcaption>
+</figure>
+
+<p>个人使用方面，大多是将服务器的状态暴露，让 Prometheus 抓取，最后 Grafana 使用出来，可以实时监控服务器的负载和各资源的状态。</p>
 
 </article>
 </main>
@@ -471,7 +522,7 @@
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2022-12-30 - <abbr title="Date of last major modification to this page">2022-12-29</abbr></td>
+                2022-12-30 - <abbr title="Date of last major modification to this page">2023-01-01</abbr></td>
             </tr>
             
             
@@ -567,11 +618,11 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2022-12-29 16:21 UTC.
+      Build by GitHub Actions at: 2023-01-01 15:28 UTC.
     </p>
     <p>
       
-      &copy;2022
+      &copy;2023
       ECWUUUUU.
       All rights reserved.
       
