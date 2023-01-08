@@ -6,7 +6,16 @@
     <description>Recent content in Container on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 00:20:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jan 2023 23:17:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab：我的赛博积木 - 组成与架构</title>
+      <link>https://ecwuuuuu.com/post/homelab-journey-architecture/</link>
+      <pubDate>Sun, 08 Jan 2023 23:17:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/homelab-journey-architecture/</guid>
+      <description>架构概览 经常能在 r/homelab 上看到 &amp;ldquo;LabPorn&amp;rdquo; 里其他大佬的机架。虽然很眼红，但目前自己的 HomeLab 只是几个简单的独立设备/资源组成。包括腾讯轻量云实例，群晖 NAS 和工控机。</description>
+    </item>
+    
     <item>
       <title>Homelab：我的赛博积木 - 公网服务</title>
       <link>https://ecwuuuuu.com/post/homelab-journey-internet/</link>
