@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Screen capture on ECWUUUUU</title>
+    <link>https://ecwuuuuu.com/tags/screen-capture/</link>
+    <description>Recent content in Screen capture on ECWUUUUU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Jan 2023 00:16:08 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/screen-capture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 input-overlay 工具在 OBS Studio 中展示鼠标和按键操作</title>
+      <link>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</link>
+      <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</guid>
+      <description>最近折腾了下 OBS Studio 的 input-overlay 插件，考虑到该插件的中文教程不多，特将折腾过程记录为本文。 什么是 input-overlay input-overlay 是由 Alex (univrsal) 开发的一个 OBS Studio 插件。安装后，可以在 OBS Studio 中增加</description>
+    </item>
+    
+  </channel>
+</rss>
