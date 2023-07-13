@@ -204,7 +204,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
         </svg>
-        Status: In Progress
+        Status: Finished
         
         
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -324,7 +324,7 @@
     <h2 id="架构概览">架构概览</h2>
 <p>经常能在 r/homelab 上看到 &ldquo;<a href="https://www.reddit.com/r/homelab/?f=flair_name%3A%22LabPorn%22">LabPorn</a>&rdquo; 里其他大佬的机架。虽然很眼红，但目前自己的 HomeLab 只是几个简单的独立设备/资源组成。包括腾讯轻量云实例，群晖 NAS 和工控机。</p>
 <h2 id="内网">内网</h2>
-<p>我的地址在粤港澳大湾区，并在常住的广州和中山配有两台设备。</p>
+<p>我的地址在粤港澳大湾区，并在常住的广州，中山，和珠海配有三台设备。</p>
 <hr>
 <p>广州是一台<a href="https://cndl.synology.cn/download/Document/Hardware/DataSheet/DiskStation/18-year/DS918+/chs/Synology_DS918_Plus_Data_Sheet_chs.pdf">群晖的 DS918+</a>，J3455 CPU 配 12G RAM（原装 4G + 后装 8G）。保持官方最新 DSM 系统并配有四块硬盘，总共有效存储 24T。</p>
 <ul>
@@ -334,12 +334,22 @@
 </ul>
 <p>大多情况下使用 DSM 内带的 Docker 部署服务，小部分会使用官方制作的 spk 包安装（如 EMBY 和 Tailscale）。</p>
 <hr>
-<p>在中山是 J4125 四口 2.5GB 的工控机。配有 16G RAM，120G mSTAT 固态。使用 ESXi 7.0 作为底层 hypervisor。</p>
+<p>在中山是 J4125 四口 2.5GB 的工控机。配有 16G RAM，120G mSTAT 固态。使用 PVE 7 作为底层 hypervisor。</p>
 <ul>
-<li>一个 Ubuntu 22.04 虚拟机，部署日常服务。</li>
+<li>一个 Debian 11 虚拟机，运行服务监测容器 （Uptime Kuma）。</li>
 <li>一个 OpenWRT 做旁路由。</li>
 </ul>
 <p>在 Ubuntu 虚拟机上，使用了基于 Containerd 的容器服务，然后使用 <a href="https://caddyserver.com/">Caddy</a> 做服务代理。</p>
+<hr>
+<p>在珠海的是自己组装的 W-2140B 服务器。配有 64G RECC RAM，500G NVMe 固态，四块 16T SAS 硬盘。使用 PVE 7.0 作为底层 hypervisor。（详细组装过程见<a href="https://www.bilibili.com/video/BV1KV4y127wk">B 站视频</a>）</p>
+<ul>
+<li>一个 TrueNAS 虚拟机，直通 HBA 卡管理硬盘。</li>
+<li>一个 Ubuntu 虚拟机，部署耗费较多资源的服务（Wiki，GitLab，Coder）。</li>
+<li>一个 Debian 虚拟机，用于下载、内容刮削。</li>
+<li>一个 Ubuntu LXC 虚拟机，直通 T400 (2G) 显卡，运行 Emby。</li>
+<li>一个 OpenWRT 做旁路由。</li>
+</ul>
+<p>在 Ubuntu 虚拟机上，使用 <a href="https://caddyserver.com/">Caddy</a> 做服务代理，通过 Cloudflare DNS Challenge 自动获取 TLS 证书。</p>
 <h2 id="公网">公网</h2>
 <p>公网上的服务使用了两台腾讯云 Lighthouse 虚拟机，系统基于 CentOS。</p>
 <ul>
@@ -382,7 +392,7 @@
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2023-01-08</td>
+                2023-01-08 - <abbr title="Date of last major modification to this page">2023-07-13</abbr></td>
             </tr>
             
             
@@ -483,7 +493,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2023-06-08 11:18 CST.
+      Build by GitHub Actions at: 2023-07-13 20:33 CST.
     </p>
     <p>
       
