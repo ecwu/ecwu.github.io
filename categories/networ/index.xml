@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Networ on ECWUUUUU</title>
+    <link>https://ecwuuuuu.com/categories/networ/</link>
+    <description>Recent content in Networ on ECWUUUUU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Oct 2023 02:20:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/categories/networ/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab：我的赛博积木 - 展望</title>
+      <link>https://ecwuuuuu.com/post/homelab-journey-future/</link>
+      <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/homelab-journey-future/</guid>
+      <description>从“赛博积木”系列第一篇文章到现在，已经过了一年的时间。受自己需求、实际体验后的感受等多重因素的影响。现有的架构和最初的设计已经有了很大的变</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -271,7 +271,16 @@
      
          
         
+     
+         
+        
     
+     
+        
+        
+            
+            
+        
      
         
         
@@ -298,7 +307,7 @@
         
     
      
-        <p>This post is part 6 of 7
+        <p>This post is part 6 of 8
             in the <b>HomeLab</b> series.</p>
         <p>
         
@@ -337,7 +346,7 @@
 <p>在中山是 J4125 四口 2.5GB 的工控机。配有 16G RAM，120G mSTAT 固态。使用 PVE 7 作为底层 hypervisor。</p>
 <ul>
 <li>一个 Debian 11 虚拟机，运行服务监测容器 （Uptime Kuma）。</li>
-<li>一个 OpenWRT 做旁路由。</li>
+<li>一个 OpenWRT 做单臂路由。</li>
 </ul>
 <p>在 Ubuntu 虚拟机上，使用了基于 Containerd 的容器服务，然后使用 <a href="https://caddyserver.com/">Caddy</a> 做服务代理。</p>
 <hr>
@@ -347,16 +356,16 @@
 <li>一个 Ubuntu 虚拟机，部署耗费较多资源的服务（Wiki，GitLab，Coder）。</li>
 <li>一个 Debian 虚拟机，用于下载、内容刮削。</li>
 <li>一个 Ubuntu LXC 虚拟机，直通 T400 (2G) 显卡，运行 Emby。</li>
-<li>一个 OpenWRT 做旁路由。</li>
+<li>一个 OpenWRT 做单臂路由。</li>
 </ul>
 <p>在 Ubuntu 虚拟机上，使用 <a href="https://caddyserver.com/">Caddy</a> 做服务代理，通过 Cloudflare DNS Challenge 自动获取 TLS 证书。</p>
 <h2 id="公网">公网</h2>
-<p>公网上的服务使用了两台腾讯云 Lighthouse 虚拟机，系统基于 CentOS。</p>
+<p>公网上的服务使用了腾讯云 Lighthouse 虚拟机，系统基于 CentOS。和 <a href="https://www.cubecloud.net/aff.php?aff=2332">CubeCloud</a> 的 CN2 GIA 服务器，系统基于 Ubuntu。</p>
 <ul>
-<li>4C4G 广州 峰值带宽 8M</li>
-<li>2C4G 香港 峰值带宽 30M</li>
+<li>腾讯云轻量 4C4G 广州 峰值带宽 8M</li>
+<li><del>腾讯云轻量 2C4G 香港 峰值带宽 30M</del> （已经弃用）</li>
+<li>CubeCloud CN2 GIA 2C1G 广州 峰值带宽 50M</li>
 </ul>
-<p>两台设备选装了腾讯云的宝塔定制版面板，关闭了在线面板的访问。</p>
 
 </article>
 </main>
@@ -493,7 +502,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2023-07-13 20:33 CST.
+      Build by GitHub Actions at: 2023-10-07 02:33 CST.
     </p>
     <p>
       

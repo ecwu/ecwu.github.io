@@ -6,7 +6,16 @@
     <description>Recent content in ddns on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Oct 2022 22:43:40 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/ddns/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Oct 2023 02:20:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/ddns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homelab：我的赛博积木 - 展望</title>
+      <link>https://ecwuuuuu.com/post/homelab-journey-future/</link>
+      <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/homelab-journey-future/</guid>
+      <description>从“赛博积木”系列第一篇文章到现在，已经过了一年的时间。受自己需求、实际体验后的感受等多重因素的影响。现有的架构和最初的设计已经有了很大的变</description>
+    </item>
+    
     <item>
       <title>Homelab：我的赛博积木</title>
       <link>https://ecwuuuuu.com/post/homelab-journey-intro/</link>
