@@ -6,7 +6,19 @@
     <description>Recent content in Tutorial on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Jan 2023 00:16:08 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jan 2024 00:25:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyTorch Tutorial</title>
+      <link>https://ecwuuuuu.com/post/pytorch-tutorial/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid>
+      <description>A little bit of context
+This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.
+My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.
+ Introduction to PyTorch  PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.</description>
+    </item>
+    
     <item>
       <title>使用 input-overlay 工具在 OBS Studio 中展示鼠标和按键操作</title>
       <link>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</link>

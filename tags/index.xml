@@ -6,7 +6,97 @@
     <description>Recent content in Tags on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Oct 2023 02:20:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jan 2024 00:25:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DataLoader</title>
+      <link>https://ecwuuuuu.com/tags/dataloader/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/dataloader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dataset</title>
+      <link>https://ecwuuuuu.com/tags/dataset/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/dataset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://ecwuuuuu.com/tags/deep-learning/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://ecwuuuuu.com/tags/machine-learning/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MLP</title>
+      <link>https://ecwuuuuu.com/tags/mlp/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/mlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Model</title>
+      <link>https://ecwuuuuu.com/tags/model/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PyTorch</title>
+      <link>https://ecwuuuuu.com/tags/pytorch/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>https://ecwuuuuu.com/tags/tensorflow/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transfer Learning</title>
+      <link>https://ecwuuuuu.com/tags/transfer-learning/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/transfer-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://ecwuuuuu.com/tags/tutorial/</link>
+      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Container</title>
       <link>https://ecwuuuuu.com/tags/container/</link>
@@ -193,15 +283,6 @@
       <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/streaming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>https://ecwuuuuu.com/tags/tutorial/</link>
-      <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/tutorial/</guid>
       <description></description>
     </item>
     
@@ -796,15 +877,6 @@
       <pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/classification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>https://ecwuuuuu.com/tags/machine-learning/</link>
-      <pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/machine-learning/</guid>
       <description></description>
     </item>
     

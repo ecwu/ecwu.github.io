@@ -5,6 +5,48 @@
     <loc>https://ecwuuuuu.com/categories/</loc>
     <lastmod>2023-07-13T20:32:00+08:00</lastmod>
   </url><url>
+    <loc>https://ecwuuuuu.com/tags/dataloader/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/dataset/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/deep-learning/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/</loc>
+    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/machine-learning/</loc>
+    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/series/machine-learning/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/mlp/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/model/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/note/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/</loc>
+    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/pytorch/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/pytorch-tutorial/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/series/</loc>
+    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/</loc>
+    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/tech/</loc>
+    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/tensorflow/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/transfer-learning/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/tutorial/</loc>
+  </url><url>
     <loc>https://ecwuuuuu.com/categories/cloud/</loc>
     <lastmod>2023-07-13T20:32:00+08:00</lastmod>
   </url><url>
@@ -14,9 +56,6 @@
     <loc>https://ecwuuuuu.com/tags/ddns/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/docker/</loc>
-    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/</loc>
     <lastmod>2023-07-13T20:32:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/frp/</loc>
@@ -36,19 +75,7 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/networking/</loc>
   </url><url>
-    <loc>https://ecwuuuuu.com/post/</loc>
-    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/series/</loc>
-    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/synology/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/</loc>
-    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/tech/</loc>
-    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/tencent-cloud/</loc>
   </url><url>
@@ -93,8 +120,6 @@
     <loc>https://ecwuuuuu.com/tags/streaming/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/streaming/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/tutorial/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/tutorial/</loc>
   </url><url>
@@ -353,14 +378,7 @@
     <loc>https://ecwuuuuu.com/tags/classification/</loc>
     <lastmod>2022-01-23T14:24:00+08:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/tags/machine-learning/</loc>
-    <lastmod>2022-01-23T14:24:00+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/series/machine-learning/</loc>
-  </url><url>
     <loc>https://ecwuuuuu.com/categories/machine-learning/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/note/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/sigmoid/</loc>
   </url><url>
