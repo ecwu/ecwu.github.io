@@ -6,19 +6,7 @@
     <description>Recent content in Machine Learning on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jan 2024 00:25:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/series/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PyTorch Tutorial</title>
-      <link>https://ecwuuuuu.com/post/pytorch-tutorial/</link>
-      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid>
-      <description>A little bit of context
-This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.
-My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.
- Introduction to PyTorch  PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 07 Jun 2021 13:06:14 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/series/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sigmoid or Softmax for Binary Classification</title>
       <link>https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/</link>

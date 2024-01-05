@@ -17,8 +17,6 @@
     <loc>https://ecwuuuuu.com/tags/machine-learning/</loc>
     <lastmod>2022-01-23T14:24:00+08:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/series/machine-learning/</loc>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/mlp/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/model/</loc>
@@ -31,9 +29,6 @@
     <loc>https://ecwuuuuu.com/tags/pytorch/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/post/pytorch-tutorial/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/series/</loc>
-    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/</loc>
     <lastmod>2023-07-13T20:32:00+08:00</lastmod>
@@ -74,6 +69,9 @@
     <loc>https://ecwuuuuu.com/categories/networ/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/networking/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/series/</loc>
+    <lastmod>2023-07-13T20:32:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/synology/</loc>
   </url><url>
@@ -377,6 +375,8 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/classification/</loc>
     <lastmod>2022-01-23T14:24:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/series/machine-learning/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/machine-learning/</loc>
   </url><url>
