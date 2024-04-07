@@ -6,7 +6,70 @@
     <description>Recent content in Tags on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jan 2024 00:25:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Apr 2024 01:25:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Authentication</title>
+      <link>https://ecwuuuuu.com/tags/authentication/</link>
+      <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Container</title>
+      <link>https://ecwuuuuu.com/tags/container/</link>
+      <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://ecwuuuuu.com/tags/docker/</link>
+      <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>homelab</title>
+      <link>https://ecwuuuuu.com/tags/homelab/</link>
+      <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/homelab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Images</title>
+      <link>https://ecwuuuuu.com/tags/images/</link>
+      <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/images/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self-host</title>
+      <link>https://ecwuuuuu.com/tags/self-host/</link>
+      <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/self-host/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Service</title>
+      <link>https://ecwuuuuu.com/tags/service/</link>
+      <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/service/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>DataLoader</title>
       <link>https://ecwuuuuu.com/tags/dataloader/</link>
@@ -98,15 +161,6 @@
     </item>
     
     <item>
-      <title>Container</title>
-      <link>https://ecwuuuuu.com/tags/container/</link>
-      <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/container/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ddns</title>
       <link>https://ecwuuuuu.com/tags/ddns/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
@@ -116,29 +170,11 @@
     </item>
     
     <item>
-      <title>Docker</title>
-      <link>https://ecwuuuuu.com/tags/docker/</link>
-      <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>FRP</title>
       <link>https://ecwuuuuu.com/tags/frp/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/frp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>homelab</title>
-      <link>https://ecwuuuuu.com/tags/homelab/</link>
-      <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/homelab/</guid>
       <description></description>
     </item>
     
@@ -184,33 +220,6 @@
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/%E7%BB%84%E7%BD%91/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Images</title>
-      <link>https://ecwuuuuu.com/tags/images/</link>
-      <pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/images/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>self-host</title>
-      <link>https://ecwuuuuu.com/tags/self-host/</link>
-      <pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/self-host/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Service</title>
-      <link>https://ecwuuuuu.com/tags/service/</link>
-      <pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/service/</guid>
       <description></description>
     </item>
     

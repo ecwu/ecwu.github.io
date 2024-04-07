@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authentication on ECWUUUUU</title>
+    <link>https://ecwuuuuu.com/tags/authentication/</link>
+    <description>Recent content in Authentication on ECWUUUUU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Apr 2024 01:25:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/authentication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Authentik 教程系列：简介和安装配置</title>
+      <link>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</link>
+      <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</guid>
+      <description>如果你也像我一样喜欢折腾 HomeLab，我们可能有个共同的乐趣就是寻找各种需求的自部署方案；但当我们这些自部署的服务越来越多，去访问每一个服</description>
+    </item>
+    
+  </channel>
+</rss>
