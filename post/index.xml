@@ -6,7 +6,16 @@
     <description>Recent content in Posts on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Apr 2024 01:25:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Apr 2024 19:55:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Authentik 教程系列：反向代理的配置</title>
+      <link>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</link>
+      <pubDate>Mon, 08 Apr 2024 19:55:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</guid>
+      <description>将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。 根据官方的</description>
+    </item>
+    
     <item>
       <title>Authentik 教程系列：简介和安装配置</title>
       <link>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</link>
