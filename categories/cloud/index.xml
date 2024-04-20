@@ -13,7 +13,7 @@
       <pubDate>Mon, 08 Apr 2024 19:55:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</guid>
-      <description>将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。 根据官方的</description>
+      <description>统一登录平台最重要的步骤就是将应用接入。Authentik 支持的接入协议相当丰富，包括 OIDC/OAuth2.0，SAML，SCIM，</description>
     </item>
     
     <item>

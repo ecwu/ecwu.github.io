@@ -264,180 +264,7 @@
 <main>
 <article>
     
-    <p>将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。</p>
-<p>根据官方的文档，如果要使用反向代理，以下 header 必须传给 upstream。</p>
-<ul>
-<li><code>X-Forwarded-Proto</code>: 告诉 authentik 和代理提供商是否通过 HTTPS 连接提供服务。</li>
-<li><code>X-Forwarded-For</code>: 让 authentik 知道客户端的 IP 地址。</li>
-<li><code>Host</code>: 各种安全检查、WebSocket 握手以及 Outpost 和代理提供商通信所需。</li>
-<li><code>Connection: Upgrade</code> 和 <code>Upgrade: WebSocket</code>: 需要升级 HTTP/1.1 下向 WebSocket 端点请求的协议。</li>
-</ul>
-<p>我们目前假设已经部署了 nginx 和 traefik，下面只提供具体的配置。</p>
-<h2 id="nginx">Nginx</h2>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-nginx" data-lang="nginx"><span style="color:#586e75"># Upstream where your authentik server is hosted.
-</span><span style="color:#586e75"></span><span style="color:#719e07">upstream</span> <span style="color:#2aa198">authentik</span> {
-    <span style="color:#719e07">server</span> <span style="color:#2aa198">&lt;authentik</span> <span style="color:#2aa198">服务器的</span> <span style="color:#2aa198">IP</span> <span style="color:#2aa198">或主机名&gt;:9443</span>;
-    <span style="color:#586e75"># Improve performance by keeping some connections alive.
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">keepalive</span> <span style="color:#2aa198">10</span>;
-}
-
-<span style="color:#586e75"># Upgrade WebSocket if requested, otherwise use keepalive
-</span><span style="color:#586e75"></span><span style="color:#719e07">map</span> <span style="color:#268bd2">$http_upgrade</span> <span style="color:#268bd2">$connection_upgrade_keepalive</span> {
-    <span style="color:#719e07">default</span> <span style="color:#2aa198">upgrade</span>;
-    <span style="color:#719e07">&#39;&#39;</span>      <span style="color:#2aa198">&#39;&#39;</span>;
-}
-
-<span style="color:#719e07">server</span> {
-    <span style="color:#586e75"># HTTP server config
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">listen</span> <span style="color:#2aa198">80</span>;
-    <span style="color:#719e07">listen</span> <span style="color:#2aa198">[::]:80</span>;
-    <span style="color:#719e07">server_name</span> <span style="color:#2aa198">你反代出来.的域名.com</span>;
-    <span style="color:#586e75"># 301 redirect to HTTPS
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> <span style="color:#2aa198">301</span> <span style="color:#2aa198">https://</span><span style="color:#268bd2">$host$request_uri</span>;
-}
-<span style="color:#719e07">server</span> {
-    <span style="color:#586e75"># HTTPS server config
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">listen</span> <span style="color:#2aa198">443</span> <span style="color:#2aa198">ssl</span> <span style="color:#2aa198">http2</span>;
-    <span style="color:#719e07">listen</span> <span style="color:#2aa198">[::]:443</span> <span style="color:#2aa198">ssl</span> <span style="color:#2aa198">http2</span>;
-    <span style="color:#719e07">server_name</span> <span style="color:#2aa198">你反代出来.的域名.com</span>;
-
-    <span style="color:#586e75"># TLS certificates
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">ssl_certificate</span> <span style="color:#2aa198">/etc/letsencrypt/live/domain.tld/fullchain.pem</span>;
-    <span style="color:#719e07">ssl_certificate_key</span> <span style="color:#2aa198">/etc/letsencrypt/live/domain.tld/privkey.pem</span>;
-    <span style="color:#719e07">add_header</span> <span style="color:#2aa198">Strict-Transport-Security</span> <span style="color:#2aa198">&#34;max-age=63072000&#34;</span> <span style="color:#2aa198">always</span>;
-
-    <span style="color:#586e75"># Proxy site
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">location</span> <span style="color:#2aa198">/</span> {
-        <span style="color:#719e07">proxy_pass</span> <span style="color:#2aa198">https://authentik</span>;
-        <span style="color:#719e07">proxy_http_version</span> <span style="color:#2aa198">1</span><span style="color:#2aa198">.1</span>;
-        <span style="color:#719e07">proxy_set_header</span> <span style="color:#2aa198">X-Forwarded-Proto</span> <span style="color:#268bd2">$scheme</span>;
-        <span style="color:#719e07">proxy_set_header</span> <span style="color:#2aa198">X-Forwarded-For</span> <span style="color:#268bd2">$proxy_add_x_forwarded_for</span>;
-        <span style="color:#719e07">proxy_set_header</span> <span style="color:#2aa198">Host</span> <span style="color:#268bd2">$http_host</span>;
-        <span style="color:#719e07">proxy_set_header</span> <span style="color:#2aa198">Upgrade</span> <span style="color:#268bd2">$http_upgrade</span>;
-        <span style="color:#719e07">proxy_set_header</span> <span style="color:#2aa198">Connection</span> <span style="color:#268bd2">$connection_upgrade_keepalive</span>;
-    }
-}
-</code></pre></div><h2 id="traefik">Traefik</h2>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml">---
-
-<span style="color:#268bd2">services</span>:
-  <span style="color:#268bd2">postgresql</span>:
-    <span style="color:#268bd2">image</span>: docker.io/library/postgres:12-alpine
-    <span style="color:#268bd2">restart</span>: unless-stopped
-    <span style="color:#268bd2">healthcheck</span>:
-      <span style="color:#268bd2">test</span>:
-        [
-          <span style="color:#2aa198">&#34;CMD-SHELL&#34;</span>,
-          <span style="color:#2aa198">&#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;</span>
-        ]
-      <span style="color:#268bd2">start_period</span>: 20s
-      <span style="color:#268bd2">interval</span>: 30s
-      <span style="color:#268bd2">retries</span>: <span style="color:#2aa198">5</span>
-      <span style="color:#268bd2">timeout</span>: 5s
-    <span style="color:#268bd2">volumes</span>:
-      - database:/var/lib/postgresql/data
-    <span style="color:#268bd2">environment</span>:
-      <span style="color:#268bd2">POSTGRES_PASSWORD</span>: ${PG_PASS:?database password required}
-      <span style="color:#268bd2">POSTGRES_USER</span>: ${PG_USER:-authentik}
-      <span style="color:#268bd2">POSTGRES_DB</span>: ${PG_DB:-authentik}
-    <span style="color:#268bd2">networks</span>:
-      - authentik
-    <span style="color:#268bd2">env_file</span>:
-      - .env
-  <span style="color:#268bd2">redis</span>:
-    <span style="color:#268bd2">image</span>: docker.io/library/redis:alpine
-    <span style="color:#268bd2">command</span>: --save 60 1 --loglevel warning
-    <span style="color:#268bd2">restart</span>: unless-stopped
-    <span style="color:#268bd2">healthcheck</span>:
-      <span style="color:#268bd2">test</span>: [ <span style="color:#2aa198">&#34;CMD-SHELL&#34;</span>, <span style="color:#2aa198">&#34;redis-cli ping | grep PONG&#34;</span> ]
-      <span style="color:#268bd2">start_period</span>: 20s
-      <span style="color:#268bd2">interval</span>: 30s
-      <span style="color:#268bd2">retries</span>: <span style="color:#2aa198">5</span>
-      <span style="color:#268bd2">timeout</span>: 3s
-    <span style="color:#268bd2">volumes</span>:
-      - redis:/data
-    <span style="color:#268bd2">networks</span>:
-      - authentik
-  <span style="color:#268bd2">server</span>:
-    <span style="color:#268bd2">image</span>: ${AUTHENTIK_IMAGE:-ghcr.io/goauthentik/server}:${AUTHENTIK_TAG:-2024.2.2}
-    <span style="color:#268bd2">restart</span>: unless-stopped
-    <span style="color:#268bd2">command</span>: server
-    <span style="color:#268bd2">environment</span>:
-      <span style="color:#268bd2">AUTHENTIK_REDIS__HOST</span>: redis
-      <span style="color:#268bd2">AUTHENTIK_POSTGRESQL__HOST</span>: postgresql
-      <span style="color:#268bd2">AUTHENTIK_POSTGRESQL__USER</span>: ${PG_USER:-authentik}
-      <span style="color:#268bd2">AUTHENTIK_POSTGRESQL__NAME</span>: ${PG_DB:-authentik}
-      <span style="color:#268bd2">AUTHENTIK_POSTGRESQL__PASSWORD</span>: ${PG_PASS}
-    <span style="color:#268bd2">volumes</span>:
-      - ./media:/media
-      - ./custom-templates:/templates
-    <span style="color:#268bd2">env_file</span>:
-      - .env
-    <span style="color:#268bd2">ports</span>:
-      - <span style="color:#2aa198">&#34;${COMPOSE_PORT_HTTP:-9000}:9000&#34;</span>
-      - <span style="color:#2aa198">&#34;${COMPOSE_PORT_HTTPS:-9443}:9443&#34;</span>
-    <span style="color:#268bd2">labels</span>:
-      - <span style="color:#2aa198">&#34;traefik.docker.network=traefik&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.enable=true&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.http.services.authentik.loadbalancer.server.port=${COMPOSE_PORT_HTTP:-9000}&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.http.routers.authentik-http.service=authentik&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.http.routers.authentik-http.rule=Host(`你反代出来.的域名.com`)&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.http.routers.authentik-http.entrypoints=web&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.http.routers.authentik-tls.service=authentik&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.http.routers.authentik-tls.rule=Host(`你反代出来.的域名.com`)&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.http.routers.authentik-tls.entrypoints=websecure&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.http.routers.authentik-tls.tls=true&#34;</span>
-      - <span style="color:#2aa198">&#34;traefik.http.routers.authentik-tls.tls.certresolver=cfresolver&#34;</span> <span style="color:#586e75"># 这个是我们提前配好的一个 certificatesResolvers</span>
-      - <span style="color:#2aa198">&#34;traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https&#34;</span>
-    <span style="color:#268bd2">networks</span>:
-      - authentik
-      - traefik
-    <span style="color:#268bd2">depends_on</span>:
-      - postgresql
-      - redis
-  <span style="color:#268bd2">worker</span>:
-    <span style="color:#268bd2">image</span>: ${AUTHENTIK_IMAGE:-ghcr.io/goauthentik/server}:${AUTHENTIK_TAG:-2024.2.2}
-    <span style="color:#268bd2">restart</span>: unless-stopped
-    <span style="color:#268bd2">command</span>: worker
-    <span style="color:#268bd2">environment</span>:
-      <span style="color:#268bd2">AUTHENTIK_REDIS__HOST</span>: redis
-      <span style="color:#268bd2">AUTHENTIK_POSTGRESQL__HOST</span>: postgresql
-      <span style="color:#268bd2">AUTHENTIK_POSTGRESQL__USER</span>: ${PG_USER:-authentik}
-      <span style="color:#268bd2">AUTHENTIK_POSTGRESQL__NAME</span>: ${PG_DB:-authentik}
-      <span style="color:#268bd2">AUTHENTIK_POSTGRESQL__PASSWORD</span>: ${PG_PASS}
-    <span style="color:#586e75"># `user: root` and the docker socket volume are optional.</span>
-    <span style="color:#586e75"># See more for the docker socket integration here:</span>
-    <span style="color:#586e75"># https://goauthentik.io/docs/outposts/integrations/docker</span>
-    <span style="color:#586e75"># Removing `user: root` also prevents the worker from fixing the permissions</span>
-    <span style="color:#586e75"># on the mounted folders, so when removing this make sure the folders have the correct UID/GID</span>
-    <span style="color:#586e75"># (1000:1000 by default)</span>
-    <span style="color:#268bd2">user</span>: root
-    <span style="color:#268bd2">volumes</span>:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./media:/media
-      - ./certs:/certs
-      - ./custom-templates:/templates
-    <span style="color:#268bd2">env_file</span>:
-      - .env
-    <span style="color:#268bd2">networks</span>:
-      - authentik
-    <span style="color:#268bd2">depends_on</span>:
-      - postgresql
-      - redis
-<span style="color:#268bd2">volumes</span>:
-  <span style="color:#268bd2">database</span>:
-    <span style="color:#268bd2">driver</span>: local
-  <span style="color:#268bd2">redis</span>:
-    <span style="color:#268bd2">driver</span>: local
-
-<span style="color:#268bd2">networks</span>:
-  <span style="color:#268bd2">traefik</span>:
-    <span style="color:#268bd2">external</span>: <span style="color:#cb4b16">true</span>
-  <span style="color:#268bd2">authentik</span>:
-</code></pre></div><p>使用 traefik 需要确保 <code>traefik</code> 网络已经创建，且已经部署好的 traefik 容器也在这个网络下。</p>
-<blockquote>
-<p>关于 traefik <code>certificatesResolvers</code> 如果配置请参考 <a href="https://www.reddit.com/r/Traefik/comments/18qf1ob/use_cloudflare_for_dns_challenge_for_local/">https://www.reddit.com/r/Traefik/comments/18qf1ob/use_cloudflare_for_dns_challenge_for_local/</a></p>
-</blockquote>
+    <p>统一登录平台最重要的步骤就是将应用接入。Authentik 支持的接入协议相当丰富，包括 OIDC/OAuth2.0，SAML，SCIM，</p>
 
 </article>
 </main>
@@ -509,6 +336,45 @@
             </tr>
             
             
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Extra Materials</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  <ul role="list"
+                    class="border border-gray-200 dark:border-gray-700 rounded-md divide-y divide-gray-200 dark:divide-gray-700">
+                    
+                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                      <div class="w-0 flex-1 flex items-center">
+                        
+                        
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+
+                        
+                        
+                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
+                          Bilibili：Authentik 教程系列 2 - 为 Authentik 配置 Traefik 和 Nginx 反向代理
+                        </span>
+                      </div>
+                      <div class="ml-4 flex-shrink-0">
+                        <a href="https://www.bilibili.com/video/BV1VE42137Vi/" class="font-medium text-indigo-600 hover:text-indigo-500">
+                          Check
+                        </a>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </dd>
+              </td>
+            </tr>
+            
             
             
             
@@ -574,7 +440,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-04-10 11:08 CST.
+      Build by GitHub Actions at: 2024-04-20 13:57 CST.
     </p>
     <p>
       
