@@ -6,7 +6,16 @@
     <description>Recent content in Cloud on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Apr 2024 19:55:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Apr 2024 14:29:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title>
+      <link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</link>
+      <pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</guid>
+      <description>搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 SAML 2.0， OAuth 2.0/OpenID Connect (OIDC)， LDAP， SCI</description>
+    </item>
+    
     <item>
       <title>Authentik 教程系列：反向代理的配置</title>
       <link>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</link>
