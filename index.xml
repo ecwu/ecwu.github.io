@@ -334,7 +334,7 @@ Since the new branch new-theme was created using attribute --orphan, it will be 
       <pubDate>Sun, 09 Jan 2022 14:49:18 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/page/changelog/</guid>
-      <description>About this site  Write with static site generator Hugo  Uses ecwu-theme from Jan 2022, Theme introduction: TBA   Build with GitHub Actions Site preview build with Cloudflare Pages  https://ecwu-github-io-source.pages.dev/   Host by GitHub Pages Cloudflare &amp;amp; Qiniu for distributing files Comment Plugin: giscus Site Analytics: Google Analytics v4 LaTeX Render: KaTeX  Changelog 2022 October 2022  Warp the main content with &amp;lt;main&amp;gt; tags, improving RSS scraping results.</description>
+      <description>About this site  Write with static site generator Hugo  Uses ecwu-theme from Jan 2022, Theme introduction: TBA   Build with GitHub Actions Site preview build with Cloudflare Pages  https://ecwu-github-io-source.pages.dev/   Host by GitHub Pages Cloudflare &amp;amp; Qiniu for distributing files Comment Plugin: giscus Site Analytics: Google Analytics v4 LaTeX Render: KaTeX  Changelog 2024 May 2024  Refreshing the design and layout for friends page, adding avatar for each item.</description>
     </item>
     
     <item>
