@@ -8,7 +8,7 @@
     
     <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.b53253356ea64296200c398d68c2a96a107b5c4b07082c0a3759b2825cfd88cb.css" integrity="sha256-tTJTNW6mQpYgDDmNaMKpahB7XEsHCCwKN1myglz9iMs=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入 -  ECWU&#39;s Notebook</title>
+<title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Homepage and Blog of ECWU">
 <meta name="keywords" content="Homelab,Docker,Container,Images,Service,Self-host,Authentication,SAML,OIDC,OpenID Connect,">
@@ -173,15 +173,15 @@
     <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
 </div></div>
   <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
-    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/AT5vuPoi8vc/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8aGFuZHNoYWtlfGVufDB8fHx8MTcxMzIwOTg2Mnww&amp;force=true&amp;w=2400" alt="Featured Images">
+    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/rZCimlB7skw/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjd8fGZvcndhcmR8ZW58MHx8fHwxNzE0NDg5NzIyfDA&amp;force=true&amp;w=2400" alt="Featured Images">
     
     <figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">
-      Photo by charlesdeluvio on Unsplash
+      Photo by Nick Night on Unsplash
     </figcaption>
     
   </figure>
 <div class="mb-12 mt-16 w-content">
-  <h1 class="text-gray-900 dark:text-gray-200">Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</h1>
+  <h1 class="text-gray-900 dark:text-gray-200">Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</h1>
   
 
   
@@ -204,7 +204,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
         </svg>
-        Status: In Progress
+        Status: Finished
         
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -245,6 +245,13 @@
         
      
          
+         
+             
+            
+              
+        
+     
+         
         
     
      
@@ -256,9 +263,12 @@
      
         
         
+     
+        
+        
     
      
-        <p>This post is part 3 of 3
+        <p>This post is part 4 of 4
             in the <b>Authentik</b> series.</p>
         <p>
         
@@ -267,7 +277,7 @@
                     |
             
             
-                <a href="https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/">Prev: Authentik 教程系列：反向代理的配置</a>
+                <a href="https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap-copy/">Prev: Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</a>
             
         
         
@@ -282,135 +292,89 @@
     <summary>Table of Contents</summary>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#authentik-设计的架构简化版">Authentik 设计的架构（简化版）</a></li>
-    <li><a href="#应用程序创建">应用程序创建</a></li>
-    <li><a href="#提供程序">提供程序</a>
-      <ul>
-        <li><a href="#openid-connect-oidc--oauth-20">OpenID Connect (OIDC) / OAuth 2.0</a></li>
-        <li><a href="#创建新证书">创建新证书</a></li>
-        <li><a href="#saml">SAML</a></li>
-      </ul>
-    </li>
-    <li><a href="#outposts">Outposts</a>
-      <ul>
-        <li><a href="#ldap-配置">LDAP 配置</a></li>
-      </ul>
-    </li>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#部署细节">部署细节</a></li>
   </ul>
 </nav>
   </details>
 </section>
 
-    <p>搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 <a href="https://en.wikipedia.org/wiki/SAML_2.0">SAML 2.0</a>， <a href="https://openid.net/developers/how-connect-works/">OAuth 2.0/OpenID Connect (OIDC)</a>， <a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">LDAP</a>， <a href="https://scim.cloud">SCIM</a>，和 <a href="https://en.wikipedia.org/wiki/RADIUS">RADIUS</a>，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。</p>
-<h2 id="authentik-设计的架构简化版">Authentik 设计的架构（简化版）</h2>
-<p>我们先用一个很简化的模型来介绍我们会涉及到的几个概念。Authentik 内部维护有一个用户数据库。这之外还创建有应用程序（application）和提供程序（provider）。应用程序是程序的入口，记录了应用的名称、图标的信息；方便隔离各应用并设置其独立的权限。</p>
-<p>大多数应用程序与提供程序一对一绑定，提供程序基于用户数据库与设定的规则（policy）一起提供登录鉴别和鉴权能力。</p>
-<p>那么一个要接入的软件，我们会为他创建一个新的应用，根据软件支持的统一登录协议创建对应的提供程序。</p>
-<blockquote>
-<p>下面配置的细节，基于 Authentik 2024.2.2，在内网的环境中进行的配置，按英文界面按钮文字进行说明。</p>
-</blockquote>
-<h2 id="应用程序创建">应用程序创建</h2>
-<p>使用管理员账号登录，进入后台 <code>Applications</code> &gt; <code>Applications</code>，点击 Create 会弹出一个填写新应用参数的窗口。</p>
-<p><img src="https://cdn.ecwuuuuu.com/blog/image/authentik/application-create.png" alt="Authentik Application Creation Window"></p>
-<p>常用功能填写的参数包括：</p>
+    <h2 id="简介">简介</h2>
+<p>如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作<code>转发验证</code>)。</p>
+<p><img src="https://doc.traefik.io/traefik/assets/img/middleware/authforward.png" alt="Traefik ForwardAuth Flowchart"></p>
+<p>鉴权的过程用 Traefik 的流程图做一下讲解：你的请求在经过反向代理时，ForwardAuth 的中间件会向设定好的身份验证服务发请求。如果验证服务返回 <code>2XX</code> 的验证码，反向代理则任务验证通过，将内容展现出来，否则则会拒绝返回内容。</p>
+<p>Authentik 则基于 OIDC 实现了这个身份验证服务，反向代理的请求过来后会跳转进行身份验证。验证的结果返回到反向代理并记录到 Header 和 Cookie 中。后续继续访问时则凭着有效的 Cookie 则可以以有效的 Session 保持授权状态。</p>
+<h2 id="部署细节">部署细节</h2>
+<p>根据上面的简单介绍，可以看出这个授权结构需要三个组件：</p>
 <ul>
-<li>名称 Name：显示在页面上和授权页的应用名</li>
-<li>短标签名 slug：一般只用小写英文字母和连接符 <code>-</code>，是在 URL 中使用的内部名称</li>
-<li>组 Group: Authentik 的用户界面上，组同名的应用会显示在一起。</li>
-<li>提供程序 Provider：指定与应用绑定的提供程序，如果还没有创建，或者该应用不使用同一登录，暂时不填。</li>
+<li>部署好的应用：我们这里用一个没有用户系统的应用 <a href="https://hub.docker.com/r/pawelmalak/flame">flame</a> 做演示。</li>
+<li>配置好的反向代理：我们这里用的是 Traefik，但官方也支持 Nginx / Envoy / Caddy。</li>
+<li>身份验证服务：Authentik。</li>
 </ul>
-<p>用户界面设置中：</p>
-<ul>
-<li>启动 URL （Launch URL）：在 Authentik 中点击应用会跳转的 URL，如果留空系统会尝试提取启动 URL。
-<ul>
-<li>在新标签页打开（Open in new tab）：如名字所示</li>
-</ul>
-</li>
-<li>图标 Icon：在用户界面显示的应用图标，如果留空系统会按首字母生成一个占位图标。</li>
-<li>发布者（Publisher）和描述（Description）：显示在用户界面的应用相关字段。</li>
-</ul>
-<p>在应用创建的页面，官方也提供了一个创建向导，可以快速地同时创建应用和我们后面要提到的提供程序。创建好时，应用程序跟提供程序就已经被自动绑定了。</p>
-<h2 id="提供程序">提供程序</h2>
-<p>提供程序的创建在后台 <code>Applications</code> &gt; <code>Provider</code> 中。点击 <code>Create</code> 会弹出一个创建提供程序的向导。其中首先要选择的是提供程序的类型。</p>
-<p><img src="https://cdn.ecwuuuuu.com/blog/image/authentik/provider-select.png" alt="Authentik Provider select"></p>
-<h3 id="openid-connect-oidc--oauth-20">OpenID Connect (OIDC) / OAuth 2.0</h3>
-<p>如果你要创建的是 OIDC 提供程序。选择类型之后，你能填入以下字段：</p>
-<ul>
-<li>名称 Name：这个主要是用于指示不同的提供程序，我往往喜欢直接用：应用名 + Provider 这样的格式</li>
-<li>身份验证流程 Authentication flow：这个是指示如果用户处于未登录状态，将会跳转至哪个身份验证流程。可以留空，系统会使用默认的登录流程。</li>
-<li>授权流程 Authorization flow：系统提供了两种初始的 <code>default-provider-authorization-explicit-consent</code>，<code>default-provider-authorization-implicit-consent</code> 差异是 <code>explicit</code> 会在登陆时有一个确认窗问你是否授权信息提供给应用用于登录。</li>
-</ul>
-<p>接下来的协议设置是 OIDC 协议专用的字段：</p>
-<ul>
-<li>客户端类型 Client type：可选机密 Confidential 和公开 Public，这个主要是看接入的应用是否通过加密的方式处理了相关的身份信息。目前大多的应用都是支持加密的，所以一般都是选择机密。</li>
-<li>客户端 ID 和 客户端 Secret：是创建 OIDC 提供程序时窗口系统会自动生成这两个字段。这个信息需要在配置客户端（接入应用）时填到应用里。</li>
-<li>重定向 URI：用户通过 OIDC 完成了授权，接入应用会获得令牌并用令牌去获取登录用户的信息，获取的请求会告知统一登陆将用户信息重定向至哪里。Authentik 这里提供了一个确认的机制，以防中间人替换了用户信息重定向的端点。也可以写成正则表达式甚至是通配符来接受所有重定向 URI。</li>
-<li>签名密钥 Signing Key：指定传递的信息使用什么密钥进行加密。有一部分应用的 OIDC 实现要求一定要进行签名，这时候就需要指定好。</li>
-</ul>
-<p>在 Authentik 里面都创建好之后，就可以在应用中做配置来进行接入了。一般接入的方式有两种，应用内创建认证源和启动时的配置。以下举 Gitea（创建认证源） 和 Grafana（启动时配置） 的例子来说明如何配置。</p>
-<h4 id="gitea">Gitea</h4>
-<p><img src="https://cdn.ecwuuuuu.com/blog/image/authentik/gitea-oidc-setup.png" alt="Gitea OIDC Settings"></p>
-<p><a href="https://github.com/go-gitea/gitea">Gitea</a> 是一个轻量的版本控制平台。通过在启动的应用内创建认证源进行 OAuth2 的配置。入口是<code>管理后台</code> &gt; <code>身份及认证</code> &gt; <code>认证源</code>。</p>
-<p>用户首先需要创建一个新的用户源类型选择 <code>OAuth2</code>，提供程序选择 <code>OpenID Connect</code>。<code>认证名称</code> 和 <code>图标 URL</code> 是可以自定的，会显示在登录页的登录按钮上。</p>
-<p>和 Authentik 对应提供程序相关的字段有<code>客户端 ID</code>和<code>客户端密钥</code>，这个是签名创建提供程序时，Authentik 已经自动生成了的，只需要对应复制到 Gitea 中。</p>
-<p>OpenID 配置一般还需要填写授权URL，令牌URL等信息告知应用程序，让授权时进行正确的跳转。Gitea 直接支持通过配置 URL 直接自动获取并解析。只需要进到 Authentik 的对应提供程序详情，就可以复制到 OpenID 配置 URL（格式是：<code>https://&lt;AUTHENTIK URL&gt;/application/o/&lt;APPLICATION SLUG&gt;/.well-known/openid-configuration</code>）。</p>
-<p>最后还需要填写附加授权范围（Scopes）为：<code>email profile</code>。保存并启用这个认证源，那么配置就完成了。</p>
-<h4 id="grafana">Grafana</h4>
-<p><img src="https://cdn.ecwuuuuu.com/blog/image/authentik/grafana-oidc-setup.png" alt="Grafana OIDC Settings"></p>
-<p><a href="https://github.com/grafana/grafana">Grafana</a> 是一个数据可视化的平台。它的 OAuth2 接入是通过启动时的环境变量进行配置。一下是启动的 docker-compose.yaml</p>
+<p>这里需要注意的是因为我们需要将授权后得到的 Cookie 保存在浏览器，所以验证服务是需要和应用在有一个域名下的，要实现这需要部署 Authentik Proxy，并配置 Treafik 将特定子目录的请求导向这个 Proxy。而 Proxy 本身通过 API 与 Authentik server 通信。</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml"><span style="color:#268bd2">services</span>:
-  <span style="color:#268bd2">grafana</span>:
-    <span style="color:#268bd2">image</span>: grafana/grafana-oss
-    <span style="color:#268bd2">container_name</span>: grafana
-    <span style="color:#268bd2">restart</span>: unless-stopped
-    <span style="color:#268bd2">ports</span>:
-      - <span style="color:#2aa198">&#39;3000:3000&#39;</span>
-    <span style="color:#268bd2">extra_hosts</span>:
-      - <span style="color:#2aa198">&#34;auth.demo.ecwu.xyz:192.168.31.6&#34;</span>
+  <span style="color:#268bd2">flame</span>:
+    <span style="color:#268bd2">image</span>: pawelmalak/flame:latest
+    <span style="color:#268bd2">container_name</span>: flame
+    <span style="color:#268bd2">volumes</span>:
+      - ./data:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock <span style="color:#586e75"># optional but required for Docker integration feature</span>
     <span style="color:#268bd2">environment</span>:
-      <span style="color:#268bd2">GF_SERVER_ROOT_URL</span>: <span style="color:#2aa198">&#34;http://192.168.31.6:3000&#34;</span>
-      <span style="color:#268bd2">GF_AUTH_GENERIC_OAUTH_ENABLED</span>: <span style="color:#2aa198">&#34;true&#34;</span>
-      <span style="color:#268bd2">GF_AUTH_GENERIC_OAUTH_NAME</span>: <span style="color:#2aa198">&#34;authentik&#34;</span>
-      <span style="color:#268bd2">GF_AUTH_GENERIC_OAUTH_CLIENT_ID</span>: <span style="color:#2aa198">&#34;x4el5XrUcfTZbm1hEmBHRx8KlvsoWV2MDLvKEEyG&#34;</span>
-      <span style="color:#268bd2">GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET</span>: <span style="color:#2aa198">&#34;rXBIJdaCJXYX9D1DaCvw1oIFxhef22rv3CEgUHXohDafk3mX1aoZFzUfRBTZ4DtsJQ9BuTHlNy0Of15FiEg1oRlrFHls9lP2hKask6lLvdGJYSS6bPnrL1hFUFRxti2b&#34;</span>
-      <span style="color:#268bd2">GF_AUTH_GENERIC_OAUTH_SCOPES</span>: <span style="color:#2aa198">&#34;openid profile email&#34;</span>
-      <span style="color:#268bd2">GF_AUTH_GENERIC_OAUTH_AUTH_URL</span>: <span style="color:#2aa198">&#34;https://auth.demo.ecwu.xyz/application/o/authorize/&#34;</span>
-      <span style="color:#268bd2">GF_AUTH_GENERIC_OAUTH_TOKEN_URL</span>: <span style="color:#2aa198">&#34;https://auth.demo.ecwu.xyz/application/o/token/&#34;</span>
-      <span style="color:#268bd2">GF_AUTH_GENERIC_OAUTH_API_URL</span>: <span style="color:#2aa198">&#34;https://auth.demo.ecwu.xyz/application/o/userinfo/&#34;</span>
-      <span style="color:#268bd2">GF_AUTH_SIGNOUT_REDIRECT_URL</span>: <span style="color:#2aa198">&#34;https://auth.demo.ecwu.xyz/application/o/grafana/end-session/&#34;</span>
-      <span style="color:#586e75"># Optionally enable auto-login (bypasses Grafana login screen)</span>
-      <span style="color:#268bd2">GF_AUTH_OAUTH_AUTO_LOGIN</span>: <span style="color:#2aa198">&#34;false&#34;</span>
-      <span style="color:#586e75"># Optionally map user groups to Grafana roles</span>
-      <span style="color:#268bd2">GF_AUTH_GENERIC_OAUTH_ROLE_ATTRIBUTE_PATH</span>: <span style="color:#2aa198">&#34;contains(groups, &#39;authentik Admins&#39;) &amp;&amp; &#39;Admin&#39; || &#39;Viewer&#39;&#34;</span>
-</code></pre></div><p>所有跟 OAuth 相关的配置都是以 <code>GF_AUTH_GENERIC_OAUTH</code> 开头的，可以看到和 Gitea 最大的区别就是，Grafana 并不支持 OpenID 配置 URL 自动获取配置。而是需要单独指定“授权”、“令牌”、“用户信息”和“登出” URL。</p>
-<p>配置的时候有三个小细节需要注意：</p>
-<ol>
-<li>需要写 <code>GF_SERVER_ROOT_URL</code> 环境变量来指示 Grafana 的 URL ，因为 Grafana 在处理 OAuth 请求写入重定向端点时是通过 ROOT_URL 确定的，如果写不对则无法正常跳转完成鉴权。</li>
-<li>附加授权范围（Scopes）为：<code>openid profile email</code></li>
-<li><code>GF_AUTH_GENERIC_OAUTH_ROLE_ATTRIBUTE_PATH</code> 是根据用户的组信息来动态的绑定新登录用户的权限，yaml的例子是，如果用户存在组 <code>authentik Admins</code> 内（Authentik 默认管理员组的名字），就会授予 Grafana 管理员权限，否则只是普通的浏览者（Viewer）的权限。</li>
-</ol>
-<h3 id="创建新证书">创建新证书</h3>
-<p>有些应用要求 idP 对传输的信息进行签名，像一会要提到的 Cloudflare Zero Trust。Authentik 本身会默认创建有一张证书，你也可以直接选择来进行使用。但是我们这边介绍一下如何创建一张新的证书用于应用的签名。</p>
-<p>首先进入证书创建的入口，<code>System</code> &gt; <code>Certificates</code> 按钮有 <code>Create</code> 和 <code>Generate</code>，第一个是你已经在其他地方生成了需要导入到 Authentik。Generate 则是直接在线生成一张新的证书。一般点 <code>Generate</code> 即可。创建时可以选择有效时间，默认为 365 天。但如果过期了则需要进行更换，可以偷懒创建个 3650 天（10年）的 :P。</p>
-<h3 id="saml">SAML</h3>
-<p>如果在创建页选择了 SAML，你能看到以下字段：名称 Name，身份验证流程 Authentication flow，授权流程 Authorization flow 与 OIDC 是差不多的，根据需求设置即可。也有 SAML 特有的设置：</p>
+      - PASSWORD=flame_password
+    <span style="color:#268bd2">labels</span>:
+      <span style="color:#268bd2">traefik.enable</span>: <span style="color:#cb4b16">true</span>
+      <span style="color:#268bd2">traefik.http.services.flame.loadbalancer.server.port</span>: <span style="color:#2aa198">5005</span>
+      <span style="color:#268bd2">traefik.http.routers.flame.service</span>: flame
+      <span style="color:#268bd2">traefik.http.routers.flame.rule</span>: Host(`flame服务.的.域名`)
+      <span style="color:#268bd2">traefik.http.routers.flame.entrypoints</span>: web
+      <span style="color:#268bd2">traefik.http.routers.flame-tls.service</span>: flame
+      <span style="color:#268bd2">traefik.http.routers.flame-tls.rule</span>: Host(`flame服务.的.域名`)
+      <span style="color:#268bd2">traefik.http.routers.flame-tls.priority</span>: <span style="color:#2aa198">10</span>
+      <span style="color:#268bd2">traefik.http.routers.flame-tls.entrypoints</span>: websecure
+      <span style="color:#268bd2">traefik.http.routers.flame-tls.tls.certresolver</span>: cfresolver
+      <span style="color:#268bd2">traefik.http.routers.flame-tls.middlewares</span>: authentik@docker
+    <span style="color:#268bd2">restart</span>: unless-stopped
+    <span style="color:#268bd2">networks</span>:
+      - traefik
+  <span style="color:#268bd2">authentik-proxy</span>:
+    <span style="color:#268bd2">image</span>: ghcr.io/goauthentik/proxy
+    <span style="color:#268bd2">ports</span>:
+      - <span style="color:#2aa198">9000</span>:<span style="color:#2aa198">9000</span>
+      - <span style="color:#2aa198">9444</span>:<span style="color:#2aa198">9443</span>
+    <span style="color:#268bd2">networks</span>:
+      - traefik
+      - authentik_authentik
+    <span style="color:#268bd2">environment</span>:
+      <span style="color:#268bd2">AUTHENTIK_HOST</span>: https://auth服务.的.域名/
+      <span style="color:#268bd2">AUTHENTIK_INSECURE</span>: <span style="color:#2aa198">&#34;false&#34;</span>
+      <span style="color:#268bd2">AUTHENTIK_TOKEN</span>: 在 Authentik 后台 Outpost 可以获取到 API TOKEN
+      <span style="color:#268bd2">AUTHENTIK_HOST_BROWSER</span>: https://auth服务.的.域名 <span style="color:#586e75"># 可以设定内外网不同的域名 </span>
+    <span style="color:#268bd2">labels</span>:
+      <span style="color:#268bd2">traefik.enable</span>: <span style="color:#cb4b16">true</span>
+      <span style="color:#268bd2">traefik.http.services.authentik-proxy.loadbalancer.server.port</span>: <span style="color:#2aa198">9000</span>
+      <span style="color:#268bd2">traefik.http.routers.authentik-proxy.service</span>: authentik-proxy
+      <span style="color:#268bd2">traefik.http.routers.authentik-proxy.rule</span>: Host(`flame服务.的.域名`) &amp;&amp; PathPrefix(`/outpost.goauthentik.io/`)
+      <span style="color:#268bd2">traefik.http.routers.authentik-proxy.entrypoints</span>: web
+      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.service</span>: authentik-proxy
+      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.rule</span>: Host(`flame服务.的.域名`) &amp;&amp; PathPrefix(`/outpost.goauthentik.io/`)
+      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.priority</span>: <span style="color:#2aa198">15</span>
+      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.entrypoints</span>: websecure
+      <span style="color:#268bd2">traefik.http.middlewares.authentik.forwardauth.address</span>: http://authentik-proxy:9000/outpost.goauthentik.io/auth/traefik  <span style="color:#586e75"># 这里写 Traefik 能访问到 Authentik Proxy 的网址。</span>
+      <span style="color:#268bd2">traefik.http.middlewares.authentik.forwardauth.trustForwardHeader</span>: <span style="color:#cb4b16">true</span>
+      <span style="color:#268bd2">traefik.http.middlewares.authentik.forwardauth.authResponseHeaders</span>: X-authentik-username,X-authentik-groups,X-authentik-email,X-authentik-name,X-authentik-uid,X-authentik-jwt,X-authentik-meta-jwks,X-authentik-meta-outpost,X-authentik-meta-provider,X-authentik-meta-app,X-authentik-meta-version
+<span style="color:#268bd2">networks</span>:
+  <span style="color:#268bd2">traefik</span>:
+    <span style="color:#268bd2">external</span>: <span style="color:#cb4b16">true</span>
+  <span style="color:#268bd2">authentik_authentik</span>:
+    <span style="color:#268bd2">external</span>: <span style="color:#cb4b16">true</span>
+</code></pre></div><p>其中需要讲解的几个点：</p>
 <ul>
-<li>ACS URL：Authentik 完成鉴权后重定向的地方</li>
-<li>Issuer/Entity ID：服务提供商的标识，如果应用程序可以设定则可以自定义并保持两边一致即可。如果不能自定则需要填写的与应用程序指示的一致。</li>
-<li>Service Provider Binding：Authentik 通过什么方式将信息发回到服务提供商。有 Redirect（Get 请求）或 Post 的方式。不同的应用支持不同，需要根据具体情况设定。</li>
-<li>Audience：一般与 Issuer 一致或者可以不设定。</li>
+<li><code>flame-tls.middlewares: authentik@docker</code> 里面特指的 <code>authentik@docker</code> 就是我们在 authentik-proxy 容器 labels 里面配置的 <code>middlewares.authentik.forwardauth</code> 中间件。</li>
+<li>对于两个应用的 Host 我们设定了 <code>priority</code>，proxy 的优先级略高，这样如果发生了请求 URL 的冲突，会优先去做身份验证的请求。</li>
+<li>我们的 Outpost 没有使用 docker 连接让 Authentik 自动拉起，而是通过手动启动并通过 API 去链接 Authentik 的方式，其中请求 API 需要用到的 Token 需要现在 Outpost 创建好才能获取。如果选择自动拉起的话配置会有不同，需要额外配置网络和 labels。</li>
+<li>中间件配置 <code>authResponseHeaders</code> 的一长串可以直接去 Authentik <a href="https://docs.goauthentik.io/docs/providers/proxy/server_traefik">配置文档</a>获取到，我没有做修改。</li>
 </ul>
-<p>SAML 一般要求对请求进行签名，你需要展开 Advanced protocol settings 进行更多设置：</p>
-<ul>
-<li>Signing Certificate 选择一张证书，可以是上面我们在创建新证书部分创建的证书。</li>
-<li>Verification Certificate 是应用那边返回的请求签名对应的证书。如果你能获取应用侧的证书则可以进行设定。否则留空。</li>
-<li>Property mappings 是决定那些信息将传递给应用。你可以全选。</li>
-</ul>
-<p>其他设置可以保持不变。</p>
-<h4 id="cloudflare-zero-trust">Cloudflare Zero Trust</h4>
-<p>TBA</p>
-<h2 id="outposts">Outposts</h2>
-<h3 id="ldap-配置">LDAP 配置</h3>
+<p>更多细节可以见视频（在文章最底部）演示。</p>
 
 </article>
 </main>
@@ -422,7 +386,7 @@
         Article Card
       </h3>
       <p class="mt-1 text-sm text-gray-500">
-        For "<span class="italic">Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</span>"
+        For "<span class="italic">Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</span>"
       </p>
     </div>
     <div class="border-t border-gray-200 dark:border-gray-700">
@@ -446,7 +410,7 @@
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2024-04-21</td>
+                2024-05-01</td>
             </tr>
             
             
@@ -515,59 +479,11 @@
                         
                         
                         <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          Bilibili：Authentik 教程系列 3 - 将应用接入统一登陆 - OAuth 协议篇 - 以 Gitea 和 Grafana 为例
+                          Bilibili：Authentik 教程系列 9 - 配置 ForwardAuth 将任意应用加入统一登陆
                         </span>
                       </div>
                       <div class="ml-4 flex-shrink-0">
-                        <a href="https://www.bilibili.com/video/BV1QC41157pX/" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Check
-                        </a>
-                      </div>
-                    </li>
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
-                          stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          Bilibili：Authentik 教程系列 4 - 将应用接入统一登陆 - SAML 协议篇 - 以 Cloudflare Zero Trust 和 GitLab 为例
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="https://www.bilibili.com/video/BV1um411B7kE/" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Check
-                        </a>
-                      </div>
-                    </li>
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
-                          stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          Bilibili：Authentik 教程系列 5 - 将应用接入统一登陆 - LDAP 协议篇 - 以 EMBY 为例
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="https://www.bilibili.com/video/BV12z421C7hU/" class="font-medium text-indigo-600 hover:text-indigo-500">
+                        <a href="https://www.bilibili.com/video/BV1Mb421a7fF/" class="font-medium text-indigo-600 hover:text-indigo-500">
                           Check
                         </a>
                       </div>
@@ -614,11 +530,11 @@
 <h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2>
 <ul class="list-disc list-inside text-gray-900 dark:text-gray-200">
     
+    <li><a href="https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap-copy/">Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</a></li>
+    
     <li><a href="https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/">Authentik 教程系列：反向代理的配置</a></li>
     
     <li><a href="https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/">Authentik 教程系列：简介和安装配置</a></li>
-    
-    <li><a href="https://ecwuuuuu.com/post/homelab-journey-accessing/">Homelab：我的赛博积木 - 访问</a></li>
     
 </ul>
 </section>
@@ -643,7 +559,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-05-01 21:46 CST.
+      Build by GitHub Actions at: 2024-05-01 22:45 CST.
     </p>
     <p>
       
