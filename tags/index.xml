@@ -6,11 +6,11 @@
     <description>Recent content in Tags on ECWUUUUU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2024 21:53:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Aug 2024 17:11:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Authentication</title>
       <link>https://ecwuuuuu.com/tags/authentication/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/authentication/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>Container</title>
       <link>https://ecwuuuuu.com/tags/container/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/container/</guid>
       <description></description>
@@ -28,18 +28,117 @@
     <item>
       <title>Docker</title>
       <link>https://ecwuuuuu.com/tags/docker/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Docker Images</title>
+      <link>https://ecwuuuuu.com/tags/docker-images/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/docker-images/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>homelab</title>
       <link>https://ecwuuuuu.com/tags/homelab/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/homelab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LDAP</title>
+      <link>https://ecwuuuuu.com/tags/ldap/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/ldap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OIDC</title>
+      <link>https://ecwuuuuu.com/tags/oidc/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/oidc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenID Connect</title>
+      <link>https://ecwuuuuu.com/tags/openid-connect/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/openid-connect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Passkey</title>
+      <link>https://ecwuuuuu.com/tags/passkey/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/passkey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Passwordless</title>
+      <link>https://ecwuuuuu.com/tags/passwordless/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/passwordless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SAML</title>
+      <link>https://ecwuuuuu.com/tags/saml/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/saml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self-host</title>
+      <link>https://ecwuuuuu.com/tags/self-host/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/self-host/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Service</title>
+      <link>https://ecwuuuuu.com/tags/service/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Single Sign-on</title>
+      <link>https://ecwuuuuu.com/tags/single-sign-on/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/single-sign-on/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSO</title>
+      <link>https://ecwuuuuu.com/tags/sso/</link>
+      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
+      
+      <guid>https://ecwuuuuu.com/tags/sso/</guid>
       <description></description>
     </item>
     
@@ -49,51 +148,6 @@
       <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
       
       <guid>https://ecwuuuuu.com/tags/images/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OIDC</title>
-      <link>https://ecwuuuuu.com/tags/oidc/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/oidc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OpenID Connect</title>
-      <link>https://ecwuuuuu.com/tags/openid-connect/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/openid-connect/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SAML</title>
-      <link>https://ecwuuuuu.com/tags/saml/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/saml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Self-host</title>
-      <link>https://ecwuuuuu.com/tags/self-host/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/self-host/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Service</title>
-      <link>https://ecwuuuuu.com/tags/service/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
-      
-      <guid>https://ecwuuuuu.com/tags/service/</guid>
       <description></description>
     </item>
     
