@@ -6,7 +6,7 @@
   </url><url>
     <loc>https://ecwuuuuu.com/series/authentik/</loc>
   </url><url>
-    <loc>https://ecwuuuuu.com/post/authentik-tutorial-video/</loc>
+    <loc>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/</loc>
     <lastmod>2024-08-08T19:56:00+08:00</lastmod>
@@ -20,15 +20,14 @@
     <loc>https://ecwuuuuu.com/tags/docker/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/tags/docker-images/</loc>
-  </url><url>
     <loc>https://ecwuuuuu.com/</loc>
     <lastmod>2024-08-08T19:56:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/homelab/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/tags/ldap/</loc>
+    <loc>https://ecwuuuuu.com/tags/images/</loc>
+    <lastmod>2024-04-08T10:30:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/network/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
@@ -36,10 +35,6 @@
     <loc>https://ecwuuuuu.com/tags/oidc/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/openid-connect/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/passkey/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/passwordless/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/post/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
@@ -55,10 +50,6 @@
     <loc>https://ecwuuuuu.com/tags/service/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/tags/single-sign-on/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/sso/</loc>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/</loc>
     <lastmod>2024-08-08T19:56:00+08:00</lastmod>
   </url><url>
@@ -68,10 +59,21 @@
     <loc>https://ecwuuuuu.com/categories/website/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</loc>
+    <loc>https://ecwuuuuu.com/post/authentik-tutorial-video/</loc>
   </url><url>
-    <loc>https://ecwuuuuu.com/tags/images/</loc>
-    <lastmod>2024-04-08T10:30:00+08:00</lastmod>
+    <loc>https://ecwuuuuu.com/tags/docker-images/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/ldap/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/passkey/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/passwordless/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/single-sign-on/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/sso/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap-copy/</loc>
   </url><url>

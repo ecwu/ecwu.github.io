@@ -8,10 +8,10 @@
     
     <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>My Past NLP Projects -  ECWU&#39;s Notebook</title>
+<title>Authentik 教程系列：服务的迁移 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Homepage and Blog of ECWU">
-<meta name="keywords" content="NLP,Natural Language Processing,Classification,Machine Learning,Offensive Detection,Summarization,Text Generation,Controllable Text Generation,Cross Modal,Dialogue,Transformer,Pre-trained Language Model,">
+<meta name="keywords" content="Homelab,Docker,Container,Images,Service,Self-host,Authentication,SAML,OIDC,OpenID Connect,">
 <meta name="author" content="ECWUUUUU"><script>
   if (localStorage.getItem("current-theme") === null) {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -43,7 +43,15 @@
 
   function change_discussion_color_mode(){
     
-    console.log('utteranc.es is not enabled.')
+    const theme = localStorage.getItem('current-theme') === 'light' ? 'light' : 'dark'
+    const message = {
+  setConfig: {
+    theme: theme,
+  }
+};
+    
+    const iframe = document.querySelector('iframe.giscus-frame');
+    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
     
   }
   
@@ -165,12 +173,16 @@
     <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
 </div></div>
   <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
-    <img class="object-cover object-center w-full h-96" src="http://cdn.ecwuuuuu.com/blog/image/misc/307-guaige.jpg" alt="Featured Images">
+    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/7b49gfsgQZY/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTR8fHRyYW5zcG9ydHxlbnwwfHx8fDE3MjU4MDg5MzV8MA&amp;force=true&amp;w=2400" alt="Featured Images">
+    
+    <figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">
+      Photo by xyzcharlize on Unsplash
+    </figcaption>
     
   </figure>
 <div class="mb-12 mt-16 w-content">
-  <h1 class="text-gray-900 dark:text-gray-200">My Past NLP Projects</h1>
-  <h2 class="text-gray-700 dark:text-gray-400">Natural Language Processing</h2>
+  <h1 class="text-gray-900 dark:text-gray-200">Authentik 教程系列：服务的迁移</h1>
+  
 
   
   <div class="text-gray-700 dark:text-gray-400">
@@ -194,6 +206,11 @@
         </svg>
         Status: Finished
         
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+        Confidence: likely
+        
         
         
       </p>
@@ -214,9 +231,38 @@
      
      
          
+         
+             
+            
+              
         
      
          
+         
+             
+            
+              
+        
+     
+         
+         
+             
+            
+              
+        
+     
+         
+         
+             
+            
+              
+        
+     
+         
+         
+             
+            
+              
         
      
          
@@ -225,55 +271,135 @@
      
         
         
-            
-            
+     
+        
         
      
         
         
-            
-            
+     
+        
+        
+     
+        
         
      
         
         
     
      
-        <p>This post is part 1 of 3
-            in the <b>Project</b> series.</p>
+        <p>This post is part 6 of 6
+            in the <b>Authentik</b> series.</p>
         <p>
         
+            
+                <a href="https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/">Goto: First Post</a>
+                    |
+            
+            
+                <a href="https://ecwuuuuu.com/post/authentik-tutorial-video/">Prev: Authentik 视频教程 - 合集</a>
+            
         
         
-            <a href="https://ecwuuuuu.com/post/robotics-project/">Next:【记录】智能门锁 -  Introduction to Robotics 课程项目</i></a></p>
         
     
   </div>
 <main>
 <article>
     
-    <p>I started to learn NLP-related stuff in mid-2018. And gradually start to some serious research. My focus mainly on Natural Language Generation (NLG).</p>
-<h2 id="beginning-semeval2019">Beginning: SemEval2019</h2>
-<p>By the end of 2018, members of the AI learning group <span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md">Lead by <a href="https://dst.uic.edu.cn/en/faculty/faculty.htm#/wfsu/en">Prof. Weifeng Su</a></span> decide to take part in the SemEval 2019. To study and learning more about NLP.</p>
-<p>Our group chose task 6: Identifying and Categorizing Offensive Language in Social Media (OffensEval). Which the input text is users' tweets and we need to classify it.</p>
-<p>There are three subtasks. Task A needs to identify the offensive language. Task B needs to categorization the offensive type. And Task C needs to identify the offensive target.</p>
-<p>We used the BERT model, which is state-of-the-art at that time for text classification. But our experiment limit to changing the preprocessing methods and some simple ensemble (not even proper) methods. But is still fun to learn such an advanced model and some NLP methods.</p>
+<section class="mb-8">
+  <details closed class="toc">
+    <summary>Table of Contents</summary>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#提醒">提醒</a></li>
+    <li><a href="#引入和备份操作">引入和备份操作</a>
+      <ul>
+        <li><a href="#postgresql-备份">PostgreSQL 备份</a></li>
+        <li><a href="#media-文件夹的备份">media 文件夹的备份</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据的数据恢复重启容器">数据的数据恢复、重启容器</a>
+      <ul>
+        <li><a href="#容器准备">容器准备</a></li>
+        <li><a href="#数据库数据恢复">数据库数据恢复</a></li>
+        <li><a href="#media-文件夹恢复">media 文件夹恢复</a></li>
+        <li><a href="#恢复数据库网络配置">恢复数据库网络配置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </details>
+</section>
+
+    <h2 id="提醒">提醒</h2>
+<p><strong>因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！</strong></p>
+<h2 id="引入和备份操作">引入和备份操作</h2>
+<p>这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。</p>
+<p>我们首先回顾一下 Authentik 的四个容器：</p>
+<ul>
+<li>Server</li>
+<li>Worker (和 Worker 是一个镜像，启动参数不同)</li>
+<li>Database (PostgreSQL)</li>
+<li>Redis</li>
+</ul>
+<p>其中 Server 和 Worker 可以认为是无状态的，用户和应用的数据都存储在数据库中。Redis 中储存的是用户的 Session 和 Worker 待运行的任务（必要数据也会定时持久化）。可见这些数据中，只有 Database 容器的数据是需要备份的。</p>
+<p>Server 和 Worker 还映射出了三个文件夹：</p>
+<ul>
+<li>media</li>
+<li>certs</li>
+<li>custom-templates</li>
+</ul>
+<p>certs 的数据如果被服务发现后，会被存到数据库中，所以不需要备份。custom-templates 如果你之前制作了内容，则<strong>需要备份</strong>。media 里面存储的是上传的应用图标，背景图，<strong>需要备份</strong>。如果这个数据不备份，迁移后的服务会因为缺少文件而无法显示图标或背景。</p>
+<h3 id="postgresql-备份">PostgreSQL 备份</h3>
 <blockquote>
-<p>Our work was published as a paper in the NAACL 2019 Workshop: <a href="https://www.aclweb.org/anthology/S19-2099/">ACL Anthology</a></p>
+<p>居于官方数据升级迁移教程修改： <a href="https://docs.goauthentik.io/docs/troubleshooting/postgres/upgrade_docker">https://docs.goauthentik.io/docs/troubleshooting/postgres/upgrade_docker</a></p>
 </blockquote>
-<h2 id="final-year-project-lenatten">Final Year Project: LenAtten</h2>
-<p>We proposed a novel attention-based module that can be applied to the RNN-based sequence-to-sequence Model for Fixed Length Summarization Task. The proposed method achieved good results on CNN/Daily Mail and English Gigaword Dataset.</p>
-<blockquote>
-<p>This work has been published at Findings of ACL 2021: <a href="https://aclanthology.org/2021.findings-acl.31/">ACL Anthology</a>; <a href="https://github.com/X-AISIG/LenAtten">Code</a>.</p>
-</blockquote>
-<h2 id="msc-independent-project-cross-modal-dialogue-pre-training">MSc Independent Project: Cross-modal Dialogue Pre-training</h2>
-<blockquote>
-<p>Emotion-aware Multimodal Pre-training for Image-grounded Emotional Response Generation</p>
-</blockquote>
-<p>In this work, we consider the natural situation that happens during a two-person doing conversation. Factors like facial expression, posture, and more will be considered except for the content expressed through spoken language. And usually, such non-verbal factors will convey much richer and more abstract information like emotions. Based on this nature, we proposed methods pre-training the language model to capture emotions from modals and incorporate the emotion into text generation for dialogue.</p>
-<blockquote>
-<p>This work has been accepted at DASFAA 2022; the article can be accessed from <a href="https://link.springer.com/chapter/10.1007/978-3-031-00129-1_1">Springer Link</a>.</p>
-</blockquote>
+<p>我们会使用 <code>docker compose exec</code> 来执行指令，所以在执行前需要进入 Authentik <code>docker-compose.yaml</code> 文件所在的目录。</p>
+<ol>
+<li>将数据库容器的 docker volume 做一个备份：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">docker volume create authentik_database_backup
+docker run --rm -v authentik_database:/from -v authentik_database_backup:/to alpine sh -c <span style="color:#2aa198">&#39;cd /from &amp;&amp; cp -a . /to&#39;</span>
+</code></pre></div><p>这里利用首先创建了一个叫 <code>authentik_database_backup</code> 的 docker volume；然后创建了一个 alpine 的容器并将旧 volume 和新建的 volume 都挂载进去，并执行复制的操作来实现了 volume 的备份。</p>
+<ol start="2">
+<li>将数据库的内容使用 pg_dump 导出为 <code>sql</code> 文件。</li>
+</ol>
+<p><code>docker compose exec postgresql pg_dump -U authentik -d authentik -cC &gt; authentik_db_backup.sql</code></p>
+<p>这个就是利用 postgresql 自带的 pg_dump 工具，将数据保存成 sql 文件。</p>
+<h3 id="media-文件夹的备份">media 文件夹的备份</h3>
+<p>我这边直接使用 <code>zip</code> 指令对文件夹进行了打包(<code>zip -r media.zip media</code>)，然后再在目标机器进行了解压。</p>
+<h2 id="数据的数据恢复重启容器">数据的数据恢复、重启容器</h2>
+<h3 id="容器准备">容器准备</h3>
+<p>经过前两个操作，数据也就备份好了，我们可以接着在新服务器进行容器的重建。首先可以在官网按照服务创建的操作，下载 <code>docker-compose.yaml</code>，并提前拉取需要的镜像。<code>.env</code> 直接复用旧服务器上的。</p>
+<p>在启动前，需要给 <code>postgresql</code> 容器添加一个网络的配置，<code>network_mode: none</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml">  <span style="color:#268bd2">postgresql</span>:
+    <span style="color:#268bd2">image</span>: docker.io/library/postgres:16-alpine
+    <span style="color:#268bd2">restart</span>: unless-stopped
+    <span style="color:#268bd2">healthcheck</span>:
+      <span style="color:#268bd2">test</span>: [<span style="color:#2aa198">&#34;CMD-SHELL&#34;</span>, <span style="color:#2aa198">&#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;</span>]
+      <span style="color:#268bd2">start_period</span>: 20s
+      <span style="color:#268bd2">interval</span>: 30s
+      <span style="color:#268bd2">retries</span>: <span style="color:#2aa198">5</span>
+      <span style="color:#268bd2">timeout</span>: 5s
+    <span style="color:#268bd2">volumes</span>:
+      - database:/var/lib/postgresql/data
+    <span style="color:#268bd2">environment</span>:
+      <span style="color:#268bd2">POSTGRES_PASSWORD</span>: ${PG_PASS:?database password required}
+      <span style="color:#268bd2">POSTGRES_USER</span>: ${PG_USER:-authentik}
+      <span style="color:#268bd2">POSTGRES_DB</span>: ${PG_DB:-authentik}
+    <span style="color:#268bd2">env_file</span>:
+      - .env
+    <span style="color:#268bd2">network_mode</span>: none
+</code></pre></div><p>这样可以避免其他容器接到 postgresql，对数据库进行写入。方便我们进行备份。</p>
+<p>修改后，我们就可以 <code>docker compose up -d</code> 来启动服务了。</p>
+<h3 id="数据库数据恢复">数据库数据恢复</h3>
+<p>待数据库启动后，执行 <code>cat authentik_db_backup.sql | docker compose exec -T postgresql psql -U authentik</code>，待执行完毕，数据库里的数据就恢复了。</p>
+<h3 id="media-文件夹恢复">media 文件夹恢复</h3>
+<p>文件夹的恢复只需要将文件放置到相应位置即可，解压后需要注意文件的归属和权限，使用 <code>sudo chown -R root:root media</code> 调整好文件权限。</p>
+<h3 id="恢复数据库网络配置">恢复数据库网络配置</h3>
+<p>我们刚刚在 yaml 里面写的  <code>network_mode: none</code> 需要删掉，然后执行 <code>docker compose up -d --force-recreate</code> 来重建服务，网络配置恢复后，Server 和 Worker 也可以正常的访问数据库。配置好反向代理，新服务器上的 Authentik 服务也就启动了。</p>
+<p>最后还需要检查 Outpost 有没有正常启动，可能需要自行手动启动。至此，Authentik 就已经迁移完了。</p>
 
 </article>
 </main>
@@ -285,7 +411,7 @@
         Article Card
       </h3>
       <p class="mt-1 text-sm text-gray-500">
-        For "<span class="italic">My Past NLP Projects</span>"
+        For "<span class="italic">Authentik 教程系列：服务的迁移</span>"
       </p>
     </div>
     <div class="border-t border-gray-200 dark:border-gray-700">
@@ -309,7 +435,7 @@
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2021-05-07 - <abbr title="Date of last major modification to this page">2022-01-23</abbr></td>
+                2024-09-08</td>
             </tr>
             
             
@@ -321,131 +447,38 @@
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/nlp">NLP</a>
+                  href="https://ecwuuuuu.com/tags/homelab">Homelab</a>
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/natural-language-processing">Natural Language Processing</a>
+                  href="https://ecwuuuuu.com/tags/docker">Docker</a>
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/classification">Classification</a>
+                  href="https://ecwuuuuu.com/tags/container">Container</a>
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/machine-learning">Machine Learning</a>
+                  href="https://ecwuuuuu.com/tags/images">Images</a>
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/offensive-detection">Offensive Detection</a>
+                  href="https://ecwuuuuu.com/tags/service">Service</a>
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/summarization">Summarization</a>
+                  href="https://ecwuuuuu.com/tags/self-host">Self-host</a>
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/text-generation">Text Generation</a>
+                  href="https://ecwuuuuu.com/tags/authentication">Authentication</a>
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/controllable-text-generation">Controllable Text Generation</a>
+                  href="https://ecwuuuuu.com/tags/saml">SAML</a>
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/cross-modal">Cross Modal</a>
+                  href="https://ecwuuuuu.com/tags/oidc">OIDC</a>
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/dialogue">Dialogue</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/transformer">Transformer</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/pre-trained-language-model">Pre-trained Language Model</a>
+                  href="https://ecwuuuuu.com/tags/openid-connect">OpenID Connect</a>
                 
               </td>
             </tr>
             
-            
-            <tr class="px-4 py-5">
-              <th
-                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
-                Extra Materials</td>
-              <td
-                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  <ul role="list"
-                    class="border border-gray-200 dark:border-gray-700 rounded-md divide-y divide-gray-200 dark:divide-gray-700">
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
-                          stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          [ACL Anthology] BNU-HKBU UIC NLP Team 2 at SemEval-2019 Task 6: Detecting Offensive Language Using BERT model
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="https://aclanthology.org/S19-2099/" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Check
-                        </a>
-                      </div>
-                    </li>
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
-                          stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          [ACL Anthology] LenAtten: An Effective Length Controlling Unit For Text Summarization
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="https://aclanthology.org/2021.findings-acl.31/" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Check
-                        </a>
-                      </div>
-                    </li>
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
-                          stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          [GitHub] LenAtten
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="https://github.com/X-AISIG/LenAtten" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Check
-                        </a>
-                      </div>
-                    </li>
-                    
-                  </ul>
-                </dd>
-              </td>
-            </tr>
             
             
             
@@ -458,6 +491,23 @@
 </div>
 
 
+<div class="pb-10 w-content ">
+  <script src="https://giscus.app/client.js"
+          data-repo="ecwu/ecwu.github.io"
+          data-repo-id="MDEwOlJlcG9zaXRvcnkxNjQzMzE1NjY="
+          data-category="Blog Post Discussion"
+          data-category-id="DIC_kwDOCcuALs4CObNl"
+          data-mapping="pathname"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="botton"
+          data-theme="light"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
 
 
 
@@ -466,9 +516,11 @@
 <h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2>
 <ul class="list-disc list-inside text-gray-900 dark:text-gray-200">
     
-    <li><a href="https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/">Sigmoid or Softmax for Binary Classification</a></li>
+    <li><a href="https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/">Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</a></li>
     
-    <li><a href="https://ecwuuuuu.com/post/pytorch-tutorial/">PyTorch Tutorial</a></li>
+    <li><a href="https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap-copy/">Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</a></li>
+    
+    <li><a href="https://ecwuuuuu.com/post/authentik-tutorial-video/">Authentik 视频教程 - 合集</a></li>
     
 </ul>
 </section>
