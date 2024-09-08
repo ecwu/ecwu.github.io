@@ -327,6 +327,7 @@
         <li><a href="#恢复数据库网络配置">恢复数据库网络配置</a></li>
       </ul>
     </li>
+    <li><a href="#参考资料">参考资料</a></li>
   </ul>
 </nav>
   </details>
@@ -400,6 +401,11 @@ docker run --rm -v authentik_database:/from -v authentik_database_backup:/to alp
 <h3 id="恢复数据库网络配置">恢复数据库网络配置</h3>
 <p>我们刚刚在 yaml 里面写的  <code>network_mode: none</code> 需要删掉，然后执行 <code>docker compose up -d --force-recreate</code> 来重建服务，网络配置恢复后，Server 和 Worker 也可以正常的访问数据库。配置好反向代理，新服务器上的 Authentik 服务也就启动了。</p>
 <p>最后还需要检查 Outpost 有没有正常启动，可能需要自行手动启动。至此，Authentik 就已经迁移完了。</p>
+<h2 id="参考资料">参考资料</h2>
+<ul>
+<li><a href="https://github.com/goauthentik/authentik/issues/8411">https://github.com/goauthentik/authentik/issues/8411</a></li>
+<li><a href="https://docs.goauthentik.io/docs/troubleshooting/postgres/upgrade_docker">https://docs.goauthentik.io/docs/troubleshooting/postgres/upgrade_docker</a></li>
+</ul>
 
 </article>
 </main>
@@ -545,7 +551,7 @@ docker run --rm -v authentik_database:/from -v authentik_database_backup:/to alp
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-09-09 05:27 CST.
+      Build by GitHub Actions at: 2024-09-09 05:30 CST.
     </p>
     <p>
       
