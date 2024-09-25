@@ -406,12 +406,14 @@
 <li>TrueNAS Scale 虚拟机直通了 HBA 卡，分配了 4 核心 32G 的内存。这个虚拟机负责管理硬盘并提供存储的接口。里面我将四块硬盘组成了 RAIDZ1 存储池，并提供出 NFS 和 Samba 的接口用来挂载到其他系统中。</li>
 <li>Ubuntu 虚拟机分配了 8 核心 16G 的内存，主要是运行各种自用的服务。</li>
 <li>Debian 虚拟机分配了 4 核心 14G 的内存，安装了<a href="https://ecwuuuuu.com/post/homelab-journey-intranet/#%E5%8D%8A%E8%87%AA%E5%8A%A8%E5%AA%92%E4%BD%93%E4%B8%AD%E5%BF%83">内网服务/半自动媒体中心</a>同款的下载器和内容刮削工具。</li>
-<li>Ubuntu LXC 容器分配率 4 核心 8G 的内存，安装了 Emby。</li>
-<li>OpenWRT 容器分配率 2 核心 2G 的内存，安装了 Emby。</li>
+<li>Ubuntu LXC 容器分配率 4 核心 8G 的内存，安装了 Emby，直通了显卡用于硬件解码。</li>
+<li>OpenWRT 容器分配率 2 核心 2G 的内存。</li>
 </ol>
 <p>大部分的虚拟机都配置了 Tailscale 用于访问和管理。Ubuntu LXC 容器使用 Wireguard 与 CN2 GIA 服务器组网，提高部分服务的访问速度。</p>
 <p>因为腾讯云轻量香港的服务器继续续费比较贵，所以将大部分的服务都迁移到了 Ubuntu 虚拟机中，并通过 Tailscale 来访问，有较高的安全性，访问的体验也不错。</p>
+<blockquote>
 <p>未完待续。</p>
+</blockquote>
 
 </article>
 </main>
@@ -596,7 +598,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-09-09 05:30 CST.
+      Build by GitHub Actions at: 2024-09-25 20:12 CST.
     </p>
     <p>
       
