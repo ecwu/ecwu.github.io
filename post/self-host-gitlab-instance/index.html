@@ -4,9 +4,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>自建 GitLab 踩坑实录 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -381,23 +381,23 @@
 <ol>
 <li>第一步是将 GitLab 的 Nginx 关闭：</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ruby" data-lang="ruby"><span style="color:#586e75"># from</span>
-nginx<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;enable&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#719e07">true</span>
-<span style="color:#586e75"># to</span>
-nginx<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;enable&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#719e07">false</span>
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#586e75"># from</span>
+</span></span><span style="display:flex;"><span>nginx<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;enable&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#719e07">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># to</span>
+</span></span><span style="display:flex;"><span>nginx<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;enable&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#719e07">false</span>
+</span></span></code></pre></div><ol start="2">
 <li>设置 Nginx 用户</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ruby" data-lang="ruby"><span style="color:#586e75"># www is the user.</span>
-web_server<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;external_users&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#719e07">[</span><span style="color:#2aa198">&#39;www&#39;</span><span style="color:#719e07">]</span>
-</code></pre></div><p>如果不知道 Nginx 的用户，可以查看 Nginx 的配置文件 <code>nginx.conf</code>，用户会直接写在第一行（<code>user www www;</code> 则用户为 <code>www</code>）。如果不知道 nginx 配置文件的位置，可以用运行 <code>nginx -t</code> 查看。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#586e75"># www is the user.</span>
+</span></span><span style="display:flex;"><span>web_server<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;external_users&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#719e07">[</span><span style="color:#2aa198">&#39;www&#39;</span><span style="color:#719e07">]</span>
+</span></span></code></pre></div><p>如果不知道 Nginx 的用户，可以查看 Nginx 的配置文件 <code>nginx.conf</code>，用户会直接写在第一行（<code>user www www;</code> 则用户为 <code>www</code>）。如果不知道 nginx 配置文件的位置，可以用运行 <code>nginx -t</code> 查看。</p>
 <ol start="3">
 <li>修改 <code>external_url</code> 到你的个人域名</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ruby" data-lang="ruby">external_url <span style="color:#2aa198">&#39;http://git.yourdomain.com&#39;</span>
-<span style="color:#586e75"># type `https` if you want https SSL.</span>
-external_url <span style="color:#2aa198">&#39;https://git.yourdomain.com&#39;</span>
-</code></pre></div><p>需要注意，如果要使用 https，url 中需要将 http 改为 https。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>external_url <span style="color:#2aa198">&#39;http://git.yourdomain.com&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># type `https` if you want https SSL.</span>
+</span></span><span style="display:flex;"><span>external_url <span style="color:#2aa198">&#39;https://git.yourdomain.com&#39;</span>
+</span></span></code></pre></div><p>需要注意，如果要使用 https，url 中需要将 http 改为 https。</p>
 <p>到这，你已经修改了 GitLab 的配置文件，运行 <code>gitlab-ctl reconfigure</code> 应用配置。</p>
 <h3 id="使用自定义域名访问nginx-配置部分">使用自定义域名访问（Nginx 配置部分）</h3>
 <p>官方其实已经提供了 <a href="https://gitlab.com/gitlab-org/gitlab-recipes/-/tree/master/web-server/nginx">Nginx Vhost 的配置文件</a>，你只需要稍微的修改，就可以运用在自己的服务器上（有两个版本，根据是否启用 SSL 进行选择）。</p>
@@ -421,15 +421,15 @@ external_url <span style="color:#2aa198">&#39;https://git.yourdomain.com&#39;</s
 <li>将 55 行的 <code>ssl on;</code> 删去（在 Nginx 1.12 版本之后已经遗弃这一指令）</li>
 <li>将 56-57 行的 <code>ssl_certificate</code> 进行修改。下面的位置与宝塔的 SSL 配置联动，在站点设置的 SSL 设置中，部署的证书会放置在下面列出的位置。如果不确定宝塔会放置证书的位置，在第 1 步覆盖前，可以先在原配置中找到（前提是站点已经配置并启用 SSL）</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">  ssl_certificate        /www/server/panel/vhost/cert/git.yourdomain.com/fullchain.pem;
-  ssl_certificate_key    /www/server/panel/vhost/cert/git.yourdomain.com/privkey.pem;
-</code></pre></div><ol start="4">
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>  ssl_certificate        /www/server/panel/vhost/cert/git.yourdomain.com/fullchain.pem;
+</span></span><span style="display:flex;"><span>  ssl_certificate_key    /www/server/panel/vhost/cert/git.yourdomain.com/privkey.pem;
+</span></span></code></pre></div><ol start="4">
 <li>修改 log 的位置</li>
 </ol>
 <p>在配置文件的 41-42 行、90-91 行，定义了日志的输出位置，根据自己的情况进行修改。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">  access_log  /www/wwwlogs/git.yourdomain.com.log;
-  error_log   /www/wwwlogs/git.yourdomain.com.error.log;
-</code></pre></div><p>至此，使用自定义域名访问自建 GitLab 的配置已经完成，你应该应该可以通过域名访问自建的 GitLab 实例。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>  access_log  /www/wwwlogs/git.yourdomain.com.log;
+</span></span><span style="display:flex;"><span>  error_log   /www/wwwlogs/git.yourdomain.com.error.log;
+</span></span></code></pre></div><p>至此，使用自定义域名访问自建 GitLab 的配置已经完成，你应该应该可以通过域名访问自建的 GitLab 实例。</p>
 <h2 id="配置-runner">配置 Runner</h2>
 <p>虽然前面提到 GitLab 是完整的 DevOps 平台，但是要支持 CI/CD 等功能还需要进一步的配置。为了支持自动构建仓库，我尝试配置了一个 GitLab Runner。使用 Docker 进行安装和注册。官方对于 Docker 安装 Runner 已经给出了详细的教程（<a href="https://docs.gitlab.com/runner/install/docker.html">安装</a>/<a href="https://docs.gitlab.com/runner/register/index.html#docker">注册</a>）。</p>
 <p>注册完就可以在管理后台的 Runner Tab 看到自建的 Runner 了。但是会发现项目还是无法使用 Runner 进行构建。排查后发现，虽然 Runner 是 Shared 的，但是还是只允许指定的项目，所以你需要在 Runner 的 <code>Restrict projects for this runner</code> 配置中，指定需要 CI 的项目。（这并不是一个治本的解决方案，需要待我继续熟悉下 GitLab）。</p>
@@ -608,7 +608,7 @@ external_url <span style="color:#2aa198">&#39;https://git.yourdomain.com&#39;</s
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -630,17 +630,20 @@ external_url <span style="color:#2aa198">&#39;https://git.yourdomain.com&#39;</s
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

@@ -4,9 +4,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Homelab：我的赛博积木 - 公网服务 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -478,17 +478,17 @@
 <p>需要注意的是，目前最新的版本 <code>0.66.3</code> 还不支持数学公式（LaTeX），但是<a href="https://github.com/outline/outline/issues/1038">相关的功能已经合并进主线</a>，相信很快会在下一个发布版本中推出。</p>
 <h3 id="团队协作工具youtrack">团队协作工具：YouTrack</h3>
 
-<figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/youtrack-ui.png" alt="alt" class="rounded-lg">
-
-  <figcaption>
-  <strong>YouTrack </strong>
-  官方演示项目
+  <figure class="w-full">
+    <img src="//cdn.ecwuuuuu.com/blog/image/homelab/youtrack-ui.png" alt="alt" class="rounded-lg">
   
-  
-  
-  </figcaption>
-</figure>
+    <figcaption>
+    <strong>YouTrack </strong>
+    官方演示项目
+    
+    
+    
+    </figcaption>
+  </figure>
 
 <p><a href="https://hub.docker.com/r/jetbrains/youtrack/">YouTrack</a> 部署来只是为了体验功能，它来自 IntelliJ IDEA 的公司 JetBrains，十个用户以内支持免费自部署。因为没有团队开发软件的需求，我并没有深度体验过，只作为一个灵活很高的看板和信息记录工具，属于是有点小题大做了。</p>
 <h2 id="辅助工具">辅助工具</h2>
@@ -516,32 +516,32 @@
 <p>各大互联网公司提供的服务状态页，使用 <a href="https://github.com/louislam/uptime-kuma">Uptime Kuma</a> 你也可以获得同款。Uptime Kuma 部署后，可以定期（默认 60 秒）的帮你检查你监控的网页（也允许监控 TCP，UDP），并提供一个状态页进行展示。在服务出现故障时，它还能通过提醒服务告知你（比如 Telegram Bot）。</p>
 <p>但除了自建，还有一种“滥用” GitHub 的方式实现服务的状态监控，通过 <a href="https://github.com/upptime/upptime">upptime/upptime</a> 项目，利用 GitHub Actions 定期检查服务状态，用 GitHub Repository 储存历史信息，用 GitHub Pages 来展示状态页，是无成本的一种监控服务状态的方式。但需要注意的是，因为 GitHub Actions 的因素，服务并无法保证准确的一个固定的监控时间间隔，也就是说服务无法访问时，可能无法第一时间感知（但是个人用，也完全是够了）。</p>
 
-<figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/uptime-kuma-ui.png" alt="alt" class="rounded-lg">
-
-  <figcaption>
-  
-  服务状态页
-  
-  
-  
-  </figcaption>
-</figure>
+ <figure class="w-full">
+   <img src="//cdn.ecwuuuuu.com/blog/image/homelab/uptime-kuma-ui.png" alt="alt" class="rounded-lg">
+ 
+   <figcaption>
+   
+   服务状态页
+   
+   
+   
+   </figcaption>
+ </figure>
 
 <h3 id="万能的数据可视化面板grafana">万能的数据可视化面板：Grafana</h3>
 <p>这个服务使用的并不多，但是部署了还是可以提一下。Grafana 主要是用于数据的可视化并允许你方便的制作出一个可视化的面板。使用时它连接数据源（可以是传统基于 SQL 的，也可以是时间序列数据库如 <a href="https://prometheus.io/">Prometheus</a>）然后面板中编辑数据的检索语句（Query），然后利用它自带（比如折线图、散点图、文本、列表）或是第三方的插件进行可视化。通过这种方式，可以很方便的生成出一个美观的可视化大屏。</p>
 
-<figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/grafana-ui.png" alt="alt" class="rounded-lg">
-
-  <figcaption>
-  <strong>Grafana </strong>
-  可视化服务器 Docker 带宽和资源使用的状态
+  <figure class="w-full">
+    <img src="//cdn.ecwuuuuu.com/blog/image/homelab/grafana-ui.png" alt="alt" class="rounded-lg">
   
-  
-  
-  </figcaption>
-</figure>
+    <figcaption>
+    <strong>Grafana </strong>
+    可视化服务器 Docker 带宽和资源使用的状态
+    
+    
+    
+    </figcaption>
+  </figure>
 
 <p>个人使用方面，会将将服务器的状态接口让 Prometheus 抓取，然后使用 Grafana 可视化出来，实时监控服务器的负载和各资源的状态。</p>
 
@@ -677,7 +677,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -699,17 +699,20 @@
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

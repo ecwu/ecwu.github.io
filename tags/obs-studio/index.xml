@@ -4,17 +4,16 @@
     <title>OBS Studio on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/tags/obs-studio/</link>
     <description>Recent content in OBS Studio on ECWUUUUU</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Jan 2023 00:16:08 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/obs-studio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ecwuuuuu.com/tags/obs-studio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 input-overlay 工具在 OBS Studio 中展示鼠标和按键操作</title>
       <link>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</link>
       <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</guid>
-      <description>最近折腾了下 OBS Studio 的 input-overlay 插件，考虑到该插件的中文教程不多，特将折腾过程记录为本文。 什么是 input-overlay input-overlay 是由 Alex (univrsal) 开发的一个 OBS Studio 插件。安装后，可以在 OBS Studio 中增加</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;最近折腾了下 OBS Studio 的 &lt;a href=&#34;https://github.com/univrsal/input-overlay&#34;&gt;input-overlay&lt;/a&gt; 插件，考虑到该插件的中文教程不多，特将折腾过程记录为本文。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;什么是-input-overlay&#34;&gt;什么是 input-overlay&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://camo.githubusercontent.com/925ac0d1526f620d1669077ed909daf2ff8318ae9ffcecd14f790090de0b39ec/68747470733a2f2f692e696d6775722e636f6d2f6e5067707352782e706e67&#34; alt=&#34;input-overlay 使用中的效果&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/univrsal/input-overlay&#34;&gt;input-overlay&lt;/a&gt; 是由 &lt;a href=&#34;https://vrsal.xyz/&#34;&gt;Alex (univrsal)&lt;/a&gt; 开发的一个 OBS Studio 插件。安装后，可以在 OBS Studio 中增加新的来源（source）用于展示鼠标、键盘、甚至是各种游戏手柄的操作。可以在游戏操作教学、软件教程类直播中提升直播时的效果。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

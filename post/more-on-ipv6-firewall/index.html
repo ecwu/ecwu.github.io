@@ -4,9 +4,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>More on IPv6 Firewall - EUI-64 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -379,40 +379,40 @@
 <p>There still exists some &ldquo;pattern&rdquo;. In fact, the IPv6 address is generated based on EUI-64 (<a href="https://datatracker.ietf.org/doc/html/rfc2373#page-19">RFC2373</a>) derive from <a href="https://datatracker.ietf.org/doc/html/rfc5342#section-2.1">IEEE 802 48 bit MAC</a>.</p>
 <h3 id="eui-64">EUI-64</h3>
 <p>For Example, your MAC address for the device is <code>00:00:5E:00:53:AF</code>. EUI-64 inserts hex values of <code>0xFF</code> and <code>0xFE</code> in the middle of the MAC address. Then flip the 7th bit from 0 to 1. The result should be <code>0200:5EFF:FE00:53AF</code>. And this address will keep not change unless you change your MAC address or network card.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">|0              1|1              3|3              4|
-|0              5|6              1|2              7|
-+----------------+----------------+----------------+
-|cccccc0gcccccccc|ccccccccmmmmmmmm|mmmmmmmmmmmmmmmm|
-+----------------+----------------+----------------+
-
-insert 0xFF and 0xFE (1111111111111110).
-
-|0              1|1              3|3              4|4              6|
-|0              5|6              1|2              7|8              3|
-+----------------+----------------+----------------+----------------+
-|cccccc1gcccccccc|cccccccc11111111|11111110mmmmmmmm|mmmmmmmmmmmmmmmm|
-+----------------+----------------+----------------+----------------+
-</code></pre></div><p>The EUI-64 result together with ISP IPv6 Prefix(<code>/64</code>), can form the final IPv6 address.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Assuming IPv6 Prefix is `2001:2002:2003:2004`
-
-The final IPv6 address should be:
-
-2001:2002:2003:2004:0200:5EFF:FE00:53AF
--------Prefix------ -EUI-64 Generated--
-</code></pre></div><h2 id="masking">Masking</h2>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>|0              1|1              3|3              4|
+</span></span><span style="display:flex;"><span>|0              5|6              1|2              7|
+</span></span><span style="display:flex;"><span>+----------------+----------------+----------------+
+</span></span><span style="display:flex;"><span>|cccccc0gcccccccc|ccccccccmmmmmmmm|mmmmmmmmmmmmmmmm|
+</span></span><span style="display:flex;"><span>+----------------+----------------+----------------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>insert 0xFF and 0xFE (1111111111111110).
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>|0              1|1              3|3              4|4              6|
+</span></span><span style="display:flex;"><span>|0              5|6              1|2              7|8              3|
+</span></span><span style="display:flex;"><span>+----------------+----------------+----------------+----------------+
+</span></span><span style="display:flex;"><span>|cccccc1gcccccccc|cccccccc11111111|11111110mmmmmmmm|mmmmmmmmmmmmmmmm|
+</span></span><span style="display:flex;"><span>+----------------+----------------+----------------+----------------+
+</span></span></code></pre></div><p>The EUI-64 result together with ISP IPv6 Prefix(<code>/64</code>), can form the final IPv6 address.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Assuming IPv6 Prefix is `2001:2002:2003:2004`
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The final IPv6 address should be:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2001:2002:2003:2004:0200:5EFF:FE00:53AF
+</span></span><span style="display:flex;"><span>-------Prefix------ -EUI-64 Generated--
+</span></span></code></pre></div><h2 id="masking">Masking</h2>
 <p>Usually, subnet masking separates the IP into network and host addresses. Under IPv4, it defines the number of allowed hosts on a subnet. Or in other words, Only bits with their mask of 0 are allowed to change.</p>
 <p>In the previous <a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/">Synology DDNS Tutorial</a>. <code>::0000:8a2e:0370:7334/::ffff:ffff:ffff:ffff</code> is similar to subnet masking but masking backward. Double colon <code>::</code> omit the continuous 0s.</p>
 <p>This is well suited for my use case since my ISP will change the prefix assigned to me but my EUI-64 address will keep unchanged. But such masking from the back (or should I call it arbitrary masking?) is not fully implemented for different systems or a standard. According to the source I found, such masking is supported by Netfilter/iptables <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and no easy notice documentation is available.</p>
 <h2 id="solution">Solution?</h2>
 <p>According to what I explored, <strong>Linksys Velop</strong> system doesn&rsquo;t have such implementation for changing IPv6 Address with fixed suffix. I already contacted their tech support and still waiting for a reply. So my less convent solution may be to move the firewall to my devices or simply ignore it for now and uses another way to access my devices (like FRP).</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p><a href="https://www.right.com.cn/forum/thread-4052554-1-1.html#:~:text=%E5%8F%AF%E8%A7%81%20iptables%20%E5%AF%B9%20v6%20%E5%9C%B0%E5%9D%80%E7%9A%84%E5%8C%B9%E9%85%8D%E6%8E%A9%E7%A0%81%E5%8F%AF%E4%BB%A5%E9%9D%9E%E5%B8%B8%E7%81%B5%E6%B4%BB%EF%BC%8C%E4%B8%8D%E5%83%8F%20v4%20%E4%B8%8B%E5%8F%AA%E6%8C%89%E5%89%8D%E7%BC%80%E9%80%82%E9%85%8D%E3%80%82%E5%9D%91%E7%9A%84%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B8%AA%E7%89%B9%E5%BE%81%E6%98%AF%E6%B2%A1%E6%9C%89%E6%96%87%E6%A1%A3%E7%9A%84%EF%BC%8C%E7%9B%AE%E5%89%8D%E6%96%87%E6%A1%A3%E4%B8%AD%E5%86%99%E7%9A%84%20mask%20%E8%A7%A3%E9%87%8A%E8%BF%98%E6%98%AF%E9%80%82%E9%85%8D%20IPv4%20%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%8C%E6%9C%89%E4%BA%BA%E4%B8%93%E9%97%A8%E5%8F%91%E9%82%AE%E4%BB%B6%E5%8E%BB%20netfilter%20%E5%88%97%E8%A1%A8%E9%97%AE%E4%BA%86%E6%89%8D%E7%9F%A5%E9%81%93%E3%80%82IPv6%20%E5%9C%B0%E5%9D%80%E4%B8%AD%EF%BC%8C%E5%8F%8C%E5%86%92%E5%8F%B7%EF%BC%9A%EF%BC%9A%E7%9A%84%E5%86%99%E6%B3%95%E4%BB%A3%E8%A1%A8%E6%98%AF%E5%89%8D%20/%20%E5%90%8E%E5%9D%87%E4%B8%BA%200%20%E4%BD%8D%EF%BC%8C%E5%8F%8C%E5%86%92%E5%8F%B7%E5%8F%AA%E8%83%BD%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E3%80%82">华硕 ipv6 防火墙动态 ip，怎么设置一直打开某一端口</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
 </article>
 </main>
@@ -655,7 +655,7 @@ The final IPv6 address should be:
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -677,17 +677,20 @@ The final IPv6 address should be:
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tailwind on ECWUUUUU</title>
+    <title>Tailwind on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/tags/tailwind/</link>
-    <description>Recent content in tailwind on ECWUUUUU</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Tailwind on ECWUUUUU</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2021 16:35:45 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/tailwind/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ecwuuuuu.com/tags/tailwind/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>(Switched!) Switching to a new theme ... I guess</title>
       <link>https://ecwuuuuu.com/post/new-theme-for-blog/</link>
       <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/new-theme-for-blog/</guid>
-      <description>This blogsite has been using hugo-tufte theme (with some customization) for a while. I choose the theme because I appreciate the aesthetic look of the original Tufte $\LaTeX$ template. Using a dedicated area on the right side of the page for sidenotes, supplements images, or thoughts. Diversify the layout of an article, and make the article fun to read.
-A couple of months ago, under my willingness of making enhancements to the theme.</description>
+      <description>&lt;p&gt;This blogsite has been using &lt;a href=&#34;https://github.com/shawnohare/hugo-tufte&#34;&gt;hugo-tufte&lt;/a&gt; theme (with some customization) for a while. I choose the theme because I appreciate the aesthetic look of the original Tufte $\LaTeX$ template. Using a dedicated area on the right side of the page for sidenotes, supplements images, or thoughts. Diversify the layout of an article, and make the article fun to read.&lt;/p&gt;&#xA;&lt;p&gt;A couple of months ago, under my willingness of making enhancements to the theme. And I start to do some research on how other people are doing sidenote on their blog (Like the &lt;a href=&#34;https://www.gwern.net/Sidenotes&#34;&gt;great article&lt;/a&gt; by Gwern Branwen). With some &amp;ldquo;deep thinking&amp;rdquo;. I start to realize. Maybe it is not a good idea to use footnotes on the Internet pages.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,29 +4,23 @@
     <title>Tutorial on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/tags/tutorial/</link>
     <description>Recent content in Tutorial on ECWUUUUU</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jan 2024 00:25:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ecwuuuuu.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PyTorch Tutorial</title>
       <link>https://ecwuuuuu.com/post/pytorch-tutorial/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid>
-      <description>A little bit of context
-This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.
-My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.
- Introduction to PyTorch  PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;A little bit of context&lt;/p&gt;&#xA;&lt;p&gt;This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.&lt;/p&gt;&#xA;&lt;p&gt;My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;introduction-to-pytorch&#34;&gt;Introduction to PyTorch&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pytorch.org/assets/images/logo-white.svg&#34; alt=&#34;PyTorch&#34;&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li&gt;&#xA;&lt;li&gt;Its popularity and widespread adoption by the research and industry communities.&lt;/li&gt;&#xA;&lt;li&gt;PyTorch is widely known for its ease of use, Pythonic interface, and excellent support for research-oriented tasks.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;key-technology&#34;&gt;Key Technology&lt;/h3&gt;&#xA;&lt;h4 id=&#34;dynamic-computational-graph&#34;&gt;Dynamic computational graph&lt;/h4&gt;&#xA;&lt;p&gt;A &lt;strong&gt;computational graph&lt;/strong&gt; represents the flow of data through a computational model in the form of a directed acyclic graph (DAG). It serves as a visual representation of the mathematical operations performed on input data to produce the desired output.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>使用 input-overlay 工具在 OBS Studio 中展示鼠标和按键操作</title>
       <link>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</link>
       <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</guid>
-      <description>最近折腾了下 OBS Studio 的 input-overlay 插件，考虑到该插件的中文教程不多，特将折腾过程记录为本文。 什么是 input-overlay input-overlay 是由 Alex (univrsal) 开发的一个 OBS Studio 插件。安装后，可以在 OBS Studio 中增加</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;最近折腾了下 OBS Studio 的 &lt;a href=&#34;https://github.com/univrsal/input-overlay&#34;&gt;input-overlay&lt;/a&gt; 插件，考虑到该插件的中文教程不多，特将折腾过程记录为本文。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;什么是-input-overlay&#34;&gt;什么是 input-overlay&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://camo.githubusercontent.com/925ac0d1526f620d1669077ed909daf2ff8318ae9ffcecd14f790090de0b39ec/68747470733a2f2f692e696d6775722e636f6d2f6e5067707352782e706e67&#34; alt=&#34;input-overlay 使用中的效果&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/univrsal/input-overlay&#34;&gt;input-overlay&lt;/a&gt; 是由 &lt;a href=&#34;https://vrsal.xyz/&#34;&gt;Alex (univrsal)&lt;/a&gt; 开发的一个 OBS Studio 插件。安装后，可以在 OBS Studio 中增加新的来源（source）用于展示鼠标、键盘、甚至是各种游戏手柄的操作。可以在游戏操作教学、软件教程类直播中提升直播时的效果。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

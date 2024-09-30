@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en">
     <head>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
     integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
     integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
@@ -41,9 +41,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>String -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -353,94 +353,94 @@
 <li>左指针移动后，更新字典内字符的位置，以便处理下一次字符重复</li>
 <li>判断左右指针框选范围字符串的长度、如果超过过去的长度，则更新。</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">lengthOfLongestSubstring</span>(<span style="color:#268bd2">self</span>, s: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">int</span>:
-        appear <span style="color:#719e07">=</span> <span style="color:#b58900">dict</span>()
-        l <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
-        longest <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;&#34;</span>
-        <span style="color:#719e07">for</span> c <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(s)):
-            <span style="color:#719e07">if</span> s[c] <span style="color:#719e07">in</span> appear:
-                <span style="color:#719e07">if</span> appear[s[c]] <span style="color:#719e07">&gt;=</span> l:  <span style="color:#586e75"># index not allow go backward</span>
-                    l <span style="color:#719e07">=</span> appear[s[c]] <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>
-                appear[s[c]] <span style="color:#719e07">=</span> c  <span style="color:#586e75"># update index</span>
-            <span style="color:#719e07">else</span>:
-                appear[s[c]] <span style="color:#719e07">=</span> c
-            <span style="color:#719e07">if</span> <span style="color:#b58900">len</span>(longest) <span style="color:#719e07">&lt;</span> c<span style="color:#719e07">+</span><span style="color:#2aa198">1</span><span style="color:#719e07">-</span>l:  <span style="color:#586e75"># Update string length</span>
-                longest <span style="color:#719e07">=</span> s[l:c<span style="color:#719e07">+</span><span style="color:#2aa198">1</span>]
-        <span style="color:#719e07">return</span> <span style="color:#b58900">len</span>(longest)
-</code></pre></div><p>这种方法，主要的时间复杂度在右指针的遍历，因为右指针只遍历字符串一次，算法时间复杂度为 $\mathcal{O}(n)$, $n$ 为字符串长度。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">lengthOfLongestSubstring</span>(<span style="color:#268bd2">self</span>, s: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">int</span>:
+</span></span><span style="display:flex;"><span>        appear <span style="color:#719e07">=</span> <span style="color:#b58900">dict</span>()
+</span></span><span style="display:flex;"><span>        l <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>        longest <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> c <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(s)):
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> s[c] <span style="color:#719e07">in</span> appear:
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">if</span> appear[s[c]] <span style="color:#719e07">&gt;=</span> l:  <span style="color:#586e75"># index not allow go backward</span>
+</span></span><span style="display:flex;"><span>                    l <span style="color:#719e07">=</span> appear[s[c]] <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>                appear[s[c]] <span style="color:#719e07">=</span> c  <span style="color:#586e75"># update index</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">else</span>:
+</span></span><span style="display:flex;"><span>                appear[s[c]] <span style="color:#719e07">=</span> c
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> <span style="color:#b58900">len</span>(longest) <span style="color:#719e07">&lt;</span> c<span style="color:#719e07">+</span><span style="color:#2aa198">1</span><span style="color:#719e07">-</span>l:  <span style="color:#586e75"># Update string length</span>
+</span></span><span style="display:flex;"><span>                longest <span style="color:#719e07">=</span> s[l:c<span style="color:#719e07">+</span><span style="color:#2aa198">1</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> <span style="color:#b58900">len</span>(longest)
+</span></span></code></pre></div><p>这种方法，主要的时间复杂度在右指针的遍历，因为右指针只遍历字符串一次，算法时间复杂度为 $\mathcal{O}(n)$, $n$ 为字符串长度。</p>
 <h2 id="5-最长回文子串">5. 最长回文子串</h2>
 <p><a href="https://leetcode-cn.com/problems/longest-palindromic-substring">https://leetcode-cn.com/problems/longest-palindromic-substring</a></p>
 <p>回文串指从正序与倒序字串内容一致。</p>
 <p>首先能想到一个最简单的方法是中心扩散：遍历每个字符，从每个字符的位置开始，向两侧扩散并判断字符是否一致，直到遇到不匹配。</p>
 <p>其中，回文长度为单数和双数的情况需要分别处理。拿到回文区段后，判断长度是否是最长。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">longestPalindrome</span>(<span style="color:#268bd2">self</span>, s: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">str</span>:
-        start, end <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>
-        <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(s)):
-            l1, r1 <span style="color:#719e07">=</span> i, i
-            <span style="color:#719e07">while</span> l1 <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">0</span> <span style="color:#719e07">and</span> r1 <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(s) <span style="color:#719e07">and</span> s[l1] <span style="color:#719e07">==</span> s[r1]:
-                l1 <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
-                r1 <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-            l1, r1 <span style="color:#719e07">=</span> l1 <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>, r1 <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
-            l2, r2 <span style="color:#719e07">=</span> i, i<span style="color:#719e07">+</span><span style="color:#2aa198">1</span>
-            <span style="color:#719e07">while</span> l2 <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">0</span> <span style="color:#719e07">and</span> r2 <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(s) <span style="color:#719e07">and</span> s[l2] <span style="color:#719e07">==</span> s[r2]:
-                l2 <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
-                r2 <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-            l2, r2 <span style="color:#719e07">=</span> l2 <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>, r2 <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
-            <span style="color:#719e07">if</span> r1 <span style="color:#719e07">-</span> l1 <span style="color:#719e07">&gt;</span> end <span style="color:#719e07">-</span> start:
-                start, end <span style="color:#719e07">=</span> l1, r1
-            <span style="color:#719e07">if</span> r2 <span style="color:#719e07">-</span> l2 <span style="color:#719e07">&gt;</span> end <span style="color:#719e07">-</span> start:
-                start, end <span style="color:#719e07">=</span> l2, r2
-        <span style="color:#719e07">return</span> s[start:end <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>]
-</code></pre></div><p>时间复杂度为 $\mathcal{O}(n^2)$。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">longestPalindrome</span>(<span style="color:#268bd2">self</span>, s: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">str</span>:
+</span></span><span style="display:flex;"><span>        start, end <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(s)):
+</span></span><span style="display:flex;"><span>            l1, r1 <span style="color:#719e07">=</span> i, i
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">while</span> l1 <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">0</span> <span style="color:#719e07">and</span> r1 <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(s) <span style="color:#719e07">and</span> s[l1] <span style="color:#719e07">==</span> s[r1]:
+</span></span><span style="display:flex;"><span>                l1 <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>                r1 <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>            l1, r1 <span style="color:#719e07">=</span> l1 <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>, r1 <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>            l2, r2 <span style="color:#719e07">=</span> i, i<span style="color:#719e07">+</span><span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">while</span> l2 <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">0</span> <span style="color:#719e07">and</span> r2 <span style="color:#719e07">&lt;</span> <span style="color:#b58900">len</span>(s) <span style="color:#719e07">and</span> s[l2] <span style="color:#719e07">==</span> s[r2]:
+</span></span><span style="display:flex;"><span>                l2 <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>                r2 <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>            l2, r2 <span style="color:#719e07">=</span> l2 <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>, r2 <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> r1 <span style="color:#719e07">-</span> l1 <span style="color:#719e07">&gt;</span> end <span style="color:#719e07">-</span> start:
+</span></span><span style="display:flex;"><span>                start, end <span style="color:#719e07">=</span> l1, r1
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> r2 <span style="color:#719e07">-</span> l2 <span style="color:#719e07">&gt;</span> end <span style="color:#719e07">-</span> start:
+</span></span><span style="display:flex;"><span>                start, end <span style="color:#719e07">=</span> l2, r2
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> s[start:end <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>]
+</span></span></code></pre></div><p>时间复杂度为 $\mathcal{O}(n^2)$。</p>
 <p>除了暴力解法，还有许多其他的方法，但是时间复杂度上都没有明显的优势。有一个专门针对回文字串的算法 <a href="https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher.27s_algorithm">Manacher&rsquo;s Algorithm</a>（<del>马拉车算法</del>），将时间复杂度降低到了 $\mathcal{O}(n)$，这里只讨论算法思想。</p>
 <p>算法的做法是，维护数组 $P[]$ 用来记录字符串在 $i$ 位置为中心，存在的回文子串的个数，这个数其实也就是回文子串的“半径”。构建这个数组的方法可以根据中心扩散法的基础上修改。但是很明显，这样时间复杂度并没有下降。</p>
 <p>Manacher 算法，充分利用了对称性，将寻找字符回文串个数的时间降到了线性。</p>
 <p>设想一个字符串内容为 <code>cbacabac</code>, 我们记录这样一个结构。其中 T 代表的是原字符串。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">   0  1  2  3  4  5  6  7  8
-T  a  b  a  b  a  b  a  b  c
-P  0  1  2  3  3  3  1  0  0
-</code></pre></div><p>如位置 <code>4</code> 的字符 <code>a</code>，符合条件的子串就包括 <code>bab</code>，<code>ababa</code>，和 <code>bababab</code>，则 $P[4]=3$。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>   0  1  2  3  4  5  6  7  8
+</span></span><span style="display:flex;"><span>T  a  b  a  b  a  b  a  b  c
+</span></span><span style="display:flex;"><span>P  0  1  2  3  3  3  1  0  0
+</span></span></code></pre></div><p>如位置 <code>4</code> 的字符 <code>a</code>，符合条件的子串就包括 <code>bab</code>，<code>ababa</code>，和 <code>bababab</code>，则 $P[4]=3$。</p>
 <p>如果现在要获得位置 <code>6</code> 字符的 $P$，经过观察会发现，因为已知位置 <code>4</code> 的 $P$，位置 <code>6</code> 字符包含在位置 <code>4</code> 的回文串中。根据镜面对称的特点，对应的，位置 <code>2</code> 在位置 <code>4</code> 字符的回文串中，所能拓展的范围 (<code>a</code>) 与位置 <code>6</code> 字符在相同回文串区间 (<code>+</code>) 内的扩展的范围 (<code>b</code>) 一致（例子中为 <code>1-3</code> 和 <code>5-7</code>）。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">   0  1  2  3  4  5  6  7  8
-T  a  b  a  b  a  b  a  b  c
-P  0  1  2  3  3  3  1  0  0
-      -------     -------
-         a           b
-      ~~~~~~~~~~~~~~~~~~~
-               +
-</code></pre></div><p>如果位置 <code>2</code> 的回文串在 <code>1-3</code> 区间就结束了，那么位置 <code>6</code> 的回文串在 <code>5-7</code> 区间也会结束。如果没有结束，则会给位置 <code>6</code> 的中心扩散提供信息：字符串范围的<strong>下限</strong>是 <code>5-7</code> （至少两侧有一对回文字符）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>   0  1  2  3  4  5  6  7  8
+</span></span><span style="display:flex;"><span>T  a  b  a  b  a  b  a  b  c
+</span></span><span style="display:flex;"><span>P  0  1  2  3  3  3  1  0  0
+</span></span><span style="display:flex;"><span>      -------     -------
+</span></span><span style="display:flex;"><span>         a           b
+</span></span><span style="display:flex;"><span>      ~~~~~~~~~~~~~~~~~~~
+</span></span><span style="display:flex;"><span>               +
+</span></span></code></pre></div><p>如果位置 <code>2</code> 的回文串在 <code>1-3</code> 区间就结束了，那么位置 <code>6</code> 的回文串在 <code>5-7</code> 区间也会结束。如果没有结束，则会给位置 <code>6</code> 的中心扩散提供信息：字符串范围的<strong>下限</strong>是 <code>5-7</code> （至少两侧有一对回文字符）。</p>
 <p>通过这种对称性，我们避免了不必要的重复搜索。上面的方法，在单双数长度的回文串的情况下，会有不同的结果，这时候会使用在字符间插入一个特殊字符（不存在原题中使用的字符集的字符，在英文字母的情况下，可以用 <code>#</code>）。这样所有的字符串都可以视为单数长度的字符串。还有一些细节，可见题解 <a href="https://leetcode-cn.com/problems/longest-palindromic-substring/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-bao-gu/#%E8%A7%A3%E6%B3%95-5-manachers-algorithm-%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95%E3%80%82">详细通俗的思路分析，多解法-windliang</a>。</p>
 <h2 id="17-电话号码的字母组合">17. 电话号码的字母组合</h2>
 <p><a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number">https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number</a></p>
 <p>题目根据给出的数字组合，对应<a href="https://baike.baidu.com/item/%E4%B9%9D%E5%AE%AB%E6%A0%BC%E8%BE%93%E5%85%A5%E6%B3%95">九宫格输入法</a>的数字英文对照。输出所有可能的字符组合。其中一种方式就是维护一个映射表，然后循环的将所有的组合输出。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">letterCombinations</span>(<span style="color:#268bd2">self</span>, digits: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> List[<span style="color:#b58900">str</span>]:
-        mapping <span style="color:#719e07">=</span> {
-            <span style="color:#2aa198">&#39;2&#39;</span>: [<span style="color:#2aa198">&#39;a&#39;</span>, <span style="color:#2aa198">&#39;b&#39;</span>, <span style="color:#2aa198">&#39;c&#39;</span>],
-            <span style="color:#2aa198">&#39;3&#39;</span>: [<span style="color:#2aa198">&#39;d&#39;</span>, <span style="color:#2aa198">&#39;e&#39;</span>, <span style="color:#2aa198">&#39;f&#39;</span>],
-            <span style="color:#2aa198">&#39;4&#39;</span>: [<span style="color:#2aa198">&#39;g&#39;</span>, <span style="color:#2aa198">&#39;h&#39;</span>, <span style="color:#2aa198">&#39;i&#39;</span>],
-            <span style="color:#2aa198">&#39;5&#39;</span>: [<span style="color:#2aa198">&#39;j&#39;</span>, <span style="color:#2aa198">&#39;k&#39;</span>, <span style="color:#2aa198">&#39;l&#39;</span>],
-            <span style="color:#2aa198">&#39;6&#39;</span>: [<span style="color:#2aa198">&#39;m&#39;</span>, <span style="color:#2aa198">&#39;n&#39;</span>, <span style="color:#2aa198">&#39;o&#39;</span>],
-            <span style="color:#2aa198">&#39;7&#39;</span>: [<span style="color:#2aa198">&#39;p&#39;</span>, <span style="color:#2aa198">&#39;q&#39;</span>, <span style="color:#2aa198">&#39;r&#39;</span>, <span style="color:#2aa198">&#39;s&#39;</span>],
-            <span style="color:#2aa198">&#39;8&#39;</span>: [<span style="color:#2aa198">&#39;t&#39;</span>, <span style="color:#2aa198">&#39;u&#39;</span>, <span style="color:#2aa198">&#39;v&#39;</span>],
-            <span style="color:#2aa198">&#39;9&#39;</span>: [<span style="color:#2aa198">&#39;w&#39;</span>, <span style="color:#2aa198">&#39;x&#39;</span>, <span style="color:#2aa198">&#39;y&#39;</span>, <span style="color:#2aa198">&#39;z&#39;</span>]
-            }
-        <span style="color:#719e07">if</span> digits <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;&#39;</span>:
-            <span style="color:#719e07">return</span> []
-        ans <span style="color:#719e07">=</span> [<span style="color:#2aa198">&#39;&#39;</span>]
-        <span style="color:#719e07">for</span> num <span style="color:#719e07">in</span> digits:
-            ans <span style="color:#719e07">=</span> [ec <span style="color:#719e07">+</span> ac <span style="color:#719e07">for</span> ec <span style="color:#719e07">in</span> ans <span style="color:#719e07">for</span> ac <span style="color:#719e07">in</span> mapping[num]]
-        <span style="color:#719e07">return</span> ans
-</code></pre></div><p>其中， <code>ans = [ec + ac for ec in ans for ac in mapping[num]]</code> 可以展开：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">for</span> num <span style="color:#719e07">in</span> digits:
-    new_ans <span style="color:#719e07">=</span> <span style="color:#b58900">list</span>()
-    <span style="color:#719e07">for</span> ec <span style="color:#719e07">in</span> ans:
-        <span style="color:#719e07">for</span> ac <span style="color:#719e07">in</span> mapping[num]:
-            new_ans<span style="color:#719e07">.</span>append(ec <span style="color:#719e07">+</span> ac)
-    ans <span style="color:#719e07">=</span> new_ans
-</code></pre></div><p>时间复杂度为 $\mathcal{O}(3^m\times 4^n)$，其中 $m$为映射中有三个字母的数字个数，$m$为映射中有四个字母的数字个数。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">letterCombinations</span>(<span style="color:#268bd2">self</span>, digits: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> List[<span style="color:#b58900">str</span>]:
+</span></span><span style="display:flex;"><span>        mapping <span style="color:#719e07">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#2aa198">&#39;2&#39;</span>: [<span style="color:#2aa198">&#39;a&#39;</span>, <span style="color:#2aa198">&#39;b&#39;</span>, <span style="color:#2aa198">&#39;c&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#2aa198">&#39;3&#39;</span>: [<span style="color:#2aa198">&#39;d&#39;</span>, <span style="color:#2aa198">&#39;e&#39;</span>, <span style="color:#2aa198">&#39;f&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#2aa198">&#39;4&#39;</span>: [<span style="color:#2aa198">&#39;g&#39;</span>, <span style="color:#2aa198">&#39;h&#39;</span>, <span style="color:#2aa198">&#39;i&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#2aa198">&#39;5&#39;</span>: [<span style="color:#2aa198">&#39;j&#39;</span>, <span style="color:#2aa198">&#39;k&#39;</span>, <span style="color:#2aa198">&#39;l&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#2aa198">&#39;6&#39;</span>: [<span style="color:#2aa198">&#39;m&#39;</span>, <span style="color:#2aa198">&#39;n&#39;</span>, <span style="color:#2aa198">&#39;o&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#2aa198">&#39;7&#39;</span>: [<span style="color:#2aa198">&#39;p&#39;</span>, <span style="color:#2aa198">&#39;q&#39;</span>, <span style="color:#2aa198">&#39;r&#39;</span>, <span style="color:#2aa198">&#39;s&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#2aa198">&#39;8&#39;</span>: [<span style="color:#2aa198">&#39;t&#39;</span>, <span style="color:#2aa198">&#39;u&#39;</span>, <span style="color:#2aa198">&#39;v&#39;</span>],
+</span></span><span style="display:flex;"><span>            <span style="color:#2aa198">&#39;9&#39;</span>: [<span style="color:#2aa198">&#39;w&#39;</span>, <span style="color:#2aa198">&#39;x&#39;</span>, <span style="color:#2aa198">&#39;y&#39;</span>, <span style="color:#2aa198">&#39;z&#39;</span>]
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">if</span> digits <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">return</span> []
+</span></span><span style="display:flex;"><span>        ans <span style="color:#719e07">=</span> [<span style="color:#2aa198">&#39;&#39;</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> num <span style="color:#719e07">in</span> digits:
+</span></span><span style="display:flex;"><span>            ans <span style="color:#719e07">=</span> [ec <span style="color:#719e07">+</span> ac <span style="color:#719e07">for</span> ec <span style="color:#719e07">in</span> ans <span style="color:#719e07">for</span> ac <span style="color:#719e07">in</span> mapping[num]]
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> ans
+</span></span></code></pre></div><p>其中， <code>ans = [ec + ac for ec in ans for ac in mapping[num]]</code> 可以展开：</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">for</span> num <span style="color:#719e07">in</span> digits:
+</span></span><span style="display:flex;"><span>    new_ans <span style="color:#719e07">=</span> <span style="color:#b58900">list</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">for</span> ec <span style="color:#719e07">in</span> ans:
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> ac <span style="color:#719e07">in</span> mapping[num]:
+</span></span><span style="display:flex;"><span>            new_ans<span style="color:#719e07">.</span>append(ec <span style="color:#719e07">+</span> ac)
+</span></span><span style="display:flex;"><span>    ans <span style="color:#719e07">=</span> new_ans
+</span></span></code></pre></div><p>时间复杂度为 $\mathcal{O}(3^m\times 4^n)$，其中 $m$为映射中有三个字母的数字个数，$m$为映射中有四个字母的数字个数。</p>
 <h2 id="20-有效的括号">20. 有效的括号</h2>
 <p><a href="https://leetcode-cn.com/problems/valid-parentheses">https://leetcode-cn.com/problems/valid-parentheses</a></p>
 <p>比较经典的利用栈的题目，遇到左括弧则推入栈中，遇到又括弧则抛出栈内元素进行比对。因为栈这一数据结构是先进先出（<a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">FIFO</a>)，则满足情况的阔号串满足：遍历完字符串后所有的堆栈为空。阔号的对则使用字典进行储存，方便进行压栈和抛出时比对。</p>
@@ -451,17 +451,17 @@ P  0  1  2  3  3  3  1  0  0
 <li>右括号数量大于左括弧数量：栈已经不存在更多元素，继续抛出栈顶元素会出错。</li>
 </ol>
 <p>针对第三个问题，使用到一个 trick 是，在初始化栈时，塞入一个不为阔号的元素：例如 <code>$</code>，则第三种情况发生时，一定无法匹配，触发第一个条件结束判断并返回结果。但是符合情况的字符串也发生了改变，如果栈的长度为1（只剩下<code>$</code>），则括号串满足条件。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">isValid</span>(<span style="color:#268bd2">self</span>, s: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">bool</span>:
-        dic <span style="color:#719e07">=</span> {<span style="color:#2aa198">&#39;{&#39;</span>: <span style="color:#2aa198">&#39;}&#39;</span>,  <span style="color:#2aa198">&#39;[&#39;</span>: <span style="color:#2aa198">&#39;]&#39;</span>, <span style="color:#2aa198">&#39;(&#39;</span>: <span style="color:#2aa198">&#39;)&#39;</span>, <span style="color:#2aa198">&#39;?&#39;</span>: <span style="color:#2aa198">&#39;?&#39;</span>}
-        stack <span style="color:#719e07">=</span> [<span style="color:#2aa198">&#39;?&#39;</span>]
-        <span style="color:#719e07">for</span> c <span style="color:#719e07">in</span> s:
-            <span style="color:#719e07">if</span> c <span style="color:#719e07">in</span> dic:
-                stack<span style="color:#719e07">.</span>append(c)
-            <span style="color:#719e07">elif</span> dic[stack<span style="color:#719e07">.</span>pop()] <span style="color:#719e07">!=</span> c:
-                <span style="color:#719e07">return</span> <span style="color:#cb4b16">False</span> 
-        <span style="color:#719e07">return</span> <span style="color:#b58900">len</span>(stack) <span style="color:#719e07">==</span> <span style="color:#2aa198">1</span>
-</code></pre></div><p>遍历一次，时间复杂度为 $O(n)$。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">isValid</span>(<span style="color:#268bd2">self</span>, s: <span style="color:#b58900">str</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">bool</span>:
+</span></span><span style="display:flex;"><span>        dic <span style="color:#719e07">=</span> {<span style="color:#2aa198">&#39;{&#39;</span>: <span style="color:#2aa198">&#39;}&#39;</span>,  <span style="color:#2aa198">&#39;[&#39;</span>: <span style="color:#2aa198">&#39;]&#39;</span>, <span style="color:#2aa198">&#39;(&#39;</span>: <span style="color:#2aa198">&#39;)&#39;</span>, <span style="color:#2aa198">&#39;?&#39;</span>: <span style="color:#2aa198">&#39;?&#39;</span>}
+</span></span><span style="display:flex;"><span>        stack <span style="color:#719e07">=</span> [<span style="color:#2aa198">&#39;?&#39;</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> c <span style="color:#719e07">in</span> s:
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> c <span style="color:#719e07">in</span> dic:
+</span></span><span style="display:flex;"><span>                stack<span style="color:#719e07">.</span>append(c)
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">elif</span> dic[stack<span style="color:#719e07">.</span>pop()] <span style="color:#719e07">!=</span> c:
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">return</span> <span style="color:#cb4b16">False</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> <span style="color:#b58900">len</span>(stack) <span style="color:#719e07">==</span> <span style="color:#2aa198">1</span>
+</span></span></code></pre></div><p>遍历一次，时间复杂度为 $O(n)$。</p>
 
 </article>
 </main>
@@ -563,7 +563,7 @@ P  0  1  2  3  3  3  1  0  0
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -585,17 +585,20 @@ P  0  1  2  3  3  3  1  0  0
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

@@ -4,9 +4,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Authentik 教程系列：服务的迁移 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -360,9 +360,9 @@
 <ol>
 <li>将数据库容器的 docker volume 做一个备份：</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">docker volume create authentik_database_backup
-docker run --rm -v authentik_database:/from -v authentik_database_backup:/to alpine sh -c <span style="color:#2aa198">&#39;cd /from &amp;&amp; cp -a . /to&#39;</span>
-</code></pre></div><p>这里利用首先创建了一个叫 <code>authentik_database_backup</code> 的 docker volume；然后创建了一个 alpine 的容器并将旧 volume 和新建的 volume 都挂载进去，并执行复制的操作来实现了 volume 的备份。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker volume create authentik_database_backup
+</span></span><span style="display:flex;"><span>docker run --rm -v authentik_database:/from -v authentik_database_backup:/to alpine sh -c <span style="color:#2aa198">&#39;cd /from &amp;&amp; cp -a . /to&#39;</span>
+</span></span></code></pre></div><p>这里利用首先创建了一个叫 <code>authentik_database_backup</code> 的 docker volume；然后创建了一个 alpine 的容器并将旧 volume 和新建的 volume 都挂载进去，并执行复制的操作来实现了 volume 的备份。</p>
 <ol start="2">
 <li>将数据库的内容使用 pg_dump 导出为 <code>sql</code> 文件。</li>
 </ol>
@@ -374,25 +374,25 @@ docker run --rm -v authentik_database:/from -v authentik_database_backup:/to alp
 <h3 id="容器准备">容器准备</h3>
 <p>经过前两个操作，数据也就备份好了，我们可以接着在新服务器进行容器的重建。首先可以在官网按照服务创建的操作，下载 <code>docker-compose.yaml</code>，并提前拉取需要的镜像。<code>.env</code> 直接复用旧服务器上的。</p>
 <p>在启动前，需要给 <code>postgresql</code> 容器添加一个网络的配置，<code>network_mode: none</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml">  <span style="color:#268bd2">postgresql</span>:
-    <span style="color:#268bd2">image</span>: docker.io/library/postgres:16-alpine
-    <span style="color:#268bd2">restart</span>: unless-stopped
-    <span style="color:#268bd2">healthcheck</span>:
-      <span style="color:#268bd2">test</span>: [<span style="color:#2aa198">&#34;CMD-SHELL&#34;</span>, <span style="color:#2aa198">&#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;</span>]
-      <span style="color:#268bd2">start_period</span>: 20s
-      <span style="color:#268bd2">interval</span>: 30s
-      <span style="color:#268bd2">retries</span>: <span style="color:#2aa198">5</span>
-      <span style="color:#268bd2">timeout</span>: 5s
-    <span style="color:#268bd2">volumes</span>:
-      - database:/var/lib/postgresql/data
-    <span style="color:#268bd2">environment</span>:
-      <span style="color:#268bd2">POSTGRES_PASSWORD</span>: ${PG_PASS:?database password required}
-      <span style="color:#268bd2">POSTGRES_USER</span>: ${PG_USER:-authentik}
-      <span style="color:#268bd2">POSTGRES_DB</span>: ${PG_DB:-authentik}
-    <span style="color:#268bd2">env_file</span>:
-      - .env
-    <span style="color:#268bd2">network_mode</span>: none
-</code></pre></div><p>这样可以避免其他容器接到 postgresql，对数据库进行写入。方便我们进行备份。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  <span style="color:#268bd2">postgresql</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">image</span>: docker.io/library/postgres:16-alpine
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">restart</span>: unless-stopped
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">healthcheck</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">test</span>: [<span style="color:#2aa198">&#34;CMD-SHELL&#34;</span>, <span style="color:#2aa198">&#34;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&#34;</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">start_period</span>: 20s
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">interval</span>: 30s
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">retries</span>: <span style="color:#2aa198">5</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">timeout</span>: 5s
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">volumes</span>:
+</span></span><span style="display:flex;"><span>      - database:/var/lib/postgresql/data
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">POSTGRES_PASSWORD</span>: ${PG_PASS:?database password required}
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">POSTGRES_USER</span>: ${PG_USER:-authentik}
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">POSTGRES_DB</span>: ${PG_DB:-authentik}
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">env_file</span>:
+</span></span><span style="display:flex;"><span>      - .env
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">network_mode</span>: none
+</span></span></code></pre></div><p>这样可以避免其他容器接到 postgresql，对数据库进行写入。方便我们进行备份。</p>
 <p>修改后，我们就可以 <code>docker compose up -d</code> 来启动服务了。</p>
 <h3 id="数据库数据恢复">数据库数据恢复</h3>
 <p>待数据库启动后，执行 <code>cat authentik_db_backup.sql | docker compose exec -T postgresql psql -U authentik</code>，待执行完毕，数据库里的数据就恢复了。</p>
@@ -551,7 +551,7 @@ docker run --rm -v authentik_database:/from -v authentik_database_backup:/to alp
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -573,17 +573,20 @@ docker run --rm -v authentik_database:/from -v authentik_database_backup:/to alp
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

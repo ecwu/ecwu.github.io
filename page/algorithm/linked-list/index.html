@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en">
     <head>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
     integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
     integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
@@ -41,9 +41,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Linked List -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -346,106 +346,106 @@
 <p><a href="https://leetcode-cn.com/problems/add-two-numbers">https://leetcode-cn.com/problems/add-two-numbers</a></p>
 <p>给两个非空链表，每个节点储存一位数字，按逆序排序。返回一个相同形式的链表，表示两个链表的和。</p>
 <p>数据在链表中是倒序的，这非常的便于处理计算时出现的进位。那最简单的方式就是从两个链表的入口开始计算，直到两个链表走到末尾。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#586e75"># Definition for singly-linked list.</span>
-<span style="color:#586e75"># class ListNode:</span>
-<span style="color:#586e75">#     def __init__(self, val=0, next=None):</span>
-<span style="color:#586e75">#         self.val = val</span>
-<span style="color:#586e75">#         self.next = next</span>
-<span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">addTwoNumbers</span>(<span style="color:#268bd2">self</span>, l1: ListNode, l2: ListNode) <span style="color:#719e07">-&gt;</span> ListNode:
-        <span style="color:#719e07">def</span> <span style="color:#268bd2">getValue</span>(node):
-            <span style="color:#719e07">return</span> node<span style="color:#719e07">.</span>val <span style="color:#719e07">if</span> node <span style="color:#719e07">!=</span> <span style="color:#cb4b16">None</span> <span style="color:#719e07">else</span> <span style="color:#2aa198">0</span>
-        sep <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
-        amount <span style="color:#719e07">=</span> getValue(l1) <span style="color:#719e07">+</span> getValue(l2) <span style="color:#719e07">+</span> sep
-        sep <span style="color:#719e07">=</span> <span style="color:#b58900">int</span>(amount <span style="color:#719e07">/</span> <span style="color:#2aa198">10</span>)
-        returnList <span style="color:#719e07">=</span> ListNode(val<span style="color:#719e07">=</span>amount <span style="color:#719e07">%</span> <span style="color:#2aa198">10</span>)
-        currentListPt <span style="color:#719e07">=</span> returnList
-        <span style="color:#719e07">while</span> l1 <span style="color:#719e07">!=</span> <span style="color:#cb4b16">None</span> <span style="color:#719e07">or</span> l2 <span style="color:#719e07">!=</span> <span style="color:#cb4b16">None</span>:
-            <span style="color:#719e07">try</span>:
-                l1 <span style="color:#719e07">=</span> l1<span style="color:#719e07">.</span>next <span style="color:#719e07">if</span> l1<span style="color:#719e07">.</span>next <span style="color:#719e07">else</span> <span style="color:#cb4b16">None</span>
-            <span style="color:#719e07">except</span> <span style="color:#cb4b16">AttributeError</span>:
-                <span style="color:#719e07">pass</span>
-            <span style="color:#719e07">try</span>:
-                l2 <span style="color:#719e07">=</span> l2<span style="color:#719e07">.</span>next <span style="color:#719e07">if</span> l2<span style="color:#719e07">.</span>next <span style="color:#719e07">else</span> <span style="color:#cb4b16">None</span>
-            <span style="color:#719e07">except</span> <span style="color:#cb4b16">AttributeError</span>:
-                <span style="color:#719e07">pass</span>
-            <span style="color:#719e07">if</span> l1 <span style="color:#719e07">==</span> <span style="color:#cb4b16">None</span> <span style="color:#719e07">and</span> l2 <span style="color:#719e07">==</span> <span style="color:#cb4b16">None</span>:
-                <span style="color:#719e07">break</span>
-            amount <span style="color:#719e07">=</span> getValue(l1) <span style="color:#719e07">+</span> getValue(l2) <span style="color:#719e07">+</span> sep
-            sep <span style="color:#719e07">=</span> <span style="color:#b58900">int</span>(amount <span style="color:#719e07">/</span> <span style="color:#2aa198">10</span>)
-            currentListPt<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> ListNode(val<span style="color:#719e07">=</span>amount <span style="color:#719e07">%</span> <span style="color:#2aa198">10</span>)
-            currentListPt <span style="color:#719e07">=</span> currentListPt<span style="color:#719e07">.</span>next
-        <span style="color:#719e07">if</span> sep <span style="color:#719e07">!=</span> <span style="color:#2aa198">0</span>:
-            currentListPt<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> ListNode(val<span style="color:#719e07">=</span>sep)
-        <span style="color:#719e07">return</span> returnList
-</code></pre></div><p>这种方式，LeetCode 的<a href="https://leetcode-cn.com/problems/add-two-numbers/solution/liang-shu-xiang-jia-by-leetcode-solution/">官方题解</a> 称为模拟，时间复杂度受两链表长度的影响 $\mathcal{O}(\max(m,n))$ （m, n 分别为两链表的长度）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75"># Definition for singly-linked list.</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># class ListNode:</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#     def __init__(self, val=0, next=None):</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#         self.val = val</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#         self.next = next</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">addTwoNumbers</span>(<span style="color:#268bd2">self</span>, l1: ListNode, l2: ListNode) <span style="color:#719e07">-&gt;</span> ListNode:
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">def</span> <span style="color:#268bd2">getValue</span>(node):
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">return</span> node<span style="color:#719e07">.</span>val <span style="color:#719e07">if</span> node <span style="color:#719e07">!=</span> <span style="color:#cb4b16">None</span> <span style="color:#719e07">else</span> <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>        sep <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>        amount <span style="color:#719e07">=</span> getValue(l1) <span style="color:#719e07">+</span> getValue(l2) <span style="color:#719e07">+</span> sep
+</span></span><span style="display:flex;"><span>        sep <span style="color:#719e07">=</span> <span style="color:#b58900">int</span>(amount <span style="color:#719e07">/</span> <span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex;"><span>        returnList <span style="color:#719e07">=</span> ListNode(val<span style="color:#719e07">=</span>amount <span style="color:#719e07">%</span> <span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex;"><span>        currentListPt <span style="color:#719e07">=</span> returnList
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">while</span> l1 <span style="color:#719e07">!=</span> <span style="color:#cb4b16">None</span> <span style="color:#719e07">or</span> l2 <span style="color:#719e07">!=</span> <span style="color:#cb4b16">None</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">try</span>:
+</span></span><span style="display:flex;"><span>                l1 <span style="color:#719e07">=</span> l1<span style="color:#719e07">.</span>next <span style="color:#719e07">if</span> l1<span style="color:#719e07">.</span>next <span style="color:#719e07">else</span> <span style="color:#cb4b16">None</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">except</span> <span style="color:#cb4b16">AttributeError</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">pass</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">try</span>:
+</span></span><span style="display:flex;"><span>                l2 <span style="color:#719e07">=</span> l2<span style="color:#719e07">.</span>next <span style="color:#719e07">if</span> l2<span style="color:#719e07">.</span>next <span style="color:#719e07">else</span> <span style="color:#cb4b16">None</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">except</span> <span style="color:#cb4b16">AttributeError</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">pass</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> l1 <span style="color:#719e07">==</span> <span style="color:#cb4b16">None</span> <span style="color:#719e07">and</span> l2 <span style="color:#719e07">==</span> <span style="color:#cb4b16">None</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">break</span>
+</span></span><span style="display:flex;"><span>            amount <span style="color:#719e07">=</span> getValue(l1) <span style="color:#719e07">+</span> getValue(l2) <span style="color:#719e07">+</span> sep
+</span></span><span style="display:flex;"><span>            sep <span style="color:#719e07">=</span> <span style="color:#b58900">int</span>(amount <span style="color:#719e07">/</span> <span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex;"><span>            currentListPt<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> ListNode(val<span style="color:#719e07">=</span>amount <span style="color:#719e07">%</span> <span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex;"><span>            currentListPt <span style="color:#719e07">=</span> currentListPt<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">if</span> sep <span style="color:#719e07">!=</span> <span style="color:#2aa198">0</span>:
+</span></span><span style="display:flex;"><span>            currentListPt<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> ListNode(val<span style="color:#719e07">=</span>sep)
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> returnList
+</span></span></code></pre></div><p>这种方式，LeetCode 的<a href="https://leetcode-cn.com/problems/add-two-numbers/solution/liang-shu-xiang-jia-by-leetcode-solution/">官方题解</a> 称为模拟，时间复杂度受两链表长度的影响 $\mathcal{O}(\max(m,n))$ （m, n 分别为两链表的长度）。</p>
 <p>第二种方法：递归</p>
 <p>未完待续。</p>
 <h2 id="19-删除链表的倒数第-n-个结点">19. 删除链表的倒数第 N 个结点</h2>
 <p><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list">https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list</a></p>
 <p>因为需要删除倒数第 n 个结点，则需要得到指向该结点前一位置的指针，然后将指针的 <code>next</code> 指向 <code>next.next</code> 位置则实现倒数第 n 个结点的删除。</p>
 <p>而找到第 n 个结点前后指针的方法可以使用快慢指针：后指针先走 n 步，然后前指针再移动，等后指针到达链表末尾时，前指针则到达 n 结点前一位置。其中需要注意边界条件，如果后指针先移动后，已经达到链表末尾，则链表长度为1，直接返回空链表（<code>head.next</code>）。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#586e75"># Definition for singly-linked list.</span>
-<span style="color:#586e75"># class ListNode:</span>
-<span style="color:#586e75">#     def __init__(self, val=0, next=None):</span>
-<span style="color:#586e75">#         self.val = val</span>
-<span style="color:#586e75">#         self.next = next</span>
-<span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">removeNthFromEnd</span>(<span style="color:#268bd2">self</span>, head: ListNode, n: <span style="color:#b58900">int</span>) <span style="color:#719e07">-&gt;</span> ListNode:
-        p1 <span style="color:#719e07">=</span> p2 <span style="color:#719e07">=</span> head
-        <span style="color:#719e07">for</span> _ <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(n):
-            p1 <span style="color:#719e07">=</span> p1<span style="color:#719e07">.</span>next
-        <span style="color:#719e07">if</span> <span style="color:#719e07">not</span> p1:
-            <span style="color:#719e07">return</span> head<span style="color:#719e07">.</span>next
-        <span style="color:#719e07">while</span> p1<span style="color:#719e07">.</span>next <span style="color:#719e07">!=</span> <span style="color:#cb4b16">None</span>:
-            p1 <span style="color:#719e07">=</span> p1<span style="color:#719e07">.</span>next
-            p2 <span style="color:#719e07">=</span> p2<span style="color:#719e07">.</span>next
-        p2<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> p2<span style="color:#719e07">.</span>next<span style="color:#719e07">.</span>next
-        <span style="color:#719e07">return</span> head
-</code></pre></div><p>因为只进行一次扫描，则时间复杂度为 $O(n)$</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75"># Definition for singly-linked list.</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># class ListNode:</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#     def __init__(self, val=0, next=None):</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#         self.val = val</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#         self.next = next</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">removeNthFromEnd</span>(<span style="color:#268bd2">self</span>, head: ListNode, n: <span style="color:#b58900">int</span>) <span style="color:#719e07">-&gt;</span> ListNode:
+</span></span><span style="display:flex;"><span>        p1 <span style="color:#719e07">=</span> p2 <span style="color:#719e07">=</span> head
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> _ <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(n):
+</span></span><span style="display:flex;"><span>            p1 <span style="color:#719e07">=</span> p1<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">if</span> <span style="color:#719e07">not</span> p1:
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">return</span> head<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">while</span> p1<span style="color:#719e07">.</span>next <span style="color:#719e07">!=</span> <span style="color:#cb4b16">None</span>:
+</span></span><span style="display:flex;"><span>            p1 <span style="color:#719e07">=</span> p1<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>            p2 <span style="color:#719e07">=</span> p2<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>        p2<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> p2<span style="color:#719e07">.</span>next<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> head
+</span></span></code></pre></div><p>因为只进行一次扫描，则时间复杂度为 $O(n)$</p>
 <h2 id="21-合并两个有序链表">21. 合并两个有序链表</h2>
 <p><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists">https://leetcode-cn.com/problems/merge-two-sorted-lists</a></p>
 <p>主要的思路是使用两个指针指向两个升序链表中，还未加入新链表的元素。每步比较两个指向元素的大小，将较小的那个一加入新链表中。其中需要对边界条件进行处理，当一个指针指向空元素时，则直接将另一个指针指向的元素加入新链表中。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#586e75"># Definition for singly-linked list.</span>
-<span style="color:#586e75"># class ListNode:</span>
-<span style="color:#586e75">#     def __init__(self, val=0, next=None):</span>
-<span style="color:#586e75">#         self.val = val</span>
-<span style="color:#586e75">#         self.next = next</span>
-<span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">mergeTwoLists</span>(<span style="color:#268bd2">self</span>, list1: Optional[ListNode], list2: Optional[ListNode]) <span style="color:#719e07">-&gt;</span> Optional[ListNode]:
-        <span style="color:#719e07">if</span> <span style="color:#719e07">not</span> list1 <span style="color:#719e07">and</span> <span style="color:#719e07">not</span> list2:
-            <span style="color:#719e07">return</span> list1
-        <span style="color:#719e07">if</span> <span style="color:#719e07">not</span> list2:
-            <span style="color:#719e07">return</span> list1
-        <span style="color:#719e07">elif</span> <span style="color:#719e07">not</span> list1:
-            <span style="color:#719e07">return</span> list2
-        
-        new_list_head <span style="color:#719e07">=</span> ListNode()
-        new_list_p <span style="color:#719e07">=</span> new_list_head
-        l1p <span style="color:#719e07">=</span> list1
-        l2p <span style="color:#719e07">=</span> list2
-
-        <span style="color:#719e07">while</span> l1p <span style="color:#719e07">or</span> l2p:
-            <span style="color:#719e07">try</span>:
-                <span style="color:#719e07">if</span> l1p<span style="color:#719e07">.</span>val <span style="color:#719e07">&lt;=</span> l2p<span style="color:#719e07">.</span>val:
-                    new_list_p<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> l1p
-                    l1p <span style="color:#719e07">=</span> l1p<span style="color:#719e07">.</span>next
-                    new_list_p <span style="color:#719e07">=</span> new_list_p<span style="color:#719e07">.</span>next
-                <span style="color:#719e07">else</span>:
-                    new_list_p<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> l2p
-                    l2p <span style="color:#719e07">=</span> l2p<span style="color:#719e07">.</span>next
-                    new_list_p <span style="color:#719e07">=</span> new_list_p<span style="color:#719e07">.</span>next
-            <span style="color:#719e07">except</span> <span style="color:#cb4b16">AttributeError</span>:
-                <span style="color:#719e07">if</span> l1p:
-                    new_list_p<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> l1p
-                    l1p <span style="color:#719e07">=</span> l1p<span style="color:#719e07">.</span>next
-                    new_list_p <span style="color:#719e07">=</span> new_list_p<span style="color:#719e07">.</span>next
-                <span style="color:#719e07">elif</span> l2p:
-                    new_list_p<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> l2p
-                    l2p <span style="color:#719e07">=</span> l2p<span style="color:#719e07">.</span>next
-                    new_list_p <span style="color:#719e07">=</span> new_list_p<span style="color:#719e07">.</span>next
-        <span style="color:#719e07">return</span> new_list_head<span style="color:#719e07">.</span>next
-</code></pre></div><p>需要注意的是，新链表的构建，初始化了一个数值为 0 的链表节点。这个节点在最后结果中并不需要，所以在最后返回时，返回该链表头元素的下一元素 <code>new_list_head.next</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75"># Definition for singly-linked list.</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># class ListNode:</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#     def __init__(self, val=0, next=None):</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#         self.val = val</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#         self.next = next</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">mergeTwoLists</span>(<span style="color:#268bd2">self</span>, list1: Optional[ListNode], list2: Optional[ListNode]) <span style="color:#719e07">-&gt;</span> Optional[ListNode]:
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">if</span> <span style="color:#719e07">not</span> list1 <span style="color:#719e07">and</span> <span style="color:#719e07">not</span> list2:
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">return</span> list1
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">if</span> <span style="color:#719e07">not</span> list2:
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">return</span> list1
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">elif</span> <span style="color:#719e07">not</span> list1:
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">return</span> list2
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        new_list_head <span style="color:#719e07">=</span> ListNode()
+</span></span><span style="display:flex;"><span>        new_list_p <span style="color:#719e07">=</span> new_list_head
+</span></span><span style="display:flex;"><span>        l1p <span style="color:#719e07">=</span> list1
+</span></span><span style="display:flex;"><span>        l2p <span style="color:#719e07">=</span> list2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">while</span> l1p <span style="color:#719e07">or</span> l2p:
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">try</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">if</span> l1p<span style="color:#719e07">.</span>val <span style="color:#719e07">&lt;=</span> l2p<span style="color:#719e07">.</span>val:
+</span></span><span style="display:flex;"><span>                    new_list_p<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> l1p
+</span></span><span style="display:flex;"><span>                    l1p <span style="color:#719e07">=</span> l1p<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>                    new_list_p <span style="color:#719e07">=</span> new_list_p<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">else</span>:
+</span></span><span style="display:flex;"><span>                    new_list_p<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> l2p
+</span></span><span style="display:flex;"><span>                    l2p <span style="color:#719e07">=</span> l2p<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>                    new_list_p <span style="color:#719e07">=</span> new_list_p<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">except</span> <span style="color:#cb4b16">AttributeError</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">if</span> l1p:
+</span></span><span style="display:flex;"><span>                    new_list_p<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> l1p
+</span></span><span style="display:flex;"><span>                    l1p <span style="color:#719e07">=</span> l1p<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>                    new_list_p <span style="color:#719e07">=</span> new_list_p<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">elif</span> l2p:
+</span></span><span style="display:flex;"><span>                    new_list_p<span style="color:#719e07">.</span>next <span style="color:#719e07">=</span> l2p
+</span></span><span style="display:flex;"><span>                    l2p <span style="color:#719e07">=</span> l2p<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>                    new_list_p <span style="color:#719e07">=</span> new_list_p<span style="color:#719e07">.</span>next
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> new_list_head<span style="color:#719e07">.</span>next
+</span></span></code></pre></div><p>需要注意的是，新链表的构建，初始化了一个数值为 0 的链表节点。这个节点在最后结果中并不需要，所以在最后返回时，返回该链表头元素的下一元素 <code>new_list_head.next</code>。</p>
 <p>时间上，只进行一次扫描，所以时间复杂度为 $O(m+n)$， $m$ 为链表1的长度， $n$ 为链表2的长度。</p>
 
 </article>
@@ -586,7 +586,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -608,17 +608,20 @@
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

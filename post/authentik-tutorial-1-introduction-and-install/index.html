@@ -4,9 +4,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Authentik 教程系列：简介和安装配置 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -310,8 +310,8 @@
 <p>安装方面，官方是推荐使用 Docker Compose 进行安装。如果你的 HomeLab 环境，是使用的 Kubernetes 进行的容器编排，官方也提供了相应的文件。</p>
 <p>我这边呢使用的是一台，Ubuntu 的虚拟机进行操作，已经安装了 Docker 和 Docker Compose。</p>
 <p>1.让你去下载一个 Authentik 最新版本的 docker-compose 文件</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">wget https://goauthentik.io/docker-compose.yml
-</code></pre></div><p>点开里面可以看到，启动这个服务需要多个容器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://goauthentik.io/docker-compose.yml
+</span></span></code></pre></div><p>点开里面可以看到，启动这个服务需要多个容器：</p>
 <ul>
 <li>postgresql</li>
 <li>redis</li>
@@ -324,9 +324,9 @@
 </ol>
 <p><code>.env</code> 文件会存储 PostgreSQL 数据库的密码，以及 Authentik 的一个私钥。
 我们这里面只需要执行文档中给的指令</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;PG_PASS=</span><span style="color:#719e07">$(</span>openssl rand -base64 36<span style="color:#719e07">)</span><span style="color:#2aa198">&#34;</span> &gt;&gt; .env
-<span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;AUTHENTIK_SECRET_KEY=</span><span style="color:#719e07">$(</span>openssl rand -base64 36<span style="color:#719e07">)</span><span style="color:#2aa198">&#34;</span> &gt;&gt; .env
-</code></pre></div><p>你也可以选择进行一个邮箱的配置，这样重置密码流程，系统会通过邮件的形式发送密码重置邮件。但是呢我们在这一篇中并不涉及，我们之后会具体去介绍。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;PG_PASS=</span><span style="color:#719e07">$(</span>openssl rand -base64 36<span style="color:#719e07">)</span><span style="color:#2aa198">&#34;</span> &gt;&gt; .env
+</span></span><span style="display:flex;"><span><span style="color:#b58900">echo</span> <span style="color:#2aa198">&#34;AUTHENTIK_SECRET_KEY=</span><span style="color:#719e07">$(</span>openssl rand -base64 36<span style="color:#719e07">)</span><span style="color:#2aa198">&#34;</span> &gt;&gt; .env
+</span></span></code></pre></div><p>你也可以选择进行一个邮箱的配置，这样重置密码流程，系统会通过邮件的形式发送密码重置邮件。但是呢我们在这一篇中并不涉及，我们之后会具体去介绍。</p>
 <p>实际上你已经可以，直接启动这个 Docker Compose 的命令，但是呢我会考虑增加两个参数：</p>
 <ul>
 <li>AUTHENTIK_TAG：定义了拉去哪个版本，比如目前的最新 2024.2.2</li>
@@ -339,8 +339,8 @@
 <ol start="3">
 <li>当所有的镜像都已经拉取下来之后，我们就可以启动 <code>docker compose up -d</code> 来将这些容器都创建出来，接着教程告诉你可以直接去访问对应网址来进行管理员账号的初始化：</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">http://&lt;你服务器的 IP 或主机名&gt;:9000/if/flow/initial-setup/
-</code></pre></div><p>那我这边的话 <code>192.168.31.6</code> 就是我测试设备的 IP，9000呢是它 HTTP 的端口号。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>http://&lt;你服务器的 IP 或主机名&gt;:9000/if/flow/initial-setup/
+</span></span></code></pre></div><p>那我这边的话 <code>192.168.31.6</code> 就是我测试设备的 IP，9000呢是它 HTTP 的端口号。</p>
 <p>如果你立马进行访问，可能会显示拒绝访问。我们这是可以通过 <code>docker ps</code> 检查下启动容器的状态，有可能容器还在启动过程中。你也可以通过 <code>docker compose logs -f</code> 来查看具体的打印日志。</p>
 <p>我们等待一下直到他健康状态变成 healthy</p>
 <blockquote>
@@ -530,7 +530,7 @@ Server 的话呢一般是处理前端的界面，具体的业务流程；worker 
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -552,17 +552,20 @@ Server 的话呢一般是处理前端的界面，具体的业务流程；worker 
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

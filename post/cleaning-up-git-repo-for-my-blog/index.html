@@ -4,9 +4,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Cleaning Up Git Repo For My Blog -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -340,66 +340,66 @@
 <li>Remove <code>new-theme</code> branch via GitHub Web UI</li>
 </ol>
 <p>(Noted that I probably did something wrong in step 2 with the following commands)</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="color:#586e75"># Commands in Step 2</span>
-git fetch origin
-git branch -u origin/main main
-git remote set-head origin -a
-git remote prune origin
-git push -u
-</code></pre></div><p>Everything seems to work after all these steps. And the site and GitHub actions are working perfectly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#586e75"># Commands in Step 2</span>
+</span></span><span style="display:flex;"><span>git fetch origin
+</span></span><span style="display:flex;"><span>git branch -u origin/main main
+</span></span><span style="display:flex;"><span>git remote set-head origin -a
+</span></span><span style="display:flex;"><span>git remote prune origin
+</span></span><span style="display:flex;"><span>git push -u
+</span></span></code></pre></div><p>Everything seems to work after all these steps. And the site and GitHub actions are working perfectly.</p>
 <h2 id="the-problem-surfaced">The problem surfaced</h2>
 <p>The theme is integrated into the repository using git submodule, but every time I do some changes to the theme, I have to commit twice: for both the theme and the blog source. I found <a href="https://gist.github.com/robballou/7dd8c1afd54e65ca44c8993c94a6517a">a bash script</a> from GitHub Gist that can commit both the parent repo and the submodule changes.</p>
 <p>I download the script, and it seems can be run without a problem and successfully push the changes in the submodule. But when the script is trying to push the parent repo, the script prompted a message, and the push action is not conducted.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Your configuration specifies to merge with the ref &#39;refs/heads/master&#39;
-from the remote, but no such ref was fetched.
-</code></pre></div><p>I searched for the web and run command <code>git remote show origin</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">warning: more than one branch.main.remote
-* remote origin
-  Fetch URL: git@github.com:ecwu/ecwu.github.io.source.git
-  Push  URL: git@github.com:ecwu/ecwu.github.io.source.git
-  HEAD branch: main
-  Remote branches:
-    legacy                        tracked
-    main                          tracked
-    refs/remotes/origin/master    stale (use &#39;git remote prune&#39; to remove)
-    refs/remotes/origin/new-theme stale (use &#39;git remote prune&#39; to remove)
-  Local branches configured for &#39;git pull&#39;:
-    legacy merges with remote master
-    main   merges with remote master
-              and with remote new-theme
-  Local ref configured for &#39;git push&#39;:
-    HEAD pushes to main (up to date)
-</code></pre></div><p>The messages show that there are more than one <code>branch.main.remote</code>, and two local branches <code>legacy</code> and <code>main</code> are set to merge with <code>master</code> and <code>new-theme</code> branches which are no longer exist.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Your configuration specifies to merge with the ref &#39;refs/heads/master&#39;
+</span></span><span style="display:flex;"><span>from the remote, but no such ref was fetched.
+</span></span></code></pre></div><p>I searched for the web and run command <code>git remote show origin</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>warning: more than one branch.main.remote
+</span></span><span style="display:flex;"><span>* remote origin
+</span></span><span style="display:flex;"><span>  Fetch URL: git@github.com:ecwu/ecwu.github.io.source.git
+</span></span><span style="display:flex;"><span>  Push  URL: git@github.com:ecwu/ecwu.github.io.source.git
+</span></span><span style="display:flex;"><span>  HEAD branch: main
+</span></span><span style="display:flex;"><span>  Remote branches:
+</span></span><span style="display:flex;"><span>    legacy                        tracked
+</span></span><span style="display:flex;"><span>    main                          tracked
+</span></span><span style="display:flex;"><span>    refs/remotes/origin/master    stale (use &#39;git remote prune&#39; to remove)
+</span></span><span style="display:flex;"><span>    refs/remotes/origin/new-theme stale (use &#39;git remote prune&#39; to remove)
+</span></span><span style="display:flex;"><span>  Local branches configured for &#39;git pull&#39;:
+</span></span><span style="display:flex;"><span>    legacy merges with remote master
+</span></span><span style="display:flex;"><span>    main   merges with remote master
+</span></span><span style="display:flex;"><span>              and with remote new-theme
+</span></span><span style="display:flex;"><span>  Local ref configured for &#39;git push&#39;:
+</span></span><span style="display:flex;"><span>    HEAD pushes to main (up to date)
+</span></span></code></pre></div><p>The messages show that there are more than one <code>branch.main.remote</code>, and two local branches <code>legacy</code> and <code>main</code> are set to merge with <code>master</code> and <code>new-theme</code> branches which are no longer exist.</p>
 <p>So I believe the solution is to re-config the default merge branch for the local branches and remove the stale remote branches.</p>
 <h2 id="re-config-the-branch">Re-config the branch</h2>
 <p>The file that stores the configuration is located in <code>.git/config</code>, after opening the file, I can spot that there are two <code>[branch &quot;main&quot;]</code>, and its merge field is filled incorrectly. I remove one extra one and change the field to <code>ref/heads/main</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-toml" data-lang="toml"><span style="color:#586e75"># Final result in .git/config</span>
-[branch <span style="color:#2aa198">&#34;main&#34;</span>]
-    remote = origin
-    merge = refs/heads/main
-[branch <span style="color:#2aa198">&#34;legacy&#34;</span>]
-    remote = origin
-    merge = refs/heads/main
-</code></pre></div><p>Then, I run the command <code>git fetch origin --prune</code>, it removes those outdated branches.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">$ git fetch origin --prune
-From github.com:ecwu/ecwu.github.io.source
- - [deleted]         (none)     -&gt; origin/master
-   (refs/remotes/origin/HEAD has become dangling)
- - [deleted]         (none)     -&gt; origin/new-theme
-</code></pre></div><p>Now, my remote seems normal, and rebase pull is working fine!</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">* remote origin
-  Fetch URL: git@github.com:ecwu/ecwu.github.io.source.git
-  Push  URL: git@github.com:ecwu/ecwu.github.io.source.git
-  HEAD branch: main
-  Remote branches:
-    legacy tracked
-    main   tracked
-  Local branches configured for &#39;git pull&#39;:
-    legacy merges with remote main
-    main   merges with remote main
-  Local ref configured for &#39;git push&#39;:
-    HEAD pushes to main (up to date)
-</code></pre></div><h2 id="extra-words">Extra words</h2>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#586e75"># Final result in .git/config</span>
+</span></span><span style="display:flex;"><span>[branch <span style="color:#2aa198">&#34;main&#34;</span>]
+</span></span><span style="display:flex;"><span>    remote = origin
+</span></span><span style="display:flex;"><span>    merge = refs/heads/main
+</span></span><span style="display:flex;"><span>[branch <span style="color:#2aa198">&#34;legacy&#34;</span>]
+</span></span><span style="display:flex;"><span>    remote = origin
+</span></span><span style="display:flex;"><span>    merge = refs/heads/main
+</span></span></code></pre></div><p>Then, I run the command <code>git fetch origin --prune</code>, it removes those outdated branches.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ git fetch origin --prune
+</span></span><span style="display:flex;"><span>From github.com:ecwu/ecwu.github.io.source
+</span></span><span style="display:flex;"><span> - [deleted]         (none)     -&gt; origin/master
+</span></span><span style="display:flex;"><span>   (refs/remotes/origin/HEAD has become dangling)
+</span></span><span style="display:flex;"><span> - [deleted]         (none)     -&gt; origin/new-theme
+</span></span></code></pre></div><p>Now, my remote seems normal, and rebase pull is working fine!</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>* remote origin
+</span></span><span style="display:flex;"><span>  Fetch URL: git@github.com:ecwu/ecwu.github.io.source.git
+</span></span><span style="display:flex;"><span>  Push  URL: git@github.com:ecwu/ecwu.github.io.source.git
+</span></span><span style="display:flex;"><span>  HEAD branch: main
+</span></span><span style="display:flex;"><span>  Remote branches:
+</span></span><span style="display:flex;"><span>    legacy tracked
+</span></span><span style="display:flex;"><span>    main   tracked
+</span></span><span style="display:flex;"><span>  Local branches configured for &#39;git pull&#39;:
+</span></span><span style="display:flex;"><span>    legacy merges with remote main
+</span></span><span style="display:flex;"><span>    main   merges with remote main
+</span></span><span style="display:flex;"><span>  Local ref configured for &#39;git push&#39;:
+</span></span><span style="display:flex;"><span>    HEAD pushes to main (up to date)
+</span></span></code></pre></div><h2 id="extra-words">Extra words</h2>
 <p>When I encounter the problem, I was also confused by the multiply remote branches (<code>refs/remotes/origin/master</code>, <code>refs/heads/master</code>, &hellip;) that were seen to point to the same branch. If this also confuse you, you can check the post <a href="https://stackoverflow.com/questions/20106712/what-are-the-differences-between-git-remote-prune-git-prune-git-fetch-prune">What are the differences between git remote prune, git prune, git fetch &ndash;prune, etc</a> on StackOverflow.</p>
 
 </article>
@@ -616,7 +616,7 @@ From github.com:ecwu/ecwu.github.io.source
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -638,17 +638,20 @@ From github.com:ecwu/ecwu.github.io.source
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

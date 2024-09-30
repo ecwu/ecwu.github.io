@@ -4,116 +4,93 @@
     <title>Docker on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/tags/docker/</link>
     <description>Recent content in Docker on ECWUUUUU</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Sep 2024 22:20:00 +0100</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Apr 2024 10:30:00 +0800</lastBuildDate>
+    <atom:link href="https://ecwuuuuu.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Authentik 教程系列：服务的迁移</title>
       <link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid>
-      <description>提醒 因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！ 引入和备份操作 这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录</description>
+      <description>&lt;h2 id=&#34;提醒&#34;&gt;提醒&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;引入和备份操作&#34;&gt;引入和备份操作&lt;/h2&gt;&#xA;&lt;p&gt;这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Authentik 视频教程 - 合集</title>
       <link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link>
       <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid>
-      <description>我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。 No. Topic</description>
+      <description>&lt;p&gt;我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th style=&#34;text-align: center&#34;&gt;No.&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Topic&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: center&#34;&gt;BV&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;1&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;介绍、安装和配置&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1pm41167WK&#34;&gt;BV1pm41167WK&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;2&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;配置反向代理（Traefik 为例）&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1VE42137Vi&#34;&gt;BV1VE42137Vi&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;3&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1QC41157pX&#34;&gt;BV1QC41157pX&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1um411B7kE&#34;&gt;BV1um411B7kE&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;5&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;LDAP 协议应用接入 - 以 EMBY 为例&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV12z421C7hU&#34;&gt;BV12z421C7hU&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;6&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;邮件发送和界面自定义配置&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1iE421T7me&#34;&gt;BV1iE421T7me&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;7&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;管理用户，组和应用访问权限&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Am41127Yy&#34;&gt;BV1Am41127Yy&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;8&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Vp421Q7Qz&#34;&gt;BV1Vp421Q7Qz&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;9&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;ForwardAuth 配置接入任意应用&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Mb421a7fF&#34;&gt;BV1Mb421a7fF&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;10&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;配置多因素身份验证&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1sJ4m1u7Rq&#34;&gt;BV1sJ4m1u7Rq&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;11&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;配置 Passwordless 登录&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1tE421P7o1&#34;&gt;BV1tE421P7o1&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
     </item>
-    
     <item>
       <title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</title>
       <link>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</link>
       <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</guid>
-      <description>简介 如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的</description>
+      <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;&#xA;&lt;p&gt;如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作&lt;code&gt;转发验证&lt;/code&gt;)。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title>
       <link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap-copy/</link>
       <pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap-copy/</guid>
-      <description>搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 SAML 2.0， OAuth 2.0/OpenID Connect (OIDC)， LDAP， SCI</description>
+      <description>&lt;p&gt;搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 &lt;a href=&#34;https://en.wikipedia.org/wiki/SAML_2.0&#34;&gt;SAML 2.0&lt;/a&gt;， &lt;a href=&#34;https://openid.net/developers/how-connect-works/&#34;&gt;OAuth 2.0/OpenID Connect (OIDC)&lt;/a&gt;， &lt;a href=&#34;https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol&#34;&gt;LDAP&lt;/a&gt;， &lt;a href=&#34;https://scim.cloud&#34;&gt;SCIM&lt;/a&gt;，和 &lt;a href=&#34;https://en.wikipedia.org/wiki/RADIUS&#34;&gt;RADIUS&lt;/a&gt;，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Authentik 教程系列：反向代理的配置</title>
       <link>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</link>
       <pubDate>Mon, 08 Apr 2024 19:55:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</guid>
-      <description>将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。 根据官方的</description>
+      <description>&lt;p&gt;将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。&lt;/p&gt;&#xA;&lt;p&gt;根据官方的文档，如果要使用反向代理，以下 header 必须传给 upstream。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Authentik 教程系列：简介和安装配置</title>
       <link>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</link>
       <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</guid>
-      <description>如果你也像我一样喜欢折腾 HomeLab，我们可能有个共同的乐趣就是寻找各种需求的自部署方案；但当我们这些自部署的服务越来越多，去访问每一个服</description>
+      <description>&lt;p&gt;如果你也像我一样喜欢折腾 HomeLab，我们可能有个共同的乐趣就是寻找各种需求的自部署方案；但当我们这些自部署的服务越来越多，去访问每一个服务都需要单独的账号和密码；如果用户不止你一人，多账号管理也会成为一个麻烦的事情。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Homelab：我的赛博积木 - 展望</title>
       <link>https://ecwuuuuu.com/post/homelab-journey-future/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/homelab-journey-future/</guid>
-      <description>从“赛博积木”系列第一篇文章到现在，已经过了一年的时间。受自己需求、实际体验后的感受等多重因素的影响。现有的架构和最初的设计已经有了很大的变</description>
+      <description>&lt;p&gt;从“赛博积木”系列第一篇文章到现在，已经过了一年的时间。受自己需求、实际体验后的感受等多重因素的影响。现有的架构和最初的设计已经有了很大的变化。其中最大的变化应该是在 23 年 6 月新组装的个人服务器，直接影响了我许多服务的部署形式。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Homelab：我的赛博积木 - 访问</title>
       <link>https://ecwuuuuu.com/post/homelab-journey-accessing/</link>
       <pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/homelab-journey-accessing/</guid>
-      <description>前面已经介绍了基础设施和已经部署的服务。对于部署在公网的服务，访问是方便的。在 Nginx 中通过反向代理将容器服务绑定在域名上，再配上 SSL 证书就可以实现</description>
+      <description>&lt;p&gt;前面已经介绍了基础设施和已经部署的服务。对于部署在&lt;a href=&#34;https://ecwuuuuu.com/post/homelab-journey-internet/&#34;&gt;公网的服务&lt;/a&gt;，访问是方便的。在 Nginx 中通过反向代理将容器服务绑定在域名上，再配上 SSL 证书就可以实现安全方便的服务访问体验。真正让人头疼的是内网服务的访问和访问控制。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Homelab：我的赛博积木 - 组成与架构</title>
       <link>https://ecwuuuuu.com/post/homelab-journey-architecture/</link>
       <pubDate>Sun, 08 Jan 2023 23:17:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/homelab-journey-architecture/</guid>
-      <description>架构概览 经常能在 r/homelab 上看到 &amp;ldquo;LabPorn&amp;rdquo; 里其他大佬的机架。虽然很眼红，但目前自己的 HomeLab 只是几个简单的独立设备/资源组成。包括腾讯轻量云实例，群晖 NAS 和工控机。</description>
+      <description>&lt;h2 id=&#34;架构概览&#34;&gt;架构概览&lt;/h2&gt;&#xA;&lt;p&gt;经常能在 r/homelab 上看到 &amp;ldquo;&lt;a href=&#34;https://www.reddit.com/r/homelab/?f=flair_name%3A%22LabPorn%22&#34;&gt;LabPorn&lt;/a&gt;&amp;rdquo; 里其他大佬的机架。虽然很眼红，但目前自己的 HomeLab 只是几个简单的独立设备/资源组成。包括腾讯轻量云实例，群晖 NAS 和工控机。&lt;/p&gt;&#xA;&lt;h2 id=&#34;内网&#34;&gt;内网&lt;/h2&gt;&#xA;&lt;p&gt;我的地址在粤港澳大湾区，并在常住的广州，中山，和珠海配有三台设备。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Homelab：我的赛博积木 - 公网服务</title>
       <link>https://ecwuuuuu.com/post/homelab-journey-internet/</link>
       <pubDate>Fri, 30 Dec 2022 00:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/homelab-journey-internet/</guid>
-      <description>与内网服务不一样，部署在公网的服务目的性明确：希望能随时随地能访问到。这些服务部署在腾讯云轻量服务器，机房位于广州和香港。 身份鉴权 (SSO)</description>
+      <description>&lt;p&gt;与&lt;a href=&#34;https://ecwuuuuu.com/post/homelab-journey-intranet/&#34;&gt;内网服务&lt;/a&gt;不一样，部署在公网的服务目的性明确：希望能随时随地能访问到。这些服务部署在腾讯云轻量服务器，机房位于广州和香港。&lt;/p&gt;&#xA;&lt;h2 id=&#34;身份鉴权-ssoauthentik&#34;&gt;身份鉴权 (SSO)：Authentik&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;涉及的服务：Authentik&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;部署在公网的服务，身份鉴权是很重要的一部分：有些资源、计算资源有必要授权后才可以访问。但如果各个系统的账号都分开控制，账号管理肯定非常麻烦。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Homelab：我的赛博积木 - 内网服务</title>
       <link>https://ecwuuuuu.com/post/homelab-journey-intranet/</link>
       <pubDate>Sat, 15 Oct 2022 12:07:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/homelab-journey-intranet/</guid>
-      <description>我的计算设施中，云服务器和本地设备各占一半，本地设备无公网 IPv4。这样的情况使得我的服务是分地部署、内外网隔离的（但不是做到严格隔离，这部</description>
+      <description>&lt;p&gt;我的计算设施中，云服务器和本地设备各占一半，本地设备无公网 IPv4。这样的情况使得我的服务是分地部署、内外网隔离的（但不是做到严格隔离，这部分细节会在外网服务中提到。）&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Homelab：我的赛博积木</title>
       <link>https://ecwuuuuu.com/post/homelab-journey-intro/</link>
       <pubDate>Tue, 04 Oct 2022 22:43:40 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/homelab-journey-intro/</guid>
-      <description>HomeLab 直译是在家里的实验室，赛博语境下指网络、计算设备组成的实验沙盒。可以用来学习计算机技术和部署自用的服务。个人感觉 HomeLab 这个概念更多是在国外使用</description>
+      <description>&lt;p&gt;HomeLab 直译是在家里的实验室，赛博语境下指网络、计算设备组成的实验沙盒。可以用来学习计算机技术和部署自用的服务。个人感觉 HomeLab 这个概念更多是在国外使用，许多的爱好者集中在 Reddit 频道 &lt;a href=&#34;https://www.reddit.com/r/homelab/&#34;&gt;r/homelab&lt;/a&gt; 分享、交流项目和问题；在 YouTube 上也有不少博主提供手把手教学视频。这个应对国内的概念应该是 NAS 和 All in One (All in Boom 😀)，许多教程能在什么值得买和哔哩哔哩找到。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

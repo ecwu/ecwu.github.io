@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en">
     <head>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"
     integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"
     integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx"
@@ -41,9 +41,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>PyTorch Tutorial -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -380,18 +380,18 @@
 <li>Ensure you have Python installed on your machine. You can use Anaconda or Miniconda Python distributions: <a href="https://docs.conda.io/projects/miniconda/en/latest/">Anaconda/Miniconda Miniconda — miniconda documentation</a></li>
 <li>To install PyTorch, you can either use pip or conda: <a href="https://pytorch.org/get-started/locally/">Start Locally | PyTorch</a></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-<span style="color:#586e75"># or</span>
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
-</code></pre></div><p>This command will download and install the CPU version of PyTorch.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># or</span>
+</span></span><span style="display:flex;"><span>conda install pytorch torchvision torchaudio cpuonly -c pytorch
+</span></span></code></pre></div><p>This command will download and install the CPU version of PyTorch.</p>
 <h4 id="with-gpu">With GPU</h4>
 <p>If you have a GPU and want to utilize its power for accelerated computations, make sure you have a GPU that supports CUDA 11 or later.</p>
 <ul>
 <li>CUDA Environment: <a href="https://developer.nvidia.com/cuda-zone">CUDA Zone - Library of Resources | NVIDIA Developer</a></li>
 <li>To install the GPU version of PyTorch, use pip with the following command:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
-</code></pre></div><p>These steps will help you set up PyTorch based on your specific requirements and environment.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+</span></span></code></pre></div><p>These steps will help you set up PyTorch based on your specific requirements and environment.</p>
 <hr>
 <h2 id="tensors-and-operations">Tensors and Operations</h2>
 <h3 id="tensor">Tensor</h3>
@@ -401,52 +401,52 @@ conda install pytorch torchvision torchaudio cpuonly -c pytorch
 <ul>
 <li>Direct: You can initialize a tensor of a specific size with all elements set to zero using the torch.zeros() function.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#586e75"># Initialize a tensor of size 2x3 with all elements set to zero</span>
-tensor_a <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>zeros(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>)
-<span style="color:#b58900">print</span>(tensor_a)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75"># Initialize a tensor of size 2x3 with all elements set to zero</span>
+</span></span><span style="display:flex;"><span>tensor_a <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>zeros(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(tensor_a)
+</span></span></code></pre></div><ul>
 <li>From NumPy: You can create a NumPy array and then initialize a tensor from it using the <code>torch.from_numpy()</code> function.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
- 
-<span style="color:#586e75"># Create a NumPy array</span>
-numpy_array <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>array([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>], [<span style="color:#2aa198">4</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>]])
- 
-<span style="color:#586e75"># Initialize a tensor from the NumPy array</span>
-tensor_b <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>from_numpy(numpy_array)
-<span style="color:#b58900">print</span>(tensor_b)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">import</span> numpy <span style="color:#719e07">as</span> np
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Create a NumPy array</span>
+</span></span><span style="display:flex;"><span>numpy_array <span style="color:#719e07">=</span> np<span style="color:#719e07">.</span>array([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>], [<span style="color:#2aa198">4</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>]])
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Initialize a tensor from the NumPy array</span>
+</span></span><span style="display:flex;"><span>tensor_b <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>from_numpy(numpy_array)
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(tensor_b)
+</span></span></code></pre></div><ul>
 <li>From another tensor: You can create a new tensor from an existing tensor using the <code>torch.tensor()</code> function.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#586e75"># From another tensor</span>
-tensor_c <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>], [<span style="color:#2aa198">4</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>]])
- 
-<span style="color:#586e75"># When you use torch.tensor(), you create a new tensor</span>
-<span style="color:#586e75"># without any connection to the original tensor&#39;s computational</span>
-<span style="color:#586e75"># graph or gradient history. This means that the new tensor will</span>
-<span style="color:#586e75"># not have any gradients associated with it, and it will not</span>
-<span style="color:#586e75"># participate in any future gradient calculations or</span>
-<span style="color:#586e75"># backpropagation.</span>
- 
-<span style="color:#586e75"># tensor_d = torch.tensor(tensor_c)</span>
-<span style="color:#586e75"># print(tensor_d)</span>
- 
-tensor_e <span style="color:#719e07">=</span> tensor_c<span style="color:#719e07">.</span>clone()<span style="color:#719e07">.</span>detach()
-
-<span style="color:#b58900">print</span>(tensor_e)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75"># From another tensor</span>
+</span></span><span style="display:flex;"><span>tensor_c <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>], [<span style="color:#2aa198">4</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>]])
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># When you use torch.tensor(), you create a new tensor</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># without any connection to the original tensor&#39;s computational</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># graph or gradient history. This means that the new tensor will</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># not have any gradients associated with it, and it will not</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># participate in any future gradient calculations or</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># backpropagation.</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># tensor_d = torch.tensor(tensor_c)</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># print(tensor_d)</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>tensor_e <span style="color:#719e07">=</span> tensor_c<span style="color:#719e07">.</span>clone()<span style="color:#719e07">.</span>detach()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(tensor_e)
+</span></span></code></pre></div><ul>
 <li>Fill in random or constant values: You can initialize a tensor with random values. You can also initialize a tensor with constant values using <code>torch.full()</code>.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#586e75"># Fill in random or constant values</span>
-tensor_f <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>rand(<span style="color:#2aa198">3</span>, <span style="color:#2aa198">2</span>)  <span style="color:#586e75"># Uniform Distribution</span>
-<span style="color:#b58900">print</span>(tensor_f)
- 
-tensor_g <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>randn(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">2</span>)  <span style="color:#586e75"># Normal Distribution</span>
-<span style="color:#b58900">print</span>(tensor_g)
- 
-tensor_h <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>full((<span style="color:#2aa198">3</span>, <span style="color:#2aa198">3</span>), <span style="color:#2aa198">7</span>)  <span style="color:#586e75"># Filled with constant value</span>
-<span style="color:#b58900">print</span>(tensor_h)
-</code></pre></div><h4 id="attributes-of-a-tensor">Attributes of a Tensor</h4>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75"># Fill in random or constant values</span>
+</span></span><span style="display:flex;"><span>tensor_f <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>rand(<span style="color:#2aa198">3</span>, <span style="color:#2aa198">2</span>)  <span style="color:#586e75"># Uniform Distribution</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(tensor_f)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>tensor_g <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>randn(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">2</span>)  <span style="color:#586e75"># Normal Distribution</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(tensor_g)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>tensor_h <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>full((<span style="color:#2aa198">3</span>, <span style="color:#2aa198">3</span>), <span style="color:#2aa198">7</span>)  <span style="color:#586e75"># Filled with constant value</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(tensor_h)
+</span></span></code></pre></div><h4 id="attributes-of-a-tensor">Attributes of a Tensor</h4>
 <p>Tensors in PyTorch have attributes that provide information about their shape, data type, device, and gradient requirements. Some commonly used attributes include:</p>
 <ul>
 <li>Shape: It represents the size of each dimension of the tensor. You can access it using the shape attribute or the <code>size()</code> method. For example, <code>tensor.shape</code> or <code>tensor.size()</code> will return the shape of the tensor.</li>
@@ -454,17 +454,17 @@ tensor_h <span style="color:#719e07">=</span> torch<span style="color:#719e07">.
 <li>Device: It specifies the device (CPU or GPU) on which the tensor is stored. You can use the device attribute to check if the tensor is on the CPU or GPU.</li>
 <li><code>requires_grad</code>: This attribute indicates whether the tensor requires gradient computation for automatic differentiation. By default, tensors created directly from data do not require gradients. You can enable gradient tracking by setting <code>requires_grad=True</code> on a tensor.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">tensor <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>zeros(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>)
-<span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor shape: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>shape<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)  <span style="color:#586e75"># This is a attribute, not function</span>
-<span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor size: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>size()<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
- 
-<span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor dtype: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>dtype<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
-tensor <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>zeros(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>, dtype<span style="color:#719e07">=</span>torch<span style="color:#719e07">.</span>float64)  <span style="color:#586e75"># explicite define the dtype for tensor</span>
-<span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor dtype: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>dtype<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
- 
-<span style="color:#586e75"># tensor = torch.zeros(2, 3).to(&#39;cuda&#39;)</span>
-<span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor device: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>device<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
-</code></pre></div><h3 id="operations">Operations</h3>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tensor <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>zeros(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>)
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor shape: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>shape<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)  <span style="color:#586e75"># This is a attribute, not function</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor size: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>size()<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor dtype: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>dtype<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
+</span></span><span style="display:flex;"><span>tensor <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>zeros(<span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>, dtype<span style="color:#719e07">=</span>torch<span style="color:#719e07">.</span>float64)  <span style="color:#586e75"># explicite define the dtype for tensor</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor dtype: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>dtype<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># tensor = torch.zeros(2, 3).to(&#39;cuda&#39;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;tensor device: </span><span style="color:#2aa198">{</span>tensor<span style="color:#719e07">.</span>device<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
+</span></span></code></pre></div><h3 id="operations">Operations</h3>
 <p>Tensors in PyTorch support a wide range of operations for manipulating and performing computations on the data they contain. These operations include arithmetic operations, linear algebra, matrix manipulation (such as indexing and slicing), and more. You can refer to the <a href="https://pytorch.org/docs/stable/tensors.html">PyTorch documentation</a> for a comprehensive list of tensor operations.</p>
 <p>Some examples of tensor operations include:</p>
 <ul>
@@ -473,76 +473,76 @@ tensor <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</
 <li>Reshaping: Tensors can be reshaped to have a different shape but the same data.</li>
 <li>Arithmetic operations: Tensors support element-wise addition, multiplication, and matrix multiplication.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">tensor <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>], [<span style="color:#2aa198">4</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>]])
- 
-<span style="color:#586e75"># Indexing</span>
-<span style="color:#b58900">print</span>(tensor[<span style="color:#2aa198">0</span>, <span style="color:#2aa198">1</span>])  <span style="color:#586e75"># Output: 2</span>
- 
-<span style="color:#586e75"># Slicing</span>
-<span style="color:#b58900">print</span>(tensor[:, <span style="color:#2aa198">1</span>:])  <span style="color:#586e75"># Output: tensor([[2, 3], [5, 6]])</span>
-
-<span style="color:#586e75"># Joining tensors</span>
-tensor1 <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>], [<span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>]])
-tensor2 <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>], [<span style="color:#2aa198">7</span>, <span style="color:#2aa198">8</span>]])
- 
-<span style="color:#586e75"># Concatenation</span>
-concatenated <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>cat((tensor1, tensor2), dim<span style="color:#719e07">=</span><span style="color:#2aa198">0</span>)  <span style="color:#586e75"># Concatenate along dimension 0</span>
-<span style="color:#b58900">print</span>(concatenated)
- 
-<span style="color:#586e75"># Stacking</span>
-stacked <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>stack((tensor1, tensor2), dim<span style="color:#719e07">=</span><span style="color:#2aa198">0</span>)  <span style="color:#586e75"># Stack along new dimension 0</span>
-<span style="color:#b58900">print</span>(stacked)
-
-<span style="color:#586e75"># Reshape: Returns a tensor with the same data but a different shape.</span>
-tensor <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>], [<span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>]])
-reshaped <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>reshape(tensor, (<span style="color:#2aa198">4</span>,))
-<span style="color:#b58900">print</span>(reshaped)
-</code></pre></div><h4 id="arithmetic-operations">Arithmetic operations</h4>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">tensor1 <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>], [<span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>]])
-tensor2 <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>], [<span style="color:#2aa198">7</span>, <span style="color:#2aa198">8</span>]])
- 
-<span style="color:#586e75"># Element-wise addition</span>
-result <span style="color:#719e07">=</span> tensor1 <span style="color:#719e07">+</span> tensor2
-<span style="color:#b58900">print</span>(result)
- 
-<span style="color:#586e75"># Element-wise multiplication</span>
-result <span style="color:#719e07">=</span> tensor1 <span style="color:#719e07">*</span> tensor2
-<span style="color:#b58900">print</span>(result)
- 
-<span style="color:#586e75"># Matrix Multiplication</span>
-result <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>matmul(tensor1, tensor2)
-<span style="color:#b58900">print</span>(result)
-</code></pre></div><h2 id="building-neural-networks">Building Neural Networks</h2>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tensor <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>], [<span style="color:#2aa198">4</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>]])
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Indexing</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(tensor[<span style="color:#2aa198">0</span>, <span style="color:#2aa198">1</span>])  <span style="color:#586e75"># Output: 2</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Slicing</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(tensor[:, <span style="color:#2aa198">1</span>:])  <span style="color:#586e75"># Output: tensor([[2, 3], [5, 6]])</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Joining tensors</span>
+</span></span><span style="display:flex;"><span>tensor1 <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>], [<span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>]])
+</span></span><span style="display:flex;"><span>tensor2 <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>], [<span style="color:#2aa198">7</span>, <span style="color:#2aa198">8</span>]])
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Concatenation</span>
+</span></span><span style="display:flex;"><span>concatenated <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>cat((tensor1, tensor2), dim<span style="color:#719e07">=</span><span style="color:#2aa198">0</span>)  <span style="color:#586e75"># Concatenate along dimension 0</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(concatenated)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Stacking</span>
+</span></span><span style="display:flex;"><span>stacked <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>stack((tensor1, tensor2), dim<span style="color:#719e07">=</span><span style="color:#2aa198">0</span>)  <span style="color:#586e75"># Stack along new dimension 0</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(stacked)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Reshape: Returns a tensor with the same data but a different shape.</span>
+</span></span><span style="display:flex;"><span>tensor <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>], [<span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>]])
+</span></span><span style="display:flex;"><span>reshaped <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>reshape(tensor, (<span style="color:#2aa198">4</span>,))
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(reshaped)
+</span></span></code></pre></div><h4 id="arithmetic-operations">Arithmetic operations</h4>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tensor1 <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>], [<span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>]])
+</span></span><span style="display:flex;"><span>tensor2 <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>tensor([[<span style="color:#2aa198">5</span>, <span style="color:#2aa198">6</span>], [<span style="color:#2aa198">7</span>, <span style="color:#2aa198">8</span>]])
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Element-wise addition</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#719e07">=</span> tensor1 <span style="color:#719e07">+</span> tensor2
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(result)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Element-wise multiplication</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#719e07">=</span> tensor1 <span style="color:#719e07">*</span> tensor2
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(result)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Matrix Multiplication</span>
+</span></span><span style="display:flex;"><span>result <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>matmul(tensor1, tensor2)
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(result)
+</span></span></code></pre></div><h2 id="building-neural-networks">Building Neural Networks</h2>
 <h3 id="nnmodule-class"><code>nn.Module</code> Class</h3>
 <p>The <code>nn.Module</code> class serves as a base class for all neural network modules in PyTorch. It is used to define the architecture and behavior of the network. This class provides a convenient way to organize the parameters of a model and define the forward pass computation. To create your own neural network using <code>nn.Module</code>, you need to define a subclass of <code>nn.Module</code> and override two key methods: <code>__init__</code> and <code>forward</code>. The <code>__init__</code> method is used to define the layers and modules of your network, while the <code>forward</code> method specifies the forward pass computation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> torch
-<span style="color:#719e07">import</span> torch.nn <span style="color:#719e07">as</span> nn
-
-<span style="color:#719e07">class</span> <span style="color:#268bd2">MyNetwork</span>(nn<span style="color:#719e07">.</span>Module):
-    <span style="color:#719e07">def</span> __init__(<span style="color:#268bd2">self</span>):
-        <span style="color:#b58900">super</span>(MyNetwork, <span style="color:#268bd2">self</span>)<span style="color:#719e07">.</span>__init__()
-        <span style="color:#586e75"># Define the layers and modules of your network</span>
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc1 <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Linear(<span style="color:#2aa198">10</span>, <span style="color:#2aa198">5</span>)
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc2 <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Linear(<span style="color:#2aa198">5</span>, <span style="color:#2aa198">2</span>)
-  
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">forward</span>(<span style="color:#268bd2">self</span>, x):
-        <span style="color:#586e75"># Define the forward pass computation</span>
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc1(x)
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc2(x)
-        <span style="color:#719e07">return</span> x
-</code></pre></div><p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/mlp-figure.png" alt="mlp-figure.png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> torch.nn <span style="color:#719e07">as</span> nn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">MyNetwork</span>(nn<span style="color:#719e07">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> __init__(<span style="color:#268bd2">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#b58900">super</span>(MyNetwork, <span style="color:#268bd2">self</span>)<span style="color:#719e07">.</span>__init__()
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Define the layers and modules of your network</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc1 <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Linear(<span style="color:#2aa198">10</span>, <span style="color:#2aa198">5</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc2 <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Linear(<span style="color:#2aa198">5</span>, <span style="color:#2aa198">2</span>)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">forward</span>(<span style="color:#268bd2">self</span>, x):
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Define the forward pass computation</span>
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc1(x)
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc2(x)
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> x
+</span></span></code></pre></div><p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/mlp-figure.png" alt="mlp-figure.png"></p>
 <p>In the <code>__init__</code> method, you can define any layers or modules you need for your network. In this example, we define two fully connected layers (<code>nn.Linear</code>) with specified input and output sizes.
 In the forward method, you specify the sequence of operations that will be applied to the input x during the forward pass. In this example, we apply the first linear layer (<code>self.fc1</code>), followed by the second linear layer (<code>self.fc2</code>).</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">batch_size <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>
-in_features <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>
- 
-model <span style="color:#719e07">=</span> MyNetwork()
- 
-input_data <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>randn(batch_size, in_features)
-output <span style="color:#719e07">=</span> model(input_data)
- 
-<span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;input: </span><span style="color:#2aa198">{</span>input_data<span style="color:#2aa198">}</span><span style="color:#cb4b16">\n</span><span style="color:#2aa198">output: </span><span style="color:#2aa198">{</span>output<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
-</code></pre></div><p>In this example, we first instantize the network we just defined. And setup the input_data which is a tensor representing the input to your network. You can pass this input tensor to your network instance (model) to obtain the output tensor (output). The forward method of your network will be automatically called, executing the forward pass computation defined earlier.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>batch_size <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>in_features <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>model <span style="color:#719e07">=</span> MyNetwork()
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>input_data <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>randn(batch_size, in_features)
+</span></span><span style="display:flex;"><span>output <span style="color:#719e07">=</span> model(input_data)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;input: </span><span style="color:#2aa198">{</span>input_data<span style="color:#2aa198">}</span><span style="color:#cb4b16">\n</span><span style="color:#2aa198">output: </span><span style="color:#2aa198">{</span>output<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
+</span></span></code></pre></div><p>In this example, we first instantize the network we just defined. And setup the input_data which is a tensor representing the input to your network. You can pass this input tensor to your network instance (model) to obtain the output tensor (output). The forward method of your network will be automatically called, executing the forward pass computation defined earlier.</p>
 <h3 id="predefined-layers">Predefined Layers</h3>
 <p>PyTorch&rsquo;s nn module provides a wide range of predefined layers that you can use to build your neural networks. Just like the <code>nn.Linear</code> and <code>nn.ReLU</code> we just use. Here are some commonly used layers:</p>
 <ul>
@@ -553,95 +553,95 @@ nn.Dropout: This layer implements dropout regularization, which randomly sets in
 <li><code>nn.ReLU</code>: This activation function applies the Rectified Linear Unit (ReLU) element-wise to the input tensor. ReLU sets negative values to zero and keeps positive values unchanged.</li>
 <li><code>nn.Softmax</code>: This activation function applies the softmax operation to the input tensor, which normalizes the tensor into a probability distribution over the classes. It is commonly used for multi-class classification problems.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">class</span> <span style="color:#268bd2">MyNetwork</span>(nn<span style="color:#719e07">.</span>Module):
-    <span style="color:#719e07">def</span> __init__(<span style="color:#268bd2">self</span>, in_channels, out_classes):
-        <span style="color:#b58900">super</span>(MyNetwork, <span style="color:#268bd2">self</span>)<span style="color:#719e07">.</span>__init__()
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>conv <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Conv2d(in_channels, <span style="color:#2aa198">64</span>, kernel_size<span style="color:#719e07">=</span><span style="color:#2aa198">3</span>, padding<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>)
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>batchnorm <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>BatchNorm2d(<span style="color:#2aa198">64</span>)
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>relu <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>ReLU()
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>dropout <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Dropout(p<span style="color:#719e07">=</span><span style="color:#2aa198">0.2</span>)
-          
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc1 <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Linear(<span style="color:#2aa198">64</span> <span style="color:#719e07">*</span> <span style="color:#2aa198">28</span> <span style="color:#719e07">*</span> <span style="color:#2aa198">28</span>, <span style="color:#2aa198">128</span>)
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc2 <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Linear(<span style="color:#2aa198">128</span>, out_classes)
-          
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>softmax <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Softmax(dim<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>)
-  
-    <span style="color:#719e07">def</span> <span style="color:#268bd2">forward</span>(<span style="color:#268bd2">self</span>, x):
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>conv(x)
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>batchnorm(x)
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>relu(x)
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>dropout(x)
-          
-        x <span style="color:#719e07">=</span> x<span style="color:#719e07">.</span>view(x<span style="color:#719e07">.</span>size(<span style="color:#2aa198">0</span>), <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>)  <span style="color:#586e75"># Flatten the tensor</span>
-          
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc1(x)
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>relu(x)
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>dropout(x)
-          
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc2(x)
-        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>softmax(x)
-          
-        <span style="color:#719e07">return</span> x
-</code></pre></div><h3 id="model-summary-and-parameters">Model Summary and Parameters</h3>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">model <span style="color:#719e07">=</span> MyNetwork(in_channels<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>, out_classes<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>)
- 
-<span style="color:#586e75"># Print the network structure</span>
-<span style="color:#b58900">print</span>(model)
- 
-<span style="color:#586e75"># Calculate the parameter count</span>
-total_params <span style="color:#719e07">=</span> <span style="color:#b58900">sum</span>(p<span style="color:#719e07">.</span>numel() <span style="color:#719e07">for</span> p <span style="color:#719e07">in</span> model<span style="color:#719e07">.</span>parameters() <span style="color:#719e07">if</span> p<span style="color:#719e07">.</span>requires_grad)
-<span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;Total parameters: </span><span style="color:#2aa198">{</span>total_params<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
- 
-<span style="color:#2aa198">&#34;&#34;&#34;
-</span><span style="color:#2aa198">Output:
-</span><span style="color:#2aa198"> 
-</span><span style="color:#2aa198">MyNetwork(
-</span><span style="color:#2aa198">  (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
-</span><span style="color:#2aa198">  (batchnorm): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-</span><span style="color:#2aa198">  (relu): ReLU()
-</span><span style="color:#2aa198">  (dropout): Dropout(p=0.2, inplace=False)
-</span><span style="color:#2aa198">  (fc1): Linear(in_features=50176, out_features=128, bias=True)
-</span><span style="color:#2aa198">  (fc2): Linear(in_features=128, out_features=10, bias=True)
-</span><span style="color:#2aa198">  (softmax): Softmax(dim=1)
-</span><span style="color:#2aa198">)
-</span><span style="color:#2aa198">Total parameters: 6425866
-</span><span style="color:#2aa198">&#34;&#34;&#34;</span>
-</code></pre></div><p>There is a convenient package called <code>torchsummary</code> that you can use to calculate the total number of parameters in a PyTorch model. Here&rsquo;s how you can use it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">from</span> torchsummary <span style="color:#719e07">import</span> summary
- 
-<span style="color:#586e75"># Instantiate the network</span>
-model <span style="color:#719e07">=</span> MyNetwork(in_channels<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>, out_classes<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>)
-model <span style="color:#719e07">=</span> model<span style="color:#719e07">.</span>to(<span style="color:#2aa198">&#34;cuda:0&#34;</span>)
-<span style="color:#586e75"># Print the model summary</span>
-summary(model, (<span style="color:#2aa198">1</span>, <span style="color:#2aa198">28</span>, <span style="color:#2aa198">28</span>))  <span style="color:#586e75"># Provide an example input size</span>
- 
-<span style="color:#2aa198">&#34;&#34;&#34;
-</span><span style="color:#2aa198">Output:
-</span><span style="color:#2aa198"> 
-</span><span style="color:#2aa198">----------------------------------------------------------------
-</span><span style="color:#2aa198">        Layer (type)               Output Shape         Param #
-</span><span style="color:#2aa198">================================================================
-</span><span style="color:#2aa198">            Conv2d-1           [-1, 64, 28, 28]           1,792
-</span><span style="color:#2aa198">       BatchNorm2d-2           [-1, 64, 28, 28]             128
-</span><span style="color:#2aa198">              ReLU-3           [-1, 64, 28, 28]               0
-</span><span style="color:#2aa198">           Dropout-4           [-1, 64, 28, 28]               0
-</span><span style="color:#2aa198">            Linear-5                  [-1, 128]       6,422,656
-</span><span style="color:#2aa198">              ReLU-6                  [-1, 128]               0
-</span><span style="color:#2aa198">           Dropout-7                  [-1, 128]               0
-</span><span style="color:#2aa198">            Linear-8                   [-1, 10]           1,290
-</span><span style="color:#2aa198">           Softmax-9                   [-1, 10]               0
-</span><span style="color:#2aa198">================================================================
-</span><span style="color:#2aa198">Total params: 6,425,866
-</span><span style="color:#2aa198">Trainable params: 6,425,866
-</span><span style="color:#2aa198">Non-trainable params: 0
-</span><span style="color:#2aa198">----------------------------------------------------------------
-</span><span style="color:#2aa198">Input size (MB): 0.01
-</span><span style="color:#2aa198">Forward/backward pass size (MB): 1.53
-</span><span style="color:#2aa198">Params size (MB): 24.51
-</span><span style="color:#2aa198">Estimated Total Size (MB): 26.06
-</span><span style="color:#2aa198">----------------------------------------------------------------
-</span><span style="color:#2aa198">&#34;&#34;&#34;</span>
-</code></pre></div><h2 id="dataset-and-dataloader">Dataset and DataLoader</h2>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">MyNetwork</span>(nn<span style="color:#719e07">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> __init__(<span style="color:#268bd2">self</span>, in_channels, out_classes):
+</span></span><span style="display:flex;"><span>        <span style="color:#b58900">super</span>(MyNetwork, <span style="color:#268bd2">self</span>)<span style="color:#719e07">.</span>__init__()
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>conv <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Conv2d(in_channels, <span style="color:#2aa198">64</span>, kernel_size<span style="color:#719e07">=</span><span style="color:#2aa198">3</span>, padding<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>batchnorm <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>BatchNorm2d(<span style="color:#2aa198">64</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>relu <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>ReLU()
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>dropout <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Dropout(p<span style="color:#719e07">=</span><span style="color:#2aa198">0.2</span>)
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc1 <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Linear(<span style="color:#2aa198">64</span> <span style="color:#719e07">*</span> <span style="color:#2aa198">28</span> <span style="color:#719e07">*</span> <span style="color:#2aa198">28</span>, <span style="color:#2aa198">128</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc2 <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Linear(<span style="color:#2aa198">128</span>, out_classes)
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>softmax <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>Softmax(dim<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">forward</span>(<span style="color:#268bd2">self</span>, x):
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>conv(x)
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>batchnorm(x)
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>relu(x)
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>dropout(x)
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> x<span style="color:#719e07">.</span>view(x<span style="color:#719e07">.</span>size(<span style="color:#2aa198">0</span>), <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>)  <span style="color:#586e75"># Flatten the tensor</span>
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc1(x)
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>relu(x)
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>dropout(x)
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc2(x)
+</span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>softmax(x)
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> x
+</span></span></code></pre></div><h3 id="model-summary-and-parameters">Model Summary and Parameters</h3>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>model <span style="color:#719e07">=</span> MyNetwork(in_channels<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>, out_classes<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Print the network structure</span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(model)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Calculate the parameter count</span>
+</span></span><span style="display:flex;"><span>total_params <span style="color:#719e07">=</span> <span style="color:#b58900">sum</span>(p<span style="color:#719e07">.</span>numel() <span style="color:#719e07">for</span> p <span style="color:#719e07">in</span> model<span style="color:#719e07">.</span>parameters() <span style="color:#719e07">if</span> p<span style="color:#719e07">.</span>requires_grad)
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;Total parameters: </span><span style="color:#2aa198">{</span>total_params<span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#2aa198">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Output:
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">MyNetwork(
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">  (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">  (batchnorm): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">  (relu): ReLU()
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">  (dropout): Dropout(p=0.2, inplace=False)
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">  (fc1): Linear(in_features=50176, out_features=128, bias=True)
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">  (fc2): Linear(in_features=128, out_features=10, bias=True)
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">  (softmax): Softmax(dim=1)
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">)
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Total parameters: 6425866
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">&#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>There is a convenient package called <code>torchsummary</code> that you can use to calculate the total number of parameters in a PyTorch model. Here&rsquo;s how you can use it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">from</span> torchsummary <span style="color:#719e07">import</span> summary
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Instantiate the network</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#719e07">=</span> MyNetwork(in_channels<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>, out_classes<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex;"><span>model <span style="color:#719e07">=</span> model<span style="color:#719e07">.</span>to(<span style="color:#2aa198">&#34;cuda:0&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Print the model summary</span>
+</span></span><span style="display:flex;"><span>summary(model, (<span style="color:#2aa198">1</span>, <span style="color:#2aa198">28</span>, <span style="color:#2aa198">28</span>))  <span style="color:#586e75"># Provide an example input size</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#2aa198">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Output:
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">----------------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        Layer (type)               Output Shape         Param #
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">================================================================
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">            Conv2d-1           [-1, 64, 28, 28]           1,792
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">       BatchNorm2d-2           [-1, 64, 28, 28]             128
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">              ReLU-3           [-1, 64, 28, 28]               0
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">           Dropout-4           [-1, 64, 28, 28]               0
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">            Linear-5                  [-1, 128]       6,422,656
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">              ReLU-6                  [-1, 128]               0
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">           Dropout-7                  [-1, 128]               0
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">            Linear-8                   [-1, 10]           1,290
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">           Softmax-9                   [-1, 10]               0
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">================================================================
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Total params: 6,425,866
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Trainable params: 6,425,866
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Non-trainable params: 0
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">----------------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Input size (MB): 0.01
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Forward/backward pass size (MB): 1.53
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Params size (MB): 24.51
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Estimated Total Size (MB): 26.06
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">----------------------------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">&#34;&#34;&#34;</span>
+</span></span></code></pre></div><h2 id="dataset-and-dataloader">Dataset and DataLoader</h2>
 <p>PyTorch Dataset represents a dataset of input samples and their corresponding labels, while PyTorch DataLoader is responsible for efficiently loading the data from the dataset during training or inference.</p>
 <h3 id="dataset-class"><code>Dataset</code> Class</h3>
 <p>The PyTorch <code>torch.utils.data.Dataset</code> class is a base class that you can inherit from to create your custom dataset.</p>
@@ -650,30 +650,30 @@ summary(model, (<span style="color:#2aa198">1</span>, <span style="color:#2aa198
 <li><code>__len__</code>: Returns the total number of data samples in the dataset.</li>
 <li><code>__getitem__</code>: Retrieves a specific data sample from the dataset, given its index.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> torch
-<span style="color:#719e07">from</span> torch.utils.data <span style="color:#719e07">import</span> Dataset
- 
-<span style="color:#719e07">class</span> <span style="color:#268bd2">CustomDataset</span>(Dataset):
-    <span style="color:#719e07">def</span> __init__(<span style="color:#268bd2">self</span>, data):
-        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>data <span style="color:#719e07">=</span> data
- 
-    <span style="color:#719e07">def</span> __len__(<span style="color:#268bd2">self</span>):
-        <span style="color:#719e07">return</span> <span style="color:#b58900">len</span>(<span style="color:#268bd2">self</span><span style="color:#719e07">.</span>data)
- 
-    <span style="color:#719e07">def</span> __getitem__(<span style="color:#268bd2">self</span>, index):
-        sample <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>data[index]
-        <span style="color:#586e75"># Implement any necessary preprocessing or data transformations here</span>
-        <span style="color:#586e75"># Return the preprocessed sample</span>
-        <span style="color:#719e07">return</span> sample
- 
-<span style="color:#586e75"># Create an instance of your custom dataset</span>
-data <span style="color:#719e07">=</span> [<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>, <span style="color:#2aa198">5</span>]
-dataset <span style="color:#719e07">=</span> CustomDataset(data)
- 
-<span style="color:#586e75"># Access individual data samples</span>
-sample <span style="color:#719e07">=</span> dataset[<span style="color:#2aa198">0</span>]
-<span style="color:#b58900">print</span>(sample)  <span style="color:#586e75"># Output: 1</span>
-</code></pre></div><h3 id="built-in-datasets">Built-in Datasets</h3>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#719e07">from</span> torch.utils.data <span style="color:#719e07">import</span> Dataset
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">CustomDataset</span>(Dataset):
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> __init__(<span style="color:#268bd2">self</span>, data):
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>data <span style="color:#719e07">=</span> data
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> __len__(<span style="color:#268bd2">self</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> <span style="color:#b58900">len</span>(<span style="color:#268bd2">self</span><span style="color:#719e07">.</span>data)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> __getitem__(<span style="color:#268bd2">self</span>, index):
+</span></span><span style="display:flex;"><span>        sample <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>data[index]
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Implement any necessary preprocessing or data transformations here</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Return the preprocessed sample</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> sample
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Create an instance of your custom dataset</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#719e07">=</span> [<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>, <span style="color:#2aa198">4</span>, <span style="color:#2aa198">5</span>]
+</span></span><span style="display:flex;"><span>dataset <span style="color:#719e07">=</span> CustomDataset(data)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Access individual data samples</span>
+</span></span><span style="display:flex;"><span>sample <span style="color:#719e07">=</span> dataset[<span style="color:#2aa198">0</span>]
+</span></span><span style="display:flex;"><span><span style="color:#b58900">print</span>(sample)  <span style="color:#586e75"># Output: 1</span>
+</span></span></code></pre></div><h3 id="built-in-datasets">Built-in Datasets</h3>
 <p>PyTorch provides several built-in datasets through the <code>torchvision</code>.datasets module. These datasets are commonly used for computer vision tasks. Here are some of the popular built-in datasets available in PyTorch:</p>
 <ul>
 <li><a href="http://yann.lecun.com/exdb/mnist/">MNIST</a>: Handwritten digit dataset.</li>
@@ -688,18 +688,18 @@ sample <span style="color:#719e07">=</span> dataset[<span style="color:#2aa198">
 <li><a href="https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html">CelebA</a>: Large-scale celebrity faces dataset.</li>
 </ul>
 <p>To use these built-in datasets in PyTorch, you need to follow these steps:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">from</span> torchvision <span style="color:#719e07">import</span> datasets
- 
-dataset <span style="color:#719e07">=</span> datasets<span style="color:#719e07">.</span>MNIST(root<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;./data&#39;</span>, train<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>, download<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>)
-  
-<span style="color:#586e75"># Access the samples</span>
-sample <span style="color:#719e07">=</span> dataset[<span style="color:#2aa198">1</span>]
- 
-<span style="color:#719e07">import</span> matplotlib.pyplot <span style="color:#719e07">as</span> plt  <span style="color:#586e75"># Visualize</span>
-plt<span style="color:#719e07">.</span>figure(figsize<span style="color:#719e07">=</span>(<span style="color:#2aa198">3</span>,<span style="color:#2aa198">3</span>))
-plt<span style="color:#719e07">.</span>imshow(sample[<span style="color:#2aa198">0</span>])
-plt<span style="color:#719e07">.</span>show()
-</code></pre></div><h3 id="transformations">Transformations</h3>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">from</span> torchvision <span style="color:#719e07">import</span> datasets
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>dataset <span style="color:#719e07">=</span> datasets<span style="color:#719e07">.</span>MNIST(root<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;./data&#39;</span>, train<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>, download<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Access the samples</span>
+</span></span><span style="display:flex;"><span>sample <span style="color:#719e07">=</span> dataset[<span style="color:#2aa198">1</span>]
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> matplotlib.pyplot <span style="color:#719e07">as</span> plt  <span style="color:#586e75"># Visualize</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#719e07">.</span>figure(figsize<span style="color:#719e07">=</span>(<span style="color:#2aa198">3</span>,<span style="color:#2aa198">3</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#719e07">.</span>imshow(sample[<span style="color:#2aa198">0</span>])
+</span></span><span style="display:flex;"><span>plt<span style="color:#719e07">.</span>show()
+</span></span></code></pre></div><h3 id="transformations">Transformations</h3>
 <p>Transformations in PyTorch are operations applied to data samples in a dataset. They are commonly used to preprocess or augment the data before feeding it into a machine learning model. PyTorch provides the <code>torchvision.transforms</code> module, which offers a variety of predefined transformations for computer vision tasks. Here are some commonly used transformations:</p>
 <ul>
 <li>
@@ -727,54 +727,54 @@ plt<span style="color:#719e07">.</span>show()
 <p><code>RandomResizedCrop(size)</code>: Randomly crops and resizes the input image to the specified size.</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">from</span> torchvision <span style="color:#719e07">import</span> transforms
-
-<span style="color:#586e75"># Define the transformations</span>
-transform <span style="color:#719e07">=</span> transforms<span style="color:#719e07">.</span>Compose([
-    transforms<span style="color:#719e07">.</span>CenterCrop(<span style="color:#2aa198">20</span>),  <span style="color:#586e75"># Crops the given image at the center.</span>
-    transforms<span style="color:#719e07">.</span>Resize(<span style="color:#2aa198">28</span>),  <span style="color:#586e75"># Resize the input image to 28*28</span>
-    <span style="color:#586e75"># transforms.RandomHorizontalFlip(),  # Randomly flip horizontally</span>
-    transforms<span style="color:#719e07">.</span>ToTensor(),  <span style="color:#586e75"># Convert PIL image to tensor</span>
-    transforms<span style="color:#719e07">.</span>Normalize((<span style="color:#2aa198">0.5</span>,), (<span style="color:#2aa198">0.5</span>,))  <span style="color:#586e75"># Normalize tensor</span>
-])
-
-<span style="color:#586e75"># Create an instance of the dataset with transformations</span>
-dataset <span style="color:#719e07">=</span> datasets<span style="color:#719e07">.</span>MNIST(root<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;./data&#39;</span>, train<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>, download<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>, transform<span style="color:#719e07">=</span>transform)
-</code></pre></div><h3 id="what-is-dataloader-and-how-to-use">What is DataLoader and how to use</h3>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">from</span> torchvision <span style="color:#719e07">import</span> transforms
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Define the transformations</span>
+</span></span><span style="display:flex;"><span>transform <span style="color:#719e07">=</span> transforms<span style="color:#719e07">.</span>Compose([
+</span></span><span style="display:flex;"><span>    transforms<span style="color:#719e07">.</span>CenterCrop(<span style="color:#2aa198">20</span>),  <span style="color:#586e75"># Crops the given image at the center.</span>
+</span></span><span style="display:flex;"><span>    transforms<span style="color:#719e07">.</span>Resize(<span style="color:#2aa198">28</span>),  <span style="color:#586e75"># Resize the input image to 28*28</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># transforms.RandomHorizontalFlip(),  # Randomly flip horizontally</span>
+</span></span><span style="display:flex;"><span>    transforms<span style="color:#719e07">.</span>ToTensor(),  <span style="color:#586e75"># Convert PIL image to tensor</span>
+</span></span><span style="display:flex;"><span>    transforms<span style="color:#719e07">.</span>Normalize((<span style="color:#2aa198">0.5</span>,), (<span style="color:#2aa198">0.5</span>,))  <span style="color:#586e75"># Normalize tensor</span>
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Create an instance of the dataset with transformations</span>
+</span></span><span style="display:flex;"><span>dataset <span style="color:#719e07">=</span> datasets<span style="color:#719e07">.</span>MNIST(root<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;./data&#39;</span>, train<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>, download<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>, transform<span style="color:#719e07">=</span>transform)
+</span></span></code></pre></div><h3 id="what-is-dataloader-and-how-to-use">What is DataLoader and how to use</h3>
 <p>In PyTorch, a <code>DataLoader</code> is an iterable that provides an interface to efficiently load data from a dataset during training or evaluation. It handles batch loading, shuffling, and other useful functionalities to facilitate the training process. The <code>DataLoader</code> takes a dataset as input and returns batches of data samples and their corresponding labels.</p>
 <p>The relationship between a dataset and a <code>DataLoader</code> is that the <code>DataLoader</code> wraps the dataset and provides an interface to access the data in batches. It abstracts away the details of data loading and allows you to focus on training your model.</p>
 <p>To use a <code>DataLoader</code> with the dataset you defined, you can follow these steps:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> torch
-<span style="color:#719e07">from</span> torch.utils.data <span style="color:#719e07">import</span> DataLoader
- 
-dataset <span style="color:#719e07">=</span> CustomDataset(data)
- 
-dataloader <span style="color:#719e07">=</span> DataLoader(dataset, batch_size<span style="color:#719e07">=</span><span style="color:#2aa198">32</span>, shuffle<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>)
- 
-<span style="color:#719e07">for</span> batch_data, batch_labels <span style="color:#719e07">in</span> dataloader:
-    <span style="color:#586e75"># Use the batch_data and batch_labels for training or evaluation</span>
-    <span style="color:#586e75"># ...</span>
- 
-    <span style="color:#586e75"># Clear gradients, perform backward pass, update model parameters, etc.</span>
-    <span style="color:#586e75"># ...</span>
-</code></pre></div><h2 id="training-and-optimization">Training and Optimization</h2>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#719e07">from</span> torch.utils.data <span style="color:#719e07">import</span> DataLoader
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>dataset <span style="color:#719e07">=</span> CustomDataset(data)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>dataloader <span style="color:#719e07">=</span> DataLoader(dataset, batch_size<span style="color:#719e07">=</span><span style="color:#2aa198">32</span>, shuffle<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#719e07">for</span> batch_data, batch_labels <span style="color:#719e07">in</span> dataloader:
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># Use the batch_data and batch_labels for training or evaluation</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># ...</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># Clear gradients, perform backward pass, update model parameters, etc.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># ...</span>
+</span></span></code></pre></div><h2 id="training-and-optimization">Training and Optimization</h2>
 <p>Splitting data into training, validation, and test sets
 The common method we use for the dataset split is from sklearn</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">from</span> sklearn.model_selection <span style="color:#719e07">import</span> train_test_split  dataset <span style="color:#719e07">=</span> CustomDataset(data)
- 
-<span style="color:#586e75"># Split the data into train, validation, and test sets</span>
-train_data, test_data <span style="color:#719e07">=</span> train_test_split(dataset, test_size<span style="color:#719e07">=</span><span style="color:#2aa198">0.2</span>, random_state<span style="color:#719e07">=</span><span style="color:#2aa198">42</span>)
-train_data, val_data <span style="color:#719e07">=</span> train_test_split(train_data, test_size<span style="color:#719e07">=</span><span style="color:#2aa198">0.2</span>, random_state<span style="color:#719e07">=</span><span style="color:#2aa198">42</span>)
-</code></pre></div><p>In the example above, the dataset is split into 80% training data and 20% test data. Then, the training data is further split into 80% for training and 20% for validation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">from</span> sklearn.model_selection <span style="color:#719e07">import</span> train_test_split  dataset <span style="color:#719e07">=</span> CustomDataset(data)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Split the data into train, validation, and test sets</span>
+</span></span><span style="display:flex;"><span>train_data, test_data <span style="color:#719e07">=</span> train_test_split(dataset, test_size<span style="color:#719e07">=</span><span style="color:#2aa198">0.2</span>, random_state<span style="color:#719e07">=</span><span style="color:#2aa198">42</span>)
+</span></span><span style="display:flex;"><span>train_data, val_data <span style="color:#719e07">=</span> train_test_split(train_data, test_size<span style="color:#719e07">=</span><span style="color:#2aa198">0.2</span>, random_state<span style="color:#719e07">=</span><span style="color:#2aa198">42</span>)
+</span></span></code></pre></div><p>In the example above, the dataset is split into 80% training data and 20% test data. Then, the training data is further split into 80% for training and 20% for validation.</p>
 <p>Once you have split your data into training, validation, and test sets, you can construct separate data loaders for each set.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#586e75"># Define batch size</span>
-batch_size <span style="color:#719e07">=</span> <span style="color:#2aa198">32</span>
- 
-<span style="color:#586e75"># Create data loaders for training, validation, and test sets</span>
-train_loader <span style="color:#719e07">=</span> DataLoader(train_data, batch_size<span style="color:#719e07">=</span>batch_size, shuffle<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>)
-val_loader <span style="color:#719e07">=</span> DataLoader(val_data, batch_size<span style="color:#719e07">=</span>batch_size)
-test_loader <span style="color:#719e07">=</span> DataLoader(test_data, batch_size<span style="color:#719e07">=</span>batch_size)
-</code></pre></div><p>In the code above, <code>train_data</code>, <code>val_data</code>, and <code>test_data</code> represent the respective splits of your dataset. The <code>batch_size</code> parameter specifies the number of samples in each batch. You can adjust this value based on your computational resources and model requirements.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75"># Define batch size</span>
+</span></span><span style="display:flex;"><span>batch_size <span style="color:#719e07">=</span> <span style="color:#2aa198">32</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Create data loaders for training, validation, and test sets</span>
+</span></span><span style="display:flex;"><span>train_loader <span style="color:#719e07">=</span> DataLoader(train_data, batch_size<span style="color:#719e07">=</span>batch_size, shuffle<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>)
+</span></span><span style="display:flex;"><span>val_loader <span style="color:#719e07">=</span> DataLoader(val_data, batch_size<span style="color:#719e07">=</span>batch_size)
+</span></span><span style="display:flex;"><span>test_loader <span style="color:#719e07">=</span> DataLoader(test_data, batch_size<span style="color:#719e07">=</span>batch_size)
+</span></span></code></pre></div><p>In the code above, <code>train_data</code>, <code>val_data</code>, and <code>test_data</code> represent the respective splits of your dataset. The <code>batch_size</code> parameter specifies the number of samples in each batch. You can adjust this value based on your computational resources and model requirements.</p>
 <p>The <code>DataLoader</code> class from PyTorch is used to create the data loaders. The <code>shuffle=True</code> argument is passed to the training loader to randomly shuffle the samples in each epoch, which helps in improving the model&rsquo;s generalization.</p>
 <h3 id="defining-loss-functions-eg-cross-entropy-mean-squared-error">Defining loss functions (e.g., cross-entropy, mean squared error)</h3>
 <p>After defining the data loader and model in a deep learning task, the next steps typically involve defining the loss function and optimizer. Here&rsquo;s a general outline of how to do that:</p>
@@ -784,74 +784,74 @@ test_loader <span style="color:#719e07">=</span> DataLoader(test_data, batch_siz
 <li>Binary Cross-Entropy: Used for binary classification tasks where the output is a probability between 0 and 1.</li>
 <li>Categorical Cross-Entropy: Appropriate for multi-class classification problems where the output is a probability distribution over multiple classes.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#586e75"># loss_fn = nn.MSELoss()</span>
-<span style="color:#586e75"># loss_fn = nn.BCELoss()</span>
-loss_fn <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>CrossEntropyLoss()
-<span style="color:#586e75"># loss_fn = nn.KLDivLoss()</span>
-</code></pre></div><h3 id="choosing-and-configuring-optimizers-eg-sgd-adam">Choosing and configuring optimizers (e.g., SGD, Adam)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75"># loss_fn = nn.MSELoss()</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># loss_fn = nn.BCELoss()</span>
+</span></span><span style="display:flex;"><span>loss_fn <span style="color:#719e07">=</span> nn<span style="color:#719e07">.</span>CrossEntropyLoss()
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># loss_fn = nn.KLDivLoss()</span>
+</span></span></code></pre></div><h3 id="choosing-and-configuring-optimizers-eg-sgd-adam">Choosing and configuring optimizers (e.g., SGD, Adam)</h3>
 <p>The optimizer is responsible for updating the model&rsquo;s parameters based on the computed gradients during the backpropagation process. It adjusts the parameters in the direction that minimizes the loss function. One commonly used optimizer is Stochastic Gradient Descent (SGD), but there are many other variants available, such as Adam, RMSprop, and Adagrad. PyTorch provides various optimizers in the <code>torch.optim</code> module. To use an optimizer, you typically need to pass the model parameters and specify the learning rate. Here&rsquo;s an example of defining an optimizer:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> torch.optim <span style="color:#719e07">as</span> optim
-  
-<span style="color:#586e75"># optimizer = optim.SGD(model.parameters(), lr=0.001)</span>
-<span style="color:#586e75"># Or</span>
-optimizer <span style="color:#719e07">=</span> optim<span style="color:#719e07">.</span>Adam(model<span style="color:#719e07">.</span>parameters(), lr<span style="color:#719e07">=</span><span style="color:#2aa198">0.001</span>)
-</code></pre></div><h3 id="do-training">Do Training</h3>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">import</span> torch.optim <span style="color:#719e07">as</span> optim
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># optimizer = optim.SGD(model.parameters(), lr=0.001)</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Or</span>
+</span></span><span style="display:flex;"><span>optimizer <span style="color:#719e07">=</span> optim<span style="color:#719e07">.</span>Adam(model<span style="color:#719e07">.</span>parameters(), lr<span style="color:#719e07">=</span><span style="color:#2aa198">0.001</span>)
+</span></span></code></pre></div><h3 id="do-training">Do Training</h3>
 <p>Once you have defined the model, data loader, loss function, and optimizer, you can proceed with training your model and calculating metrics for each batch and epoch. Here&rsquo;s an overview of the steps involved:</p>
 <p>Training Loop: Iterate over your data for a specified number of epochs. In each epoch, iterate over the batches of data provided by the data loader. Here&rsquo;s an example of a training loop:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">device <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;cuda&#39;</span> <span style="color:#719e07">if</span> torch<span style="color:#719e07">.</span>cuda<span style="color:#719e07">.</span>is_available() <span style="color:#719e07">else</span> <span style="color:#2aa198">&#39;cpu&#39;</span>
-model <span style="color:#719e07">=</span> model<span style="color:#719e07">.</span>to(device)
-loss_fn <span style="color:#719e07">=</span> loss_fn<span style="color:#719e07">.</span>to(device)
- 
-<span style="color:#719e07">import</span> torch.nn.functional <span style="color:#719e07">as</span> F
- 
-<span style="color:#719e07">def</span> <span style="color:#268bd2">metric</span>(batch_predictions, batch_labels):
-    <span style="color:#586e75"># Convert the predictions and labels to numpy arrays</span>
-    _, predicted_labels <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>max(batch_predictions, dim<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>)
-    correct_predictions <span style="color:#719e07">=</span> (predicted_labels <span style="color:#719e07">==</span> batch_labels)<span style="color:#719e07">.</span>sum()<span style="color:#719e07">.</span>item()
-    <span style="color:#586e75"># Calculate the prediction error</span>
-    accuracy <span style="color:#719e07">=</span> correct_predictions <span style="color:#719e07">/</span> <span style="color:#b58900">len</span>(batch_labels)
-    <span style="color:#719e07">return</span> accuracy
- 
-num_epochs <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>
-<span style="color:#719e07">for</span> epoch <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(num_epochs):
-    epoch_loss <span style="color:#719e07">=</span> <span style="color:#2aa198">0.0</span>
-    epoch_metric <span style="color:#719e07">=</span> <span style="color:#2aa198">0.0</span>
-    batch_count <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
-  
-    <span style="color:#586e75"># Iterate over the batches in the dataloader</span>
-    <span style="color:#719e07">for</span> batch <span style="color:#719e07">in</span> train_loader:
-        <span style="color:#586e75"># Clear gradients from previous iteration</span>
-        batch_data, batch_labels <span style="color:#719e07">=</span> batch[<span style="color:#2aa198">0</span>], batch[<span style="color:#2aa198">1</span>]
-        batch_data <span style="color:#719e07">=</span> batch_data<span style="color:#719e07">.</span>to(device)
-        batch_labels <span style="color:#719e07">=</span> batch_labels<span style="color:#719e07">.</span>to(device)
-        <span style="color:#586e75"># print(batch_data.size())</span>
-        optimizer<span style="color:#719e07">.</span>zero_grad()
-  
-        <span style="color:#586e75"># Forward pass</span>
-        batch_predictions <span style="color:#719e07">=</span> model(batch_data)
-        <span style="color:#586e75"># print(batch_predictions)</span>
-  
-        <span style="color:#586e75"># Calculate loss</span>
-        loss <span style="color:#719e07">=</span> loss_fn(batch_predictions, batch_labels)
-        epoch_loss <span style="color:#719e07">+=</span> loss<span style="color:#719e07">.</span>item()
-  
-        <span style="color:#586e75"># Backward pass</span>
-        loss<span style="color:#719e07">.</span>backward()
-        optimizer<span style="color:#719e07">.</span>step()
-  
-        <span style="color:#586e75"># Calculate and record metrics</span>
-        batch_metric <span style="color:#719e07">=</span> metric(batch_predictions, batch_labels)
-        epoch_metric <span style="color:#719e07">+=</span> batch_metric
-  
-        batch_count <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-      
-    <span style="color:#586e75"># Calculate average loss and metric for the epoch</span>
-    avg_epoch_loss <span style="color:#719e07">=</span> epoch_loss <span style="color:#719e07">/</span> batch_count
-    avg_epoch_metric <span style="color:#719e07">=</span> epoch_metric <span style="color:#719e07">/</span> batch_count
-  
-    <span style="color:#586e75"># Print or log the metrics for analysis</span>
-    <span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;Epoch </span><span style="color:#2aa198">{</span>epoch<span style="color:#719e07">+</span><span style="color:#2aa198">1</span><span style="color:#2aa198">}</span><span style="color:#2aa198"> - Loss: </span><span style="color:#2aa198">{</span>avg_epoch_loss<span style="color:#2aa198">:</span><span style="color:#2aa198">.4f</span><span style="color:#2aa198">}</span><span style="color:#2aa198"> - Metric: </span><span style="color:#2aa198">{</span>avg_epoch_metric<span style="color:#2aa198">:</span><span style="color:#2aa198">.4f</span><span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
-</code></pre></div><p>You&rsquo;ll typically follow these steps:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>device <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;cuda&#39;</span> <span style="color:#719e07">if</span> torch<span style="color:#719e07">.</span>cuda<span style="color:#719e07">.</span>is_available() <span style="color:#719e07">else</span> <span style="color:#2aa198">&#39;cpu&#39;</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#719e07">=</span> model<span style="color:#719e07">.</span>to(device)
+</span></span><span style="display:flex;"><span>loss_fn <span style="color:#719e07">=</span> loss_fn<span style="color:#719e07">.</span>to(device)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> torch.nn.functional <span style="color:#719e07">as</span> F
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#719e07">def</span> <span style="color:#268bd2">metric</span>(batch_predictions, batch_labels):
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># Convert the predictions and labels to numpy arrays</span>
+</span></span><span style="display:flex;"><span>    _, predicted_labels <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>max(batch_predictions, dim<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>)
+</span></span><span style="display:flex;"><span>    correct_predictions <span style="color:#719e07">=</span> (predicted_labels <span style="color:#719e07">==</span> batch_labels)<span style="color:#719e07">.</span>sum()<span style="color:#719e07">.</span>item()
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># Calculate the prediction error</span>
+</span></span><span style="display:flex;"><span>    accuracy <span style="color:#719e07">=</span> correct_predictions <span style="color:#719e07">/</span> <span style="color:#b58900">len</span>(batch_labels)
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">return</span> accuracy
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>num_epochs <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">for</span> epoch <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(num_epochs):
+</span></span><span style="display:flex;"><span>    epoch_loss <span style="color:#719e07">=</span> <span style="color:#2aa198">0.0</span>
+</span></span><span style="display:flex;"><span>    epoch_metric <span style="color:#719e07">=</span> <span style="color:#2aa198">0.0</span>
+</span></span><span style="display:flex;"><span>    batch_count <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># Iterate over the batches in the dataloader</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">for</span> batch <span style="color:#719e07">in</span> train_loader:
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Clear gradients from previous iteration</span>
+</span></span><span style="display:flex;"><span>        batch_data, batch_labels <span style="color:#719e07">=</span> batch[<span style="color:#2aa198">0</span>], batch[<span style="color:#2aa198">1</span>]
+</span></span><span style="display:flex;"><span>        batch_data <span style="color:#719e07">=</span> batch_data<span style="color:#719e07">.</span>to(device)
+</span></span><span style="display:flex;"><span>        batch_labels <span style="color:#719e07">=</span> batch_labels<span style="color:#719e07">.</span>to(device)
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># print(batch_data.size())</span>
+</span></span><span style="display:flex;"><span>        optimizer<span style="color:#719e07">.</span>zero_grad()
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Forward pass</span>
+</span></span><span style="display:flex;"><span>        batch_predictions <span style="color:#719e07">=</span> model(batch_data)
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># print(batch_predictions)</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Calculate loss</span>
+</span></span><span style="display:flex;"><span>        loss <span style="color:#719e07">=</span> loss_fn(batch_predictions, batch_labels)
+</span></span><span style="display:flex;"><span>        epoch_loss <span style="color:#719e07">+=</span> loss<span style="color:#719e07">.</span>item()
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Backward pass</span>
+</span></span><span style="display:flex;"><span>        loss<span style="color:#719e07">.</span>backward()
+</span></span><span style="display:flex;"><span>        optimizer<span style="color:#719e07">.</span>step()
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Calculate and record metrics</span>
+</span></span><span style="display:flex;"><span>        batch_metric <span style="color:#719e07">=</span> metric(batch_predictions, batch_labels)
+</span></span><span style="display:flex;"><span>        epoch_metric <span style="color:#719e07">+=</span> batch_metric
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        batch_count <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># Calculate average loss and metric for the epoch</span>
+</span></span><span style="display:flex;"><span>    avg_epoch_loss <span style="color:#719e07">=</span> epoch_loss <span style="color:#719e07">/</span> batch_count
+</span></span><span style="display:flex;"><span>    avg_epoch_metric <span style="color:#719e07">=</span> epoch_metric <span style="color:#719e07">/</span> batch_count
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># Print or log the metrics for analysis</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b58900">print</span>(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#34;Epoch </span><span style="color:#2aa198">{</span>epoch<span style="color:#719e07">+</span><span style="color:#2aa198">1</span><span style="color:#2aa198">}</span><span style="color:#2aa198"> - Loss: </span><span style="color:#2aa198">{</span>avg_epoch_loss<span style="color:#2aa198">:</span><span style="color:#2aa198">.4f</span><span style="color:#2aa198">}</span><span style="color:#2aa198"> - Metric: </span><span style="color:#2aa198">{</span>avg_epoch_metric<span style="color:#2aa198">:</span><span style="color:#2aa198">.4f</span><span style="color:#2aa198">}</span><span style="color:#2aa198">&#34;</span>)
+</span></span></code></pre></div><p>You&rsquo;ll typically follow these steps:</p>
 <ul>
 <li>Iterate over the training dataset for a specific number of epochs.
 <ul>
@@ -868,47 +868,47 @@ num_epochs <span style="color:#719e07">=</span> <span style="color:#2aa198">10</
 </ul>
 <h4 id="saving-and-loading-models">Saving and Loading Models</h4>
 <p>To save a trained model in PyTorch, you can use the <code>torch.save()</code> function. This function allows you to save various components of the model, including the model&rsquo;s architecture, parameters, optimizer state, and any additional information you want to store.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">torch<span style="color:#719e07">.</span>save(model, <span style="color:#2aa198">&#39;saved_model.pth&#39;</span>)
-</code></pre></div><p>In this example, the model object is saved in a file called &ldquo;<code>saved_model.pth</code>&rdquo;. This file will contain the entire model, including its architecture, parameters, and other associated information.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>torch<span style="color:#719e07">.</span>save(model, <span style="color:#2aa198">&#39;saved_model.pth&#39;</span>)
+</span></span></code></pre></div><p>In this example, the model object is saved in a file called &ldquo;<code>saved_model.pth</code>&rdquo;. This file will contain the entire model, including its architecture, parameters, and other associated information.</p>
 <p>When you load the saved model, you can use the <code>torch.load()</code> function. Here&rsquo;s an example of how to load the saved model:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">loaded_model <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>load(<span style="color:#2aa198">&#39;saved_model.pth&#39;</span>)
-loaded_model <span style="color:#719e07">=</span> loaded_model<span style="color:#719e07">.</span>to(device)
-<span style="color:#586e75"># Print the model summary</span>
-summary(loaded_model, (<span style="color:#2aa198">1</span>, <span style="color:#2aa198">28</span>, <span style="color:#2aa198">28</span>))  <span style="color:#586e75"># Provide an example input size</span>
-</code></pre></div><p>The <code>torch.load()</code> function returns the model object, which you can assign to a variable (loaded_model in this case). After loading, you can use the loaded model for inference, evaluation, or further training.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>loaded_model <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>load(<span style="color:#2aa198">&#39;saved_model.pth&#39;</span>)
+</span></span><span style="display:flex;"><span>loaded_model <span style="color:#719e07">=</span> loaded_model<span style="color:#719e07">.</span>to(device)
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Print the model summary</span>
+</span></span><span style="display:flex;"><span>summary(loaded_model, (<span style="color:#2aa198">1</span>, <span style="color:#2aa198">28</span>, <span style="color:#2aa198">28</span>))  <span style="color:#586e75"># Provide an example input size</span>
+</span></span></code></pre></div><p>The <code>torch.load()</code> function returns the model object, which you can assign to a variable (loaded_model in this case). After loading, you can use the loaded model for inference, evaluation, or further training.</p>
 <p>Note that when you save the entire model using <code>torch.save()</code>, it saves the complete state of the model, including all parameters and buffers. However, it does not save the optimizer state by default. If you want to save and load the optimizer state as well, you can save it <em>separately</em> or include it in a dictionary along with the model.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#586e75"># Save model and optimizer together</span>
-checkpoint <span style="color:#719e07">=</span> {
-    <span style="color:#2aa198">&#39;model_state_dict&#39;</span>: model<span style="color:#719e07">.</span>state_dict(),
-    <span style="color:#2aa198">&#39;optimizer_state_dict&#39;</span>: optimizer<span style="color:#719e07">.</span>state_dict()
-}
-torch<span style="color:#719e07">.</span>save(checkpoint, <span style="color:#2aa198">&#39;saved_model-w-optimizer.pth&#39;</span>)
-</code></pre></div><p>To load the model and optimizer together, you can use <code>torch.load()</code> and then access the saved states:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">checkpoint <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>load(<span style="color:#2aa198">&#39;saved_model-w-optimizer.pth&#39;</span>)
-opt_model <span style="color:#719e07">=</span> MyNetwork(in_channels<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>, out_classes<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>)
-opt_optimizer <span style="color:#719e07">=</span> optim<span style="color:#719e07">.</span>Adam(opt_model<span style="color:#719e07">.</span>parameters(), lr<span style="color:#719e07">=</span><span style="color:#2aa198">0.001</span>)
-opt_model<span style="color:#719e07">.</span>load_state_dict(checkpoint[<span style="color:#2aa198">&#39;model_state_dict&#39;</span>])
-opt_optimizer<span style="color:#719e07">.</span>load_state_dict(checkpoint[<span style="color:#2aa198">&#39;optimizer_state_dict&#39;</span>])
-</code></pre></div><h2 id="transfer-learning">Transfer Learning</h2>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75"># Save model and optimizer together</span>
+</span></span><span style="display:flex;"><span>checkpoint <span style="color:#719e07">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;model_state_dict&#39;</span>: model<span style="color:#719e07">.</span>state_dict(),
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;optimizer_state_dict&#39;</span>: optimizer<span style="color:#719e07">.</span>state_dict()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>torch<span style="color:#719e07">.</span>save(checkpoint, <span style="color:#2aa198">&#39;saved_model-w-optimizer.pth&#39;</span>)
+</span></span></code></pre></div><p>To load the model and optimizer together, you can use <code>torch.load()</code> and then access the saved states:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>checkpoint <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>load(<span style="color:#2aa198">&#39;saved_model-w-optimizer.pth&#39;</span>)
+</span></span><span style="display:flex;"><span>opt_model <span style="color:#719e07">=</span> MyNetwork(in_channels<span style="color:#719e07">=</span><span style="color:#2aa198">1</span>, out_classes<span style="color:#719e07">=</span><span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex;"><span>opt_optimizer <span style="color:#719e07">=</span> optim<span style="color:#719e07">.</span>Adam(opt_model<span style="color:#719e07">.</span>parameters(), lr<span style="color:#719e07">=</span><span style="color:#2aa198">0.001</span>)
+</span></span><span style="display:flex;"><span>opt_model<span style="color:#719e07">.</span>load_state_dict(checkpoint[<span style="color:#2aa198">&#39;model_state_dict&#39;</span>])
+</span></span><span style="display:flex;"><span>opt_optimizer<span style="color:#719e07">.</span>load_state_dict(checkpoint[<span style="color:#2aa198">&#39;optimizer_state_dict&#39;</span>])
+</span></span></code></pre></div><h2 id="transfer-learning">Transfer Learning</h2>
 <p>In PyTorch, you can use predefined models from the <code>torchvision.models</code> module, which provides a collection of popular pre-trained models for tasks such as image classification, object detection, and segmentation (Huggingface for NLP, LLM, and Multi-modal). These models are trained on large datasets like ImageNet and have learned useful features that can be leveraged for various computer vision tasks.</p>
 <h3 id="load-models-and-pre-trained-weights">Load Models and Pre-trained weights</h3>
 <p>To use a predefined model and download its pre-trained parameters, you can follow these steps:</p>
 <p>Import the necessary modules, and load a model:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">import</span> torchvision.models <span style="color:#719e07">as</span> models
- 
-model <span style="color:#719e07">=</span> models<span style="color:#719e07">.</span>resnet50(weights<span style="color:#719e07">=</span>models<span style="color:#719e07">.</span>ResNet50_Weights<span style="color:#719e07">.</span>IMAGENET1K_V1)
-</code></pre></div><p>In this example, the ResNet-50 model is loaded with pre-trained weights. You can choose different models such as ResNet-18, VGG-16, etc. Here is the full model list: <a href="https://pytorch.org/vision/stable/models.html">Models and pre-trained weights — Torchvision 0.15 documentation (pytorch.org)</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">import</span> torchvision.models <span style="color:#719e07">as</span> models
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>model <span style="color:#719e07">=</span> models<span style="color:#719e07">.</span>resnet50(weights<span style="color:#719e07">=</span>models<span style="color:#719e07">.</span>ResNet50_Weights<span style="color:#719e07">.</span>IMAGENET1K_V1)
+</span></span></code></pre></div><p>In this example, the ResNet-50 model is loaded with pre-trained weights. You can choose different models such as ResNet-18, VGG-16, etc. Here is the full model list: <a href="https://pytorch.org/vision/stable/models.html">Models and pre-trained weights — Torchvision 0.15 documentation (pytorch.org)</a></p>
 <h3 id="modify-model-for-your-task">Modify model for your task</h3>
 <p>After loaded such model with pre-trained parameters, you can use them just like the model you defined, but you have to know that the model is design for a specific tasks, which may not align with yours. So if you want to use the model on your task and fully utilize the pretrain effort, you can change the model and do transfer learning (fine-tuning). What you need to do is replacing or fine-tuning the last fully connected layer. For ResNet model the last layer typically corresponds to the classification layer for ImageNet&rsquo;s 1000 classes. If your task has a different number of classes, you need to adapt the last layer accordingly. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">num_classes <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>
-model<span style="color:#719e07">.</span>fc <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>nn<span style="color:#719e07">.</span>Linear(model<span style="color:#719e07">.</span>fc<span style="color:#719e07">.</span>in_features, num_classes)
-</code></pre></div><p>In this example, the last fully connected layer (<code>model.fc</code>) is replaced with a new linear layer that has num_classes output units.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>num_classes <span style="color:#719e07">=</span> <span style="color:#2aa198">10</span>
+</span></span><span style="display:flex;"><span>model<span style="color:#719e07">.</span>fc <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>nn<span style="color:#719e07">.</span>Linear(model<span style="color:#719e07">.</span>fc<span style="color:#719e07">.</span>in_features, num_classes)
+</span></span></code></pre></div><p>In this example, the last fully connected layer (<code>model.fc</code>) is replaced with a new linear layer that has num_classes output units.</p>
 <p>Depending on your task and the amount of available data, you may choose to freeze some layers to prevent their weights from being updated during training. This is particularly useful when you have limited data or when the pre-trained model is already well-suited to your task. For example, to freeze all layers except the last one:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python"><span style="color:#719e07">for</span> param <span style="color:#719e07">in</span> model<span style="color:#719e07">.</span>parameters():
-    param<span style="color:#719e07">.</span>requires_grad <span style="color:#719e07">=</span> <span style="color:#cb4b16">False</span>
-model<span style="color:#719e07">.</span>fc<span style="color:#719e07">.</span>weight<span style="color:#719e07">.</span>requires_grad <span style="color:#719e07">=</span> <span style="color:#cb4b16">True</span>
-model<span style="color:#719e07">.</span>fc<span style="color:#719e07">.</span>bias<span style="color:#719e07">.</span>requires_grad <span style="color:#719e07">=</span> <span style="color:#cb4b16">True</span>
-</code></pre></div><p>In this example, all parameters (<code>requires_grad</code>) are set to False except for the weights and biases of the last fully connected layer (<code>model.fc</code>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">for</span> param <span style="color:#719e07">in</span> model<span style="color:#719e07">.</span>parameters():
+</span></span><span style="display:flex;"><span>    param<span style="color:#719e07">.</span>requires_grad <span style="color:#719e07">=</span> <span style="color:#cb4b16">False</span>
+</span></span><span style="display:flex;"><span>model<span style="color:#719e07">.</span>fc<span style="color:#719e07">.</span>weight<span style="color:#719e07">.</span>requires_grad <span style="color:#719e07">=</span> <span style="color:#cb4b16">True</span>
+</span></span><span style="display:flex;"><span>model<span style="color:#719e07">.</span>fc<span style="color:#719e07">.</span>bias<span style="color:#719e07">.</span>requires_grad <span style="color:#719e07">=</span> <span style="color:#cb4b16">True</span>
+</span></span></code></pre></div><p>In this example, all parameters (<code>requires_grad</code>) are set to False except for the weights and biases of the last fully connected layer (<code>model.fc</code>).</p>
 <p>With these steps, you can use a pre-trained model, download its pre-trained parameters, and modify it to suit your specific task. Once you&rsquo;ve made the necessary modifications, you can train the model on your own dataset or use it for inference.</p>
 <blockquote>
 <p>PS: The layer naming is not fully aligned for all model, like the Transformer model have a different name and structure for the output layer, you need to look in to the model first before the modification.</p>
@@ -916,24 +916,24 @@ model<span style="color:#719e07">.</span>fc<span style="color:#719e07">.</span>b
 <h2 id="gpu-acceleration">GPU Acceleration</h2>
 <p>GPU acceleration in PyTorch refers to leveraging the computational power of Graphics Processing Units (GPUs) to speed up training and inference processes. GPUs are highly parallel processors capable of performing multiple calculations simultaneously, making them well-suited for tasks involving large-scale matrix computations, such as deep learning.</p>
 <p>To utilize CUDA and GPU-enabled devices in PyTorch, you need to ensure that you have the appropriate hardware (an NVIDIA GPU) and the necessary software dependencies installed, including <code>CUDA Toolkit</code> and <code>cuDNN</code>. Once you have these prerequisites set up, you can follow these steps to move tensors and models to the GPU for faster computation:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">device <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>device(<span style="color:#2aa198">&#34;cuda&#34;</span> <span style="color:#719e07">if</span> torch<span style="color:#719e07">.</span>cuda<span style="color:#719e07">.</span>is_available() <span style="color:#719e07">else</span> <span style="color:#2aa198">&#34;cpu&#34;</span>)
-</code></pre></div><p>This code snippet checks if CUDA is available and assigns the device accordingly. If CUDA is available, the device will be set to <code>&quot;cuda&quot;</code>; otherwise, it will fall back to the CPU.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>device <span style="color:#719e07">=</span> torch<span style="color:#719e07">.</span>device(<span style="color:#2aa198">&#34;cuda&#34;</span> <span style="color:#719e07">if</span> torch<span style="color:#719e07">.</span>cuda<span style="color:#719e07">.</span>is_available() <span style="color:#719e07">else</span> <span style="color:#2aa198">&#34;cpu&#34;</span>)
+</span></span></code></pre></div><p>This code snippet checks if CUDA is available and assigns the device accordingly. If CUDA is available, the device will be set to <code>&quot;cuda&quot;</code>; otherwise, it will fall back to the CPU.</p>
 <ul>
 <li>Move tensors to the GPU:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">tensor <span style="color:#719e07">=</span> tensor<span style="color:#719e07">.</span>to(device)
-</code></pre></div><p>This line of code moves a PyTorch tensor to the GPU by calling the <code>to()</code> method and passing the device as an argument. After this operation, computations involving this tensor will be performed on the GPU.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>tensor <span style="color:#719e07">=</span> tensor<span style="color:#719e07">.</span>to(device)
+</span></span></code></pre></div><p>This line of code moves a PyTorch tensor to the GPU by calling the <code>to()</code> method and passing the device as an argument. After this operation, computations involving this tensor will be performed on the GPU.</p>
 <ul>
 <li>Move models to the GPU:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">model <span style="color:#719e07">=</span> model<span style="color:#719e07">.</span>to(device)
-</code></pre></div><p>Similarly, you can move an entire PyTorch model to the GPU using the <code>to()</code> method. This ensures that all model parameters and computations are performed on the GPU.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>model <span style="color:#719e07">=</span> model<span style="color:#719e07">.</span>to(device)
+</span></span></code></pre></div><p>Similarly, you can move an entire PyTorch model to the GPU using the <code>to()</code> method. This ensures that all model parameters and computations are performed on the GPU.</p>
 <ul>
 <li>Ensure inputs are also on the GPU:</li>
 </ul>
 <p>If you&rsquo;re passing inputs to the model during training or inference, make sure to move those tensors to the GPU as well. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-python" data-lang="python">input_data <span style="color:#719e07">=</span> input_data<span style="color:#719e07">.</span>to(device)
-</code></pre></div><p>By moving tensors and models to the GPU, PyTorch automatically utilizes the GPU&rsquo;s computational power, leading to faster computations compared to running on the CPU. It&rsquo;s important to note that not all operations are automatically GPU-accelerated. PyTorch provides GPU-accelerated implementations for most common operations, but some custom operations may require manual implementation for GPU compatibility.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>input_data <span style="color:#719e07">=</span> input_data<span style="color:#719e07">.</span>to(device)
+</span></span></code></pre></div><p>By moving tensors and models to the GPU, PyTorch automatically utilizes the GPU&rsquo;s computational power, leading to faster computations compared to running on the CPU. It&rsquo;s important to note that not all operations are automatically GPU-accelerated. PyTorch provides GPU-accelerated implementations for most common operations, but some custom operations may require manual implementation for GPU compatibility.</p>
 <p>When using a GPU, it&rsquo;s also essential to manage GPU memory appropriately, especially when working with large models or batches of data. You may need to optimize your code to minimize memory usage, such as using gradient accumulation or batch splitting techniques.</p>
 <p>Remember to perform necessary operations on the same device (CPU or GPU) to avoid unnecessary data transfers between devices, as it can negatively impact performance.</p>
 <h2 id="addition-topics">Addition Topics</h2>
@@ -1132,7 +1132,7 @@ model<span style="color:#719e07">.</span>fc<span style="color:#719e07">.</span>b
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -1154,17 +1154,20 @@ model<span style="color:#719e07">.</span>fc<span style="color:#719e07">.</span>b
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

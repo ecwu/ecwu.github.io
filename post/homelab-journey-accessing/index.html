@@ -4,9 +4,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Homelab：我的赛博积木 - 访问 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -387,29 +387,29 @@
 <p>群晖中使用 Docker 的服务相对是比较难管理的，各个服务都会用不同的端口号。再加上群晖虽然使用 Nginx 展示各种内容，但你无法方便的修改配置将主页映射到容器中（也就无法使用之前章节中介绍的 Flame 或者 Homarr）。</p>
 <p>为此我使用了 Hugo 制作了一个门户页（使用 <a href="https://github.com/adityatelange/hugo-PaperMod/">Hugo-PaperMod</a> 模板），来方便访问不同的服务。但是这个静态页面有些小问题，因为前面提到的访问方法很多，不同情况下，我的访问用的 URL 都是不一样的，正常 HTML 并无法自适应。但群晖的 DSM 中却有这一特性，即会根据你访问的 URL 来动态的调整页面中提供的 URL。为了实现类似的功能，我修改了 Hugo 模板的一些代码，加入了一段 JavaScript 来动态的修改按钮的 URL。</p>
 <p><img src="http://cdn.ecwuuuuu.com/blog/image/homelab/nas-80-hugo-home.png" alt="NAS 上用 Hugo 生成的页面"></p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-Javascript" data-lang="Javascript"><span style="color:#268bd2">let</span> getUrl <span style="color:#719e07">=</span> <span style="color:#b58900">window</span>.location;
-<span style="color:#268bd2">let</span> baseUrl <span style="color:#719e07">=</span> getUrl.protocol<span style="color:#719e07">+</span><span style="color:#2aa198">&#34;//&#34;</span><span style="color:#719e07">+</span>getUrl.hostname;
-<span style="color:#268bd2">let</span> btns <span style="color:#719e07">=</span> <span style="color:#b58900">document</span>.getElementsByClassName(<span style="color:#2aa198">&#34;dynamic-url&#34;</span>);
-
-<span style="color:#719e07">for</span>(<span style="color:#268bd2">let</span> i<span style="color:#719e07">=</span><span style="color:#2aa198">0</span>; i <span style="color:#719e07">&lt;</span> btns.length; i<span style="color:#719e07">++</span>){
-  btn_url <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> URL(btns.item(i).href);
-  btns.item(i).setAttribute(<span style="color:#2aa198">&#34;href&#34;</span>, baseUrl <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;:&#34;</span> <span style="color:#719e07">+</span> btn_url.port <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;/&#34;</span>);
-}
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#268bd2">let</span> getUrl <span style="color:#719e07">=</span> <span style="color:#b58900">window</span>.location;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">let</span> baseUrl <span style="color:#719e07">=</span> getUrl.protocol<span style="color:#719e07">+</span><span style="color:#2aa198">&#34;//&#34;</span><span style="color:#719e07">+</span>getUrl.hostname;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">let</span> btns <span style="color:#719e07">=</span> <span style="color:#b58900">document</span>.getElementsByClassName(<span style="color:#2aa198">&#34;dynamic-url&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">for</span>(<span style="color:#268bd2">let</span> i<span style="color:#719e07">=</span><span style="color:#2aa198">0</span>; i <span style="color:#719e07">&lt;</span> btns.length; i<span style="color:#719e07">++</span>){
+</span></span><span style="display:flex;"><span>  btn_url <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> URL(btns.item(i).href);
+</span></span><span style="display:flex;"><span>  btns.item(i).setAttribute(<span style="color:#2aa198">&#34;href&#34;</span>, baseUrl <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;:&#34;</span> <span style="color:#719e07">+</span> btn_url.port <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;/&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
 <p>这段代码的意思是，首先拿到当前访问的网址做处理，提取出协议和 Hostname 组成 BaseURL。然后循环对页面中所有按钮的 URL处理：将 Hostname 部分修改成 BaseURL（可以认为是替换，但实际的做法是将端口号提取出来，然后和 BaseURL 组装出新的 URL）。其中 Anchor 按钮都会带有 <code>dynamic-url</code> class，方便使用 <code>getElementsByClassName</code> 提取出来，批量替换。</p>
 </blockquote>
 <h2 id="本地服务域名访问--配置-ssl-证书">本地服务域名访问 + 配置 SSL 证书</h2>
 <p>部署了太多的服务，就比较难管理，除了用门户/开源的导航页的方案，还有一种方法是设定多个有意义的域名，然后将域名的请求指向特定的服务。这样不需要记 Port Number，也可以访问想要的服务。这背后基于反向代理基于。这里将所有的域名都解析到本地设备的 IP（可以使用 Cloudflare 的泛域名解析），并且本地设备的 80 和 443 端口已经被 Nginx / Caddy / Traefik 之类的 Web 服务端/代理工具托管。这样，你访问设置好的域名都会访问到对应的 IP，但是你访问使用的 Hostname 信息依然会随着请求头发送到服务端，服务端就是根据这个信息，来将请求转发到对应的服务中。</p>
 <h3 id="caddy-配置示例">Caddy 配置示例</h3>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">portainer.local.ecwu.xyz {
-  reverse_proxy https://portainer:9443 {
-    transport http {
-      tls_insecure_skip_verify
-    }
-  }
-  tls /data/cert/local.ecwu.xyz.crt /data/cert/local.ecwu.xyz.key
-}
-</code></pre></div><p>上图的配置是我用于本地的 Portainer 服务做的配置，使用的是 Caddy 作为服务端。因为 Portainer 默认使用 HTTPS，且会生成自签证书，这样需要要求不校验 HTTPS 证书的有效性。然后再套用自定义证书（Let&rsquo;s Encrypt）。<code>/data/cert/local.ecwu.xyz.(crt/key)</code> 就是我存储 certificates 并映射进 Caddy 容器中的位置。</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>portainer.local.ecwu.xyz {
+</span></span><span style="display:flex;"><span>  reverse_proxy https://portainer:9443 {
+</span></span><span style="display:flex;"><span>    transport http {
+</span></span><span style="display:flex;"><span>      tls_insecure_skip_verify
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  tls /data/cert/local.ecwu.xyz.crt /data/cert/local.ecwu.xyz.key
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>上图的配置是我用于本地的 Portainer 服务做的配置，使用的是 Caddy 作为服务端。因为 Portainer 默认使用 HTTPS，且会生成自签证书，这样需要要求不校验 HTTPS 证书的有效性。然后再套用自定义证书（Let&rsquo;s Encrypt）。<code>/data/cert/local.ecwu.xyz.(crt/key)</code> 就是我存储 certificates 并映射进 Caddy 容器中的位置。</p>
 <p>对于默认没有 HTTPS 的网址，配置更加简单，只需要定义 reverse_proxy 字段（需要注意，服务和 Caddy 在 Docker 中需要在同一网段，或者 IP 和端口在 Caddy 容器内可以访问到）。</p>
 <h3 id="lets-encrypt-针对用于局域网的域名申请证书">Let&rsquo;s Encrypt 针对用于局域网的域名申请证书</h3>
 <p>现在没有 HTTPS 证书的网站总是会带个不安全的提示，如果想避免这个情况，可以给自己的域名配置证书。但这个证书使用亚洲诚信来申请，他有一年的有效期，但是不支持泛域名证书，且申请有数量限制。Let&rsquo;s Encrypt 会存在一些小问题，他为了校验域名的所有，需要你在线存储特定信息的文件。但本地服务器是无法访问的，这个时候，你可以使用 DNS 校验的方式来验证。</p>
@@ -562,7 +562,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -584,17 +584,20 @@
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>

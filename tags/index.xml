@@ -4,1439 +4,1122 @@
     <title>Tags on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/tags/</link>
     <description>Recent content in Tags on ECWUUUUU</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Sep 2024 22:20:00 +0100</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Aug 2024 19:56:00 +0800</lastBuildDate>
+    <atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Authentication</title>
       <link>https://ecwuuuuu.com/tags/authentication/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/authentication/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Container</title>
       <link>https://ecwuuuuu.com/tags/container/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/container/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Docker</title>
       <link>https://ecwuuuuu.com/tags/docker/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>homelab</title>
+      <title>Homelab</title>
       <link>https://ecwuuuuu.com/tags/homelab/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/homelab/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Images</title>
       <link>https://ecwuuuuu.com/tags/images/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/images/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OIDC</title>
       <link>https://ecwuuuuu.com/tags/oidc/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/oidc/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OpenID Connect</title>
       <link>https://ecwuuuuu.com/tags/openid-connect/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/openid-connect/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SAML</title>
       <link>https://ecwuuuuu.com/tags/saml/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/saml/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Self-host</title>
+      <title>Self-Host</title>
       <link>https://ecwuuuuu.com/tags/self-host/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/self-host/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Service</title>
       <link>https://ecwuuuuu.com/tags/service/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/service/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Docker Images</title>
       <link>https://ecwuuuuu.com/tags/docker-images/</link>
       <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/docker-images/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>LDAP</title>
       <link>https://ecwuuuuu.com/tags/ldap/</link>
       <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/ldap/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Passkey</title>
       <link>https://ecwuuuuu.com/tags/passkey/</link>
       <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/passkey/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Passwordless</title>
       <link>https://ecwuuuuu.com/tags/passwordless/</link>
       <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/passwordless/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Single Sign-on</title>
+      <title>Single Sign-On</title>
       <link>https://ecwuuuuu.com/tags/single-sign-on/</link>
       <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/single-sign-on/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SSO</title>
       <link>https://ecwuuuuu.com/tags/sso/</link>
       <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/sso/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DataLoader</title>
       <link>https://ecwuuuuu.com/tags/dataloader/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/dataloader/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Dataset</title>
       <link>https://ecwuuuuu.com/tags/dataset/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/dataset/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Deep Learning</title>
       <link>https://ecwuuuuu.com/tags/deep-learning/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/deep-learning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Machine Learning</title>
       <link>https://ecwuuuuu.com/tags/machine-learning/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/machine-learning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>MLP</title>
       <link>https://ecwuuuuu.com/tags/mlp/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/mlp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Model</title>
       <link>https://ecwuuuuu.com/tags/model/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/model/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PyTorch</title>
       <link>https://ecwuuuuu.com/tags/pytorch/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/pytorch/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tensorflow</title>
       <link>https://ecwuuuuu.com/tags/tensorflow/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/tensorflow/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Transfer Learning</title>
       <link>https://ecwuuuuu.com/tags/transfer-learning/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/transfer-learning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tutorial</title>
       <link>https://ecwuuuuu.com/tags/tutorial/</link>
       <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/tutorial/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ddns</title>
+      <title>DDNS</title>
       <link>https://ecwuuuuu.com/tags/ddns/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/ddns/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>FRP</title>
       <link>https://ecwuuuuu.com/tags/frp/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/frp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>J4125</title>
       <link>https://ecwuuuuu.com/tags/j4125/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/j4125/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Networking</title>
       <link>https://ecwuuuuu.com/tags/networking/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/networking/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Synology</title>
       <link>https://ecwuuuuu.com/tags/synology/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/synology/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tencent Cloud</title>
       <link>https://ecwuuuuu.com/tags/tencent-cloud/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/tencent-cloud/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>组网</title>
       <link>https://ecwuuuuu.com/tags/%E7%BB%84%E7%BD%91/</link>
       <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/%E7%BB%84%E7%BD%91/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Synology QuickConnect</title>
       <link>https://ecwuuuuu.com/tags/synology-quickconnect/</link>
       <pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/synology-quickconnect/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tailscale</title>
       <link>https://ecwuuuuu.com/tags/tailscale/</link>
       <pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/tailscale/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>input-overlay</title>
+      <title>Input-Overlay</title>
       <link>https://ecwuuuuu.com/tags/input-overlay/</link>
       <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/input-overlay/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Live</title>
       <link>https://ecwuuuuu.com/tags/live/</link>
       <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/live/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OBS Studio</title>
       <link>https://ecwuuuuu.com/tags/obs-studio/</link>
       <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/obs-studio/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Plugin</title>
       <link>https://ecwuuuuu.com/tags/plugin/</link>
       <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/plugin/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Screen capture</title>
+      <title>Screen Capture</title>
       <link>https://ecwuuuuu.com/tags/screen-capture/</link>
       <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/screen-capture/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Streaming</title>
       <link>https://ecwuuuuu.com/tags/streaming/</link>
       <pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/streaming/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Architecture</title>
       <link>https://ecwuuuuu.com/tags/architecture/</link>
       <pubDate>Sun, 08 Jan 2023 23:17:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/architecture/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>List</title>
       <link>https://ecwuuuuu.com/tags/list/</link>
       <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/list/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>opensource</title>
+      <title>Opensource</title>
       <link>https://ecwuuuuu.com/tags/opensource/</link>
       <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/opensource/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Selfhost</title>
       <link>https://ecwuuuuu.com/tags/selfhost/</link>
       <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/selfhost/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>server</title>
+      <title>Server</title>
       <link>https://ecwuuuuu.com/tags/server/</link>
       <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/server/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>summary</title>
+      <title>Summary</title>
       <link>https://ecwuuuuu.com/tags/summary/</link>
       <pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/summary/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Music</title>
       <link>https://ecwuuuuu.com/tags/music/</link>
       <pubDate>Tue, 27 Dec 2022 23:52:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/music/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>baota</title>
+      <title>Baota</title>
       <link>https://ecwuuuuu.com/tags/baota/</link>
       <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/baota/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cloud</title>
+      <title>Cloud</title>
       <link>https://ecwuuuuu.com/tags/cloud/</link>
       <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/cloud/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git</title>
+      <title>Git</title>
       <link>https://ecwuuuuu.com/tags/git/</link>
       <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gitea</title>
+      <title>Gitea</title>
       <link>https://ecwuuuuu.com/tags/gitea/</link>
       <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/gitea/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gitlab</title>
+      <title>Gitlab</title>
       <link>https://ecwuuuuu.com/tags/gitlab/</link>
       <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/gitlab/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gitlab-ce</title>
+      <title>Gitlab-Ce</title>
       <link>https://ecwuuuuu.com/tags/gitlab-ce/</link>
       <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/gitlab-ce/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>nginx</title>
+      <title>Nginx</title>
       <link>https://ecwuuuuu.com/tags/nginx/</link>
       <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/nginx/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Collection</title>
       <link>https://ecwuuuuu.com/tags/collection/</link>
       <pubDate>Thu, 07 Apr 2022 16:07:13 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/collection/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>School</title>
       <link>https://ecwuuuuu.com/tags/school/</link>
       <pubDate>Thu, 07 Apr 2022 16:07:13 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/school/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Art</title>
       <link>https://ecwuuuuu.com/tags/art/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/art/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CIELAB</title>
       <link>https://ecwuuuuu.com/tags/cielab/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/cielab/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Color</title>
       <link>https://ecwuuuuu.com/tags/color/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/color/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Color Differences</title>
       <link>https://ecwuuuuu.com/tags/color-differences/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/color-differences/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Color Space</title>
       <link>https://ecwuuuuu.com/tags/color-space/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/color-space/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Design</title>
       <link>https://ecwuuuuu.com/tags/design/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/design/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HSL</title>
       <link>https://ecwuuuuu.com/tags/hsl/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/hsl/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HSV</title>
       <link>https://ecwuuuuu.com/tags/hsv/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/hsv/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Perception</title>
       <link>https://ecwuuuuu.com/tags/perception/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/perception/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Programming</title>
       <link>https://ecwuuuuu.com/tags/programming/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/programming/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>RGB</title>
       <link>https://ecwuuuuu.com/tags/rgb/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/rgb/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Asus</title>
       <link>https://ecwuuuuu.com/tags/asus/</link>
       <pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/asus/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>EUI-64</title>
       <link>https://ecwuuuuu.com/tags/eui-64/</link>
       <pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/eui-64/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Firewall</title>
       <link>https://ecwuuuuu.com/tags/firewall/</link>
       <pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/firewall/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Linksys</title>
       <link>https://ecwuuuuu.com/tags/linksys/</link>
       <pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/linksys/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Placeholder</title>
       <link>https://ecwuuuuu.com/tags/placeholder/</link>
       <pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/placeholder/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>3D Printing</title>
       <link>https://ecwuuuuu.com/tags/3d-printing/</link>
       <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/3d-printing/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Arduino</title>
       <link>https://ecwuuuuu.com/tags/arduino/</link>
       <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/arduino/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Fingerprint</title>
       <link>https://ecwuuuuu.com/tags/fingerprint/</link>
       <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/fingerprint/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Microphone</title>
       <link>https://ecwuuuuu.com/tags/microphone/</link>
       <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/microphone/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>RFID</title>
       <link>https://ecwuuuuu.com/tags/rfid/</link>
       <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/rfid/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Robotic</title>
       <link>https://ecwuuuuu.com/tags/robotic/</link>
       <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/robotic/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Smart Lock</title>
       <link>https://ecwuuuuu.com/tags/smart-lock/</link>
       <pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/smart-lock/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Recommendation</title>
       <link>https://ecwuuuuu.com/tags/recommendation/</link>
       <pubDate>Tue, 11 Jan 2022 21:58:05 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/recommendation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Video</title>
       <link>https://ecwuuuuu.com/tags/video/</link>
       <pubDate>Tue, 11 Jan 2022 21:58:05 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/video/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>YouTube</title>
       <link>https://ecwuuuuu.com/tags/youtube/</link>
       <pubDate>Tue, 11 Jan 2022 21:58:05 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/youtube/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>YouTuber</title>
       <link>https://ecwuuuuu.com/tags/youtuber/</link>
       <pubDate>Tue, 11 Jan 2022 21:58:05 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/youtuber/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Anime</title>
       <link>https://ecwuuuuu.com/tags/anime/</link>
       <pubDate>Mon, 10 Jan 2022 22:04:44 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/anime/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Figure</title>
       <link>https://ecwuuuuu.com/tags/figure/</link>
       <pubDate>Mon, 10 Jan 2022 22:04:44 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/figure/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Flash</title>
       <link>https://ecwuuuuu.com/tags/flash/</link>
       <pubDate>Mon, 10 Jan 2022 22:04:44 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/flash/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hinata Shoyo</title>
       <link>https://ecwuuuuu.com/tags/hinata-shoyo/</link>
       <pubDate>Mon, 10 Jan 2022 22:04:44 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/hinata-shoyo/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git branch</title>
+      <title>Git Branch</title>
       <link>https://ecwuuuuu.com/tags/git-branch/</link>
       <pubDate>Mon, 10 Jan 2022 15:54:37 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/git-branch/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git rebase</title>
+      <title>Git Rebase</title>
       <link>https://ecwuuuuu.com/tags/git-rebase/</link>
       <pubDate>Mon, 10 Jan 2022 15:54:37 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/git-rebase/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>github</title>
+      <title>Github</title>
       <link>https://ecwuuuuu.com/tags/github/</link>
       <pubDate>Mon, 10 Jan 2022 15:54:37 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/github/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>repository</title>
+      <title>Repository</title>
       <link>https://ecwuuuuu.com/tags/repository/</link>
       <pubDate>Mon, 10 Jan 2022 15:54:37 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/repository/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>hugo</title>
+      <title>Hugo</title>
       <link>https://ecwuuuuu.com/tags/hugo/</link>
       <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tailwind</title>
+      <title>Tailwind</title>
       <link>https://ecwuuuuu.com/tags/tailwind/</link>
       <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/tailwind/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>theme</title>
+      <title>Theme</title>
       <link>https://ecwuuuuu.com/tags/theme/</link>
       <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/theme/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Website</title>
       <link>https://ecwuuuuu.com/tags/website/</link>
       <pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/website/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>.xyz</title>
+      <title>.Xyz</title>
       <link>https://ecwuuuuu.com/tags/.xyz/</link>
       <pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/.xyz/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Cloudflare</title>
       <link>https://ecwuuuuu.com/tags/cloudflare/</link>
       <pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/cloudflare/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Domain</title>
       <link>https://ecwuuuuu.com/tags/domain/</link>
       <pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/domain/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dotxyz</title>
+      <title>Dotxyz</title>
       <link>https://ecwuuuuu.com/tags/dotxyz/</link>
       <pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/dotxyz/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Gandi</title>
       <link>https://ecwuuuuu.com/tags/gandi/</link>
       <pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/gandi/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>FUJIFILM X-T4</title>
       <link>https://ecwuuuuu.com/tags/fujifilm-x-t4/</link>
       <pubDate>Tue, 20 Jul 2021 13:57:20 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/fujifilm-x-t4/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Metro</title>
       <link>https://ecwuuuuu.com/tags/metro/</link>
       <pubDate>Tue, 20 Jul 2021 13:57:20 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/metro/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Set</title>
       <link>https://ecwuuuuu.com/tags/set/</link>
       <pubDate>Tue, 20 Jul 2021 13:57:20 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/set/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>X-T4</title>
       <link>https://ecwuuuuu.com/tags/x-t4/</link>
       <pubDate>Tue, 20 Jul 2021 13:57:20 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/x-t4/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Activation Function</title>
       <link>https://ecwuuuuu.com/tags/activation-function/</link>
       <pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/activation-function/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Classification</title>
       <link>https://ecwuuuuu.com/tags/classification/</link>
       <pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/classification/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Sigmoid</title>
       <link>https://ecwuuuuu.com/tags/sigmoid/</link>
       <pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/sigmoid/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Softmax</title>
       <link>https://ecwuuuuu.com/tags/softmax/</link>
       <pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/softmax/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Controllable Text Generation</title>
       <link>https://ecwuuuuu.com/tags/controllable-text-generation/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/controllable-text-generation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Cross Modal</title>
       <link>https://ecwuuuuu.com/tags/cross-modal/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/cross-modal/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Dialogue</title>
       <link>https://ecwuuuuu.com/tags/dialogue/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/dialogue/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Natural Language Processing</title>
       <link>https://ecwuuuuu.com/tags/natural-language-processing/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/natural-language-processing/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NLP</title>
       <link>https://ecwuuuuu.com/tags/nlp/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/nlp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Offensive Detection</title>
       <link>https://ecwuuuuu.com/tags/offensive-detection/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/offensive-detection/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Pre-trained Language Model</title>
+      <title>Pre-Trained Language Model</title>
       <link>https://ecwuuuuu.com/tags/pre-trained-language-model/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/pre-trained-language-model/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Summarization</title>
       <link>https://ecwuuuuu.com/tags/summarization/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/summarization/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Text Generation</title>
       <link>https://ecwuuuuu.com/tags/text-generation/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/text-generation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Transformer</title>
       <link>https://ecwuuuuu.com/tags/transformer/</link>
       <pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/transformer/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DS918&#43;</title>
       <link>https://ecwuuuuu.com/tags/ds918&#43;/</link>
       <pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/ds918&#43;/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HTTPS</title>
       <link>https://ecwuuuuu.com/tags/https/</link>
       <pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/https/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NAS</title>
       <link>https://ecwuuuuu.com/tags/nas/</link>
       <pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/nas/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Home</title>
       <link>https://ecwuuuuu.com/tags/home/</link>
       <pubDate>Fri, 25 Dec 2020 21:30:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/home/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Instagram</title>
       <link>https://ecwuuuuu.com/tags/instagram/</link>
       <pubDate>Fri, 25 Dec 2020 21:30:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/instagram/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mobile Phone Photography</title>
       <link>https://ecwuuuuu.com/tags/mobile-phone-photography/</link>
       <pubDate>Fri, 25 Dec 2020 21:30:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/mobile-phone-photography/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HP5 PLUS</title>
       <link>https://ecwuuuuu.com/tags/hp5-plus/</link>
       <pubDate>Thu, 16 Jul 2020 15:20:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/hp5-plus/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ILFORD</title>
+      <title>Ilford</title>
       <link>https://ecwuuuuu.com/tags/ilford/</link>
       <pubDate>Thu, 16 Jul 2020 15:20:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/ilford/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Kodak</title>
       <link>https://ecwuuuuu.com/tags/kodak/</link>
       <pubDate>Thu, 16 Jul 2020 15:20:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/kodak/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Photography</title>
       <link>https://ecwuuuuu.com/tags/photography/</link>
       <pubDate>Thu, 16 Jul 2020 15:20:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/photography/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PKX</title>
       <link>https://ecwuuuuu.com/tags/pkx/</link>
       <pubDate>Thu, 16 Jul 2020 15:20:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/pkx/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Portra 400</title>
       <link>https://ecwuuuuu.com/tags/portra-400/</link>
       <pubDate>Thu, 16 Jul 2020 15:20:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/portra-400/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>UIC</title>
       <link>https://ecwuuuuu.com/tags/uic/</link>
       <pubDate>Mon, 13 Jul 2020 21:43:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/uic/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>120 Film</title>
       <link>https://ecwuuuuu.com/tags/120-film/</link>
       <pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/120-film/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>135 Film</title>
       <link>https://ecwuuuuu.com/tags/135-film/</link>
       <pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/135-film/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>analog</title>
+      <title>Analog</title>
       <link>https://ecwuuuuu.com/tags/analog/</link>
       <pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/analog/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Film</title>
       <link>https://ecwuuuuu.com/tags/film/</link>
       <pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/film/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mamiya</title>
       <link>https://ecwuuuuu.com/tags/mamiya/</link>
       <pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/mamiya/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mamiya RB67</title>
       <link>https://ecwuuuuu.com/tags/mamiya-rb67/</link>
       <pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/mamiya-rb67/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>AGFAPhoto</title>
       <link>https://ecwuuuuu.com/tags/agfaphoto/</link>
       <pubDate>Sat, 14 Sep 2019 00:07:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/agfaphoto/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Fujifilm</title>
       <link>https://ecwuuuuu.com/tags/fujifilm/</link>
       <pubDate>Sat, 14 Sep 2019 00:07:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/fujifilm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Article</title>
       <link>https://ecwuuuuu.com/tags/article/</link>
       <pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/article/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Book</title>
       <link>https://ecwuuuuu.com/tags/book/</link>
       <pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/book/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hobby</title>
       <link>https://ecwuuuuu.com/tags/hobby/</link>
       <pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/hobby/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Movie</title>
       <link>https://ecwuuuuu.com/tags/movie/</link>
       <pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/movie/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Barrelfish OS</title>
       <link>https://ecwuuuuu.com/tags/barrelfish-os/</link>
       <pubDate>Wed, 09 Jan 2019 12:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/barrelfish-os/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Computer Science</title>
       <link>https://ecwuuuuu.com/tags/computer-science/</link>
       <pubDate>Wed, 09 Jan 2019 12:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/computer-science/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ETH Zurich</title>
       <link>https://ecwuuuuu.com/tags/eth-zurich/</link>
       <pubDate>Wed, 09 Jan 2019 12:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/eth-zurich/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Multi-kernel</title>
+      <title>Multi-Kernel</title>
       <link>https://ecwuuuuu.com/tags/multi-kernel/</link>
       <pubDate>Wed, 09 Jan 2019 12:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/multi-kernel/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Operating System</title>
       <link>https://ecwuuuuu.com/tags/operating-system/</link>
       <pubDate>Wed, 09 Jan 2019 12:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/operating-system/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OS</title>
       <link>https://ecwuuuuu.com/tags/os/</link>
       <pubDate>Wed, 09 Jan 2019 12:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/os/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Academy of film hkbu</title>
+      <title>Academy of Film Hkbu</title>
       <link>https://ecwuuuuu.com/tags/academy-of-film-hkbu/</link>
       <pubDate>Mon, 20 Aug 2018 02:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/academy-of-film-hkbu/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HKBU Summer Program</title>
       <link>https://ecwuuuuu.com/tags/hkbu-summer-program/</link>
       <pubDate>Mon, 20 Aug 2018 02:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/hkbu-summer-program/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hong Kong</title>
       <link>https://ecwuuuuu.com/tags/hong-kong/</link>
       <pubDate>Mon, 20 Aug 2018 02:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/hong-kong/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Television Studio Production</title>
       <link>https://ecwuuuuu.com/tags/television-studio-production/</link>
       <pubDate>Mon, 20 Aug 2018 02:56:01 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/television-studio-production/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Adobe Premiere</title>
       <link>https://ecwuuuuu.com/tags/adobe-premiere/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/adobe-premiere/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PDF</title>
       <link>https://ecwuuuuu.com/tags/pdf/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/pdf/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Share</title>
       <link>https://ecwuuuuu.com/tags/share/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/share/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Video Editing</title>
       <link>https://ecwuuuuu.com/tags/video-editing/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/video-editing/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Workflow</title>
       <link>https://ecwuuuuu.com/tags/workflow/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/tags/workflow/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>gitea on ECWUUUUU</title>
+    <title>Gitea on ECWUUUUU</title>
     <link>https://ecwuuuuu.com/tags/gitea/</link>
-    <description>Recent content in gitea on ECWUUUUU</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Gitea on ECWUUUUU</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Jul 2022 09:17:36 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/gitea/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ecwuuuuu.com/tags/gitea/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自建 GitLab 配置 SSH 和后续</title>
       <link>https://ecwuuuuu.com/post/gitlab-updates/</link>
       <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
-      
       <guid>https://ecwuuuuu.com/post/gitlab-updates/</guid>
-      <description>整体比较流水账，只做记录。 配置 SSH 部署了 GitLab 之后，一直在使用 HTTPS，体验不错。但是当时没有将 GitLab 的 SSH 访问成功配置。 当初的配置尝试过：1. 将 SSH 与</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;整体比较流水账，只做记录。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;配置-ssh&#34;&gt;配置 SSH&lt;/h2&gt;&#xA;&lt;p&gt;部署了 GitLab 之后，一直在使用 HTTPS，体验不错。但是当时没有将 GitLab 的 SSH 访问成功配置。&lt;/p&gt;&#xA;&lt;p&gt;当初的配置尝试过：1. 将 SSH 与服务器的 SSH 的端口共用。 2. 单独设置一个 SSH 端口并暴露出来。我的操作是直接在域名后面加端口号进行访问：&lt;code&gt;git.ecwuuuuu.com:&amp;lt;port&amp;gt;&lt;/code&gt; 但进行 Git 操作都没有成功过。在排查 Log 发现是链接失败后，对域名执行了 nslookup，发现 IP 并不是预期的服务器 IP，这里是因为我使用了 Cloudflare 的解析服务，真实的 IP 被隐藏了。所以操作行不通。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,9 +4,9 @@
 <link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
 
 
-    
-    
-    <link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.090461abe385b6d2cfe319e089ab1b6802a8f36b133963afa9be1ab87fd5af7a.css" integrity="sha256-CQRhq&#43;OFttLP4xngiasbaAKo82sTOWOvqb4auH/Vr3o=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -334,62 +334,62 @@
 <li>身份验证服务：Authentik。</li>
 </ul>
 <p>这里需要注意的是因为我们需要将授权后得到的 Cookie 保存在浏览器，所以验证服务是需要和应用在有一个域名下的，要实现这需要部署 Authentik Proxy，并配置 Treafik 将特定子目录的请求导向这个 Proxy。而 Proxy 本身通过 API 与 Authentik server 通信。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-yaml" data-lang="yaml"><span style="color:#268bd2">services</span>:
-  <span style="color:#268bd2">flame</span>:
-    <span style="color:#268bd2">image</span>: pawelmalak/flame:latest
-    <span style="color:#268bd2">container_name</span>: flame
-    <span style="color:#268bd2">volumes</span>:
-      - ./data:/app/data
-      - /var/run/docker.sock:/var/run/docker.sock <span style="color:#586e75"># optional but required for Docker integration feature</span>
-    <span style="color:#268bd2">environment</span>:
-      - PASSWORD=flame_password
-    <span style="color:#268bd2">labels</span>:
-      <span style="color:#268bd2">traefik.enable</span>: <span style="color:#cb4b16">true</span>
-      <span style="color:#268bd2">traefik.http.services.flame.loadbalancer.server.port</span>: <span style="color:#2aa198">5005</span>
-      <span style="color:#268bd2">traefik.http.routers.flame.service</span>: flame
-      <span style="color:#268bd2">traefik.http.routers.flame.rule</span>: Host(`flame服务.的.域名`)
-      <span style="color:#268bd2">traefik.http.routers.flame.entrypoints</span>: web
-      <span style="color:#268bd2">traefik.http.routers.flame-tls.service</span>: flame
-      <span style="color:#268bd2">traefik.http.routers.flame-tls.rule</span>: Host(`flame服务.的.域名`)
-      <span style="color:#268bd2">traefik.http.routers.flame-tls.priority</span>: <span style="color:#2aa198">10</span>
-      <span style="color:#268bd2">traefik.http.routers.flame-tls.entrypoints</span>: websecure
-      <span style="color:#268bd2">traefik.http.routers.flame-tls.tls.certresolver</span>: cfresolver
-      <span style="color:#268bd2">traefik.http.routers.flame-tls.middlewares</span>: authentik@docker
-    <span style="color:#268bd2">restart</span>: unless-stopped
-    <span style="color:#268bd2">networks</span>:
-      - traefik
-  <span style="color:#268bd2">authentik-proxy</span>:
-    <span style="color:#268bd2">image</span>: ghcr.io/goauthentik/proxy
-    <span style="color:#268bd2">ports</span>:
-      - <span style="color:#2aa198">9000</span>:<span style="color:#2aa198">9000</span>
-      - <span style="color:#2aa198">9444</span>:<span style="color:#2aa198">9443</span>
-    <span style="color:#268bd2">networks</span>:
-      - traefik
-      - authentik_authentik
-    <span style="color:#268bd2">environment</span>:
-      <span style="color:#268bd2">AUTHENTIK_HOST</span>: https://auth服务.的.域名/
-      <span style="color:#268bd2">AUTHENTIK_INSECURE</span>: <span style="color:#2aa198">&#34;false&#34;</span>
-      <span style="color:#268bd2">AUTHENTIK_TOKEN</span>: 在 Authentik 后台 Outpost 可以获取到 API TOKEN
-      <span style="color:#268bd2">AUTHENTIK_HOST_BROWSER</span>: https://auth服务.的.域名 <span style="color:#586e75"># 可以设定内外网不同的域名 </span>
-    <span style="color:#268bd2">labels</span>:
-      <span style="color:#268bd2">traefik.enable</span>: <span style="color:#cb4b16">true</span>
-      <span style="color:#268bd2">traefik.http.services.authentik-proxy.loadbalancer.server.port</span>: <span style="color:#2aa198">9000</span>
-      <span style="color:#268bd2">traefik.http.routers.authentik-proxy.service</span>: authentik-proxy
-      <span style="color:#268bd2">traefik.http.routers.authentik-proxy.rule</span>: Host(`flame服务.的.域名`) &amp;&amp; PathPrefix(`/outpost.goauthentik.io/`)
-      <span style="color:#268bd2">traefik.http.routers.authentik-proxy.entrypoints</span>: web
-      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.service</span>: authentik-proxy
-      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.rule</span>: Host(`flame服务.的.域名`) &amp;&amp; PathPrefix(`/outpost.goauthentik.io/`)
-      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.priority</span>: <span style="color:#2aa198">15</span>
-      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.entrypoints</span>: websecure
-      <span style="color:#268bd2">traefik.http.middlewares.authentik.forwardauth.address</span>: http://authentik-proxy:9000/outpost.goauthentik.io/auth/traefik  <span style="color:#586e75"># 这里写 Traefik 能访问到 Authentik Proxy 的网址。</span>
-      <span style="color:#268bd2">traefik.http.middlewares.authentik.forwardauth.trustForwardHeader</span>: <span style="color:#cb4b16">true</span>
-      <span style="color:#268bd2">traefik.http.middlewares.authentik.forwardauth.authResponseHeaders</span>: X-authentik-username,X-authentik-groups,X-authentik-email,X-authentik-name,X-authentik-uid,X-authentik-jwt,X-authentik-meta-jwks,X-authentik-meta-outpost,X-authentik-meta-provider,X-authentik-meta-app,X-authentik-meta-version
-<span style="color:#268bd2">networks</span>:
-  <span style="color:#268bd2">traefik</span>:
-    <span style="color:#268bd2">external</span>: <span style="color:#cb4b16">true</span>
-  <span style="color:#268bd2">authentik_authentik</span>:
-    <span style="color:#268bd2">external</span>: <span style="color:#cb4b16">true</span>
-</code></pre></div><p>其中需要讲解的几个点：</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#268bd2">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">flame</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">image</span>: pawelmalak/flame:latest
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">container_name</span>: flame
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">volumes</span>:
+</span></span><span style="display:flex;"><span>      - ./data:/app/data
+</span></span><span style="display:flex;"><span>      - /var/run/docker.sock:/var/run/docker.sock <span style="color:#586e75"># optional but required for Docker integration feature</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">environment</span>:
+</span></span><span style="display:flex;"><span>      - PASSWORD=flame_password
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">labels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.enable</span>: <span style="color:#cb4b16">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.services.flame.loadbalancer.server.port</span>: <span style="color:#2aa198">5005</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.flame.service</span>: flame
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.flame.rule</span>: Host(`flame服务.的.域名`)
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.flame.entrypoints</span>: web
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.flame-tls.service</span>: flame
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.flame-tls.rule</span>: Host(`flame服务.的.域名`)
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.flame-tls.priority</span>: <span style="color:#2aa198">10</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.flame-tls.entrypoints</span>: websecure
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.flame-tls.tls.certresolver</span>: cfresolver
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.flame-tls.middlewares</span>: authentik@docker
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">restart</span>: unless-stopped
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">networks</span>:
+</span></span><span style="display:flex;"><span>      - traefik
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">authentik-proxy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">image</span>: ghcr.io/goauthentik/proxy
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#2aa198">9000</span>:<span style="color:#2aa198">9000</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#2aa198">9444</span>:<span style="color:#2aa198">9443</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">networks</span>:
+</span></span><span style="display:flex;"><span>      - traefik
+</span></span><span style="display:flex;"><span>      - authentik_authentik
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">AUTHENTIK_HOST</span>: https://auth服务.的.域名/
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">AUTHENTIK_INSECURE</span>: <span style="color:#2aa198">&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">AUTHENTIK_TOKEN</span>: 在 Authentik 后台 Outpost 可以获取到 API TOKEN
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">AUTHENTIK_HOST_BROWSER</span>: https://auth服务.的.域名 <span style="color:#586e75"># 可以设定内外网不同的域名 </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">labels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.enable</span>: <span style="color:#cb4b16">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.services.authentik-proxy.loadbalancer.server.port</span>: <span style="color:#2aa198">9000</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.authentik-proxy.service</span>: authentik-proxy
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.authentik-proxy.rule</span>: Host(`flame服务.的.域名`) &amp;&amp; PathPrefix(`/outpost.goauthentik.io/`)
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.authentik-proxy.entrypoints</span>: web
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.service</span>: authentik-proxy
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.rule</span>: Host(`flame服务.的.域名`) &amp;&amp; PathPrefix(`/outpost.goauthentik.io/`)
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.priority</span>: <span style="color:#2aa198">15</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.routers.authentik-proxy-tls.entrypoints</span>: websecure
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.middlewares.authentik.forwardauth.address</span>: http://authentik-proxy:9000/outpost.goauthentik.io/auth/traefik  <span style="color:#586e75"># 这里写 Traefik 能访问到 Authentik Proxy 的网址。</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.middlewares.authentik.forwardauth.trustForwardHeader</span>: <span style="color:#cb4b16">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#268bd2">traefik.http.middlewares.authentik.forwardauth.authResponseHeaders</span>: X-authentik-username,X-authentik-groups,X-authentik-email,X-authentik-name,X-authentik-uid,X-authentik-jwt,X-authentik-meta-jwks,X-authentik-meta-outpost,X-authentik-meta-provider,X-authentik-meta-app,X-authentik-meta-version
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">traefik</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">external</span>: <span style="color:#cb4b16">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">authentik_authentik</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">external</span>: <span style="color:#cb4b16">true</span>
+</span></span></code></pre></div><p>其中需要讲解的几个点：</p>
 <ul>
 <li><code>flame-tls.middlewares: authentik@docker</code> 里面特指的 <code>authentik@docker</code> 就是我们在 authentik-proxy 容器 labels 里面配置的 <code>middlewares.authentik.forwardauth</code> 中间件。</li>
 <li>对于两个应用的 Host 我们设定了 <code>priority</code>，proxy 的优先级略高，这样如果发生了请求 URL 的冲突，会优先去做身份验证的请求。</li>
@@ -581,7 +581,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-01 04:24 CST.
+      Build by GitHub Actions at: 2024-10-01 05:07 CST.
     </p>
     <p>
       
@@ -603,17 +603,20 @@
 </div>
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-HSPDSQWH5L', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
 
 
     </body>
