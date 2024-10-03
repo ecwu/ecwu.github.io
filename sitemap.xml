@@ -2,14 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ecwuuuuu.com/categories/</loc>
+    <lastmod>2024-10-01T10:59:30+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/collection/</loc>
+    <lastmod>2024-08-08T19:56:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/</loc>
+    <lastmod>2024-10-01T10:59:30+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/film/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/guangzhou/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/photography/gz-sz-hk-and-kodak-gold/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/hong-kong/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/kodak-gold-200/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/medium-format/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/photography/</loc>
+    <lastmod>2024-08-08T19:56:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/photography/</loc>
+    <lastmod>2024-08-08T19:56:00+08:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/shenzhen/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/</loc>
+    <lastmod>2024-10-01T10:59:30+08:00</lastmod>
+  </url><url>
     <loc>https://ecwuuuuu.com/tags/authentication/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/series/authentik/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/</loc>
-    <lastmod>2024-10-01T10:59:30+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/cloud/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
@@ -19,9 +48,6 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/docker/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/</loc>
-    <lastmod>2024-10-01T10:59:30+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/homelab/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
@@ -49,9 +75,6 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/service/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/</loc>
-    <lastmod>2024-10-01T10:59:30+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/tech/</loc>
     <lastmod>2024-04-08T10:30:00+08:00</lastmod>
@@ -220,15 +243,6 @@
     <loc>https://ecwuuuuu.com/post/self-host-gitlab-instance/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/photography/500hrsin307/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/collection/</loc>
-    <lastmod>2024-08-08T19:56:00+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/photography/</loc>
-    <lastmod>2024-08-08T19:56:00+08:00</lastmod>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/photography/</loc>
-    <lastmod>2024-08-08T19:56:00+08:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/school/</loc>
   </url><url>
@@ -498,8 +512,6 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/analog/</loc>
   </url><url>
-    <loc>https://ecwuuuuu.com/tags/film/</loc>
-  </url><url>
     <loc>https://ecwuuuuu.com/series/film-photography/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/post/120-film-and-rb67/</loc>
@@ -550,8 +562,6 @@
     <loc>https://ecwuuuuu.com/tags/academy-of-film-hkbu/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/hkbu-summer-program/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/hong-kong/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/life/</loc>
   </url><url>
