@@ -6,8 +6,15 @@
     <description>Recent content in Cloud on ECWUUUUU</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Oct 2024 14:30:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 24 Nov 2024 14:19:00 +0000</lastBuildDate>
     <atom:link href="https://ecwuuuuu.com/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新装 GPU 服务器的容器化配置笔记</title>
+      <link>https://ecwuuuuu.com/post/gpu-container-setup-note/</link>
+      <pubDate>Sun, 24 Nov 2024 14:54:00 +0000</pubDate>
+      <guid>https://ecwuuuuu.com/post/gpu-container-setup-note/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 &lt;code&gt;lspci | grep &amp;quot;NVIDIA&amp;quot;&lt;/code&gt; 命令查看设备是否被识别。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Authentik 教程系列：服务的迁移</title>
       <link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link>

@@ -206,7 +206,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
         </svg>
-        Status: In Progress
+        Status: Finished
         
         
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -388,6 +388,10 @@
 </blockquote>
 <p>基于这样的需求：内网传输文件、所有设备都可以访问。就开始考虑部署一个网页的文件浏览器。</p>
 <p>以前自己玩云主机的时候，部署过 NextCloud (OwnCloud)。<a href="https://nextcloud.com/">NextCloud</a> 功能丰富，撑得起团队办公的需求（安装插件可以处理多种文件格式，支持协作办公）。但在内网的场景，完全没必要部署这么“重”的方案（反正只允许内网访问，甚至不需求鉴权）。所以最后选择的是用 Go 写的文件浏览器，<a href="https://github.com/filebrowser/filebrowser">filebrowser</a>。部署其 Docker 镜像，将目录映射到指定地点，就可以在 Web UI 进行文件的增删改查。支持多用户、运行脚本对文件进行操作、控制用户访问的目录范围等。</p>
+<blockquote>
+<p>2024.11 Update</p>
+<p>我现在补充了 Alist 来进行文件管理，Alist 支持多云存储（比如将 OneDrive，阿里云盘挂载），但我只是用它来管理文件，不使用它的云存储功能。你可以通过官方的仓库来了解 <a href="https://github.com/AlistGo/alist">Alist</a>。</p>
+</blockquote>
 
 <figure class="w-full">
   <img src="//cdn.ecwuuuuu.com/blog/image/homelab/filebrowser.png" alt="alt" class="rounded-lg">
@@ -674,7 +678,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2024-10-14 22:48 CST.
+      Build by GitHub Actions at: 2024-11-24 23:50 CST.
     </p>
     <p>
       
