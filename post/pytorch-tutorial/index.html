@@ -345,7 +345,7 @@
 <h3 id="key-technology">Key Technology</h3>
 <h4 id="dynamic-computational-graph">Dynamic computational graph</h4>
 <p>A <strong>computational graph</strong> represents the flow of data through a computational model in the form of a directed acyclic graph (DAG). It serves as a visual representation of the mathematical operations performed on input data to produce the desired output.</p>
-<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/computational_graph_equation2.jpg" alt="computational_graph_equation2.jpg"></p>
+<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/computational_graph_equation2.jpg-compressed.webp" alt="computational_graph_equation2.jpg"></p>
 <p>PyTorch allows for efficient and flexible model construction and dynamic control flow through its dynamic computational graph. Unlike TensorFlow, another popular deep-learning framework that employs static computational graphs, PyTorch constructs and executes the computational graph dynamically during runtime.</p>
 <p>The dynamic nature of PyTorch&rsquo;s computational graph enables greater flexibility and control flow. The graph is built on-the-fly as operations are executed, making it easier to debug and write code that involves complex or varying control flows. This feature is particularly useful for tasks that require dynamic graph construction, like recurrent neural networks or models with varying input sizes. Additionally, PyTorch&rsquo;s dynamic nature facilitates seamless integration with Python control flow and external libraries. However, it&rsquo;s worth noting that the dynamic construction of the graph may result in reduced performance compared to static graphs.</p>
 <p>In contrast, TensorFlow follows a static computational graph approach where the graph is defined and compiled before execution. The graph is constructed independently of the actual data being processed, which allows for potential optimization opportunities. Once the graph is defined, it can be executed repeatedly without the need for graph construction, thereby improving performance.</p>
@@ -363,11 +363,11 @@
 <p>Overall, PyTorch&rsquo;s automatic differentiation capability, combined with its dynamic computational graph, simplifies the process of computing gradients and enables efficient backpropagation for training deep learning models.</p>
 <h3 id="comparison-with-other">Comparison with Other</h3>
 <p>These figures show the usage of DL frameworks based on PyPI downloads, the number of models available on HuggingFace, and the changes in publications over time.</p>
-<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/num_hf_models_2023.png" alt="num_hf_models_2023.png"></p>
-<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/num_top_models_2023.png" alt="num_top_models_2023.png"></p>
-<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/Fraction-of-Papers-Using-PyTorch-vs.-TensorFlow.png" alt="Fraction-of-Papers-Using-PyTorch-vs.-TensorFlow.png"></p>
-<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/torch-download-trend.png" alt="torch-download-trend.png"></p>
-<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/tensorflow-download-trend.png" alt="tensorflow-download-trend.png"></p>
+<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/num_hf_models_2023.png-compressed.webp" alt="num_hf_models_2023.png"></p>
+<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/num_top_models_2023.png-compressed.webp" alt="num_top_models_2023.png"></p>
+<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/Fraction-of-Papers-Using-PyTorch-vs.-TensorFlow.png-compressed.webp" alt="Fraction-of-Papers-Using-PyTorch-vs.-TensorFlow.png"></p>
+<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/torch-download-trend.png-compressed.webp" alt="torch-download-trend.png"></p>
+<p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/tensorflow-download-trend.png-compressed.webp" alt="tensorflow-download-trend.png"></p>
 <h2 id="how-to-use-pytorch">How to use PyTorch</h2>
 <p>To use PyTorch, you have different options depending on the environment you are working in.</p>
 <h3 id="online-computation-resource">Online Computation Resource</h3>
@@ -532,7 +532,7 @@
 </span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc1(x)
 </span></span><span style="display:flex;"><span>        x <span style="color:#719e07">=</span> <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>fc2(x)
 </span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> x
-</span></span></code></pre></div><p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/mlp-figure.png" alt="mlp-figure.png"></p>
+</span></span></code></pre></div><p><img src="http://cdn.ecwuuuuu.com/blog/image/pytorch-tutorial/mlp-figure.png-compressed.webp" alt="mlp-figure.png"></p>
 <p>In the <code>__init__</code> method, you can define any layers or modules you need for your network. In this example, we define two fully connected layers (<code>nn.Linear</code>) with specified input and output sizes.
 In the forward method, you specify the sequence of operations that will be applied to the input x during the forward pass. In this example, we apply the first linear layer (<code>self.fc1</code>), followed by the second linear layer (<code>self.fc2</code>).</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>batch_size <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>
@@ -1134,7 +1134,7 @@ The common method we use for the dataset split is from sklearn</p>
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-01-30 00:15 CST.
+      Build by GitHub Actions at: 2025-01-30 00:53 CST.
     </p>
     <p>
       

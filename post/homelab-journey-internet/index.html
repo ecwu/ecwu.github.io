@@ -377,7 +377,7 @@
 <p>但我们日常使用各家的平台时，会经常能看到“使用 Microsoft / Google 账号登陆”的选项，点击后会跳转到 Microsoft 或 Google 的页面，并询问你是否授权账号的部分信息（如昵称、邮箱）给平台以创建账号（或确认身份），最后成功登录。这种一个帐号通行的形式就是统一身份认证 SSO。如果能将这种形式复刻在自建的服务上，那一定会有很棒的体验。所以 HomeLab 公网服务部分首先介绍自建的身份鉴权平台 Authentik。</p>
 
 <figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/authentik-ui.png" alt="alt" class="rounded-lg">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/authentik-ui.png-compressed.webp" alt="alt" class="rounded-lg">
 
   <figcaption>
   <strong>Authentik </strong>
@@ -406,7 +406,7 @@
 <p>最初使用了 Tiny Tiny RSS (TTRSS) 的 <a href="https://ttrss.henry.wang/">Docker 方案</a>，它插件、主题众多，有不少优秀的移动端 APP(第三方)，整体体验良好，使用了将近一年的时间。当 22 年 10 月份的时候，接触到 <a href="https://miniflux.app/">Miniflux</a> 项目，它界面上更加简洁，而且是用 Go 实现的，应该会比用 PHP 实现的 TTRSS 更加的轻量，这些优势促使我切换了阅读器。</p>
 
 <figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/miniflux-ui.png" alt="alt" class="rounded-lg">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/miniflux-ui.png-compressed.webp" alt="alt" class="rounded-lg">
 
   <figcaption>
   <strong>Miniflux </strong>
@@ -427,7 +427,7 @@
 <h3 id="代码托管gitea">代码托管：Gitea</h3>
 
 <figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/gitea-ui.png" alt="alt" class="rounded-lg">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/gitea-ui.png-compressed.webp" alt="alt" class="rounded-lg">
 
   <figcaption>
   <strong>自建 Gitea </strong>
@@ -448,7 +448,7 @@
 <h2 id="密码管理vaultwarden">密码管理：VaultWarden</h2>
 
 <figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/vaultwarden-ui.png" alt="alt" class="rounded-lg">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/vaultwarden-ui.png-compressed.webp" alt="alt" class="rounded-lg">
 
   <figcaption>
   <strong>vaultwarden </strong>
@@ -468,7 +468,7 @@
 <h3 id="个人或团队知识库outline">个人或团队知识库：Outline</h3>
 
 <figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/outline-ui.png" alt="alt" class="rounded-lg">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/outline-ui.png-compressed.webp" alt="alt" class="rounded-lg">
 
   <figcaption>
   <strong>Outline </strong>
@@ -485,7 +485,7 @@
 <h3 id="团队协作工具youtrack">团队协作工具：YouTrack</h3>
 
   <figure class="w-full">
-    <img src="//cdn.ecwuuuuu.com/blog/image/homelab/youtrack-ui.png" alt="alt" class="rounded-lg">
+    <img src="//cdn.ecwuuuuu.com/blog/image/homelab/youtrack-ui.png-compressed.webp" alt="alt" class="rounded-lg">
   
     <figcaption>
     <strong>YouTrack </strong>
@@ -505,7 +505,7 @@
 <p>目前内外网提到的服务就有十几种，如果使用的是端口，那很难全部记住（就算全用域名也容易搞混）。那么一个类似 Hao123 的门户导航站是有必要的。之前在内网，我使用的是 <a href="https://ecwuuuuu.com/post/homelab-journey-intranet#%E6%9C%8D%E5%8A%A1%E9%97%A8%E6%88%B7homarr">Homarr</a>，但 Homarr 没有鉴权、可以随意修改页面的内容。这种形式是不适合部署在公网的。这种情况下，我就选用了 <a href="https://github.com/pawelmalak/flame">Flame</a>。</p>
 
 <figure class="w-full">
-  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/flame-ui.png" alt="alt" class="rounded-lg">
+  <img src="//cdn.ecwuuuuu.com/blog/image/homelab/flame-ui.png-compressed.webp" alt="alt" class="rounded-lg">
 
   <figcaption>
   
@@ -527,7 +527,7 @@
 <p>但除了自建，还有一种“滥用” GitHub 的方式实现服务的状态监控，通过 <a href="https://github.com/upptime/upptime">upptime/upptime</a> 项目，利用 GitHub Actions 定期检查服务状态，用 GitHub Repository 储存历史信息，用 GitHub Pages 来展示状态页，是无成本的一种监控服务状态的方式。但需要注意的是，因为 GitHub Actions 的因素，服务并无法保证准确的一个固定的监控时间间隔，也就是说服务无法访问时，可能无法第一时间感知（但是个人用，也完全是够了）。</p>
 
  <figure class="w-full">
-   <img src="//cdn.ecwuuuuu.com/blog/image/homelab/uptime-kuma-ui.png" alt="alt" class="rounded-lg">
+   <img src="//cdn.ecwuuuuu.com/blog/image/homelab/uptime-kuma-ui.png-compressed.webp" alt="alt" class="rounded-lg">
  
    <figcaption>
    
@@ -542,7 +542,7 @@
 <p>这个服务使用的并不多，但是部署了还是可以提一下。Grafana 主要是用于数据的可视化并允许你方便的制作出一个可视化的面板。使用时它连接数据源（可以是传统基于 SQL 的，也可以是时间序列数据库如 <a href="https://prometheus.io/">Prometheus</a>）然后面板中编辑数据的检索语句（Query），然后利用它自带（比如折线图、散点图、文本、列表）或是第三方的插件进行可视化。通过这种方式，可以很方便的生成出一个美观的可视化大屏。</p>
 
   <figure class="w-full">
-    <img src="//cdn.ecwuuuuu.com/blog/image/homelab/grafana-ui.png" alt="alt" class="rounded-lg">
+    <img src="//cdn.ecwuuuuu.com/blog/image/homelab/grafana-ui.png-compressed.webp" alt="alt" class="rounded-lg">
   
     <figcaption>
     <strong>Grafana </strong>
@@ -687,7 +687,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-01-30 00:15 CST.
+      Build by GitHub Actions at: 2025-01-30 00:53 CST.
     </p>
     <p>
       
