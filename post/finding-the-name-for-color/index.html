@@ -48,7 +48,7 @@
 <title>Finding the Name for Color -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Homepage and blog for Zhenghao Wu (ECWU), sharing thoughts on technology, everyday experiences, and photography. Engaging with the community through knowledge sharing.">
-<meta name="keywords" content="Color,Design,Programming,Art,Color Space,Color Differences,Perception,HSV,HSL,CIELAB,RGB">
+<meta name="keywords" content="Color,Design,Programming,Art,Color Space,Color Differences,Perception,HSV,HSL,CIELAB,RGB,OKLCH,OKLAB">
 <meta name="author" content="ECWUUUUU"><script>
   if (localStorage.getItem("current-theme") === null) {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -365,6 +365,8 @@
     <li><a href="#perceptually-uniform-color-space">Perceptually-uniform Color Space</a>
       <ul>
         <li><a href="#color-distance-in-cielab-color-space">Color Distance in CIELAB Color Space</a></li>
+        <li><a href="#delta-e76-delta-e94-and-delta-e2000">$\Delta E76$, $\Delta E94$, and $\Delta E2000$</a></li>
+        <li><a href="#oklch-color-space-and-css-support">OKLCH Color Space and CSS Support</a></li>
       </ul>
     </li>
     <li><a href="#epilogue">Epilogue</a></li>
@@ -736,6 +738,40 @@
 <p>sqrt is unnecessary if you only need to find the closest color.</p>
 </blockquote>
 <p>Such distance is usually called $\Delta E$ in color science. Stand for the color difference. When you buy some electronics with a screen, the claim for the screen with $\Delta E$ is less than a certain number. It is what it means. (It is an average of multiple colors measurements differences). A $\Delta E \leq 1$ is hard for humans to distinguish; a good monitor should have a $\Delta E \leq 3$.</p>
+<h3 id="delta-e76-delta-e94-and-delta-e2000">$\Delta E76$, $\Delta E94$, and $\Delta E2000$</h3>
+<blockquote>
+<p>This section updated on 2025-02-09</p>
+</blockquote>
+<p>In the last section, the $\Delta E$ formulation is known as the $\Delta E76$ formulation (CIE 1976). It is the simplest and most straightforward way to calculate color differences. But simplest means it is not accurate. In detail, &ldquo;it exaggerates the differences in yellows and compresses our perceptual distance between blues&rdquo; (<a href="https://opentextbc.ca/graphicdesign/chapter/4-4-lab-colour-space-and-delta-e-measurements/">Ref</a>).</p>
+<p>There are more complex modifications like $\Delta E94$ and $\Delta E2000$ for better accuracy.</p>
+<p>The $\Delta E94$ includes some adjustment factors in the formula:</p>
+<p>$$\Delta E94 = \sqrt{(\frac{\Delta L}{K_L S_L})^2+(\frac{\Delta C}{K_C S_C})^2+(\frac{\Delta H}{K_H S_H})^2}$$</p>
+<p>where $\Delta L$, $\Delta C$, $\Delta H$ are the differences in lightness, chroma, and hue, $\Delta L = L_1-L_2, \Delta C = C_1-C_2, \Delta H = \sqrt{(a_1-a_2)^2+(b_1-b_2)^2-(C_1-C_2)^2}$.</p>
+<p>$K_L$, $K_C$, $K_H$ are the weighting factors. Usually they are set to 1, but can be changed for different applications (For textiles, $K_L=2$ to emphasize lightness differences).</p>
+<p>Where $S_L$, $S_C$, $S_H$ are the scaling factors, which compensate for the non-linear response of human vision.</p>
+<p>The $\Delta E2000$ is the most complex and accurate one. It includes more factors like the lightness, chroma, and hue differences, the weighting factors, and the compensation factors.</p>
+<p>$$
+\Delta E = \sqrt{
+\left({\Delta L&rsquo;} \over {K_L S_L}\right)^2
++
+\left({\Delta C&rsquo;} \over {K_C S_C}\right)^2
++
+\left({\Delta H&rsquo;} \over {K_H S_H}\right)^2
++
+R_T \left({\Delta C&rsquo;} \over {K_C S_C}\right) \left({\Delta H&rsquo;} \over {K_H S_H}\right)
+}
+$$</p>
+<p>$\Delta E2000$ uses a more sophisticated scaling for Lightness, Chroma, and Hue differences, reflecting that our sensitivity to these differences is not constant across the range.</p>
+<p>The $R_T$ is a rotation function to account for the hue difference. For the human eye. <strong>Hue</strong> difference in regions like blue (~275°) is less sensitive than in other colors regions.</p>
+<p>I will not go into detail about the $\Delta E94$ and $\Delta E2000$ here. You can learn more from <a href="http://www.brucelindbloom.com/index.html?Eqn_DeltaE_CIE94.html">this page</a>, <a href="http://www.brucelindbloom.com/index.html?Eqn_DeltaE_CIE2000.html">this page</a> and <a href="https://www.color.org/events/colorimetry/Melgosa_CIEDE2000_Workshop-July4.pdf">this page</a>.</p>
+<h3 id="oklch-color-space-and-css-support">OKLCH Color Space and CSS Support</h3>
+<blockquote>
+<p>This section updated on 2025-02-09</p>
+</blockquote>
+<p>With the release of the Tailwind CSS version <a href="https://tailwindcss.com/blog/tailwindcss-v4#modernized-p3-color-palette">4.0</a><a href="https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.0.0">(release tag)</a>, I noticed their new <strong>Modernized P3 color palette</strong>. It uses the OKLCH color space for the color palette.</p>
+<p>The evolving of distance formula indicates the problem of CIELAB color space. It suffers from hub non-linearity. The OKLCH color space try to solve the problem by integrating data from CAM16 (for lightness and chroma) and IPT (for hue) color spaces.</p>
+<p>The syntax for the OKLCH color space is <code>oklch(&lt;lightness&gt; &lt;chroma&gt; &lt;hue&gt; / &lt;alpha&gt;)</code> (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch">mdn web docs</a>). The support for the OKLCH color space starts from 2023, and most of the modern browsers support it.</p>
+<p>I found this color picker tool from OKLCH (<a href="https://oklch.com/)">https://oklch.com/)</a>, which is quite interesting. You can try it out to see how the color space works.</p>
 <h2 id="epilogue">Epilogue</h2>
 <p>This article is the first academic work I finished without outer pushes (like school or work). Initially, I was not entirely familiar with the topic (I still do not fully understand the complete picture after my research, like how the CIELAB converted and modeled). But I was having a lot of fun when writing the text and creating the visualization and interactive modules.</p>
 <p>Back to the color naming problem. I could give a good enough solution from what I have learned, but there exists more that I have not covered so that we can improve. Like:</p>
@@ -764,6 +800,8 @@
 <li><a href="https://stackoverflow.com/questions/4754506/color-similarity-distance-in-rgba-color-space">https://stackoverflow.com/questions/4754506/color-similarity-distance-in-rgba-color-space</a></li>
 <li><a href="https://www.compuphase.com/cmetric.htm">https://www.compuphase.com/cmetric.htm</a></li>
 <li><a href="https://cubicspot.blogspot.com/2019/05/designing-better-terminal-text-color.html">https://cubicspot.blogspot.com/2019/05/designing-better-terminal-text-color.html</a></li>
+<li><a href="http://www.brucelindbloom.com/index.html?Eqn_DeltaE_CIE94.html">http://www.brucelindbloom.com/index.html?Eqn_DeltaE_CIE94.html</a></li>
+<li><a href="http://www.brucelindbloom.com/index.html?Eqn_DeltaE_CIE2000.html">http://www.brucelindbloom.com/index.html?Eqn_DeltaE_CIE2000.html</a></li>
 </ul>
 <p>Color Naming List</p>
 <ul>
@@ -810,7 +848,7 @@
                 Publish & Update Date</td>
               <td
                 class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2022-02-23</td>
+                2022-02-23 - <abbr title="Date of last major modification to this page">2025-02-09</abbr></td>
             </tr>
             
             
@@ -853,6 +891,12 @@
                 
                 <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
                   href="https://ecwuuuuu.com/tags/rgb">RGB</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/oklch">OKLCH</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/oklab">OKLAB</a>
                 
               </td>
             </tr>
@@ -948,7 +992,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-01-30 00:53 CST.
+      Build by GitHub Actions at: 2025-02-10 01:12 CST.
     </p>
     <p>
       
