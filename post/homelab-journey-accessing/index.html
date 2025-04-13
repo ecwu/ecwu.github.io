@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.65d77e2e20a7f317019ca5fb6af95ff8fc7451450d2487bd7bdcfc41191d11d2.css" integrity="sha256-Zdd&#43;LiCn8xcBnKX7avlf&#43;Px0UUUNJIe9e9z8QRkdEdI=">
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.a150d13828fe41c78a4c4a37cb1dc0fbdc83916876576db4886f6bb5e64e0609.css" integrity="sha256-oVDROCj&#43;QceKTEo3yx3A&#43;9yDkWh2V220iG9rteZOBgk=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Homelab：我的赛博积木 - 访问 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -388,7 +388,15 @@
 <h2 id="门户-url-自适应">门户 URL 自适应</h2>
 <p>群晖中使用 Docker 的服务相对是比较难管理的，各个服务都会用不同的端口号。再加上群晖虽然使用 Nginx 展示各种内容，但你无法方便的修改配置将主页映射到容器中（也就无法使用之前章节中介绍的 Flame 或者 Homarr）。</p>
 <p>为此我使用了 Hugo 制作了一个门户页（使用 <a href="https://github.com/adityatelange/hugo-PaperMod/">Hugo-PaperMod</a> 模板），来方便访问不同的服务。但是这个静态页面有些小问题，因为前面提到的访问方法很多，不同情况下，我的访问用的 URL 都是不一样的，正常 HTML 并无法自适应。但群晖的 DSM 中却有这一特性，即会根据你访问的 URL 来动态的调整页面中提供的 URL。为了实现类似的功能，我修改了 Hugo 模板的一些代码，加入了一段 JavaScript 来动态的修改按钮的 URL。</p>
-<p><img src="http://cdn.ecwuuuuu.com/blog/image/homelab/nas-80-hugo-home.png-compressed.webp" alt="NAS 上用 Hugo 生成的页面"></p>
+<p>
+
+
+
+<img src="http://cdn.ecwuuuuu.com/blog/image/homelab/nas-80-hugo-home.png-compressed.webp" 
+     alt="NAS 上用 Hugo 生成的页面" 
+     
+     >
+</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#268bd2">let</span> getUrl <span style="color:#719e07">=</span> <span style="color:#b58900">window</span>.location;
 </span></span><span style="display:flex;"><span><span style="color:#268bd2">let</span> baseUrl <span style="color:#719e07">=</span> getUrl.protocol<span style="color:#719e07">+</span><span style="color:#2aa198">&#34;//&#34;</span><span style="color:#719e07">+</span>getUrl.hostname;
 </span></span><span style="display:flex;"><span><span style="color:#268bd2">let</span> btns <span style="color:#719e07">=</span> <span style="color:#b58900">document</span>.getElementsByClassName(<span style="color:#2aa198">&#34;dynamic-url&#34;</span>);
@@ -421,7 +429,15 @@
 <h2 id="cloudflare-zero-trust">Cloudflare Zero Trust</h2>
 <p>最后的一个技术是使用 Cloudflare Zero Trust，这里我们先不讨论 Zero Trust 是什么概念。但是你可以使用它来限制你某个网站的访问。比如我的 ecwu.xyz 页面，我不希望其他人能看到里面的内容，那么我就可以使用 CloudFlare Zero Trust 来限制其他用户的访问：必须先经过鉴权。</p>
 <p>我本身就使用 Cloudflare 进行网站的解析，并且已经部署了 Authentik 的身份验证服务。我将 Authentik 通过 OAuth2 的方式添加到 Authentication 的 Identity Provider 中。然后将 ecwu.xyz 页面加入到 Applications，并选定 Identity Provider 为 Login Method。经过这样的设定，ecwu.xyz 页面就要求登录才能访问了，并且正常情况下只显示一个登录页。</p>
-<p><img src="http://cdn.ecwuuuuu.com/blog/image/homelab/cf-access-ecwuxyz.png-compressed.webp" alt="CloudFlare Zero Trust 保护的 ecwu.xyz 网页"></p>
+<p>
+
+
+
+<img src="http://cdn.ecwuuuuu.com/blog/image/homelab/cf-access-ecwuxyz.png-compressed.webp" 
+     alt="CloudFlare Zero Trust 保护的 ecwu.xyz 网页" 
+     
+     >
+</p>
 
 </article>
 </main>
@@ -564,7 +580,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-02-13 00:35 CST.
+      Build by GitHub Actions at: 2025-04-13 18:32 CST.
     </p>
     <p>
       

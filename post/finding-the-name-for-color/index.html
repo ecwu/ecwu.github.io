@@ -39,7 +39,7 @@
 
 
 
-<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.65d77e2e20a7f317019ca5fb6af95ff8fc7451450d2487bd7bdcfc41191d11d2.css" integrity="sha256-Zdd&#43;LiCn8xcBnKX7avlf&#43;Px0UUUNJIe9e9z8QRkdEdI=">
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.a150d13828fe41c78a4c4a37cb1dc0fbdc83916876576db4886f6bb5e64e0609.css" integrity="sha256-oVDROCj&#43;QceKTEo3yx3A&#43;9yDkWh2V220iG9rteZOBgk=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Finding the Name for Color -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -556,14 +556,30 @@
 </span></span></code></pre></div><p>Use <code>#FFFFFF</code> (white) color for a try, the program return the top three matches: <code>[['白色 (White)', 0.0], ['雪色 (Snow White)', 7.0710678118654755], ['幽灵白 (Ghost White)', 9.899494936611665]]</code>. We can see that except for the exact match, the other two matches pretty much refer to the same color: White. So, it seem that our little program has been working perfectly!</p>
 <h3 id="problem">Problem</h3>
 <p>But when I tried another color, like <code>#6A4764</code>. Seeing it with my eye, the color belongs to dark magenta and dark purple. But the program&rsquo;s result is not as close. It returns <em>iron-gray</em>, <em>dust gray</em>, and <em>dark rock blue</em>. When we look closer at the color distance. The dark magenta (<code>#8B008B</code>) has a $d = 87.46$ but the others is way less ($[25.15, 34.38, 52.69]$).</p>
-<p><img src="rgb-color-match-problem.png" alt="Program Generated Top three matches"></p>
+<p>
+
+
+
+<img src="rgb-color-match-problem.png" 
+     alt="Program Generated Top three matches" 
+     
+     >
+</p>
 <blockquote>
 <p>Please hover the picture to see the original color in dark mode.</p>
 </blockquote>
 <p>Why this happens?</p>
 <h2 id="understand-color-2">Understand Color (2)</h2>
 <p>I try to visualize the named colors in 3d space. Those colors aren&rsquo;t uniformly distributed. Some are clustered together, and some are relatively sparse with almost no named color. This means some of the colors may not be easy to describe.</p>
-<p><img src="color-name-cn-visual.png" alt="Named Colors in 3D space"></p>
+<p>
+
+
+
+<img src="color-name-cn-visual.png" 
+     alt="Named Colors in 3D space" 
+     
+     >
+</p>
 <blockquote>
 <p>Please hover the picture to see the original color in dark mode.</p>
 </blockquote>
@@ -988,7 +1004,7 @@ $$</p>
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-02-13 00:35 CST.
+      Build by GitHub Actions at: 2025-04-13 18:32 CST.
     </p>
     <p>
       

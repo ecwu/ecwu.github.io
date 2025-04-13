@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.65d77e2e20a7f317019ca5fb6af95ff8fc7451450d2487bd7bdcfc41191d11d2.css" integrity="sha256-Zdd&#43;LiCn8xcBnKX7avlf&#43;Px0UUUNJIe9e9z8QRkdEdI=">
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.a150d13828fe41c78a4c4a37cb1dc0fbdc83916876576db4886f6bb5e64e0609.css" integrity="sha256-oVDROCj&#43;QceKTEo3yx3A&#43;9yDkWh2V220iG9rteZOBgk=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -344,7 +344,15 @@
 </blockquote>
 <h2 id="应用程序创建">应用程序创建</h2>
 <p>使用管理员账号登录，进入后台 <code>Applications</code> &gt; <code>Applications</code>，点击 Create 会弹出一个填写新应用参数的窗口。</p>
-<p><img src="https://cdn.ecwuuuuu.com/blog/image/authentik/application-create.png-compressed.webp" alt="Authentik Application Creation Window"></p>
+<p>
+
+
+
+<img src="https://cdn.ecwuuuuu.com/blog/image/authentik/application-create.png-compressed.webp" 
+     alt="Authentik Application Creation Window" 
+     
+     >
+</p>
 <p>常用功能填写的参数包括：</p>
 <ul>
 <li>名称 Name：显示在页面上和授权页的应用名</li>
@@ -365,7 +373,15 @@
 <p>在应用创建的页面，官方也提供了一个创建向导，可以快速地同时创建应用和我们后面要提到的提供程序。创建好时，应用程序跟提供程序就已经被自动绑定了。</p>
 <h2 id="提供程序">提供程序</h2>
 <p>提供程序的创建在后台 <code>Applications</code> &gt; <code>Provider</code> 中。点击 <code>Create</code> 会弹出一个创建提供程序的向导。其中首先要选择的是提供程序的类型。</p>
-<p><img src="https://cdn.ecwuuuuu.com/blog/image/authentik/provider-select.png-compressed.webp" alt="Authentik Provider select"></p>
+<p>
+
+
+
+<img src="https://cdn.ecwuuuuu.com/blog/image/authentik/provider-select.png-compressed.webp" 
+     alt="Authentik Provider select" 
+     
+     >
+</p>
 <h3 id="openid-connect-oidc--oauth-20">OpenID Connect (OIDC) / OAuth 2.0</h3>
 <p>如果你要创建的是 OIDC 提供程序。选择类型之后，你能填入以下字段：</p>
 <ul>
@@ -382,14 +398,30 @@
 </ul>
 <p>在 Authentik 里面都创建好之后，就可以在应用中做配置来进行接入了。一般接入的方式有两种，应用内创建认证源和启动时的配置。以下举 Gitea（创建认证源） 和 Grafana（启动时配置） 的例子来说明如何配置。</p>
 <h4 id="gitea">Gitea</h4>
-<p><img src="https://cdn.ecwuuuuu.com/blog/image/authentik/gitea-oidc-setup.png-compressed.webp" alt="Gitea OIDC Settings"></p>
+<p>
+
+
+
+<img src="https://cdn.ecwuuuuu.com/blog/image/authentik/gitea-oidc-setup.png-compressed.webp" 
+     alt="Gitea OIDC Settings" 
+     
+     >
+</p>
 <p><a href="https://github.com/go-gitea/gitea">Gitea</a> 是一个轻量的版本控制平台。通过在启动的应用内创建认证源进行 OAuth2 的配置。入口是<code>管理后台</code> &gt; <code>身份及认证</code> &gt; <code>认证源</code>。</p>
 <p>用户首先需要创建一个新的用户源类型选择 <code>OAuth2</code>，提供程序选择 <code>OpenID Connect</code>。<code>认证名称</code> 和 <code>图标 URL</code> 是可以自定的，会显示在登录页的登录按钮上。</p>
 <p>和 Authentik 对应提供程序相关的字段有<code>客户端 ID</code>和<code>客户端密钥</code>，这个是签名创建提供程序时，Authentik 已经自动生成了的，只需要对应复制到 Gitea 中。</p>
 <p>OpenID 配置一般还需要填写授权URL，令牌URL等信息告知应用程序，让授权时进行正确的跳转。Gitea 直接支持通过配置 URL 直接自动获取并解析。只需要进到 Authentik 的对应提供程序详情，就可以复制到 OpenID 配置 URL（格式是：<code>https://&lt;AUTHENTIK URL&gt;/application/o/&lt;APPLICATION SLUG&gt;/.well-known/openid-configuration</code>）。</p>
 <p>最后还需要填写附加授权范围（Scopes）为：<code>email profile</code>。保存并启用这个认证源，那么配置就完成了。</p>
 <h4 id="grafana">Grafana</h4>
-<p><img src="https://cdn.ecwuuuuu.com/blog/image/authentik/grafana-oidc-setup.png-compressed.webp" alt="Grafana OIDC Settings"></p>
+<p>
+
+
+
+<img src="https://cdn.ecwuuuuu.com/blog/image/authentik/grafana-oidc-setup.png-compressed.webp" 
+     alt="Grafana OIDC Settings" 
+     
+     >
+</p>
 <p><a href="https://github.com/grafana/grafana">Grafana</a> 是一个数据可视化的平台。它的 OAuth2 接入是通过启动时的环境变量进行配置。一下是启动的 docker-compose.yaml</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#268bd2">services</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#268bd2">grafana</span>:
@@ -676,7 +708,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-02-13 00:35 CST.
+      Build by GitHub Actions at: 2025-04-13 18:32 CST.
     </p>
     <p>
       
