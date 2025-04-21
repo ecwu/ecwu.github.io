@@ -378,7 +378,7 @@
 <p>简单来说它通过公网的中转机器实现内网流量的转发。本身 fprs 的部署也需要你有一台带公网的设备，但市面上有很多 fpr 服务提供商，很多还提供免费额度（比如我用过的 <a href="https://www.natfrp.com/">SAKURA FRP</a>），这样只需要在需要反向代理的设备上部署 frpc 就可以实现内网的穿透。</p>
 <p>最多的时候，我代理出了三个服务：DSM，EMBY 媒体服务，Apache Guacamole™ 远程桌面工具。但是国内的 frps 提供商说不上稳定，速度也差强人意。在免费使用了一年多，也尝试付费节点近半年的事件后，我最后放弃了 FRP 方案。</p>
 <h3 id="tailscale">Tailscale</h3>
-<p>Tailscale 是 <a href="cklau.cc">Lau</a> 介绍的工具，他是基于 Wireguard 构建，力求易用。</p>
+<p>Tailscale 是 <a href="https://blog.cklau.cc">Lau</a> 介绍的工具，他是基于 Wireguard 构建，力求易用。</p>
 <ul>
 <li>它通过第三方服务的认证来登录，在设备上登录后就可以将设备添加进自己的组网里。然后 Tailscale 会自动处理用于加密点对点通信的密钥分发和配置。</li>
 <li>大多时候，通信通过 NAT 穿透实现；但当穿透无法实现时，Tailscale 的中继服务会介入。</li>
@@ -582,7 +582,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-04-13 18:45 CST.
+      Build by GitHub Actions at: 2025-04-21 13:12 CST.
     </p>
     <p>
       
