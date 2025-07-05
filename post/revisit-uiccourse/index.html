@@ -1,0 +1,730 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+
+<link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
+
+
+
+
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.a150d13828fe41c78a4c4a37cb1dc0fbdc83916876576db4886f6bb5e64e0609.css" integrity="sha256-oVDROCj&#43;QceKTEo3yx3A&#43;9yDkWh2V220iG9rteZOBgk=">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>How I Rebuilt a 2018 Project in 2025 -  ECWU&#39;s Notebook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Homepage and blog for Zhenghao Wu (ECWU), sharing thoughts on technology, everyday experiences, and photography. Engaging with the community through knowledge sharing.">
+<meta name="keywords" content="uicCourse,Python,Development,Software,Programming,Coding Agent,AI,Node.js,Next.js,Tailwind CSS,Shadcn UI,Vibe Coding,Serverless,Vercel,Supabase,tRPC,Drizzle,NextAuth.js,PostgreSQL,TypeScript,React,Web Development,Full Stack,Web Framework,Web Design">
+<meta name="author" content="ECWUUUUU"><script>
+  if (localStorage.getItem("current-theme") === null) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      localStorage.setItem("current-theme", "dark");
+      document.documentElement.classList.add('dark')
+      change_discussion_color_mode();
+    } else {
+      localStorage.setItem("current-theme", "light");
+      change_discussion_color_mode();
+    }
+  } else {
+    if (localStorage.getItem('current-theme') === 'dark') {
+      document.documentElement.classList.add('dark')
+    }
+  }
+
+  function change_color_mode(){
+    if (localStorage.getItem('current-theme') === 'light') {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('current-theme', 'dark');
+      change_discussion_color_mode();
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('current-theme', 'light');
+      change_discussion_color_mode();
+    }
+  }
+  
+
+  function change_discussion_color_mode(){
+    
+    const theme = localStorage.getItem('current-theme') === 'light' ? 'light' : 'dark'
+    const message = {
+  setConfig: {
+    theme: theme,
+  }
+};
+    
+    const iframe = document.querySelector('iframe.giscus-frame');
+    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    
+  }
+  
+
+  document.addEventListener("DOMContentLoaded", () => {
+    
+
+    document
+      .getElementById("header-theme-button")
+      .addEventListener("click", change_color_mode);
+  });
+
+</script></head>
+    <body class="transition-colors duration-300"><div class="pt-6">
+    
+    <div class="nav-title flex flex-row flex-wrap gap-2"><a href="https://ecwuuuuu.com/">
+    
+    <svg class="w-36 fill-gray-900 dark:fill-gray-200" fill="currentColor" viewBox="0 0 204.24 43.44" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,43.08V0.36h18.24v5.76H6.12v12.54h10.56v5.76H6.12v12.54h12.12v6.12H0z"/>
+        <path d="M41.64,30.9v2.64c0,1.32-0.25,2.57-0.75,3.75c-0.5,1.18-1.19,2.23-2.07,3.15c-0.88,0.92-1.91,1.65-3.09,2.19  c-1.18,0.54-2.45,0.81-3.81,0.81c-1.16,0-2.34-0.16-3.54-0.48c-1.2-0.32-2.28-0.88-3.24-1.68s-1.75-1.83-2.37-3.09  c-0.62-1.26-0.93-2.87-0.93-4.83V9.84c0-1.4,0.24-2.7,0.72-3.9c0.48-1.2,1.16-2.24,2.04-3.12c0.88-0.88,1.93-1.57,3.15-2.07  C28.97,0.25,30.32,0,31.8,0c2.88,0,5.22,0.94,7.02,2.82c0.88,0.92,1.57,2.01,2.07,3.27c0.5,1.26,0.75,2.63,0.75,4.11v2.4h-6.12  v-2.04c0-1.2-0.34-2.24-1.02-3.12c-0.68-0.88-1.6-1.32-2.76-1.32c-1.52,0-2.53,0.47-3.03,1.41c-0.5,0.94-0.75,2.13-0.75,3.57v21.84  c0,1.24,0.27,2.28,0.81,3.12s1.51,1.26,2.91,1.26c0.4,0,0.83-0.07,1.29-0.21c0.46-0.14,0.89-0.37,1.29-0.69  c0.36-0.32,0.66-0.76,0.9-1.32c0.24-0.56,0.36-1.26,0.36-2.1v-2.1H41.64z"/>
+        <path d="M78.36,0.36L72,43.08h-5.76l-4.68-27.72h-0.12l-4.62,27.72h-5.76L44.7,0.36h6.48l3.06,27.12h0.12l4.8-27.12h4.68l4.98,27.78  h0.12l2.94-27.78H78.36z"/>
+        <path d="M102,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H102z"/>
+        <path d="M127.56,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  s-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H127.56z"/>
+        <path d="M153.12,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H153.12z"/>
+        <path d="M178.68,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36H165v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H178.68z"/>
+        <path d="M204.24,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H204.24z"/>
+    </svg>
+    <p class="sr-only">ECWU Homepage</p>
+    
+</a></div>
+    
+<nav aria-label="navbar" class="mb-3 mr-8">
+    <ol role="list" class="flex flex-wrap">
+        
+        
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Home</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/post/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Posts</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/photography/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Photos</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/series/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Series</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/about/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>About</a>
+            
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+            </svg>
+            
+        </div>
+        </li>
+        
+        <li>
+        <div class="flex items-center justify-center">
+            <a href="https://ecwuuuuu.com/page/friends/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Friends</a>
+            
+            
+        </div>
+        </li>
+        
+    </ol>
+</nav><div  class="flex items-center space-x-2">
+    <div class="w-6 h-6 inline-flex items-center justify-center rounded-lg bg-white dark:bg-black shadow-inner ring-1 ring-black/5">
+        <i id="header-theme-button" data-feather="sun" class="site-header-navlink rounded cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden dark:block fill-gray-900 dark:fill-gray-200" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    clip-rule="evenodd" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 block dark:hidden fill-gray-900 dark:fill-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+        </i>
+    </div>
+    <span class="dark:hidden text-sm">To Dark Mode</span>
+    <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
+</div></div>
+  <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
+    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/rDuBjNdLS0M/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzUwNjI3NTg4fA&amp;force=true&amp;w=2400" alt="Featured Images">
+    
+    <figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">
+      Photo by Kier in Sight Archives on Unsplash
+    </figcaption>
+    
+  </figure>
+<div class="mb-12 mt-16 w-content">
+  <h1 class="text-gray-900 dark:text-gray-200">How I Rebuilt a 2018 Project in 2025</h1>
+  <h2 class="text-gray-700 dark:text-gray-400">Modern Web Development, Vibe Coding, Serverless, and Practical Data Automation</h2>
+
+  
+  <div class="text-gray-700 dark:text-gray-400">
+    <span>
+      
+      <p><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg> Zhenghao Wu</p>
+      
+
+
+      
+
+      
+      <p>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        </svg>
+        Status: Finished
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+        Confidence: 8
+        
+        
+        
+      </p>
+      
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+        </svg> <a href="#article-info-card">Post Details</a>
+      </p>
+      
+      
+    </span>
+  </div>
+  
+</div><main>
+<article>
+    
+<section class="mb-8">
+  <details closed class="toc">
+    <summary>Table of Contents</summary>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#prelude-the-django-and-jquery-days">Prelude: The Django and jQuery Days</a></li>
+    <li><a href="#motivation-overcoming-the-react-hurdle-with-ai-assistance">Motivation: Overcoming the React Hurdle with AI Assistance</a></li>
+    <li><a href="#the-tech-stack-from-monolith-to-modern-full-stack">The Tech Stack: From Monolith to Modern Full-Stack</a></li>
+    <li><a href="#design-and-architecture-lessons-learned">Design and Architecture: Lessons Learned</a></li>
+    <li><a href="#practical-data-automation-from-manual-entry-to-an-automated-pipeline">Practical Data Automation: From Manual Entry to an Automated Pipeline</a></li>
+    <li><a href="#from-repetitive-crud-to-collaborative-vibe-coding">From Repetitive CRUD to Collaborative &ldquo;Vibe Coding&rdquo;</a>
+      <ul>
+        <li><a href="#which-ai-coding-agent-to-use">Which AI Coding Agent to Use?</a></li>
+      </ul>
+    </li>
+    <li><a href="#final-lessons-and-takeaways">Final Lessons and Takeaways</a></li>
+  </ul>
+</nav>
+  </details>
+</section>
+
+    <h2 id="prelude-the-django-and-jquery-days">Prelude: The Django and jQuery Days</h2>
+<p>In 2018, I was self-studying the Django web framework for a college course. To apply what I was learning, I decided to build a project to solve a real problem: our school&rsquo;s course information system.</p>
+<p>All official course information was contained within a single, large PDF file. And course details contains in more individual handbooks PDF files. Finding a specific course was a time-consuming process that required extensive scrolling and text searches. I believed I could create a more efficient and user-friendly solution.</p>
+<p>This led to the creation of <code>uicCourse</code>.</p>
+<p>
+
+
+  
+
+
+<img src="https://cdn.ecwuuuuu.com/blog/image/webdev-shift/uiccourse-home.webp" 
+     alt="uicCourse Homepage" 
+     class="no-dark-invert"
+     >
+</p>
+<p>It was built entirely in Python with a Django backend and server-side rendered templates. Over its development, I added numerous features:</p>
+<ul>
+<li>Advanced course search and filtering</li>
+<li>Course information management for admins</li>
+<li>A quick rating system and tag-based reviews</li>
+<li>Handy &ldquo;major handbook&rdquo; display for each major</li>
+<li>Data visualizations for course statistics</li>
+</ul>
+<p>
+
+
+  
+
+
+<img src="https://cdn.ecwuuuuu.com/blog/image/webdev-shift/uiccourse-course.webp" 
+     alt="uicCourse Course Page" 
+     class="no-dark-invert"
+     >
+</p>
+<p>The project was eventually passed to a UICHCC and remains operational today, serving as a snapshot of the web development practices of that time.</p>
+<p>However, as the project&rsquo;s complexity increased, its limitations became apparent. The monolithic codebase developed a complex network of dependencies. My initial database schema, with its heavy use of foreign keys, made data updates difficult. As the frontend requirements grew, the constraints of using Django templates and raw jQuery became a significant bottleneck for creating interactive elements.</p>
+<p>I eventually archived the project, but the goal of creating a better version remained.</p>
+<h2 id="motivation-overcoming-the-react-hurdle-with-ai-assistance">Motivation: Overcoming the React Hurdle with AI Assistance</h2>
+<p>For years, learning React (or Vue) was on my to-do list, but it presented a significant hurdle. My attempts to start a project often led to a frustrating cycle of build tool errors, complex configurations, and package incompatibilities.</p>
+<p>Then came LLM coding agents. Tools like GitHub Copilot and Cline became my 24/7 coding partner.</p>
+<p>Large Language Models (LLMs) provided a new way to work through technical challenges. They functioned as both a mentor for explaining concepts and a pair programmer for generating code. I could describe a goal, provide an error message, or ask for an explanation, and the agent would provide step-by-step guidance.</p>
+<ul>
+<li><strong>For simple tasks:</strong> It accelerated development by generating boilerplate code.</li>
+<li><strong>For complex challenges:</strong> It clarified the reasoning behind a framework&rsquo;s design and explained complex concepts.</li>
+</ul>
+<p>With this support, I successfully overcame the initial learning curve and built a small image management application with Next.js. This experience gave me the confidence to undertake a modern rebuild of <code>uicCourse</code>.</p>
+<p><span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md">The side project was a small image management application built with Next. I was planning to keep maintaining it, but I found out there is a better solution call <a href="https://immich.app/">immich</a>, so I archived it. </span></p>
+<p>The new project, <code>coursedb</code>, would be built with a clean architecture, an improved user experience, and a clear plan for long-term maintenance.</p>
+<h2 id="the-tech-stack-from-monolith-to-modern-full-stack">The Tech Stack: From Monolith to Modern Full-Stack</h2>
+<p>The T3 Stack, created and promoted by content creator <a href="https://www.youtube.com/@t3dotgg">Theo</a>, heavily influenced my choice of technologies. It provides a great starting point for full-stack applications.</p>
+ 
+ 
+ 
+ 
+ <div class="my-5">
+    <iframe class="aspect-video w-full h-96 max-w-full" src="https://www.youtube.com/embed/YkOSUVzOAA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
+
+
+<p>The technological evolution from the 2018 project to the 2025 rebuild is clear:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Component</th>
+          <th style="text-align: left">uicCourse (2018)</th>
+          <th style="text-align: left">coursedb (2025)</th>
+          <th style="text-align: left">Rationale for the Change</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>UI Framework</strong></td>
+          <td style="text-align: left">Bootstrap CSS + jQuery</td>
+          <td style="text-align: left">Tailwind CSS + shadcn/ui</td>
+          <td style="text-align: left">From pre-styled components to a utility-first, highly customizable design system. But also providing a modern and unified component library.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Backend</strong></td>
+          <td style="text-align: left">Django (Python)</td>
+          <td style="text-align: left">Next.js + tRPC (TypeScript)</td>
+          <td style="text-align: left">A unified full-stack TypeScript environment for seamless front-to-back development.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Database</strong></td>
+          <td style="text-align: left">SQLite</td>
+          <td style="text-align: left">PostgreSQL (on Supabase)</td>
+          <td style="text-align: left">From a simple file-based DB to a robust, scalable, and fully managed SQL database.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>ORM</strong></td>
+          <td style="text-align: left">Django ORM</td>
+          <td style="text-align: left">Drizzle ORM</td>
+          <td style="text-align: left">Moving to a lightweight, TypeScript-native ORM for end-to-end type safety.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Authentication</strong></td>
+          <td style="text-align: left">Django Auth</td>
+          <td style="text-align: left">NextAuth.js</td>
+          <td style="text-align: left">From a solid but rigid system to a flexible, provider-agnostic auth solution.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Hosting</strong></td>
+          <td style="text-align: left">Docker on a VPS</td>
+          <td style="text-align: left">Vercel + Supabase</td>
+          <td style="text-align: left">From manual server management to a fully managed, serverless infrastructure with CI/CD.</td>
+      </tr>
+  </tbody>
+</table>
+<p>
+
+
+  
+
+
+<img src="https://cdn.ecwuuuuu.com/blog/image/webdev-shift/coursedb-home.webp" 
+     alt="coursedb Homepage" 
+     class="no-dark-invert"
+     >
+</p>
+<p>This new stack represents a philosophical shift toward prioritizing developer experience (DX), type safety, and high efficiency. This allows me to focus on implementing business logic rather than configuring boilerplate.</p>
+<h2 id="design-and-architecture-lessons-learned">Design and Architecture: Lessons Learned</h2>
+<p><strong>Database Schema:</strong> In <code>uicCourse</code>, I over-relied on foreign keys, believing maximal relational integrity was always best. I learned this can lead to a rigid schema that makes data imports and future migrations difficult. For <code>coursedb</code>, the schema is more modular and loosely coupled, defined with Drizzle ORM for flexibility and programmatic seeding. I also uses features from PostgreSQL, such as JSONB columns, to store complex data structures like reviews.</p>
+<p><strong>API Layer:</strong> I replaced Django&rsquo;s monolithic views with <strong>tRPC</strong>, which has been a significant improvement. Defining API procedures in TypeScript provides end-to-end type safety between the backend and frontend without requiring code generation or OpenAPI specifications. This makes the entire application feel like a single, cohesive codebase.</p>
+<p><strong>Frontend:</strong> The new UI is built with the Next.js App Router, Server Components, and Tailwind CSS. The design uses a persistent sidebar for navigation, a shift from Bootstrap&rsquo;s simpler layout. Using <strong>shadcn/ui</strong> accelerated the creation of consistent and accessible components. The developer experience is a stark contrast to the previous workflow, offering features like hot-reloading and a typed, component-based architecture.</p>
+<p><strong>Authentication:</strong> While Django&rsquo;s built-in auth is effective for basic needs, integrating social logins or modern protocols like OIDC can be complex. <strong>NextAuth.js</strong> is designed for this flexibility, integrating smoothly with Next.js and simplifying the addition of multiple authentication providers. Now I am using Discord and GitHub for authentication, which is more convenient for users. (Discord is good for development, because it allow to set multiple redirect endpoints)</p>
+<p><strong>Database &amp; ORM:</strong> SQLite was sufficient for the original project but has performance limitations with concurrent writes. (Though it never gone popular and I never had a problem with it) <strong>PostgreSQL</strong> provides a high-performance and scalable solution. When developing locally, T3 stack provides a quick way to set up a PostgreSQL database with Docker. For production, I use <strong>Supabase</strong> for its managed PostgreSQL service, which simplifies deployment and scaling. While the Django ORM is an excellent tool, it choice <strong>Drizzle ORM</strong> for its lightweight, TypeScript-native design.</p>
+<p>
+
+
+  
+
+
+<img src="https://cdn.ecwuuuuu.com/blog/image/webdev-shift/coursedb-course.webp" 
+     alt="coursedb Course Page" 
+     class="no-dark-invert"
+     >
+</p>
+<h2 id="practical-data-automation-from-manual-entry-to-an-automated-pipeline">Practical Data Automation: From Manual Entry to an Automated Pipeline</h2>
+<p>The data entry process for the 2018 project was entirely manual. I copied course data from the official PDF and entered it into the system&rsquo;s forms. This was a highly repetitive task that took weeks to complete, driven by a concern that batch processing might introduce errors.</p>
+<p>My new data pipeline is now fully automated and takes minutes:</p>
+<ol>
+<li><strong>Extraction:</strong> The source PDF is converted to raw text using the <code>pdftotext</code> utility.</li>
+<li><strong>Structuring:</strong> A combination of regular expressions, custom rules is used to parse the unstructured text into organized data blocks (e.g., course codes, descriptions, prerequisites).</li>
+<li><strong>Refinement with AI:</strong> This is the most innovative step. The structured data is processed by an LLM using carefully crafted prompts to perform several tasks:</li>
+</ol>
+<ul>
+<li><strong>Normalize:</strong> Correct capitalization in English course titles.</li>
+<li><strong>Enrich:</strong> Generate Chinese names based on the course description.</li>
+<li><strong>Parse:</strong> Convert human-readable prerequisite rules into structured JSON.</li>
+<li><strong>Transform:</strong> Convert nested tables of elective courses into a flat CSV format.</li>
+</ul>
+<p>I now approach data handling with the same principles as coding: it is composable, iterative, and automated. This not only saves a significant amount of time but also results in richer, more accurate data.</p>
+<p>If the data have errors, I can quickly identify and fix them in the source text, re-run the pipeline, and regenerate the entire dataset. Gradually improves the quality is quite a fun process.</p>
+<h2 id="from-repetitive-crud-to-collaborative-vibe-coding">From Repetitive CRUD to Collaborative &ldquo;Vibe Coding&rdquo;</h2>
+<p>A large portion of the development time for the original system was spent on repetitive CRUD (Create, Read, Update, Delete) tasks. Each new feature required manually building UI forms, writing view logic, and handling validation.</p>
+<p>My current workflow is more collaborative. And AI scientist Andrej Karpathy call it <strong>&ldquo;vibe coding&rdquo;</strong>—a process of working with an AI agent. I describe the desired functionality at a high level, and the agent scaffolds the initial implementation. For example:</p>
+<blockquote>
+<p>&ldquo;Generate a tRPC procedure for <code>coursedb</code> to manage course reviews. It should support pagination, include user information, validate ratings are between 1 and 5, and only allow the review&rsquo;s author to delete it.&rdquo;</p>
+</blockquote>
+<p>This produces a functional, type-safe starting point in seconds. My role shifts from writing boilerplate code to refining the logic, verifying correctness, and guiding the overall architecture. This method does not replace the developer but rather augments their capabilities.</p>
+<h3 id="which-ai-coding-agent-to-use">Which AI Coding Agent to Use?</h3>
+<p>I have used several tools. Each has its strengths and weaknesses:</p>
+<ul>
+<li>
+<p><strong>GitHub Copilot:</strong> Is the OG tool. At the beginning, it allow FIM (Fill In the Middle) completion, which is great for generating code snippets and completing functions. It always make latest model available to users at &ldquo;day one&rdquo;. I remember I gain access to Gemini Pro 2.5, GPT-o3-mini, GPT-4.1, and Claude Sonnet 4 at the time these model was released. But I think the problem for Copilot is it not catch up with the latest Agent-based coding workflow. They have the mode, but it is not as good as others. Now, they start their new payment model, which allow for a limited number of requests per month. It is still a great tool for quick code generation and completion. But I think it is not the best tool for coding agent workflow.</p>
+</li>
+<li>
+<p><strong>Cline:</strong> Is a coding agent plugin for VSCode that provides a more interactive experience. It have two mode: &ldquo;Plan&rdquo; and &ldquo;Act&rdquo;. In both modes, it will go through the files in the current workspace and generate grounding solutions. In &ldquo;Plan&rdquo; mode, it generates a high-level plan for the requested feature, which is great for understanding the overall architecture. In &ldquo;Act&rdquo; mode, it generates code based on the plan. It is a great tool for vibe coding. When I use it, I usually uses a reasoning model like DeepSeek-R1 to generate the plan, and then use a coding model like Claude to implement the plan.</p>
+</li>
+<li>
+<p><strong>Claude Code</strong> is command line tool that you call from the working directory. It need a Anthropic API key or valid Claude Pro/Max subscription. The justification for its form is everyone have their preferred IDE, so instead of building a plugin and adapting to each IDE, it is better to build a command line tool that can be used IDE-agnostic. To my surprise, it generates great code and can handle complex tasks. To be honest, all the coding agents works in a similar way, The model, the prompt, and the tooling are the key factors that determine the quality of the generated code. I can see the model output is pretty quick, and the tooling is well-designed. And because anthropic itself develops the model, it can provide a more consistent experience. I think it is a great tool for vibe coding, and I use it for most of my coding tasks. The only downside is it is pretty expensive, the price tag of Claude Sonnet 4 is 3$/15$ per million input/output tokens, which is quite high compared to other models. Some power users will use 200$+ every day. Maybe that is why a lot of people are paying for the Max x20 subscription (200$ per month).</p>
+</li>
+<li>
+<p><strong>Gemini CLI</strong> pretty similiar to Claude Code, but it is a command line tool from Google for their LLM Gemini. It provides a more generous free tier, allowing for 1000 requests per day. Except for the coding agent workflow, Google also advertises its general-purpose capabilities, such help you download files from the web without writing the crawler code. It is not as powerful as Claude Code when implementing new features for coursedb, it has the potential.</p>
+</li>
+</ul>
+<blockquote>
+<p>For other popular tools like Cursor, Roo Code. I tried them but not experienced them extensively. You can check out their documentation and see if they fit your workflow.</p>
+</blockquote>
+<h2 id="final-lessons-and-takeaways">Final Lessons and Takeaways</h2>
+<p>Revisiting this project provided technical insights and a measure of my growth as a developer.</p>
+<ol>
+<li><strong>Design for Change.</strong> My 2018 schema was too rigid. The 2025 version prioritizes flexibility, acknowledging that requirements will evolve.</li>
+<li><strong>Type Safety is a Key Advantage.</strong> The combination of TypeScript, Drizzle, and tRPC prevents entire classes of runtime errors, enabling faster and more confident development.</li>
+<li><strong>Automate Processes.</strong> My initial hesitation toward automation was a major bottleneck. A well-designed script with proper validation is far more efficient and reliable than manual repetition.</li>
+<li><strong>The Developer&rsquo;s Role Remains Central.</strong> AI coding agents are powerful tools that handle execution, but the developer is responsible for setting goals, making architectural decisions, and ensuring quality.</li>
+</ol>
+<p>The journey from <code>uicCourse</code> to <code>coursedb</code> reflects the broader evolution in web development toward more automated, component-based, and efficient workflows. It has been a valuable experience, and I look forward to seeing how these tools and methodologies continue to advance.</p>
+
+</article>
+</main>
+<div class="pb-10 w-content">
+  <div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 sm:px-6">
+      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
+        <a id="article-info-card"></a>
+        Article Card
+      </h3>
+      <p class="mt-1 text-sm text-gray-500">
+        For "<span class="italic">How I Rebuilt a 2018 Project in 2025</span>"
+      </p>
+    </div>
+    <div class="border-t border-gray-200 dark:border-gray-700">
+      <dl>
+        <table class="border-collapse table-fixed w-full">
+          <tbody class="bg-white dark:bg-gray-800">
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Author</td>
+              <td
+                class="border-b font-bold border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm ">
+                Zhenghao Wu</td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Publish & Update Date</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                2025-07-05</td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Tags</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/uiccourse">uicCourse</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/python">Python</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/development">Development</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/software">Software</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/programming">Programming</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/coding-agent">Coding Agent</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/ai">AI</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/node.js">Node.js</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/next.js">Next.js</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/tailwind-css">Tailwind CSS</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/shadcn-ui">Shadcn UI</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/vibe-coding">Vibe Coding</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/serverless">Serverless</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/vercel">Vercel</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/supabase">Supabase</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/trpc">tRPC</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/drizzle">Drizzle</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/nextauth.js">NextAuth.js</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/postgresql">PostgreSQL</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/typescript">TypeScript</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/react">React</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/web-development">Web Development</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/full-stack">Full Stack</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/web-framework">Web Framework</a>
+                
+                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
+                  href="https://ecwuuuuu.com/tags/web-design">Web Design</a>
+                
+              </td>
+            </tr>
+            
+            
+            <tr class="px-4 py-5">
+              <th
+                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
+                Extra Materials</td>
+              <td
+                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
+                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                  <ul role="list"
+                    class="border border-gray-200 dark:border-gray-700 rounded-md divide-y divide-gray-200 dark:divide-gray-700">
+                    
+                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                      <div class="w-0 flex-1 flex items-center">
+                        
+                        
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+
+                        
+                        
+                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
+                          uicCourse
+                        </span>
+                      </div>
+                      <div class="ml-4 flex-shrink-0">
+                        <a href="https://course.uichcc.app" class="font-medium text-indigo-600 hover:text-indigo-500">
+                          Check
+                        </a>
+                      </div>
+                    </li>
+                    
+                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                      <div class="w-0 flex-1 flex items-center">
+                        
+                        
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+
+                        
+                        
+                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
+                          CourseDB Vercel Developement Site
+                        </span>
+                      </div>
+                      <div class="ml-4 flex-shrink-0">
+                        <a href="https://coursedb-beta.vercel.app" class="font-medium text-indigo-600 hover:text-indigo-500">
+                          Check
+                        </a>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </dd>
+              </td>
+            </tr>
+            
+            
+            
+            
+            
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+
+<div class="pb-10 w-content ">
+  <script src="https://giscus.app/client.js"
+          data-repo="ecwu/ecwu.github.io"
+          data-repo-id="MDEwOlJlcG9zaXRvcnkxNjQzMzE1NjY="
+          data-category="Blog Post Discussion"
+          data-category-id="DIC_kwDOCcuALs4CObNl"
+          data-mapping="pathname"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="botton"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+
+
+
+<section class="mb-10">
+<hr>
+<h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2>
+<ul class="list-disc list-inside text-gray-900 dark:text-gray-200">
+    
+    <li><a href="https://ecwuuuuu.com/post/finding-the-name-for-color/">Finding the Name for Color</a></li>
+    
+</ul>
+</section>
+
+<div>
+  <footer class="relative mb-6 text-gray-900 dark:text-gray-200">
+    <hr class="pb-5"><div class="flex justify-begin w-full mx-auto mb-2">
+  <ul class="flex flex-row justify-begin text-lg space-x-2">
+          
+
+      
+      <li>
+          <a href="https://ecwuuuuu.com/index.xml" aria-label="RSS"
+              class="round-button social-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 fill-gray-700 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-200" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+          </a>
+      </li>
+      
+  </ul>
+</div><p>
+      
+      Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
+      Build by GitHub Actions at: 2025-07-05 21:28 CST.
+    </p>
+    <p>
+      
+      &copy;2025
+      ECWUUUUU.
+      All rights reserved.
+      
+
+    </p>
+    
+    <p>
+      <a href="http://beian.miit.gov.cn/"> 粤 ICP 备 17015575 号 - 1</a>
+    </p>
+    
+    <p class="text-sm my-4">
+       Google Analytics enabled   | <a href="https://ecwuuuuu.com/page/changelog">site changelog</a>
+    </p>
+  </footer>
+</div>
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HSPDSQWH5L');
+        }
+      </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PostgreSQL on ECWUUUUU</title>
+    <link>https://ecwuuuuu.com/tags/postgresql/</link>
+    <description>Recent content in PostgreSQL on ECWUUUUU</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ecwuuuuu.com/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Rebuilt a 2018 Project in 2025</title>
+      <link>https://ecwuuuuu.com/post/revisit-uiccourse/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/post/revisit-uiccourse/</guid>
+      <description>&lt;h2 id=&#34;prelude-the-django-and-jquery-days&#34;&gt;Prelude: The Django and jQuery Days&lt;/h2&gt;&#xA;&lt;p&gt;In 2018, I was self-studying the Django web framework for a college course. To apply what I was learning, I decided to build a project to solve a real problem: our school&amp;rsquo;s course information system.&lt;/p&gt;&#xA;&lt;p&gt;All official course information was contained within a single, large PDF file. And course details contains in more individual handbooks PDF files. Finding a specific course was a time-consuming process that required extensive scrolling and text searches. I believed I could create a more efficient and user-friendly solution.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

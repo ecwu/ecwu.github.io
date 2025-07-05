@@ -9,6 +9,181 @@
     <lastBuildDate>Sun, 09 Feb 2025 15:16:00 +0000</lastBuildDate>
     <atom:link href="https://ecwuuuuu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AI</title>
+      <link>https://ecwuuuuu.com/tags/ai/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding Agent</title>
+      <link>https://ecwuuuuu.com/tags/coding-agent/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/coding-agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>https://ecwuuuuu.com/tags/development/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drizzle</title>
+      <link>https://ecwuuuuu.com/tags/drizzle/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/drizzle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Full Stack</title>
+      <link>https://ecwuuuuu.com/tags/full-stack/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/full-stack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Next.js</title>
+      <link>https://ecwuuuuu.com/tags/next.js/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/next.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NextAuth.js</title>
+      <link>https://ecwuuuuu.com/tags/nextauth.js/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/nextauth.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Node.js</title>
+      <link>https://ecwuuuuu.com/tags/node.js/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/node.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://ecwuuuuu.com/tags/postgresql/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://ecwuuuuu.com/tags/programming/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://ecwuuuuu.com/tags/python/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://ecwuuuuu.com/tags/react/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Serverless</title>
+      <link>https://ecwuuuuu.com/tags/serverless/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/serverless/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shadcn UI</title>
+      <link>https://ecwuuuuu.com/tags/shadcn-ui/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/shadcn-ui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>https://ecwuuuuu.com/tags/software/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Supabase</title>
+      <link>https://ecwuuuuu.com/tags/supabase/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/supabase/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tailwind CSS</title>
+      <link>https://ecwuuuuu.com/tags/tailwind-css/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/tailwind-css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TRPC</title>
+      <link>https://ecwuuuuu.com/tags/trpc/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/trpc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>https://ecwuuuuu.com/tags/typescript/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UicCourse</title>
+      <link>https://ecwuuuuu.com/tags/uiccourse/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/uiccourse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vercel</title>
+      <link>https://ecwuuuuu.com/tags/vercel/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/vercel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vibe Coding</title>
+      <link>https://ecwuuuuu.com/tags/vibe-coding/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/vibe-coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Design</title>
+      <link>https://ecwuuuuu.com/tags/web-design/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/web-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>https://ecwuuuuu.com/tags/web-development/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Framework</title>
+      <link>https://ecwuuuuu.com/tags/web-framework/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/tags/web-framework/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Cinestill 800T</title>
       <link>https://ecwuuuuu.com/tags/cinestill-800t/</link>
       <pubDate>Sat, 18 Jan 2025 18:00:00 +0000</pubDate>
@@ -601,13 +776,6 @@
       <link>https://ecwuuuuu.com/tags/perception/</link>
       <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
       <guid>https://ecwuuuuu.com/tags/perception/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://ecwuuuuu.com/tags/programming/</link>
-      <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/tags/programming/</guid>
       <description></description>
     </item>
     <item>
