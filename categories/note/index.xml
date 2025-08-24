@@ -9,6 +9,13 @@
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ecwuuuuu.com/categories/note/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>探索爱尔兰巴士实时交通数据</title>
+      <link>https://ecwuuuuu.com/post/ireland-gtfs-api/</link>
+      <pubDate>Sun, 24 Aug 2025 12:00:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/post/ireland-gtfs-api/</guid>
+      <description>&lt;p&gt;直到最近才发现&lt;a href=&#34;https://www.nationaltransport.ie&#34;&gt;爱尔兰交通管理局&lt;/a&gt;有一个公开的交通数据。之前我是在使用 &lt;a href=&#34;https://transitapp.com/&#34;&gt;Transit App&lt;/a&gt; 来查询时刻表和车辆位置（也是才知道 TFI Live 也可以看到很详细的数据），但有时候这些应用并不能完全满足我的需求（可能只是我个人想要更多的数据，但它们本身是相当不错的软件）。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>How I Rebuilt a 2018 Project in 2025</title>
       <link>https://ecwuuuuu.com/post/revisit-uiccourse/</link>
       <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>

@@ -2,16 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ecwuuuuu.com/categories/</loc>
+    <lastmod>2025-02-09T15:16:00+00:00</lastmod>
+  </url><url>
     <loc>https://ecwuuuuu.com/</loc>
     <lastmod>2025-02-09T15:16:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/gtfs/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/ireland/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/note/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/post/</loc>
     <lastmod>2025-02-09T15:16:00+00:00</lastmod>
   </url><url>
-    <loc>https://ecwuuuuu.com/tags/ai/</loc>
+    <loc>https://ecwuuuuu.com/tags/public-transport/</loc>
   </url><url>
-    <loc>https://ecwuuuuu.com/categories/</loc>
+    <loc>https://ecwuuuuu.com/tags/smart-cities/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/</loc>
     <lastmod>2025-02-09T15:16:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/tech/</loc>
+    <lastmod>2024-11-24T14:19:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/transportation/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/ireland-gtfs-api/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/ai/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/coding-agent/</loc>
   </url><url>
@@ -28,8 +48,6 @@
     <loc>https://ecwuuuuu.com/tags/nextauth.js/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/node.js/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/note/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/postgresql/</loc>
   </url><url>
@@ -48,13 +66,7 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/supabase/</loc>
   </url><url>
-    <loc>https://ecwuuuuu.com/tags/</loc>
-    <lastmod>2025-02-09T15:16:00+00:00</lastmod>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/tailwind-css/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/categories/tech/</loc>
-    <lastmod>2024-11-24T14:19:00+00:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/trpc/</loc>
   </url><url>
