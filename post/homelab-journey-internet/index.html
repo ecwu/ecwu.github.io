@@ -6,7 +6,7 @@
 
 
 
-<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.f078d5bf09b5dfcca8bdef3738bbdfe5f38b1ae9c933cd7dd3a4aaae7592e8b7.css" integrity="sha256-8HjVvwm138yove83OLvf5fOLGunJM81906SqrnWS6Lc=">
+<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.2663f80ba6a3b201a36087f93457ae4007b85addb780009714021d9a5abadf4f.css" integrity="sha256-JmP4C6ajsgGjYIf5NFeuQAe4Wt23gACXFAIdmlq6308=">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Homelab：我的赛博积木 - 公网服务 -  ECWU&#39;s Notebook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,15 +35,46 @@
     }
   })();
 
+  
+  
+  window.updateMermaidTheme = () => {
+    if (typeof mermaid !== 'undefined') {
+      const isDark = document.documentElement.classList.contains("dark");
+
+      const mermaids = document.querySelectorAll('pre.mermaid');
+      mermaids.forEach(e => {
+        if (e.getAttribute('data-processed')) {
+          
+          e.removeAttribute('data-processed');
+          
+          e.innerHTML = e.getAttribute('data-graph');
+        } else {
+          
+          e.setAttribute('data-graph', e.textContent);
+        }
+      });
+
+      if (isDark) {
+        initMermaidDark();
+        mermaid.run();
+      } else {
+        initMermaidLight();
+        mermaid.run();
+      }
+    }
+  }
+
   function change_color_mode(){
     if (localStorage.getItem('current-theme') === 'light') {
       document.documentElement.classList.add('dark')
       localStorage.setItem('current-theme', 'dark');
       change_discussion_color_mode();
+      updateMermaidTheme();
     } else {
       document.documentElement.classList.remove('dark')
       localStorage.setItem('current-theme', 'light');
       change_discussion_color_mode();
+      updateMermaidTheme();
     }
   }
   
@@ -63,6 +94,8 @@
     }
     
   }
+
+  
   
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -73,7 +106,9 @@
       .addEventListener("click", change_color_mode);
   });
 
-</script></head>
+</script>
+
+</head>
     <body class="transition-colors duration-300"><div class="pt-6">
     
     <div class="nav-title flex flex-row flex-wrap gap-2"><a href="https://ecwuuuuu.com/">
@@ -696,7 +731,7 @@
 </div><p>
       
       Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-10-23 17:33 CST.
+      Build by GitHub Actions at: 2025-10-23 20:50 CST.
     </p>
     <p>
       
