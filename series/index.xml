@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 09 Feb 2025 15:16:00 +0000</lastBuildDate>
     <atom:link href="https://ecwuuuuu.com/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Project</title>
+      <link>https://ecwuuuuu.com/series/project/</link>
+      <pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate>
+      <guid>https://ecwuuuuu.com/series/project/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Authentik</title>
       <link>https://ecwuuuuu.com/series/authentik/</link>
       <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
@@ -34,13 +41,6 @@
       <link>https://ecwuuuuu.com/series/website-note/</link>
       <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
       <guid>https://ecwuuuuu.com/series/website-note/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Project</title>
-      <link>https://ecwuuuuu.com/series/project/</link>
-      <pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/series/project/</guid>
       <description></description>
     </item>
     <item>
