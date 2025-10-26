@@ -2,11 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ecwuuuuu.com/post/blog-theme-ecwu-theme/</loc>
+  </url><url>
     <loc>https://ecwuuuuu.com/categories/</loc>
     <lastmod>2025-02-09T15:16:00+00:00</lastmod>
   </url><url>
+    <loc>https://ecwuuuuu.com/tags/design-system/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/categories/development/</loc>
+  </url><url>
     <loc>https://ecwuuuuu.com/</loc>
     <lastmod>2025-02-09T15:16:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/hugo/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/post/</loc>
+    <lastmod>2025-02-09T15:16:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/</loc>
+    <lastmod>2025-02-09T15:16:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/tailwind-css/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/theme-development/</loc>
+  </url><url>
+    <loc>https://ecwuuuuu.com/tags/web-development/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/gtfs/</loc>
   </url><url>
@@ -14,15 +34,9 @@
   </url><url>
     <loc>https://ecwuuuuu.com/categories/note/</loc>
   </url><url>
-    <loc>https://ecwuuuuu.com/post/</loc>
-    <lastmod>2025-02-09T15:16:00+00:00</lastmod>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/public-transport/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/smart-cities/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/</loc>
-    <lastmod>2025-02-09T15:16:00+00:00</lastmod>
   </url><url>
     <loc>https://ecwuuuuu.com/categories/tech/</loc>
     <lastmod>2024-11-24T14:19:00+00:00</lastmod>
@@ -72,8 +86,6 @@
   </url><url>
     <loc>https://ecwuuuuu.com/tags/supabase/</loc>
   </url><url>
-    <loc>https://ecwuuuuu.com/tags/tailwind-css/</loc>
-  </url><url>
     <loc>https://ecwuuuuu.com/tags/trpc/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/typescript/</loc>
@@ -85,8 +97,6 @@
     <loc>https://ecwuuuuu.com/tags/vibe-coding/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/web-design/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/web-development/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/web-framework/</loc>
   </url><url>
@@ -501,8 +511,6 @@
     <loc>https://ecwuuuuu.com/categories/topic/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/post/new-theme-for-blog/</loc>
-  </url><url>
-    <loc>https://ecwuuuuu.com/tags/hugo/</loc>
   </url><url>
     <loc>https://ecwuuuuu.com/tags/tailwind/</loc>
   </url><url>

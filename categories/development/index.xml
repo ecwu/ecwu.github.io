@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on ECWUUUUU</title>
+    <link>https://ecwuuuuu.com/categories/development/</link>
+    <description>Recent content in Development on ECWUUUUU</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ecwuuuuu.com/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog Theme: ecwu-theme</title>
+      <link>https://ecwuuuuu.com/post/blog-theme-ecwu-theme/</link>
+      <pubDate>Sun, 26 Oct 2025 21:00:00 +0000</pubDate>
+      <guid>https://ecwuuuuu.com/post/blog-theme-ecwu-theme/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Every developer who maintains a blog eventually faces the question: &lt;strong&gt;Should I use an existing theme or build my own?&lt;/strong&gt; For me, this wasn&amp;rsquo;t just about aesthetics - it was about creating the perfect reading experience for both technical tutorials and personal reflections.&lt;/p&gt;&#xA;&lt;p&gt;After years of blogging on various platforms and using different Hugo themes, I found myself constantly wanting just one more feature, a slightly different margin, or better typography for code blocks. Rather than continuing to patch someone else&amp;rsquo;s theme, I decided to build &lt;strong&gt;ecwu-theme&lt;/strong&gt; from the ground up.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
