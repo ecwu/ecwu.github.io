@@ -1,19 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Transfer Learning on ECWUUUUU</title>
-    <link>https://ecwuuuuu.com/tags/transfer-learning/</link>
-    <description>Recent content in Transfer Learning on ECWUUUUU</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ecwuuuuu.com/tags/transfer-learning/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PyTorch Tutorial</title>
-      <link>https://ecwuuuuu.com/post/pytorch-tutorial/</link>
-      <pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;A little bit of context&lt;/p&gt;&#xA;&lt;p&gt;This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.&lt;/p&gt;&#xA;&lt;p&gt;My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;introduction-to-pytorch&#34;&gt;Introduction to PyTorch&lt;/h2&gt;&#xA;&lt;p&gt;&#xA;&#xA;&#xA;  &#xA;&#xA;&#xA;&lt;img src=&#34;https://pytorch.org/assets/images/logo-white.svg&#34; &#xA;     alt=&#34;PyTorch&#34; &#xA;     class=&#34;no-dark-invert&#34;&#xA;     &gt;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li&gt;&#xA;&lt;li&gt;Its popularity and widespread adoption by the research and industry communities.&lt;/li&gt;&#xA;&lt;li&gt;PyTorch is widely known for its ease of use, Pythonic interface, and excellent support for research-oriented tasks.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;key-technology&#34;&gt;Key Technology&lt;/h3&gt;&#xA;&lt;h4 id=&#34;dynamic-computational-graph&#34;&gt;Dynamic computational graph&lt;/h4&gt;&#xA;&lt;p&gt;A &lt;strong&gt;computational graph&lt;/strong&gt; represents the flow of data through a computational model in the form of a directed acyclic graph (DAG). It serves as a visual representation of the mathematical operations performed on input data to produce the desired output.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Transfer Learning on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/transfer-learning/</link><description>Recent content in Transfer Learning on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/transfer-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>PyTorch Tutorial</title><link>https://ecwuuuuu.com/post/pytorch-tutorial/</link><pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid><description>&lt;blockquote>
+&lt;p>A little bit of context&lt;/p>
+&lt;p>This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.&lt;/p>
+&lt;p>My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="introduction-to-pytorch">Introduction to PyTorch&lt;/h2>
+&lt;p>
+
+
+ 
+
+
+&lt;img src="https://pytorch.org/assets/images/logo-white.svg" 
+ alt="PyTorch" 
+ class="no-dark-invert"
+ >
+&lt;/p>
+&lt;ul>
+&lt;li>PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li>
+&lt;li>Its popularity and widespread adoption by the research and industry communities.&lt;/li>
+&lt;li>PyTorch is widely known for its ease of use, Pythonic interface, and excellent support for research-oriented tasks.&lt;/li>
+&lt;/ul>
+&lt;h3 id="key-technology">Key Technology&lt;/h3>
+&lt;h4 id="dynamic-computational-graph">Dynamic computational graph&lt;/h4>
+&lt;p>A &lt;strong>computational graph&lt;/strong> represents the flow of data through a computational model in the form of a directed acyclic graph (DAG). It serves as a visual representation of the mathematical operations performed on input data to produce the desired output.&lt;/p></description></item></channel></rss>

@@ -1,19 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>DS918&#43; on ECWUUUUU</title>
-    <link>https://ecwuuuuu.com/tags/ds918&#43;/</link>
-    <description>Recent content in DS918&#43; on ECWUUUUU</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ecwuuuuu.com/tags/ds918+/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title>
-      <link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link>
-      <pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;some-background&#34;&gt;Some Background&lt;/h2&gt;&#xA;&lt;p&gt;I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;span class=&#34;px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md&#34;&gt;&#xA;China Mobile Limited; Chinese: 中国移动通信集团有限公司&lt;/span&gt;, so no dedicated IPv4 address.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DS918+ on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/ds918+/</link><description>Recent content in DS918+ on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/ds918+/index.xml" rel="self" type="application/rss+xml"/><item><title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title><link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link><pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid><description>&lt;blockquote>
+&lt;p>Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="some-background">Some Background&lt;/h2>
+&lt;p>I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md">
+China Mobile Limited; Chinese: 中国移动通信集团有限公司&lt;/span>, so no dedicated IPv4 address.&lt;/p></description></item></channel></rss>

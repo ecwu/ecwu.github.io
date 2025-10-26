@@ -1,715 +1,100 @@
-<!DOCTYPE html><html lang="en">
-    <head>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        renderMathInElement(document.body, {
-            
-            
-            delimiters: [
-                { left: '$$', right: '$$', display: true },
-                { left: '$', right: '$', display: false },
-                { left: '\\(', right: '\\)', display: false },
-                { left: '\\[', right: '\\]', display: true },
-                { left: "\\begin{equation}", right: "\\end{equation}", display: true },
-                { left: "\\begin{align}", right: "\\end{align}", display: true },
-                { left: "\\begin{alignat}", right: "\\end{alignat}", display: true },
-                { left: "\\begin{gather}", right: "\\end{gather}", display: true },
-                { left: "\\begin{CD}", right: "\\end{CD}", display: true },
-            ],
-            
-            throwOnError: false,
-            trust: (context) => ['\\htmlId', '\\href'].includes(context.command),
-            macros: {
-                "\\eqref": "\\href{###1}{(\\text{#1})}",
-                "\\ref": "\\href{###1}{\\text{#1}}",
-                "\\label": "\\htmlId{#1}{}"
-            }
-        });
-    });
-</script>
-
-<link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
-
-
-
-
-<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.744725dcb7cf600fb6c5cb9d56c898a6af45d86759410d7e6058efc92a19d2e7.css" integrity="sha256-dEcl3LfPYA&#43;2xcudVsiYpq9F2GdZQQ1&#43;YFjvySoZ0uc=">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>Array -  ECWU&#39;s Notebook</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Homepage and blog for Zhenghao Wu (ECWU), sharing thoughts on technology, everyday experiences, and photography. Engaging with the community through knowledge sharing.">
-<meta name="keywords" content="Placeholder">
-<meta name="author" content="ECWUUUUU"><script>
-  
-  (function() {
-    const theme = localStorage.getItem("current-theme");
-    
-    if (theme === null) {
-      
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        localStorage.setItem("current-theme", "dark");
-        document.documentElement.classList.add('dark');
-      } else {
-        localStorage.setItem("current-theme", "light");
-        document.documentElement.classList.remove('dark');
-      }
-    } else if (theme === 'dark') {
-      
-      document.documentElement.classList.add('dark');
-    } else {
-      
-      document.documentElement.classList.remove('dark');
-    }
-  })();
-
-  
-  
-  window.updateMermaidTheme = () => {
-    if (typeof mermaid !== 'undefined') {
-      const isDark = document.documentElement.classList.contains("dark");
-
-      const mermaids = document.querySelectorAll('pre.mermaid');
-      mermaids.forEach(e => {
-        if (e.getAttribute('data-processed')) {
-          
-          e.removeAttribute('data-processed');
-          
-          e.innerHTML = e.getAttribute('data-graph');
-        } else {
-          
-          e.setAttribute('data-graph', e.textContent);
-        }
-      });
-
-      if (isDark) {
-        initMermaidDark();
-        mermaid.run();
-      } else {
-        initMermaidLight();
-        mermaid.run();
-      }
-    }
-  }
-
-  function change_color_mode(){
-    if (localStorage.getItem('current-theme') === 'light') {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('current-theme', 'dark');
-      change_discussion_color_mode();
-      updateMermaidTheme();
-    } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('current-theme', 'light');
-      change_discussion_color_mode();
-      updateMermaidTheme();
-    }
-  }
-  
-
-  function change_discussion_color_mode(){
-    
-    
-    
-  }
-
-  
-  
-
-  document.addEventListener("DOMContentLoaded", () => {
-    
-
-    document
-      .getElementById("header-theme-button")
-      .addEventListener("click", change_color_mode);
-  });
-
-</script>
-
-</head>
-    <body class="transition-colors duration-300"><div class="pt-6">
-    
-    <div class="nav-title flex flex-row flex-wrap gap-2"><a href="https://ecwuuuuu.com/">
-    
-    <svg class="w-36 fill-gray-900 dark:fill-gray-200" fill="currentColor" viewBox="0 0 204.24 43.44" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,43.08V0.36h18.24v5.76H6.12v12.54h10.56v5.76H6.12v12.54h12.12v6.12H0z"/>
-        <path d="M41.64,30.9v2.64c0,1.32-0.25,2.57-0.75,3.75c-0.5,1.18-1.19,2.23-2.07,3.15c-0.88,0.92-1.91,1.65-3.09,2.19  c-1.18,0.54-2.45,0.81-3.81,0.81c-1.16,0-2.34-0.16-3.54-0.48c-1.2-0.32-2.28-0.88-3.24-1.68s-1.75-1.83-2.37-3.09  c-0.62-1.26-0.93-2.87-0.93-4.83V9.84c0-1.4,0.24-2.7,0.72-3.9c0.48-1.2,1.16-2.24,2.04-3.12c0.88-0.88,1.93-1.57,3.15-2.07  C28.97,0.25,30.32,0,31.8,0c2.88,0,5.22,0.94,7.02,2.82c0.88,0.92,1.57,2.01,2.07,3.27c0.5,1.26,0.75,2.63,0.75,4.11v2.4h-6.12  v-2.04c0-1.2-0.34-2.24-1.02-3.12c-0.68-0.88-1.6-1.32-2.76-1.32c-1.52,0-2.53,0.47-3.03,1.41c-0.5,0.94-0.75,2.13-0.75,3.57v21.84  c0,1.24,0.27,2.28,0.81,3.12s1.51,1.26,2.91,1.26c0.4,0,0.83-0.07,1.29-0.21c0.46-0.14,0.89-0.37,1.29-0.69  c0.36-0.32,0.66-0.76,0.9-1.32c0.24-0.56,0.36-1.26,0.36-2.1v-2.1H41.64z"/>
-        <path d="M78.36,0.36L72,43.08h-5.76l-4.68-27.72h-0.12l-4.62,27.72h-5.76L44.7,0.36h6.48l3.06,27.12h0.12l4.8-27.12h4.68l4.98,27.78  h0.12l2.94-27.78H78.36z"/>
-        <path d="M102,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H102z"/>
-        <path d="M127.56,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  s-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H127.56z"/>
-        <path d="M153.12,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H153.12z"/>
-        <path d="M178.68,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36H165v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H178.68z"/>
-        <path d="M204.24,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H204.24z"/>
-    </svg>
-    <p class="sr-only">ECWU Homepage</p>
-    
-</a></div>
-    
-<nav aria-label="navbar" class="mb-3 mr-8">
-    <ol role="list" class="flex flex-wrap">
-        
-        
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Home</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/post/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Posts</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/photography/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Photos</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/series/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Series</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/page/about/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>About</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/page/friends/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Friends</a>
-            
-            
-        </div>
-        </li>
-        
-    </ol>
-</nav><div  class="flex items-center space-x-2">
-    <div class="w-6 h-6 inline-flex items-center justify-center rounded-lg bg-white dark:bg-black shadow-inner ring-1 ring-black/5">
-        <i id="header-theme-button" data-feather="sun" class="site-header-navlink rounded cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun h-4 w-4 block dark:hidden fill-gray-900 dark:fill-gray-200"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon h-4 w-4 hidden dark:block fill-gray-900 dark:fill-gray-200"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
-        </i>
-    </div>
-    <span class="dark:hidden text-sm">To Dark Mode</span>
-    <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
-</div></div>
-  <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
-    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/GsZLXA4JPcM/download?force=true&amp;w=2400" alt="Featured Images">
-    
-    <figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">
-      Photo by Ricardo Gomez Angel on Unsplash
-    </figcaption>
-    
-  </figure>
-<div class="mb-12 mt-16 w-content">
-  <h1 class="text-gray-900 dark:text-gray-200">Array</h1>
-  
-
-  
-  <div class="text-gray-700 dark:text-gray-400">
-    <div class="space-y-1">
-      
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-signature-icon lucide-signature h-5 w-5 inline-block">
-          <path d="m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284"/>
-          <path d="M3 21h18"/>
-        </svg> Zhenghao Wu</p>
-      
-
-
-      
-      <p>
-        
-        <span class="mr-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-clock-icon lucide-calendar-clock h-5 w-5 inline-block"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/>
-          <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/>
-          <path d="M3 10h5"/>
-          <path d="M8 2v4"/>
-          <circle cx="16" cy="16" r="6"/>
-        </svg> Wednesday, February 9, 2022
-        </span>
-        
-
-        
-        <span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-clock-icon lucide-clipboard-clock h-5 w-5 inline-block">
-          <path d="M16 14v2.2l1.6 1"/>
-          <path d="M16 4h2a2 2 0 0 1 2 2v.832"/>
-          <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2"/>
-          <circle cx="16" cy="16" r="6"/>
-          <rect x="8" y="2" width="8" height="4" rx="1"/>
-        </svg> 5 min read
-        </span>
-        
-      </p>
-      
-
-      
-      <p>
-        
-        <span class="">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag-icon lucide-flag h-5 w-5 inline-block">
-          <path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/>
-        </svg>
-        Status: In Progress
-        </span>
-        
-        
-        
-      </p>
-      
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text-icon lucide-scroll-text h-5 w-5 inline-block">
-          <path d="M15 12h-5"/>
-          <path d="M15 8h-5"/>
-          <path d="M19 17V5a2 2 0 0 0-2-2H4"/>
-          <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/>
-        </svg> <a href="#article-info-card">Post Details</a>
-      </p>
-      
-      
-    </div>
-  </div>
-  
-</div>
-<div class="w-content bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400 px-5 py-3">
-     
-     
-     
-         
-        
-     
-         
-        
-     
-         
-        
-     
-         
-        
-     
-         
-        
-     
-         
-        
-     
-         
-        
-     
-         
-        
-     
-         
-        
-     
-         
-        
-     
-         
-        
-    
-     
-        
-        
-     
-        
-        
-     
-        
-        
-     
-        
-        
-     
-        
-        
-     
-        
-        
-     
-        
-        
-     
-        
-        
-     
-        
-        
-     
-        
-        
-     
-        
-        
-    
-    
-    <p>This post is part of the <b>algorithm</b> series.</p>
-    <p>
-    
-  </div>
-<main>
-<article class="prose dark:prose-invert lg:prose-xl md:prose-lg prose-ul:leading-5 prose-ol:leading-5">
-    
-<section class="mb-8">
-  <details closed class="toc">
-    <summary>Table of Contents</summary>
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#1-两数之和">1. 两数之和</a></li>
-    <li><a href="#4-寻找两个正序数组的中位数">4. 寻找两个正序数组的中位数</a></li>
-    <li><a href="#11-盛最多水的容器">11. 盛最多水的容器</a></li>
-    <li><a href="#15-三数之和">15. 三数之和</a></li>
-    <li><a href="#53-最大子数组和">53. 最大子数组和</a></li>
-    <li><a href="#136-只出现一次的数字">136. 只出现一次的数字</a></li>
-  </ul>
-</nav>
-  </details>
-</section>
-
-    <h2 id="1-两数之和">1. 两数之和</h2>
-<p><a href="https://leetcode-cn.com/problems/two-sum">https://leetcode-cn.com/problems/two-sum</a></p>
-<p>给定一个整数数组 <code>nums</code>，目标是找出数组中的两个整数，算数和为 <code>target</code>，返回数组下标（只有一个答案，不能元素重复使用）。<strong>其中最简单直接的方法就是暴力遍历</strong>，得到所有二元素数组的组合（但需要注意储存下标）。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">twoSum</span>(<span style="color:#268bd2">self</span>, nums: List[<span style="color:#b58900">int</span>], target: <span style="color:#b58900">int</span>) <span style="color:#719e07">-&gt;</span> List[<span style="color:#b58900">int</span>]:
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(nums)):
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">for</span> j <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(nums)):
-</span></span><span style="display:flex;"><span>                <span style="color:#719e07">if</span> i <span style="color:#719e07">==</span> j:
-</span></span><span style="display:flex;"><span>                    <span style="color:#719e07">continue</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#719e07">if</span> nums[i] <span style="color:#719e07">+</span> nums[j] <span style="color:#719e07">==</span> target:
-</span></span><span style="display:flex;"><span>                    <span style="color:#719e07">return</span> [i, j]
-</span></span></code></pre></div><p>但很明显，暴力遍历的时间复杂度很高，为 $\mathcal{O}(n^2)$。</p>
-<p>另一种方式则可以使用哈希表，每次计算元素和 <code>target</code> 的差值，将差值在哈希表中寻找，如果不存在，则将元素和对应的下标存入哈希表中。这样如果遇到符合要求的组合，就能拿到对应元素的下标并返回了。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">twoSum</span>(<span style="color:#268bd2">self</span>, nums: List[<span style="color:#b58900">int</span>], target: <span style="color:#b58900">int</span>) <span style="color:#719e07">-&gt;</span> List[<span style="color:#b58900">int</span>]:
-</span></span><span style="display:flex;"><span>        h_dict <span style="color:#719e07">=</span> <span style="color:#b58900">dict</span>()
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#b58900">len</span>(nums)):
-</span></span><span style="display:flex;"><span>            pair_elem <span style="color:#719e07">=</span> target <span style="color:#719e07">-</span> nums[i]
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> pair_elem <span style="color:#719e07">in</span> h_dict<span style="color:#719e07">.</span>keys():
-</span></span><span style="display:flex;"><span>                <span style="color:#719e07">return</span> [i, h_dict[pair_elem]]
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">else</span>:
-</span></span><span style="display:flex;"><span>                h_dict[nums[i]] <span style="color:#719e07">=</span> i
-</span></span></code></pre></div><p>这种优化的方法，因为只需要遍历一次，则时间复杂度为 $\mathcal{O}(n)$, 但需要哈希表（Python 中为字典 dict），则空间复杂度最差为 $\mathcal{O}(n)$</p>
-<h2 id="4-寻找两个正序数组的中位数">4. 寻找两个正序数组的中位数</h2>
-<p><a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays">https://leetcode-cn.com/problems/median-of-two-sorted-arrays</a></p>
-<p>最暴力无脑的方法就是将两数组合并后排序，得到新数组后、根据长度、得到中心元素。最后得出中位数。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">findMedianSortedArrays</span>(<span style="color:#268bd2">self</span>, nums1: List[<span style="color:#b58900">int</span>], nums2: List[<span style="color:#b58900">int</span>]) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">float</span>:
-</span></span><span style="display:flex;"><span>        nums1 <span style="color:#719e07">=</span> <span style="color:#b58900">sorted</span>(nums1<span style="color:#719e07">+</span>nums2)
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">if</span> <span style="color:#b58900">len</span>(nums1) <span style="color:#719e07">%</span> <span style="color:#2aa198">2</span> <span style="color:#719e07">==</span> <span style="color:#2aa198">1</span>:
-</span></span><span style="display:flex;"><span>            idx <span style="color:#719e07">=</span> <span style="color:#b58900">int</span>(<span style="color:#b58900">len</span>(nums1)<span style="color:#719e07">/</span><span style="color:#2aa198">2</span>)
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">return</span> nums1[idx]
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">else</span>:
-</span></span><span style="display:flex;"><span>            idx <span style="color:#719e07">=</span> <span style="color:#b58900">int</span>(<span style="color:#b58900">len</span>(nums1)<span style="color:#719e07">/</span><span style="color:#2aa198">2</span>)
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">return</span> (nums1[idx] <span style="color:#719e07">+</span> nums1[idx<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>])<span style="color:#719e07">/</span><span style="color:#2aa198">2</span>
-</span></span></code></pre></div><p>但这种方法复杂度开销主要在快速排序，为 $\mathcal{O}((m+n) \log (m+n))$。这里也可以使用归并排序之类的方法。但是这道题之所以被定义为 <code>困难</code>，是因为题目中给出的额外条件：<strong>控制时间复杂度为 $\mathcal{O}(\log (m+n))$</strong>。</p>
-<h2 id="11-盛最多水的容器">11. 盛最多水的容器</h2>
-<p><a href="https://leetcode-cn.com/problems/container-with-most-water">https://leetcode-cn.com/problems/container-with-most-water</a></p>
-<p>横坐标上有多个垂直线，寻找两根垂直线和垂直线之间距离为一个盛水的容器，使得“容器”内最大的盛水量（两垂直线较短的一条*两线距离）。这个盛水量很明显与两线中最短的线有关，所以我们可以通过更换两线中较短的那条为潜在更长的线，来避免木桶效应。最大盛水量则再每次更换垂直线后计算并比较。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">maxArea</span>(<span style="color:#268bd2">self</span>, height: List[<span style="color:#b58900">int</span>]) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">int</span>:
-</span></span><span style="display:flex;"><span>        l, r <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>, <span style="color:#b58900">len</span>(height) <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>  <span style="color:#586e75"># Use two pointers</span>
-</span></span><span style="display:flex;"><span>        ans <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">while</span> l <span style="color:#719e07">&lt;</span> r:
-</span></span><span style="display:flex;"><span>            area <span style="color:#719e07">=</span> <span style="color:#b58900">min</span>(height[l], height[r]) <span style="color:#719e07">*</span> (r <span style="color:#719e07">-</span> l)
-</span></span><span style="display:flex;"><span>            ans <span style="color:#719e07">=</span> <span style="color:#b58900">max</span>(area, ans)
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> height[l] <span style="color:#719e07">&lt;</span> height[r]:
-</span></span><span style="display:flex;"><span>                l <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">else</span>:
-</span></span><span style="display:flex;"><span>                r <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> ans
-</span></span></code></pre></div><p>使用双指针来搜索，最差情况会将所有垂直线遍历一次，复杂度为 $\mathcal{O}(n)$，空间复杂度为 $\mathcal{O}(1)$。</p>
-<h2 id="15-三数之和">15. 三数之和</h2>
-<p><a href="https://leetcode-cn.com/problems/3sum">https://leetcode-cn.com/problems/3sum</a></p>
-<p>给整数列表，返回所有和为 0 的三元组。这里可以通过排序的方法来去除不必要的搜索。我们先锚定一个整数，然后在该整数右一和末尾位置，使用两个指针，搜索可能的组合。对于重复的整数，只对最后一个出现的整数进行搜索，这样可以避免出现重复三元组。在搜索时，如果结果大于0，则右指针左移动；反之左指针右移。当搜索到一个符合条件的三元组，则左右指针同时移动，该循环在两指针相遇时结束。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">threeSum</span>(<span style="color:#268bd2">self</span>, nums: List[<span style="color:#b58900">int</span>]) <span style="color:#719e07">-&gt;</span> List[List[<span style="color:#b58900">int</span>]]:
-</span></span><span style="display:flex;"><span>        results <span style="color:#719e07">=</span> <span style="color:#b58900">list</span>()
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">if</span> <span style="color:#b58900">len</span>(nums) <span style="color:#719e07">&lt;</span> <span style="color:#2aa198">3</span>:  <span style="color:#586e75"># no possible combo exist</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">return</span> results
-</span></span><span style="display:flex;"><span>        nums <span style="color:#719e07">=</span> <span style="color:#b58900">sorted</span>(nums)
-</span></span><span style="display:flex;"><span>        n <span style="color:#719e07">=</span> <span style="color:#b58900">len</span>(nums)
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> k <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(n):
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> nums[k] <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">0</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#719e07">break</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> k <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">0</span> <span style="color:#719e07">and</span> nums[k] <span style="color:#719e07">==</span> nums[k<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>]:
-</span></span><span style="display:flex;"><span>                <span style="color:#719e07">continue</span>
-</span></span><span style="display:flex;"><span>            i <span style="color:#719e07">=</span> k <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>            j <span style="color:#719e07">=</span> <span style="color:#b58900">len</span>(nums) <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#719e07">while</span> i <span style="color:#719e07">&lt;</span> j:
-</span></span><span style="display:flex;"><span>                <span style="color:#b58900">sum</span> <span style="color:#719e07">=</span> nums[k] <span style="color:#719e07">+</span> nums[i] <span style="color:#719e07">+</span> nums[j]
-</span></span><span style="display:flex;"><span>                <span style="color:#719e07">if</span> <span style="color:#b58900">sum</span> <span style="color:#719e07">==</span> <span style="color:#2aa198">0</span>:
-</span></span><span style="display:flex;"><span>                    results<span style="color:#719e07">.</span>append([nums[k], nums[i], nums[j]])
-</span></span><span style="display:flex;"><span>                    i <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#719e07">while</span> i <span style="color:#719e07">&lt;</span> j <span style="color:#719e07">and</span> nums[i] <span style="color:#719e07">==</span> nums[i <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>]:
-</span></span><span style="display:flex;"><span>                        i <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>                    j <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#719e07">while</span> j <span style="color:#719e07">&gt;</span> i <span style="color:#719e07">and</span> nums[j] <span style="color:#719e07">==</span> nums[j <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>]:
-</span></span><span style="display:flex;"><span>                        j <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#719e07">elif</span> <span style="color:#b58900">sum</span> <span style="color:#719e07">&lt;</span> <span style="color:#2aa198">0</span>:
-</span></span><span style="display:flex;"><span>                    i <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#719e07">while</span> i <span style="color:#719e07">&lt;</span> j <span style="color:#719e07">and</span> nums[i] <span style="color:#719e07">==</span> nums[i <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>]:
-</span></span><span style="display:flex;"><span>                        i <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#719e07">else</span>:
-</span></span><span style="display:flex;"><span>                    j <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>                    <span style="color:#719e07">while</span> j <span style="color:#719e07">&gt;</span> i <span style="color:#719e07">and</span> nums[j] <span style="color:#719e07">==</span> nums[j <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>]:
-</span></span><span style="display:flex;"><span>                        j <span style="color:#719e07">-=</span> <span style="color:#2aa198">1</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> results
-</span></span></code></pre></div><p>对 n 元素搜索，再使用双指针来搜索，最差情况会将所有 n 右侧元素遍历一次，复杂度为 $\mathcal{O}(n^2)$。</p>
-<h2 id="53-最大子数组和">53. 最大子数组和</h2>
-<p><a href="https://leetcode-cn.com/problems/maximum-subarray">https://leetcode-cn.com/problems/maximum-subarray</a></p>
-<p>寻找最大数组和是一道经典的的算法题，返回数组中，最大子序列的和。最暴力的思路是遍历所有的子数组和。如果使用三个指针，时间复杂度会达到$O(n^3)$。但可以通过前缀和来优化，将复杂度降至$O(n^2)$。
-但这里，使用动态规划的思路。只需要遍历一次，维护前缀和（<code>pre</code>）和最大和（<code>max</code>）两个变量。在每个元素遍历时，先在“前缀和加当前元素”（<code>pre</code> + <code>i</code>）与当前元素（<code>i</code>）中取更大值作为新的前缀和（<code>pre</code>）。然后再比较目前最大值（<code>pre</code>）与全局最大和（<code>max</code>）作为新的全局最大和。</p>
-<p>这里最重要的思路是前缀和（<code>pre</code>）：</p>
-<ol>
-<li>如果当前元素为正数，则新前缀和会是一个更大的数。</li>
-<li>如果当前元素为负数，一种情况是加和后，前缀大于当前元素，之后遇到更多正数元素后，子序列可能和会达到全局最大。</li>
-<li>如果当前元素为负数，另种情况是加和后新前缀小于当前元素，这情况则不需要继续考虑之前的子序列（将前缀和设为当前元素），因为在这种情况下之前的前缀和已经为负数，如果继续考虑之前的子序列，如果存在更大的子序列，则无法发现。</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">maxSubArray</span>(<span style="color:#268bd2">self</span>, nums: List[<span style="color:#b58900">int</span>]) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">int</span>:
-</span></span><span style="display:flex;"><span>        _max <span style="color:#719e07">=</span> nums[<span style="color:#2aa198">0</span>]
-</span></span><span style="display:flex;"><span>        temp <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> i <span style="color:#719e07">in</span> nums:
-</span></span><span style="display:flex;"><span>            temp <span style="color:#719e07">=</span> <span style="color:#b58900">max</span>(i, temp <span style="color:#719e07">+</span> i)
-</span></span><span style="display:flex;"><span>            _max <span style="color:#719e07">=</span> <span style="color:#b58900">max</span>(_max, temp)
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> _max
-</span></span></code></pre></div><p>因为只涉及一次数组遍历，时间复杂度为$O(n)$</p>
-<h2 id="136-只出现一次的数字">136. 只出现一次的数字</h2>
-<p><a href="https://leetcode.cn/problems/single-number/">https://leetcode.cn/problems/single-number/</a></p>
-<p>数组中的数都是成对出现，只有一个落单。如果要找到那个只出现一次的数字，最简单粗暴的方法就是用字典记录每个数字出现的次数。这会许多额外的空间。所以这道题额外要求&quot;算法应该具有线性时间复杂度。不使用额外空间来实现&quot;。</p>
-<p>这里使用的方法是位运算：利用 XOR 异或运算 <code>^</code>，异或运算具有以下特性：</p>
-<ul>
-<li>交换律：<code>a ^ b ^ c &lt;=&gt; a ^ c ^ b</code></li>
-<li>任何数于 0 异或为任何数 <code>0 ^ n =&gt; n</code></li>
-<li>相同的数异或为 0  <code>n ^ n =&gt; 0</code></li>
-</ul>
-<p>那么将所有的数字异或后，得到的数字就是那个只出现了一次的数字。</p>
-<p>个人认为这种方法如果没见过就很难想到，这类问题需要多看方法拓展知识面。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">singleNumber</span>(<span style="color:#268bd2">self</span>, nums: List[<span style="color:#b58900">int</span>]) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">int</span>:
-</span></span><span style="display:flex;"><span>        a <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>  <span style="color:#586e75"># extra space</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> n <span style="color:#719e07">in</span> nums:
-</span></span><span style="display:flex;"><span>            a <span style="color:#719e07">^=</span> n
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> a
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">singleNumber</span>(<span style="color:#268bd2">self</span>, nums: List[<span style="color:#b58900">int</span>]) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">int</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">for</span> idx <span style="color:#719e07">in</span> <span style="color:#b58900">range</span>(<span style="color:#2aa198">1</span>, <span style="color:#b58900">len</span>(nums)):
-</span></span><span style="display:flex;"><span>            nums[<span style="color:#2aa198">0</span>] <span style="color:#719e07">^=</span> nums[idx]  <span style="color:#586e75"># reuse the first element i n the array</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> nums[<span style="color:#2aa198">0</span>]
-</span></span></code></pre></div>
-</article>
-</main>
-<div class="pb-10 w-content">
-  <div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg">
-    <div class="px-4 py-5 sm:px-6">
-      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
-        <a id="article-info-card"></a>
-        Article Card
-      </h3>
-      <p class="mt-1 text-sm text-gray-500">
-        For "<span class="italic">Array</span>"
-      </p>
-    </div>
-    <div class="border-t border-gray-200 dark:border-gray-700">
-      <dl>
-        <table class="border-collapse table-fixed w-full">
-          <tbody class="bg-white dark:bg-gray-800">
-            
-            <tr class="px-4 py-5">
-              <th
-                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
-                Author</td>
-              <td
-                class="border-b font-bold border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm ">
-                Zhenghao Wu</td>
-            </tr>
-            
-            
-            <tr class="px-4 py-5">
-              <th
-                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
-                Publish & Update Date</td>
-              <td
-                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2022-02-09</td>
-            </tr>
-            
-            
-            <tr class="px-4 py-5">
-              <th
-                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
-                Tags</td>
-              <td
-                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/placeholder">Placeholder</a>
-                
-              </td>
-            </tr>
-            
-            
-            <tr class="px-4 py-5">
-              <th
-                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
-                Extra Materials</td>
-              <td
-                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  <ul role="list"
-                    class="border border-gray-200 dark:border-gray-700 rounded-md divide-y divide-gray-200 dark:divide-gray-700">
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-icon lucide-file flex-shrink-0 h-5 w-5 text-gray-400"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
-                        
-                        
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          placeholder
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Download
-                        </a>
-                      </div>
-                    </li>
-                    
-                  </ul>
-                </dd>
-              </td>
-            </tr>
-            
-            
-            
-            
-            
-          </tbody>
-        </table>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<section class="mb-10">
-<hr>
-<h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2>
-<ul class="list-disc list-inside text-gray-900 dark:text-gray-200">
-    
-    <li><a href="https://ecwuuuuu.com/page/algorithm/binary/">Binary</a></li>
-    
-    <li><a href="https://ecwuuuuu.com/page/algorithm/dynamic-programming/">Dynamic Programming</a></li>
-    
-    <li><a href="https://ecwuuuuu.com/page/algorithm/graph/">Graph</a></li>
-    
-</ul>
-</section>
-
-<div>
-  <footer class="relative mb-6 text-gray-900 dark:text-gray-200">
-    <hr class="pb-5"><div class="flex justify-begin w-full mx-auto mb-2">
-  <ul class="flex flex-row justify-begin text-lg space-x-2">
-          
-
-      
-      <li>
-          <a href="https://ecwuuuuu.com/index.xml" aria-label="RSS"
-              class="round-button social-button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 fill-gray-700 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-200" viewBox="0 0 16 16">
-                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-              </svg>
-          </a>
-      </li>
-      
-  </ul>
-</div><p>
-      
-      Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-10-27 07:01 CST.
-    </p>
-    <p>
-      
-      &copy;2025
-      ECWUUUUU.
-      All rights reserved.
-      
-
-    </p>
-    
-    <p>
-      <a href="http://beian.miit.gov.cn/"> 粤 ICP 备 17015575 号 - 1</a>
-    </p>
-    
-    <p class="text-sm my-4">
-       Google Analytics enabled   | <a href="https://ecwuuuuu.com/page/changelog">site changelog</a>
-    </p>
-  </footer>
-</div>
-
-
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-HSPDSQWH5L');
-        }
-      </script>
-
-
-    </body>
-</html>
+<!doctype html><html lang=en><head><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css integrity=sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js integrity=sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js integrity=sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh crossorigin=anonymous onload=renderMathInElement(document.body)></script><script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"\\begin{align}",right:"\\end{align}",display:!0},{left:"\\begin{alignat}",right:"\\end{alignat}",display:!0},{left:"\\begin{gather}",right:"\\end{gather}",display:!0},{left:"\\begin{CD}",right:"\\end{CD}",display:!0}],throwOnError:!1,trust:e=>["\\htmlId","\\href"].includes(e.command),macros:{"\\eqref":"\\href{###1}{(\\text{#1})}","\\ref":"\\href{###1}{\\text{#1}}","\\label":"\\htmlId{#1}{}"}})})</script><link rel=icon type=image/x-icon href=https://ecwuuuuu.com/favicon.ico><link rel=stylesheet href=https://ecwuuuuu.com/css/style.min.744725dcb7cf600fb6c5cb9d56c898a6af45d86759410d7e6058efc92a19d2e7.css integrity="sha256-dEcl3LfPYA+2xcudVsiYpq9F2GdZQQ1+YFjvySoZ0uc="><meta charset=utf-8><title>Array - ECWU's Notebook</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Homepage and blog for Zhenghao Wu (ECWU), sharing thoughts on technology, everyday experiences, and photography. Engaging with the community through knowledge sharing."><meta name=keywords content="Placeholder"><meta name=author content="ECWUUUUU"><script>(function(){const e=localStorage.getItem("current-theme");e===null?window.matchMedia("(prefers-color-scheme: dark)").matches?(localStorage.setItem("current-theme","dark"),document.documentElement.classList.add("dark")):(localStorage.setItem("current-theme","light"),document.documentElement.classList.remove("dark")):e==="dark"?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")})(),window.updateMermaidTheme=()=>{if(typeof mermaid!="undefined"){const e=document.documentElement.classList.contains("dark"),t=document.querySelectorAll("pre.mermaid");t.forEach(e=>{e.getAttribute("data-processed")?(e.removeAttribute("data-processed"),e.innerHTML=e.getAttribute("data-graph")):e.setAttribute("data-graph",e.textContent)}),e?(initMermaidDark(),mermaid.run()):(initMermaidLight(),mermaid.run())}};function change_color_mode(){localStorage.getItem("current-theme")==="light"?(document.documentElement.classList.add("dark"),localStorage.setItem("current-theme","dark"),change_discussion_color_mode(),updateMermaidTheme()):(document.documentElement.classList.remove("dark"),localStorage.setItem("current-theme","light"),change_discussion_color_mode(),updateMermaidTheme())}function change_discussion_color_mode(){}document.addEventListener("DOMContentLoaded",()=>{document.getElementById("header-theme-button").addEventListener("click",change_color_mode)})</script></head><body class="transition-colors duration-300"><div class=pt-6><div class="nav-title flex flex-row flex-wrap gap-2"><a href=https://ecwuuuuu.com/><svg class="w-36 fill-gray-900 dark:fill-gray-200" fill="currentcolor" viewBox="0 0 204.24 43.44"><path d="M0 43.08V.36h18.24v5.76H6.12v12.54h10.56v5.76H6.12v12.54h12.12v6.12H0z"/><path d="M41.64 30.9v2.64c0 1.32-.25 2.57-.75 3.75s-1.19 2.23-2.07 3.15-1.91 1.65-3.09 2.19-2.45.81-3.81.81c-1.16.0-2.34-.16-3.54-.48s-2.28-.88-3.24-1.68-1.75-1.83-2.37-3.09c-.62-1.26-.93-2.87-.93-4.83V9.84c0-1.4.24-2.7.72-3.9s1.16-2.24 2.04-3.12 1.93-1.57 3.15-2.07C28.97.25 30.32.0 31.8.0c2.88.0 5.22.94 7.02 2.82.88.92 1.57 2.01 2.07 3.27s.75 2.63.75 4.11v2.4h-6.12v-2.04c0-1.2-.34-2.24-1.02-3.12s-1.6-1.32-2.76-1.32c-1.52.0-2.53.47-3.03 1.41s-.75 2.13-.75 3.57v21.84c0 1.24.27 2.28.81 3.12s1.51 1.26 2.91 1.26c.4.0.83-.07 1.29-.21s.89-.37 1.29-.69c.36-.32.66-.76.9-1.32s.36-1.26.36-2.1v-2.1h6.12z"/><path d="M78.36.36 72 43.08h-5.76l-4.68-27.72h-.12l-4.62 27.72h-5.76L44.7.36h6.48l3.06 27.12h.12l4.8-27.12h4.68l4.98 27.78h.12l2.94-27.78H78.36z"/><path d="M102 .36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16-2.48.78-3.84.78-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36h6.12v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08 1.98-.36 2.7-1.08 1.08-1.84 1.08-3.36V.36H102z"/><path d="M127.56.36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16-2.48.78-3.84.78-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36h6.12v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08 1.98-.36 2.7-1.08 1.08-1.84 1.08-3.36V.36h6.12z"/><path d="M153.12.36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16c-1.2.52-2.48.78-3.84.78s-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36h6.12v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08 1.98-.36 2.7-1.08S147 34.4 147 32.88V.36h6.12z"/><path d="M178.68.36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16c-1.2.52-2.48.78-3.84.78s-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36H165v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08c1.08.0 1.98-.36 2.7-1.08s1.08-1.84 1.08-3.36V.36h6.12z"/><path d="M204.24.36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16c-1.2.52-2.48.78-3.84.78s-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36h6.12v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08 1.98-.36 2.7-1.08 1.08-1.84 1.08-3.36V.36h6.12z"/></svg><p class=sr-only>ECWU Homepage</p></a></div><nav aria-label=navbar class="mb-3 mr-8"><ol role=list class="flex flex-wrap"><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Home</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/post/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Posts</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/photography/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Photos</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/series/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Series</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/page/about/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>About</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/page/friends/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Friends</a></div></li></ol></nav><div class="flex items-center space-x-2"><div class="w-6 h-6 inline-flex items-center justify-center rounded-lg bg-white dark:bg-black shadow-inner ring-1 ring-black/5"><i id=header-theme-button data-feather=sun class="site-header-navlink rounded cursor-pointer"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun h-4 w-4 block dark:hidden fill-gray-900 dark:fill-gray-200"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon h-4 w-4 hidden dark:block fill-gray-900 dark:fill-gray-200"><path d="M20.985 12.486a9 9 0 11-9.473-9.472c.405-.022.617.46.402.803a6 6 0 008.268 8.268c.344-.215.825-.004.803.401"/></svg></i></div><span class="dark:hidden text-sm">To Dark Mode</span>
+<span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span></div></div><figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden"><img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/GsZLXA4JPcM/download?force=true&amp;w=2400" alt="Featured Images"><figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">Photo by Ricardo Gomez Angel on Unsplash</figcaption></figure><div class="mb-12 mt-16 w-content"><h1 class="text-gray-900 dark:text-gray-200">Array</h1><div class="text-gray-700 dark:text-gray-400"><div class=space-y-1><p><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-signature-icon lucide-signature h-5 w-5 inline-block"><path d="m21 17-2.156-1.868A.5.5.0 0018 15.5v.5a1 1 0 01-1 1h-2a1 1 0 01-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 000 5c4.153.0 4.745-11.295 5.708-13.5a2.5 2.5.0 113.31 3.284"/><path d="M3 21h18"/></svg> Zhenghao Wu</p><p><span class=mr-2><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-clock-icon lucide-calendar-clock h-5 w-5 inline-block"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/><path d="M21 7.5V6a2 2 0 00-2-2H5A2 2 0 003 6v14a2 2 0 002 2h3.5"/><path d="M3 10h5"/><path d="M8 2v4"/><circle cx="16" cy="16" r="6"/></svg> Wednesday, February 9, 2022
+</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-clock-icon lucide-clipboard-clock h-5 w-5 inline-block"><path d="M16 14v2.2l1.6 1"/><path d="M16 4h2a2 2 0 012 2v.832"/><path d="M8 4H6A2 2 0 004 6v14a2 2 0 002 2h2"/><circle cx="16" cy="16" r="6"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> 5 min read</span></p><p><span><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag-icon lucide-flag h-5 w-5 inline-block"><path d="M4 22V4a1 1 0 01.4-.8A6 6 0 018 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0120 4v10a1 1 0 01-.4.8A6 6 0 0116 16c-3 0-5-2-8-2a6 6 0 00-4 1.528"/></svg>
+Status: In Progress</span></p><p><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text-icon lucide-scroll-text h-5 w-5 inline-block"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 00-2-2H4"/><path d="M8 21h12a2 2 0 002-2v-1a1 1 0 00-1-1H11a1 1 0 00-1 1v1a2 2 0 11-4 0V5A2 2 0 102 5v2a1 1 0 001 1h3"/></svg> <a href=#article-info-card>Post Details</a></p></div></div></div><div class="w-content bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400 px-5 py-3"><p>This post is part of the <b>algorithm</b> series.</p><p></div><main><article class="prose dark:prose-invert lg:prose-xl md:prose-lg prose-ul:leading-5 prose-ol:leading-5"><section class=mb-8><details closed class=toc><summary>Table of Contents</summary><nav id=TableOfContents><ul><li><a href=#1-两数之和>1. 两数之和</a></li><li><a href=#4-寻找两个正序数组的中位数>4. 寻找两个正序数组的中位数</a></li><li><a href=#11-盛最多水的容器>11. 盛最多水的容器</a></li><li><a href=#15-三数之和>15. 三数之和</a></li><li><a href=#53-最大子数组和>53. 最大子数组和</a></li><li><a href=#136-只出现一次的数字>136. 只出现一次的数字</a></li></ul></nav></details></section><h2 id=1-两数之和>1. 两数之和</h2><p><a href=https://leetcode-cn.com/problems/two-sum>https://leetcode-cn.com/problems/two-sum</a></p><p>给定一个整数数组 <code>nums</code>，目标是找出数组中的两个整数，算数和为 <code>target</code>，返回数组下标（只有一个答案，不能元素重复使用）。<strong>其中最简单直接的方法就是暴力遍历</strong>，得到所有二元素数组的组合（但需要注意储存下标）。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#719e07>class</span> <span style=color:#268bd2>Solution</span>:
+</span></span><span style=display:flex><span>    <span style=color:#719e07>def</span> <span style=color:#268bd2>twoSum</span>(<span style=color:#268bd2>self</span>, nums: List[<span style=color:#b58900>int</span>], target: <span style=color:#b58900>int</span>) <span style=color:#719e07>-&gt;</span> List[<span style=color:#b58900>int</span>]:
+</span></span><span style=display:flex><span>        <span style=color:#719e07>for</span> i <span style=color:#719e07>in</span> <span style=color:#b58900>range</span>(<span style=color:#b58900>len</span>(nums)):
+</span></span><span style=display:flex><span>            <span style=color:#719e07>for</span> j <span style=color:#719e07>in</span> <span style=color:#b58900>range</span>(<span style=color:#b58900>len</span>(nums)):
+</span></span><span style=display:flex><span>                <span style=color:#719e07>if</span> i <span style=color:#719e07>==</span> j:
+</span></span><span style=display:flex><span>                    <span style=color:#719e07>continue</span>
+</span></span><span style=display:flex><span>                <span style=color:#719e07>if</span> nums[i] <span style=color:#719e07>+</span> nums[j] <span style=color:#719e07>==</span> target:
+</span></span><span style=display:flex><span>                    <span style=color:#719e07>return</span> [i, j]
+</span></span></code></pre></div><p>但很明显，暴力遍历的时间复杂度很高，为 $\mathcal{O}(n^2)$。</p><p>另一种方式则可以使用哈希表，每次计算元素和 <code>target</code> 的差值，将差值在哈希表中寻找，如果不存在，则将元素和对应的下标存入哈希表中。这样如果遇到符合要求的组合，就能拿到对应元素的下标并返回了。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#719e07>class</span> <span style=color:#268bd2>Solution</span>:
+</span></span><span style=display:flex><span>    <span style=color:#719e07>def</span> <span style=color:#268bd2>twoSum</span>(<span style=color:#268bd2>self</span>, nums: List[<span style=color:#b58900>int</span>], target: <span style=color:#b58900>int</span>) <span style=color:#719e07>-&gt;</span> List[<span style=color:#b58900>int</span>]:
+</span></span><span style=display:flex><span>        h_dict <span style=color:#719e07>=</span> <span style=color:#b58900>dict</span>()
+</span></span><span style=display:flex><span>        <span style=color:#719e07>for</span> i <span style=color:#719e07>in</span> <span style=color:#b58900>range</span>(<span style=color:#b58900>len</span>(nums)):
+</span></span><span style=display:flex><span>            pair_elem <span style=color:#719e07>=</span> target <span style=color:#719e07>-</span> nums[i]
+</span></span><span style=display:flex><span>            <span style=color:#719e07>if</span> pair_elem <span style=color:#719e07>in</span> h_dict<span style=color:#719e07>.</span>keys():
+</span></span><span style=display:flex><span>                <span style=color:#719e07>return</span> [i, h_dict[pair_elem]]
+</span></span><span style=display:flex><span>            <span style=color:#719e07>else</span>:
+</span></span><span style=display:flex><span>                h_dict[nums[i]] <span style=color:#719e07>=</span> i
+</span></span></code></pre></div><p>这种优化的方法，因为只需要遍历一次，则时间复杂度为 $\mathcal{O}(n)$, 但需要哈希表（Python 中为字典 dict），则空间复杂度最差为 $\mathcal{O}(n)$</p><h2 id=4-寻找两个正序数组的中位数>4. 寻找两个正序数组的中位数</h2><p><a href=https://leetcode-cn.com/problems/median-of-two-sorted-arrays>https://leetcode-cn.com/problems/median-of-two-sorted-arrays</a></p><p>最暴力无脑的方法就是将两数组合并后排序，得到新数组后、根据长度、得到中心元素。最后得出中位数。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#719e07>class</span> <span style=color:#268bd2>Solution</span>:
+</span></span><span style=display:flex><span>    <span style=color:#719e07>def</span> <span style=color:#268bd2>findMedianSortedArrays</span>(<span style=color:#268bd2>self</span>, nums1: List[<span style=color:#b58900>int</span>], nums2: List[<span style=color:#b58900>int</span>]) <span style=color:#719e07>-&gt;</span> <span style=color:#b58900>float</span>:
+</span></span><span style=display:flex><span>        nums1 <span style=color:#719e07>=</span> <span style=color:#b58900>sorted</span>(nums1<span style=color:#719e07>+</span>nums2)
+</span></span><span style=display:flex><span>        <span style=color:#719e07>if</span> <span style=color:#b58900>len</span>(nums1) <span style=color:#719e07>%</span> <span style=color:#2aa198>2</span> <span style=color:#719e07>==</span> <span style=color:#2aa198>1</span>:
+</span></span><span style=display:flex><span>            idx <span style=color:#719e07>=</span> <span style=color:#b58900>int</span>(<span style=color:#b58900>len</span>(nums1)<span style=color:#719e07>/</span><span style=color:#2aa198>2</span>)
+</span></span><span style=display:flex><span>            <span style=color:#719e07>return</span> nums1[idx]
+</span></span><span style=display:flex><span>        <span style=color:#719e07>else</span>:
+</span></span><span style=display:flex><span>            idx <span style=color:#719e07>=</span> <span style=color:#b58900>int</span>(<span style=color:#b58900>len</span>(nums1)<span style=color:#719e07>/</span><span style=color:#2aa198>2</span>)
+</span></span><span style=display:flex><span>            <span style=color:#719e07>return</span> (nums1[idx] <span style=color:#719e07>+</span> nums1[idx<span style=color:#719e07>-</span><span style=color:#2aa198>1</span>])<span style=color:#719e07>/</span><span style=color:#2aa198>2</span>
+</span></span></code></pre></div><p>但这种方法复杂度开销主要在快速排序，为 $\mathcal{O}((m+n) \log (m+n))$。这里也可以使用归并排序之类的方法。但是这道题之所以被定义为 <code>困难</code>，是因为题目中给出的额外条件：<strong>控制时间复杂度为 $\mathcal{O}(\log (m+n))$</strong>。</p><h2 id=11-盛最多水的容器>11. 盛最多水的容器</h2><p><a href=https://leetcode-cn.com/problems/container-with-most-water>https://leetcode-cn.com/problems/container-with-most-water</a></p><p>横坐标上有多个垂直线，寻找两根垂直线和垂直线之间距离为一个盛水的容器，使得“容器”内最大的盛水量（两垂直线较短的一条*两线距离）。这个盛水量很明显与两线中最短的线有关，所以我们可以通过更换两线中较短的那条为潜在更长的线，来避免木桶效应。最大盛水量则再每次更换垂直线后计算并比较。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#719e07>class</span> <span style=color:#268bd2>Solution</span>:
+</span></span><span style=display:flex><span>    <span style=color:#719e07>def</span> <span style=color:#268bd2>maxArea</span>(<span style=color:#268bd2>self</span>, height: List[<span style=color:#b58900>int</span>]) <span style=color:#719e07>-&gt;</span> <span style=color:#b58900>int</span>:
+</span></span><span style=display:flex><span>        l, r <span style=color:#719e07>=</span> <span style=color:#2aa198>0</span>, <span style=color:#b58900>len</span>(height) <span style=color:#719e07>-</span> <span style=color:#2aa198>1</span>  <span style=color:#586e75># Use two pointers</span>
+</span></span><span style=display:flex><span>        ans <span style=color:#719e07>=</span> <span style=color:#2aa198>0</span>
+</span></span><span style=display:flex><span>        <span style=color:#719e07>while</span> l <span style=color:#719e07>&lt;</span> r:
+</span></span><span style=display:flex><span>            area <span style=color:#719e07>=</span> <span style=color:#b58900>min</span>(height[l], height[r]) <span style=color:#719e07>*</span> (r <span style=color:#719e07>-</span> l)
+</span></span><span style=display:flex><span>            ans <span style=color:#719e07>=</span> <span style=color:#b58900>max</span>(area, ans)
+</span></span><span style=display:flex><span>            <span style=color:#719e07>if</span> height[l] <span style=color:#719e07>&lt;</span> height[r]:
+</span></span><span style=display:flex><span>                l <span style=color:#719e07>+=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>            <span style=color:#719e07>else</span>:
+</span></span><span style=display:flex><span>                r <span style=color:#719e07>-=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>        <span style=color:#719e07>return</span> ans
+</span></span></code></pre></div><p>使用双指针来搜索，最差情况会将所有垂直线遍历一次，复杂度为 $\mathcal{O}(n)$，空间复杂度为 $\mathcal{O}(1)$。</p><h2 id=15-三数之和>15. 三数之和</h2><p><a href=https://leetcode-cn.com/problems/3sum>https://leetcode-cn.com/problems/3sum</a></p><p>给整数列表，返回所有和为 0 的三元组。这里可以通过排序的方法来去除不必要的搜索。我们先锚定一个整数，然后在该整数右一和末尾位置，使用两个指针，搜索可能的组合。对于重复的整数，只对最后一个出现的整数进行搜索，这样可以避免出现重复三元组。在搜索时，如果结果大于0，则右指针左移动；反之左指针右移。当搜索到一个符合条件的三元组，则左右指针同时移动，该循环在两指针相遇时结束。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#719e07>class</span> <span style=color:#268bd2>Solution</span>:
+</span></span><span style=display:flex><span>    <span style=color:#719e07>def</span> <span style=color:#268bd2>threeSum</span>(<span style=color:#268bd2>self</span>, nums: List[<span style=color:#b58900>int</span>]) <span style=color:#719e07>-&gt;</span> List[List[<span style=color:#b58900>int</span>]]:
+</span></span><span style=display:flex><span>        results <span style=color:#719e07>=</span> <span style=color:#b58900>list</span>()
+</span></span><span style=display:flex><span>        <span style=color:#719e07>if</span> <span style=color:#b58900>len</span>(nums) <span style=color:#719e07>&lt;</span> <span style=color:#2aa198>3</span>:  <span style=color:#586e75># no possible combo exist</span>
+</span></span><span style=display:flex><span>            <span style=color:#719e07>return</span> results
+</span></span><span style=display:flex><span>        nums <span style=color:#719e07>=</span> <span style=color:#b58900>sorted</span>(nums)
+</span></span><span style=display:flex><span>        n <span style=color:#719e07>=</span> <span style=color:#b58900>len</span>(nums)
+</span></span><span style=display:flex><span>        <span style=color:#719e07>for</span> k <span style=color:#719e07>in</span> <span style=color:#b58900>range</span>(n):
+</span></span><span style=display:flex><span>            <span style=color:#719e07>if</span> nums[k] <span style=color:#719e07>&gt;</span> <span style=color:#2aa198>0</span>:
+</span></span><span style=display:flex><span>                <span style=color:#719e07>break</span>
+</span></span><span style=display:flex><span>            <span style=color:#719e07>if</span> k <span style=color:#719e07>&gt;</span> <span style=color:#2aa198>0</span> <span style=color:#719e07>and</span> nums[k] <span style=color:#719e07>==</span> nums[k<span style=color:#719e07>-</span><span style=color:#2aa198>1</span>]:
+</span></span><span style=display:flex><span>                <span style=color:#719e07>continue</span>
+</span></span><span style=display:flex><span>            i <span style=color:#719e07>=</span> k <span style=color:#719e07>+</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>            j <span style=color:#719e07>=</span> <span style=color:#b58900>len</span>(nums) <span style=color:#719e07>-</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>            <span style=color:#719e07>while</span> i <span style=color:#719e07>&lt;</span> j:
+</span></span><span style=display:flex><span>                <span style=color:#b58900>sum</span> <span style=color:#719e07>=</span> nums[k] <span style=color:#719e07>+</span> nums[i] <span style=color:#719e07>+</span> nums[j]
+</span></span><span style=display:flex><span>                <span style=color:#719e07>if</span> <span style=color:#b58900>sum</span> <span style=color:#719e07>==</span> <span style=color:#2aa198>0</span>:
+</span></span><span style=display:flex><span>                    results<span style=color:#719e07>.</span>append([nums[k], nums[i], nums[j]])
+</span></span><span style=display:flex><span>                    i <span style=color:#719e07>+=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>                    <span style=color:#719e07>while</span> i <span style=color:#719e07>&lt;</span> j <span style=color:#719e07>and</span> nums[i] <span style=color:#719e07>==</span> nums[i <span style=color:#719e07>-</span> <span style=color:#2aa198>1</span>]:
+</span></span><span style=display:flex><span>                        i <span style=color:#719e07>+=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>                    j <span style=color:#719e07>-=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>                    <span style=color:#719e07>while</span> j <span style=color:#719e07>&gt;</span> i <span style=color:#719e07>and</span> nums[j] <span style=color:#719e07>==</span> nums[j <span style=color:#719e07>+</span> <span style=color:#2aa198>1</span>]:
+</span></span><span style=display:flex><span>                        j <span style=color:#719e07>-=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>                <span style=color:#719e07>elif</span> <span style=color:#b58900>sum</span> <span style=color:#719e07>&lt;</span> <span style=color:#2aa198>0</span>:
+</span></span><span style=display:flex><span>                    i <span style=color:#719e07>+=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>                    <span style=color:#719e07>while</span> i <span style=color:#719e07>&lt;</span> j <span style=color:#719e07>and</span> nums[i] <span style=color:#719e07>==</span> nums[i <span style=color:#719e07>-</span> <span style=color:#2aa198>1</span>]:
+</span></span><span style=display:flex><span>                        i <span style=color:#719e07>+=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>                <span style=color:#719e07>else</span>:
+</span></span><span style=display:flex><span>                    j <span style=color:#719e07>-=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>                    <span style=color:#719e07>while</span> j <span style=color:#719e07>&gt;</span> i <span style=color:#719e07>and</span> nums[j] <span style=color:#719e07>==</span> nums[j <span style=color:#719e07>+</span> <span style=color:#2aa198>1</span>]:
+</span></span><span style=display:flex><span>                        j <span style=color:#719e07>-=</span> <span style=color:#2aa198>1</span>
+</span></span><span style=display:flex><span>        <span style=color:#719e07>return</span> results
+</span></span></code></pre></div><p>对 n 元素搜索，再使用双指针来搜索，最差情况会将所有 n 右侧元素遍历一次，复杂度为 $\mathcal{O}(n^2)$。</p><h2 id=53-最大子数组和>53. 最大子数组和</h2><p><a href=https://leetcode-cn.com/problems/maximum-subarray>https://leetcode-cn.com/problems/maximum-subarray</a></p><p>寻找最大数组和是一道经典的的算法题，返回数组中，最大子序列的和。最暴力的思路是遍历所有的子数组和。如果使用三个指针，时间复杂度会达到$O(n^3)$。但可以通过前缀和来优化，将复杂度降至$O(n^2)$。
+但这里，使用动态规划的思路。只需要遍历一次，维护前缀和（<code>pre</code>）和最大和（<code>max</code>）两个变量。在每个元素遍历时，先在“前缀和加当前元素”（<code>pre</code> + <code>i</code>）与当前元素（<code>i</code>）中取更大值作为新的前缀和（<code>pre</code>）。然后再比较目前最大值（<code>pre</code>）与全局最大和（<code>max</code>）作为新的全局最大和。</p><p>这里最重要的思路是前缀和（<code>pre</code>）：</p><ol><li>如果当前元素为正数，则新前缀和会是一个更大的数。</li><li>如果当前元素为负数，一种情况是加和后，前缀大于当前元素，之后遇到更多正数元素后，子序列可能和会达到全局最大。</li><li>如果当前元素为负数，另种情况是加和后新前缀小于当前元素，这情况则不需要继续考虑之前的子序列（将前缀和设为当前元素），因为在这种情况下之前的前缀和已经为负数，如果继续考虑之前的子序列，如果存在更大的子序列，则无法发现。</li></ol><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#719e07>class</span> <span style=color:#268bd2>Solution</span>:
+</span></span><span style=display:flex><span>    <span style=color:#719e07>def</span> <span style=color:#268bd2>maxSubArray</span>(<span style=color:#268bd2>self</span>, nums: List[<span style=color:#b58900>int</span>]) <span style=color:#719e07>-&gt;</span> <span style=color:#b58900>int</span>:
+</span></span><span style=display:flex><span>        _max <span style=color:#719e07>=</span> nums[<span style=color:#2aa198>0</span>]
+</span></span><span style=display:flex><span>        temp <span style=color:#719e07>=</span> <span style=color:#2aa198>0</span>
+</span></span><span style=display:flex><span>        <span style=color:#719e07>for</span> i <span style=color:#719e07>in</span> nums:
+</span></span><span style=display:flex><span>            temp <span style=color:#719e07>=</span> <span style=color:#b58900>max</span>(i, temp <span style=color:#719e07>+</span> i)
+</span></span><span style=display:flex><span>            _max <span style=color:#719e07>=</span> <span style=color:#b58900>max</span>(_max, temp)
+</span></span><span style=display:flex><span>        <span style=color:#719e07>return</span> _max
+</span></span></code></pre></div><p>因为只涉及一次数组遍历，时间复杂度为$O(n)$</p><h2 id=136-只出现一次的数字>136. 只出现一次的数字</h2><p><a href=https://leetcode.cn/problems/single-number/>https://leetcode.cn/problems/single-number/</a></p><p>数组中的数都是成对出现，只有一个落单。如果要找到那个只出现一次的数字，最简单粗暴的方法就是用字典记录每个数字出现的次数。这会许多额外的空间。所以这道题额外要求"算法应该具有线性时间复杂度。不使用额外空间来实现"。</p><p>这里使用的方法是位运算：利用 XOR 异或运算 <code>^</code>，异或运算具有以下特性：</p><ul><li>交换律：<code>a ^ b ^ c &lt;=> a ^ c ^ b</code></li><li>任何数于 0 异或为任何数 <code>0 ^ n => n</code></li><li>相同的数异或为 0 <code>n ^ n => 0</code></li></ul><p>那么将所有的数字异或后，得到的数字就是那个只出现了一次的数字。</p><p>个人认为这种方法如果没见过就很难想到，这类问题需要多看方法拓展知识面。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#719e07>class</span> <span style=color:#268bd2>Solution</span>:
+</span></span><span style=display:flex><span>    <span style=color:#719e07>def</span> <span style=color:#268bd2>singleNumber</span>(<span style=color:#268bd2>self</span>, nums: List[<span style=color:#b58900>int</span>]) <span style=color:#719e07>-&gt;</span> <span style=color:#b58900>int</span>:
+</span></span><span style=display:flex><span>        a <span style=color:#719e07>=</span> <span style=color:#2aa198>0</span>  <span style=color:#586e75># extra space</span>
+</span></span><span style=display:flex><span>        <span style=color:#719e07>for</span> n <span style=color:#719e07>in</span> nums:
+</span></span><span style=display:flex><span>            a <span style=color:#719e07>^=</span> n
+</span></span><span style=display:flex><span>        <span style=color:#719e07>return</span> a
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#719e07>class</span> <span style=color:#268bd2>Solution</span>:
+</span></span><span style=display:flex><span>    <span style=color:#719e07>def</span> <span style=color:#268bd2>singleNumber</span>(<span style=color:#268bd2>self</span>, nums: List[<span style=color:#b58900>int</span>]) <span style=color:#719e07>-&gt;</span> <span style=color:#b58900>int</span>:
+</span></span><span style=display:flex><span>        <span style=color:#719e07>for</span> idx <span style=color:#719e07>in</span> <span style=color:#b58900>range</span>(<span style=color:#2aa198>1</span>, <span style=color:#b58900>len</span>(nums)):
+</span></span><span style=display:flex><span>            nums[<span style=color:#2aa198>0</span>] <span style=color:#719e07>^=</span> nums[idx]  <span style=color:#586e75># reuse the first element i n the array</span>
+</span></span><span style=display:flex><span>        <span style=color:#719e07>return</span> nums[<span style=color:#2aa198>0</span>]
+</span></span></code></pre></div></article></main><div class="pb-10 w-content"><div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg"><div class="px-4 py-5 sm:px-6"><h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200"><a id=article-info-card></a>Article Card</h3><p class="mt-1 text-sm text-gray-500">For "<span class=italic>Array</span>"</p></div><div class="border-t border-gray-200 dark:border-gray-700"><dl><table class="border-collapse table-fixed w-full"><tbody class="bg-white dark:bg-gray-800"><tr class="px-4 py-5"><th class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">Author</td><td class="border-b font-bold border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">Zhenghao Wu</td></tr><tr class="px-4 py-5"><th class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">Publish & Update Date</td><td class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">2022-02-09</td></tr><tr class="px-4 py-5"><th class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">Tags</td><td class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm"><a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/placeholder>Placeholder</a></td></tr><tr class="px-4 py-5"><th class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">Extra Materials</td><td class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm"><dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"><ul role=list class="border border-gray-200 dark:border-gray-700 rounded-md divide-y divide-gray-200 dark:divide-gray-700"><li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm"><div class="w-0 flex-1 flex items-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-icon lucide-file flex-shrink-0 h-5 w-5 text-gray-400"><path d="M15 2H6A2 2 0 004 4v16a2 2 0 002 2h12a2 2 0 002-2V7z"/><path d="M14 2v4a2 2 0 002 2h4"/></svg>
+<span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">placeholder</span></div><div class="ml-4 flex-shrink-0"><a href class="font-medium text-indigo-600 hover:text-indigo-500">Download</a></div></li></ul></dd></td></tr></tbody></table></div></div></div><section class=mb-10><hr><h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2><ul class="list-disc list-inside text-gray-900 dark:text-gray-200"><li><a href=https://ecwuuuuu.com/page/algorithm/binary/>Binary</a></li><li><a href=https://ecwuuuuu.com/page/algorithm/dynamic-programming/>Dynamic Programming</a></li><li><a href=https://ecwuuuuu.com/page/algorithm/graph/>Graph</a></li></ul></section><div><footer class="relative mb-6 text-gray-900 dark:text-gray-200"><hr class=pb-5><div class="flex justify-begin w-full mx-auto mb-2"><ul class="flex flex-row justify-begin text-lg space-x-2"><li><a href=https://ecwuuuuu.com/index.xml aria-label=RSS class="round-button social-button"><svg width="16" height="16" fill="currentcolor" class="w-5 h-5 fill-gray-700 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-200" viewBox="0 0 16 16"><path d="M2 0A2 2 0 000 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2zm1.5 2.5c5.523.0 10 4.477 10 10a1 1 0 11-2 0 8 8 0 00-8-8 1 1 0 010-2zm0 4a6 6 0 016 6 1 1 0 11-2 0 4 4 0 00-4-4 1 1 0 010-2zm.5 7a1.5 1.5.0 110-3 1.5 1.5.0 010 3z"/></svg></a></li></ul></div><p>Powered by <a href=https://gohugo.io>Hugo</a> and <a href=https://github.com/ecwu/ecwu-theme>ecwu-theme</a>.
+Build by GitHub Actions at: 2025-10-27 07:12 CST.</p><p>&copy;2025
+ECWUUUUU.
+All rights reserved.</p><p><a href=http://beian.miit.gov.cn/>粤 ICP 备 17015575 号 - 1</a></p><p class="text-sm my-4">Google Analytics enabled | <a href=https://ecwuuuuu.com/page/changelog>site changelog</a></p></footer></div><script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-HSPDSQWH5L")}</script></body></html>

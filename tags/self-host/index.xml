@@ -1,103 +1,105 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Self-Host on ECWUUUUU</title>
-    <link>https://ecwuuuuu.com/tags/self-host/</link>
-    <description>Recent content in Self-Host on ECWUUUUU</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 24 Nov 2024 14:19:00 +0000</lastBuildDate>
-    <atom:link href="https://ecwuuuuu.com/tags/self-host/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>服务器新装 GPU 的容器化配置笔记</title>
-      <link>https://ecwuuuuu.com/post/gpu-container-setup-note/</link>
-      <pubDate>Sun, 24 Nov 2024 14:54:00 +0000</pubDate>
-      <guid>https://ecwuuuuu.com/post/gpu-container-setup-note/</guid>
-      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 &lt;code&gt;lspci | grep &amp;quot;NVIDIA&amp;quot;&lt;/code&gt; 命令查看设备是否被识别。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Authentik 教程系列：服务的迁移</title>
-      <link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link>
-      <pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate>
-      <guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid>
-      <description>&lt;h2 id=&#34;提醒&#34;&gt;提醒&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;引入和备份操作&#34;&gt;引入和备份操作&lt;/h2&gt;&#xA;&lt;p&gt;这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Authentik 视频教程 - 合集</title>
-      <link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link>
-      <pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid>
-      <description>&lt;p&gt;我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th style=&#34;text-align: center&#34;&gt;No.&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Topic&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: center&#34;&gt;BV&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: center&#34;&gt;YouTube&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;1&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;介绍、安装和配置&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1pm41167WK&#34;&gt;BV1pm41167WK&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=KdprVtJmfrs&#34;&gt;KdprVtJmfrs&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;2&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;配置反向代理（Traefik 为例）&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1VE42137Vi&#34;&gt;BV1VE42137Vi&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=7eUDOPYv15c&#34;&gt;7eUDOPYv15c&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;3&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1QC41157pX&#34;&gt;BV1QC41157pX&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=_KGznY5dE90&#34;&gt;_KGznY5dE90&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;4&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1um411B7kE&#34;&gt;BV1um411B7kE&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RuGA-Sm3PYo&#34;&gt;RuGA-Sm3PYo&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;5&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;LDAP 协议应用接入 - 以 EMBY 为例&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV12z421C7hU&#34;&gt;BV12z421C7hU&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=eXcPcwNoNKw&#34;&gt;eXcPcwNoNKw&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;6&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;邮件发送和界面自定义配置&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1iE421T7me&#34;&gt;BV1iE421T7me&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=86udpF3OXMw&#34;&gt;86udpF3OXMw&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;7&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;管理用户，组和应用访问权限&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Am41127Yy&#34;&gt;BV1Am41127Yy&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=IJMVnHn-90g&#34;&gt;IJMVnHn-90g&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;8&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Vp421Q7Qz&#34;&gt;BV1Vp421Q7Qz&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=bRmKUN7XcO0&#34;&gt;bRmKUN7XcO0&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;9&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;ForwardAuth 配置接入任意应用&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Mb421a7fF&#34;&gt;BV1Mb421a7fF&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=HUB0aOVCo1M&#34;&gt;HUB0aOVCo1M&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;10&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;配置多因素身份验证&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1sJ4m1u7Rq&#34;&gt;BV1sJ4m1u7Rq&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Ol7wF8AsrVA&#34;&gt;Ol7wF8AsrVA&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;11&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;配置 Passwordless 登录&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1tE421P7o1&#34;&gt;BV1tE421P7o1&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=p13W__HVDI8&#34;&gt;p13W__HVDI8&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;13&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;RAC 远程访问控制 配置&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Bh9bYXEqF&#34;&gt;BV1Bh9bYXEqF&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=VSZIoAqJRLQ&#34;&gt;VSZIoAqJRLQ&lt;/a&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
-    </item>
-    <item>
-      <title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</title>
-      <link>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</link>
-      <pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</guid>
-      <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;&#xA;&lt;p&gt;如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作&lt;code&gt;转发验证&lt;/code&gt;)。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title>
-      <link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</link>
-      <pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</guid>
-      <description>&lt;p&gt;搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 &lt;a href=&#34;https://en.wikipedia.org/wiki/SAML_2.0&#34;&gt;SAML 2.0&lt;/a&gt;， &lt;a href=&#34;https://openid.net/developers/how-connect-works/&#34;&gt;OAuth 2.0/OpenID Connect (OIDC)&lt;/a&gt;， &lt;a href=&#34;https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol&#34;&gt;LDAP&lt;/a&gt;， &lt;a href=&#34;https://scim.cloud&#34;&gt;SCIM&lt;/a&gt;，和 &lt;a href=&#34;https://en.wikipedia.org/wiki/RADIUS&#34;&gt;RADIUS&lt;/a&gt;，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Authentik 教程系列：反向代理的配置</title>
-      <link>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</link>
-      <pubDate>Mon, 08 Apr 2024 19:55:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</guid>
-      <description>&lt;p&gt;将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。&lt;/p&gt;&#xA;&lt;p&gt;根据官方的文档，如果要使用反向代理，以下 header 必须传给 upstream。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Authentik 教程系列：简介和安装配置</title>
-      <link>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</link>
-      <pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</guid>
-      <description>&lt;p&gt;如果你也像我一样喜欢折腾 HomeLab，我们可能有个共同的乐趣就是寻找各种需求的自部署方案；但当我们这些自部署的服务越来越多，去访问每一个服务都需要单独的账号和密码；如果用户不止你一人，多账号管理也会成为一个麻烦的事情。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Homelab：我的赛博积木 - 访问</title>
-      <link>https://ecwuuuuu.com/post/homelab-journey-accessing/</link>
-      <pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/homelab-journey-accessing/</guid>
-      <description>&lt;p&gt;前面已经介绍了基础设施和已经部署的服务。对于部署在&lt;a href=&#34;https://ecwuuuuu.com/post/homelab-journey-internet/&#34;&gt;公网的服务&lt;/a&gt;，访问是方便的。在 Nginx 中通过反向代理将容器服务绑定在域名上，再配上 SSL 证书就可以实现安全方便的服务访问体验。真正让人头疼的是内网服务的访问和访问控制。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Homelab：我的赛博积木 - 组成与架构</title>
-      <link>https://ecwuuuuu.com/post/homelab-journey-architecture/</link>
-      <pubDate>Sun, 08 Jan 2023 23:17:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/homelab-journey-architecture/</guid>
-      <description>&lt;h2 id=&#34;架构概览&#34;&gt;架构概览&lt;/h2&gt;&#xA;&lt;p&gt;经常能在 r/homelab 上看到 &amp;ldquo;&lt;a href=&#34;https://www.reddit.com/r/homelab/?f=flair_name%3A%22LabPorn%22&#34;&gt;LabPorn&lt;/a&gt;&amp;rdquo; 里其他大佬的机架。虽然很眼红，但目前自己的 HomeLab 只是几个简单的独立设备/资源组成。包括腾讯轻量云实例，群晖 NAS 和工控机。&lt;/p&gt;&#xA;&lt;h2 id=&#34;内网&#34;&gt;内网&lt;/h2&gt;&#xA;&lt;p&gt;我的地址在粤港澳大湾区，并在常住的广州，中山，和珠海配有三台设备。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Homelab：我的赛博积木 - 公网服务</title>
-      <link>https://ecwuuuuu.com/post/homelab-journey-internet/</link>
-      <pubDate>Fri, 30 Dec 2022 00:20:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/homelab-journey-internet/</guid>
-      <description>&lt;p&gt;与&lt;a href=&#34;https://ecwuuuuu.com/post/homelab-journey-intranet/&#34;&gt;内网服务&lt;/a&gt;不一样，部署在公网的服务目的性明确：希望能随时随地能访问到。这些服务部署在腾讯云轻量服务器，机房位于广州和香港。&lt;/p&gt;&#xA;&lt;h2 id=&#34;身份鉴权-ssoauthentik&#34;&gt;身份鉴权 (SSO)：Authentik&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;涉及的服务：Authentik&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;部署在公网的服务，身份鉴权是很重要的一部分：有些资源、计算资源有必要授权后才可以访问。但如果各个系统的账号都分开控制，账号管理肯定非常麻烦。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Homelab：我的赛博积木 - 内网服务</title>
-      <link>https://ecwuuuuu.com/post/homelab-journey-intranet/</link>
-      <pubDate>Sat, 15 Oct 2022 12:07:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/homelab-journey-intranet/</guid>
-      <description>&lt;p&gt;我的计算设施中，云服务器和本地设备各占一半，本地设备无公网 IPv4。这样的情况使得我的服务是分地部署、内外网隔离的（但不是做到严格隔离，这部分细节会在外网服务中提到。）&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>自建 GitLab 配置 SSH 和后续</title>
-      <link>https://ecwuuuuu.com/post/gitlab-updates/</link>
-      <pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/gitlab-updates/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;整体比较流水账，只做记录。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;配置-ssh&#34;&gt;配置 SSH&lt;/h2&gt;&#xA;&lt;p&gt;部署了 GitLab 之后，一直在使用 HTTPS，体验不错。但是当时没有将 GitLab 的 SSH 访问成功配置。&lt;/p&gt;&#xA;&lt;p&gt;当初的配置尝试过：1. 将 SSH 与服务器的 SSH 的端口共用。 2. 单独设置一个 SSH 端口并暴露出来。我的操作是直接在域名后面加端口号进行访问：&lt;code&gt;git.ecwuuuuu.com:&amp;lt;port&amp;gt;&lt;/code&gt; 但进行 Git 操作都没有成功过。在排查 Log 发现是链接失败后，对域名执行了 nslookup，发现 IP 并不是预期的服务器 IP，这里是因为我使用了 Cloudflare 的解析服务，真实的 IP 被隐藏了。所以操作行不通。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>自建 GitLab 踩坑实录</title>
-      <link>https://ecwuuuuu.com/post/self-host-gitlab-instance/</link>
-      <pubDate>Fri, 06 May 2022 11:45:36 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/self-host-gitlab-instance/</guid>
-      <description>&lt;p&gt;之前自建了一个 Git 服务来托管自己的非公开代码。考虑要轻量，所以选择了 &lt;a href=&#34;https://gitea.io/en-us/&#34;&gt;Gitea&lt;/a&gt; 并通过 Docker + Nginx 的方式进行部署。&lt;/p&gt;&#xA;&lt;p&gt;前段时间腾讯云免费提供了轻量服务器配置升级的活动，配置提升到了 4 核心 + 4G 内存。机器性能是一个过剩的状态，为了充分利用，所以我考虑将服务从 Gitea 换到 &lt;a href=&#34;https://about.gitlab.com/install/&#34;&gt;GitLab&lt;/a&gt;。这里把我的部署过程进行记录。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Self-Host on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/self-host/</link><description>Recent content in Self-Host on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 24 Nov 2024 14:19:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/self-host/index.xml" rel="self" type="application/rss+xml"/><item><title>服务器新装 GPU 的容器化配置笔记</title><link>https://ecwuuuuu.com/post/gpu-container-setup-note/</link><pubDate>Sun, 24 Nov 2024 14:54:00 +0000</pubDate><guid>https://ecwuuuuu.com/post/gpu-container-setup-note/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 &lt;code>lspci | grep &amp;quot;NVIDIA&amp;quot;&lt;/code> 命令查看设备是否被识别。&lt;/p></description></item><item><title>Authentik 教程系列：服务的迁移</title><link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link><pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid><description>&lt;h2 id="提醒">提醒&lt;/h2>
+&lt;p>&lt;strong>因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong>&lt;/p>
+&lt;h2 id="引入和备份操作">引入和备份操作&lt;/h2>
+&lt;p>这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。&lt;/p></description></item><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p>我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">No.&lt;/th>
+ &lt;th style="text-align: left">Topic&lt;/th>
+ &lt;th style="text-align: center">BV&lt;/th>
+ &lt;th style="text-align: center">YouTube&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">1&lt;/td>
+ &lt;td style="text-align: left">介绍、安装和配置&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1pm41167WK">BV1pm41167WK&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=KdprVtJmfrs">KdprVtJmfrs&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">2&lt;/td>
+ &lt;td style="text-align: left">配置反向代理（Traefik 为例）&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1VE42137Vi">BV1VE42137Vi&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=7eUDOPYv15c">7eUDOPYv15c&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">3&lt;/td>
+ &lt;td style="text-align: left">OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1QC41157pX">BV1QC41157pX&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=_KGznY5dE90">_KGznY5dE90&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">4&lt;/td>
+ &lt;td style="text-align: left">SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1um411B7kE">BV1um411B7kE&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=RuGA-Sm3PYo">RuGA-Sm3PYo&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">5&lt;/td>
+ &lt;td style="text-align: left">LDAP 协议应用接入 - 以 EMBY 为例&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV12z421C7hU">BV12z421C7hU&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=eXcPcwNoNKw">eXcPcwNoNKw&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">6&lt;/td>
+ &lt;td style="text-align: left">邮件发送和界面自定义配置&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1iE421T7me">BV1iE421T7me&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=86udpF3OXMw">86udpF3OXMw&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">7&lt;/td>
+ &lt;td style="text-align: left">管理用户，组和应用访问权限&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Am41127Yy">BV1Am41127Yy&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=IJMVnHn-90g">IJMVnHn-90g&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">8&lt;/td>
+ &lt;td style="text-align: left">配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Vp421Q7Qz">BV1Vp421Q7Qz&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=bRmKUN7XcO0">bRmKUN7XcO0&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">9&lt;/td>
+ &lt;td style="text-align: left">ForwardAuth 配置接入任意应用&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Mb421a7fF">BV1Mb421a7fF&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=HUB0aOVCo1M">HUB0aOVCo1M&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">10&lt;/td>
+ &lt;td style="text-align: left">配置多因素身份验证&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1sJ4m1u7Rq">BV1sJ4m1u7Rq&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=Ol7wF8AsrVA">Ol7wF8AsrVA&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">11&lt;/td>
+ &lt;td style="text-align: left">配置 Passwordless 登录&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1tE421P7o1">BV1tE421P7o1&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=p13W__HVDI8">p13W__HVDI8&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">13&lt;/td>
+ &lt;td style="text-align: left">RAC 远程访问控制 配置&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Bh9bYXEqF">BV1Bh9bYXEqF&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=VSZIoAqJRLQ">VSZIoAqJRLQ&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</title><link>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</link><pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
+&lt;p>如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作&lt;code>转发验证&lt;/code>)。&lt;/p></description></item><item><title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title><link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</link><pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</guid><description>&lt;p>搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 &lt;a href="https://en.wikipedia.org/wiki/SAML_2.0">SAML 2.0&lt;/a>， &lt;a href="https://openid.net/developers/how-connect-works/">OAuth 2.0/OpenID Connect (OIDC)&lt;/a>， &lt;a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">LDAP&lt;/a>， &lt;a href="https://scim.cloud">SCIM&lt;/a>，和 &lt;a href="https://en.wikipedia.org/wiki/RADIUS">RADIUS&lt;/a>，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。&lt;/p></description></item><item><title>Authentik 教程系列：反向代理的配置</title><link>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</link><pubDate>Mon, 08 Apr 2024 19:55:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</guid><description>&lt;p>将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。&lt;/p>
+&lt;p>根据官方的文档，如果要使用反向代理，以下 header 必须传给 upstream。&lt;/p></description></item><item><title>Authentik 教程系列：简介和安装配置</title><link>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</link><pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</guid><description>&lt;p>如果你也像我一样喜欢折腾 HomeLab，我们可能有个共同的乐趣就是寻找各种需求的自部署方案；但当我们这些自部署的服务越来越多，去访问每一个服务都需要单独的账号和密码；如果用户不止你一人，多账号管理也会成为一个麻烦的事情。&lt;/p></description></item><item><title>Homelab：我的赛博积木 - 访问</title><link>https://ecwuuuuu.com/post/homelab-journey-accessing/</link><pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-accessing/</guid><description>&lt;p>前面已经介绍了基础设施和已经部署的服务。对于部署在&lt;a href="https://ecwuuuuu.com/post/homelab-journey-internet/">公网的服务&lt;/a>，访问是方便的。在 Nginx 中通过反向代理将容器服务绑定在域名上，再配上 SSL 证书就可以实现安全方便的服务访问体验。真正让人头疼的是内网服务的访问和访问控制。&lt;/p></description></item><item><title>Homelab：我的赛博积木 - 组成与架构</title><link>https://ecwuuuuu.com/post/homelab-journey-architecture/</link><pubDate>Sun, 08 Jan 2023 23:17:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-architecture/</guid><description>&lt;h2 id="架构概览">架构概览&lt;/h2>
+&lt;p>经常能在 r/homelab 上看到 &amp;ldquo;&lt;a href="https://www.reddit.com/r/homelab/?f=flair_name%3A%22LabPorn%22">LabPorn&lt;/a>&amp;rdquo; 里其他大佬的机架。虽然很眼红，但目前自己的 HomeLab 只是几个简单的独立设备/资源组成。包括腾讯轻量云实例，群晖 NAS 和工控机。&lt;/p>
+&lt;h2 id="内网">内网&lt;/h2>
+&lt;p>我的地址在粤港澳大湾区，并在常住的广州，中山，和珠海配有三台设备。&lt;/p></description></item><item><title>Homelab：我的赛博积木 - 公网服务</title><link>https://ecwuuuuu.com/post/homelab-journey-internet/</link><pubDate>Fri, 30 Dec 2022 00:20:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-internet/</guid><description>&lt;p>与&lt;a href="https://ecwuuuuu.com/post/homelab-journey-intranet/">内网服务&lt;/a>不一样，部署在公网的服务目的性明确：希望能随时随地能访问到。这些服务部署在腾讯云轻量服务器，机房位于广州和香港。&lt;/p>
+&lt;h2 id="身份鉴权-ssoauthentik">身份鉴权 (SSO)：Authentik&lt;/h2>
+&lt;blockquote>
+&lt;p>涉及的服务：Authentik&lt;/p>
+&lt;/blockquote>
+&lt;p>部署在公网的服务，身份鉴权是很重要的一部分：有些资源、计算资源有必要授权后才可以访问。但如果各个系统的账号都分开控制，账号管理肯定非常麻烦。&lt;/p></description></item><item><title>Homelab：我的赛博积木 - 内网服务</title><link>https://ecwuuuuu.com/post/homelab-journey-intranet/</link><pubDate>Sat, 15 Oct 2022 12:07:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-intranet/</guid><description>&lt;p>我的计算设施中，云服务器和本地设备各占一半，本地设备无公网 IPv4。这样的情况使得我的服务是分地部署、内外网隔离的（但不是做到严格隔离，这部分细节会在外网服务中提到。）&lt;/p></description></item><item><title>自建 GitLab 配置 SSH 和后续</title><link>https://ecwuuuuu.com/post/gitlab-updates/</link><pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate><guid>https://ecwuuuuu.com/post/gitlab-updates/</guid><description>&lt;blockquote>
+&lt;p>整体比较流水账，只做记录。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="配置-ssh">配置 SSH&lt;/h2>
+&lt;p>部署了 GitLab 之后，一直在使用 HTTPS，体验不错。但是当时没有将 GitLab 的 SSH 访问成功配置。&lt;/p>
+&lt;p>当初的配置尝试过：1. 将 SSH 与服务器的 SSH 的端口共用。 2. 单独设置一个 SSH 端口并暴露出来。我的操作是直接在域名后面加端口号进行访问：&lt;code>git.ecwuuuuu.com:&amp;lt;port&amp;gt;&lt;/code> 但进行 Git 操作都没有成功过。在排查 Log 发现是链接失败后，对域名执行了 nslookup，发现 IP 并不是预期的服务器 IP，这里是因为我使用了 Cloudflare 的解析服务，真实的 IP 被隐藏了。所以操作行不通。&lt;/p></description></item><item><title>自建 GitLab 踩坑实录</title><link>https://ecwuuuuu.com/post/self-host-gitlab-instance/</link><pubDate>Fri, 06 May 2022 11:45:36 +0800</pubDate><guid>https://ecwuuuuu.com/post/self-host-gitlab-instance/</guid><description>&lt;p>之前自建了一个 Git 服务来托管自己的非公开代码。考虑要轻量，所以选择了 &lt;a href="https://gitea.io/en-us/">Gitea&lt;/a> 并通过 Docker + Nginx 的方式进行部署。&lt;/p>
+&lt;p>前段时间腾讯云免费提供了轻量服务器配置升级的活动，配置提升到了 4 核心 + 4G 内存。机器性能是一个过剩的状态，为了充分利用，所以我考虑将服务从 Gitea 换到 &lt;a href="https://about.gitlab.com/install/">GitLab&lt;/a>。这里把我的部署过程进行记录。&lt;/p></description></item></channel></rss>

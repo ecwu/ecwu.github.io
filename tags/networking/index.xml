@@ -1,40 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Networking on ECWUUUUU</title>
-    <link>https://ecwuuuuu.com/tags/networking/</link>
-    <description>Recent content in Networking on ECWUUUUU</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 04 Oct 2024 14:30:00 +0100</lastBuildDate>
-    <atom:link href="https://ecwuuuuu.com/tags/networking/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Homelab：我的赛博积木 - 展望</title>
-      <link>https://ecwuuuuu.com/post/homelab-journey-future/</link>
-      <pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/homelab-journey-future/</guid>
-      <description>&lt;p&gt;从“赛博积木”系列第一篇文章到现在，已经过了两年的时间。受自己需求、实际体验后的感受等多重因素的影响。现有的架构和最初的设计已经有了很大的变化。其中最大的变化应该是在 23 年 6 月新组装的个人服务器，直接影响了我许多服务的部署形式。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Homelab：我的赛博积木</title>
-      <link>https://ecwuuuuu.com/post/homelab-journey-intro/</link>
-      <pubDate>Tue, 04 Oct 2022 22:43:40 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/homelab-journey-intro/</guid>
-      <description>&lt;p&gt;HomeLab 直译是在家里的实验室，赛博语境下指网络、计算设备组成的实验沙盒。可以用来学习计算机技术和部署自用的服务。个人感觉 HomeLab 这个概念更多是在国外使用，许多的爱好者集中在 Reddit 频道 &lt;a href=&#34;https://www.reddit.com/r/homelab/&#34;&gt;r/homelab&lt;/a&gt; 分享、交流项目和问题；在 YouTube 上也有不少博主提供手把手教学视频。这个应对国内的概念应该是 NAS 和 All in One (All in Boom 😀)，许多教程能在什么值得买和哔哩哔哩找到。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>More on IPv6 Firewall - EUI-64</title>
-      <link>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</link>
-      <pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</guid>
-      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;In the &lt;a href=&#34;https://ecwuuuuu.com/post/nas-ipv6-ddns/&#34;&gt;Synology DDNS Tutorial&lt;/a&gt;, I have a &lt;a href=&#34;https://ecwuuuuu.com/post/nas-ipv6-ddns/#a-firewall&#34;&gt;section&lt;/a&gt; on setting up firewall on an ASUS AC68U Router.&lt;/p&gt;&#xA;&lt;p&gt;For a recent update on my home network, the Asus router has been replaced with two Linksys WI-FI 6 tri-band mesh routers (two &lt;a href=&#34;https://www.linksys.com/hk/whole-home-mesh-wifi/linksys-mx5-velop-ax-whole-home-wifi-6-system/p/p-mx5300/&#34;&gt;MX5300&lt;/a&gt; or it&amp;rsquo;s SKU MX10600-CN)。&lt;/p&gt;&#xA;&lt;p&gt;I thought it will be easy to set up since I already have some experience and documentation, but the firewall is not working as intended.&lt;/p&gt;&#xA;&lt;h2 id=&#34;my-attempts&#34;&gt;My Attempts&lt;/h2&gt;&#xA;&lt;p&gt;&#xA;&#xA;&#xA;&#xA;&lt;img src=&#34;https://www.linksys.com/support/images/KB25634-011_EN_v1.png&#34; &#xA;      &#xA;     &#xA;     &gt;&#xA;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title>
-      <link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link>
-      <pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate>
-      <guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;some-background&#34;&gt;Some Background&lt;/h2&gt;&#xA;&lt;p&gt;I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;span class=&#34;px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md&#34;&gt;&#xA;China Mobile Limited; Chinese: 中国移动通信集团有限公司&lt;/span&gt;, so no dedicated IPv4 address.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Networking on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/networking/</link><description>Recent content in Networking on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 04 Oct 2024 14:30:00 +0100</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/networking/index.xml" rel="self" type="application/rss+xml"/><item><title>Homelab：我的赛博积木 - 展望</title><link>https://ecwuuuuu.com/post/homelab-journey-future/</link><pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-future/</guid><description>&lt;p>从“赛博积木”系列第一篇文章到现在，已经过了两年的时间。受自己需求、实际体验后的感受等多重因素的影响。现有的架构和最初的设计已经有了很大的变化。其中最大的变化应该是在 23 年 6 月新组装的个人服务器，直接影响了我许多服务的部署形式。&lt;/p></description></item><item><title>Homelab：我的赛博积木</title><link>https://ecwuuuuu.com/post/homelab-journey-intro/</link><pubDate>Tue, 04 Oct 2022 22:43:40 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-intro/</guid><description>&lt;p>HomeLab 直译是在家里的实验室，赛博语境下指网络、计算设备组成的实验沙盒。可以用来学习计算机技术和部署自用的服务。个人感觉 HomeLab 这个概念更多是在国外使用，许多的爱好者集中在 Reddit 频道 &lt;a href="https://www.reddit.com/r/homelab/">r/homelab&lt;/a> 分享、交流项目和问题；在 YouTube 上也有不少博主提供手把手教学视频。这个应对国内的概念应该是 NAS 和 All in One (All in Boom 😀)，许多教程能在什么值得买和哔哩哔哩找到。&lt;/p></description></item><item><title>More on IPv6 Firewall - EUI-64</title><link>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</link><pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate><guid>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</guid><description>&lt;h2 id="background">Background&lt;/h2>
+&lt;p>In the &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/">Synology DDNS Tutorial&lt;/a>, I have a &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/#a-firewall">section&lt;/a> on setting up firewall on an ASUS AC68U Router.&lt;/p>
+&lt;p>For a recent update on my home network, the Asus router has been replaced with two Linksys WI-FI 6 tri-band mesh routers (two &lt;a href="https://www.linksys.com/hk/whole-home-mesh-wifi/linksys-mx5-velop-ax-whole-home-wifi-6-system/p/p-mx5300/">MX5300&lt;/a> or it&amp;rsquo;s SKU MX10600-CN)。&lt;/p>
+&lt;p>I thought it will be easy to set up since I already have some experience and documentation, but the firewall is not working as intended.&lt;/p>
+&lt;h2 id="my-attempts">My Attempts&lt;/h2>
+&lt;p>
+
+
+
+&lt;img src="https://www.linksys.com/support/images/KB25634-011_EN_v1.png" 
+ 
+ 
+ >
+&lt;/p></description></item><item><title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title><link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link><pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid><description>&lt;blockquote>
+&lt;p>Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="some-background">Some Background&lt;/h2>
+&lt;p>I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md">
+China Mobile Limited; Chinese: 中国移动通信集团有限公司&lt;/span>, so no dedicated IPv4 address.&lt;/p></description></item></channel></rss>

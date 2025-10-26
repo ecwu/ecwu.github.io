@@ -1,864 +1,139 @@
-<!DOCTYPE html><html lang="en">
-    <head>
-
-<link rel="icon" type="image/x-icon" href="https://ecwuuuuu.com/favicon.ico">
-
-
-
-
-<link rel="stylesheet" href="https://ecwuuuuu.com/css/style.min.744725dcb7cf600fb6c5cb9d56c898a6af45d86759410d7e6058efc92a19d2e7.css" integrity="sha256-dEcl3LfPYA&#43;2xcudVsiYpq9F2GdZQQ1&#43;YFjvySoZ0uc=">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>服务器新装 GPU 的容器化配置笔记 -  ECWU&#39;s Notebook</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Homepage and blog for Zhenghao Wu (ECWU), sharing thoughts on technology, everyday experiences, and photography. Engaging with the community through knowledge sharing.">
-<meta name="keywords" content="Docker,Container,Docker Images,Self-host,GPU,JupyterHub,NVIDIA GPU,CUDA,PyTorch,RTX 4090D,NVIDIA A100">
-<meta name="author" content="ECWUUUUU"><script>
-  
-  (function() {
-    const theme = localStorage.getItem("current-theme");
-    
-    if (theme === null) {
-      
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        localStorage.setItem("current-theme", "dark");
-        document.documentElement.classList.add('dark');
-      } else {
-        localStorage.setItem("current-theme", "light");
-        document.documentElement.classList.remove('dark');
-      }
-    } else if (theme === 'dark') {
-      
-      document.documentElement.classList.add('dark');
-    } else {
-      
-      document.documentElement.classList.remove('dark');
-    }
-  })();
-
-  
-  
-  window.updateMermaidTheme = () => {
-    if (typeof mermaid !== 'undefined') {
-      const isDark = document.documentElement.classList.contains("dark");
-
-      const mermaids = document.querySelectorAll('pre.mermaid');
-      mermaids.forEach(e => {
-        if (e.getAttribute('data-processed')) {
-          
-          e.removeAttribute('data-processed');
-          
-          e.innerHTML = e.getAttribute('data-graph');
-        } else {
-          
-          e.setAttribute('data-graph', e.textContent);
-        }
-      });
-
-      if (isDark) {
-        initMermaidDark();
-        mermaid.run();
-      } else {
-        initMermaidLight();
-        mermaid.run();
-      }
-    }
-  }
-
-  function change_color_mode(){
-    if (localStorage.getItem('current-theme') === 'light') {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('current-theme', 'dark');
-      change_discussion_color_mode();
-      updateMermaidTheme();
-    } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('current-theme', 'light');
-      change_discussion_color_mode();
-      updateMermaidTheme();
-    }
-  }
-  
-
-  function change_discussion_color_mode(){
-    
-    const theme = localStorage.getItem('current-theme') === 'light' ? 'light' : 'dark'
-    const message = {
-      setConfig: {
-        theme: theme,
-      }
-    };
-    
-    const iframe = document.querySelector('iframe.giscus-frame');
-    if (iframe) {
-      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-    }
-    
-  }
-
-  
-  
-
-  document.addEventListener("DOMContentLoaded", () => {
-    
-
-    document
-      .getElementById("header-theme-button")
-      .addEventListener("click", change_color_mode);
-  });
-
-</script>
-
-</head>
-    <body class="transition-colors duration-300"><div class="pt-6">
-    
-    <div class="nav-title flex flex-row flex-wrap gap-2"><a href="https://ecwuuuuu.com/">
-    
-    <svg class="w-36 fill-gray-900 dark:fill-gray-200" fill="currentColor" viewBox="0 0 204.24 43.44" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,43.08V0.36h18.24v5.76H6.12v12.54h10.56v5.76H6.12v12.54h12.12v6.12H0z"/>
-        <path d="M41.64,30.9v2.64c0,1.32-0.25,2.57-0.75,3.75c-0.5,1.18-1.19,2.23-2.07,3.15c-0.88,0.92-1.91,1.65-3.09,2.19  c-1.18,0.54-2.45,0.81-3.81,0.81c-1.16,0-2.34-0.16-3.54-0.48c-1.2-0.32-2.28-0.88-3.24-1.68s-1.75-1.83-2.37-3.09  c-0.62-1.26-0.93-2.87-0.93-4.83V9.84c0-1.4,0.24-2.7,0.72-3.9c0.48-1.2,1.16-2.24,2.04-3.12c0.88-0.88,1.93-1.57,3.15-2.07  C28.97,0.25,30.32,0,31.8,0c2.88,0,5.22,0.94,7.02,2.82c0.88,0.92,1.57,2.01,2.07,3.27c0.5,1.26,0.75,2.63,0.75,4.11v2.4h-6.12  v-2.04c0-1.2-0.34-2.24-1.02-3.12c-0.68-0.88-1.6-1.32-2.76-1.32c-1.52,0-2.53,0.47-3.03,1.41c-0.5,0.94-0.75,2.13-0.75,3.57v21.84  c0,1.24,0.27,2.28,0.81,3.12s1.51,1.26,2.91,1.26c0.4,0,0.83-0.07,1.29-0.21c0.46-0.14,0.89-0.37,1.29-0.69  c0.36-0.32,0.66-0.76,0.9-1.32c0.24-0.56,0.36-1.26,0.36-2.1v-2.1H41.64z"/>
-        <path d="M78.36,0.36L72,43.08h-5.76l-4.68-27.72h-0.12l-4.62,27.72h-5.76L44.7,0.36h6.48l3.06,27.12h0.12l4.8-27.12h4.68l4.98,27.78  h0.12l2.94-27.78H78.36z"/>
-        <path d="M102,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H102z"/>
-        <path d="M127.56,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  s-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H127.56z"/>
-        <path d="M153.12,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H153.12z"/>
-        <path d="M178.68,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78c-1.36,0-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36H165v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08  c1.08,0,1.98-0.36,2.7-1.08c0.72-0.72,1.08-1.84,1.08-3.36V0.36H178.68z"/>
-        <path d="M204.24,0.36v33.12c0,1.4-0.25,2.69-0.75,3.87c-0.5,1.18-1.21,2.23-2.13,3.15c-0.92,0.92-1.98,1.64-3.18,2.16  c-1.2,0.52-2.48,0.78-3.84,0.78s-2.63-0.26-3.81-0.78c-1.18-0.52-2.23-1.24-3.15-2.16c-0.92-0.92-1.64-1.97-2.16-3.15  c-0.52-1.18-0.78-2.47-0.78-3.87V0.36h6.12v32.52c0,1.52,0.36,2.64,1.08,3.36c0.72,0.72,1.62,1.08,2.7,1.08s1.98-0.36,2.7-1.08  c0.72-0.72,1.08-1.84,1.08-3.36V0.36H204.24z"/>
-    </svg>
-    <p class="sr-only">ECWU Homepage</p>
-    
-</a></div>
-    
-<nav aria-label="navbar" class="mb-3 mr-8">
-    <ol role="list" class="flex flex-wrap">
-        
-        
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Home</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/post/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Posts</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/photography/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Photos</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/series/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Series</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/page/about/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>About</a>
-            
-            <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300">
-                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
-            </svg>
-            
-        </div>
-        </li>
-        
-        <li>
-        <div class="flex items-center justify-center">
-            <a href="https://ecwuuuuu.com/page/friends/" class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Friends</a>
-            
-            
-        </div>
-        </li>
-        
-    </ol>
-</nav><div  class="flex items-center space-x-2">
-    <div class="w-6 h-6 inline-flex items-center justify-center rounded-lg bg-white dark:bg-black shadow-inner ring-1 ring-black/5">
-        <i id="header-theme-button" data-feather="sun" class="site-header-navlink rounded cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun h-4 w-4 block dark:hidden fill-gray-900 dark:fill-gray-200"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon h-4 w-4 hidden dark:block fill-gray-900 dark:fill-gray-200"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
-        </i>
-    </div>
-    <span class="dark:hidden text-sm">To Dark Mode</span>
-    <span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span>
-</div></div>
-  <figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden">
-    <img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/G7PV6gd-w4g/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjh8fGNvbnRhaW5lcnxlbnwwfHx8fDE3MzI0NTk5OTd8MA&amp;force=true&amp;w=2400" alt="Featured Images">
-    
-    <figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">
-      Photo by CHUTTERSNAP on Unsplash
-    </figcaption>
-    
-  </figure>
-<div class="mb-12 mt-16 w-content">
-  <h1 class="text-gray-900 dark:text-gray-200">服务器新装 GPU 的容器化配置笔记</h1>
-  <h2 class="text-gray-700 dark:text-gray-400">在 JupyterHub 环境下</h2>
-
-  
-  <div class="text-gray-700 dark:text-gray-400">
-    <div class="space-y-1">
-      
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-signature-icon lucide-signature h-5 w-5 inline-block">
-          <path d="m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284"/>
-          <path d="M3 21h18"/>
-        </svg> Zhenghao Wu</p>
-      
-
-
-      
-      <p>
-        
-        <span class="mr-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-clock-icon lucide-calendar-clock h-5 w-5 inline-block"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/>
-          <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/>
-          <path d="M3 10h5"/>
-          <path d="M8 2v4"/>
-          <circle cx="16" cy="16" r="6"/>
-        </svg> Sunday, November 24, 2024
-        </span>
-        
-
-        
-        <span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-clock-icon lucide-clipboard-clock h-5 w-5 inline-block">
-          <path d="M16 14v2.2l1.6 1"/>
-          <path d="M16 4h2a2 2 0 0 1 2 2v.832"/>
-          <path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2"/>
-          <circle cx="16" cy="16" r="6"/>
-          <rect x="8" y="2" width="8" height="4" rx="1"/>
-        </svg> 7 min read
-        </span>
-        
-      </p>
-      
-
-      
-      <p>
-        
-        <span class="mr-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag-icon lucide-flag h-5 w-5 inline-block">
-          <path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/>
-        </svg>
-        Status: Finished
-        </span>
-        
-        
-        <span class="mr-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check-icon lucide-badge-check h-5 w-5 inline-block">
-          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/>
-          <path d="m9 12 2 2 4-4"/>
-        </svg>
-        Confidence: Verified in practice
-        </span>
-        
-        
-        <span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waypoints-icon lucide-waypoints h-5 w-5 inline-block">
-          <circle cx="12" cy="4.5" r="2.5"/>
-          <path d="m10.2 6.3-3.9 3.9"/>
-          <circle cx="4.5" cy="12" r="2.5"/>
-          <path d="M7 12h10"/>
-          <circle cx="19.5" cy="12" r="2.5"/>
-          <path d="m13.8 17.7 3.9-3.9"/>
-          <circle cx="12" cy="19.5" r="2.5"/>
-        </svg>
-        Importance: 8
-        </span>
-        
-      </p>
-      
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text-icon lucide-scroll-text h-5 w-5 inline-block">
-          <path d="M15 12h-5"/>
-          <path d="M15 8h-5"/>
-          <path d="M19 17V5a2 2 0 0 0-2-2H4"/>
-          <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/>
-        </svg> <a href="#article-info-card">Post Details</a>
-      </p>
-      
-      
-    </div>
-  </div>
-  
-</div><main>
-<article class="prose dark:prose-invert lg:prose-xl md:prose-lg prose-ul:leading-5 prose-ol:leading-5">
-    
-    <h2 id="前言">前言</h2>
-<p>最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 <code>lspci | grep &quot;NVIDIA&quot;</code> 命令查看设备是否被识别。</p>
-<p>下面为两个成功识别显卡设备的例子：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lspci | grep <span style="color:#2aa198">&#34;NVIDIA&#34;</span>
-</span></span><span style="display:flex;"><span>af:00.0 3D controller: NVIDIA Corporation GA100 <span style="color:#719e07">[</span>A100 PCIe 80GB<span style="color:#719e07">]</span> <span style="color:#719e07">(</span>rev a1<span style="color:#719e07">)</span>
-</span></span><span style="display:flex;"><span>d8:00.0 3D controller: NVIDIA Corporation GA100 <span style="color:#719e07">[</span>A100 PCIe 80GB<span style="color:#719e07">]</span> <span style="color:#719e07">(</span>rev a1<span style="color:#719e07">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#586e75"># 专业卡会显示为 3D controller</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ lspci | grep <span style="color:#2aa198">&#34;NVIDIA&#34;</span>
-</span></span><span style="display:flex;"><span>31:00.0 VGA compatible controller: NVIDIA Corporation Device <span style="color:#2aa198">2685</span> <span style="color:#719e07">(</span>rev a1<span style="color:#719e07">)</span>
-</span></span><span style="display:flex;"><span>31:00.1 Audio device: NVIDIA Corporation Device 22ba <span style="color:#719e07">(</span>rev a1<span style="color:#719e07">)</span>
-</span></span><span style="display:flex;"><span>b1:00.0 VGA compatible controller: NVIDIA Corporation Device <span style="color:#2aa198">2685</span> <span style="color:#719e07">(</span>rev a1<span style="color:#719e07">)</span>
-</span></span><span style="display:flex;"><span>b1:00.1 Audio device: NVIDIA Corporation Device 22ba <span style="color:#719e07">(</span>rev a1<span style="color:#719e07">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#586e75"># 游戏卡会显示为 VGA compatible controller</span>
-</span></span></code></pre></div><p>另外系统版本为 Ubuntu 22.04。系统已经安装 Docker，且 Docker 版本大于 19.03。</p>
-<h2 id="1-禁用-nouveau-驱动">1. 禁用 Nouveau 驱动</h2>
-<p>Nouveau 驱动是一个开源的 NVIDIA 显卡驱动，但是在使用 NVIDIA 官方驱动时，需要禁用 Nouveau 驱动。否则会导致显卡驱动无法正常加载。</p>
-<ul>
-<li>
-<p>1 编辑 <code>/etc/modprobe.d/blacklist-nouveau.conf</code> 文件，添加以下内容：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-txt" data-lang="txt"><span style="display:flex;"><span>blacklist nouveau
-</span></span><span style="display:flex;"><span>blacklist lbm-nouveau
-</span></span><span style="display:flex;"><span>options nouveau modeset=0
-</span></span><span style="display:flex;"><span>alias nouveau off
-</span></span><span style="display:flex;"><span>alias lbm-nouveau off
-</span></span></code></pre></div><p><code>/etc/modprobe.d</code> 目录里面存放了内核模块的配置文件。这里我们创建了一个名为 <code>blacklist-nouveau.conf</code> 的文件，里面存放了禁用 Nouveau 驱动的配置。</p>
-</li>
-<li>
-<p>2 关闭 nouveau</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#b58900">echo</span> options nouveau <span style="color:#268bd2">modeset</span><span style="color:#719e07">=</span><span style="color:#2aa198">0</span> | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
-</span></span></code></pre></div><p>我们通过 <code>tee</code> 命令将 <code>options nouveau modeset=0</code> 写入到 <code>/etc/modprobe.d/nouveau-kms.conf</code> 文件中。这样就关闭了 nouveau 驱动。</p>
-</li>
-<li>
-<p>3 更新 initramfs</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo update-initramfs -u
-</span></span><span style="display:flex;"><span>sudo reboot
-</span></span></code></pre></div><p><code>update-initramfs</code> 命令用于更新 initramfs (initial RAM file system)。initramfs 是一个临时的根文件系统，用于在 Linux 内核引导时加载必要的驱动程序。我们需要更新 initramfs 以使新的内核模块配置生效。<code>-u</code> 参数表示更新。更新完成后，重启系统。</p>
-</li>
-<li>
-<p>4 验证</p>
-<p>重启后执行以下命令。如果没有输出，说明 Nouveau 驱动已经被禁用。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsmod | grep nouveau
-</span></span></code></pre></div></li>
-</ul>
-<h2 id="2-安装-nvidia-驱动">2. 安装 NVIDIA 驱动</h2>
-<ul>
-<li>
-<p>1 安装依赖</p>
-<p>NVIDIA 驱动需要一些依赖，我们需要先安装这些依赖。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install build-essential dkms
-</span></span></code></pre></div><p><code>build-essential</code> 包含了编译 C/C++ 程序所需要的工具，<code>dkms</code> 是一个动态内核模块框架。</p>
-</li>
-<li>
-<p>2 确认 NVIDIA 驱动版本</p>
-<p>首先我们需要确认显卡所需的驱动版本。可以在 NVIDIA 官网（https://www.nvidia.com/en-us/drivers/）上查看。
-这边可以看到 4090D 的推荐驱动为 550.135 版本。</p>
-<p>这里你可以直接在官网上下载驱动，然后通过 <code>sh NVIDIA-Linux-x86_64-550.135.run</code> 来安装。但我们这里使用 <code>apt</code> 来安装。</p>
-<p>首先通过 ubuntu-drivers 工具来查看推荐的驱动版本：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ubuntu-drivers devices
-</span></span></code></pre></div><p>通过上面的命令，我们可以看到推荐的驱动版本。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ubuntu-drivers <span style="color:#268bd2">devices</span>
-</span></span><span style="display:flex;"><span><span style="color:#719e07">==</span> /sys/devices/pci0000:b0/0000:b0:02.0/0000:b1:00.0 <span style="color:#719e07">==</span>
-</span></span><span style="display:flex;"><span>modalias : pci:v000010DEd00002685sv000010DEsd00001697bc03sc00i00
-</span></span><span style="display:flex;"><span>vendor   : NVIDIA Corporation
-</span></span><span style="display:flex;"><span>driver   : nvidia-driver-550-open - distro non-free
-</span></span><span style="display:flex;"><span>driver   : nvidia-driver-550-server-open - distro non-free
-</span></span><span style="display:flex;"><span>driver   : nvidia-driver-550 - distro non-free recommended
-</span></span><span style="display:flex;"><span>driver   : nvidia-driver-550-server - distro non-free
-</span></span><span style="display:flex;"><span>driver   : xserver-xorg-video-nouveau - distro free <span style="color:#b58900">builtin</span>
-</span></span></code></pre></div><p>我们可以看到推荐的驱动版本为 <code>nvidia-driver-550</code>，这与官网上的推荐驱动版本一致。这些驱动中我们要选择的是 <strong>nvidia-driver-550-server</strong>。</p>
-</li>
-<li>
-<p>3 安装驱动</p>
-<p>安装的操作比较简单，只需要执行以下命令即可：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install -y nvidia-driver-550-server
-</span></span></code></pre></div><p>安装完成后，重启系统。</p>
-</li>
-<li>
-<p>4 验证</p>
-<p>重启后执行以下命令，如果有输出，说明驱动安装成功。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvidia-smi
-</span></span></code></pre></div><p><code>nvidia-smi</code> 是 NVIDIA 提供的一个命令行工具，用于查看显卡信息。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nvidia-smi
-</span></span><span style="display:flex;"><span>Fri Nov <span style="color:#2aa198">22</span> 15:12:11 <span style="color:#2aa198">2024</span>       
-</span></span><span style="display:flex;"><span>+-----------------------------------------------------------------------------------------+
-</span></span><span style="display:flex;"><span>| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
-</span></span><span style="display:flex;"><span>|-----------------------------------------+------------------------+----------------------+
-</span></span><span style="display:flex;"><span>| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
-</span></span><span style="display:flex;"><span>| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
-</span></span><span style="display:flex;"><span>|                                         |                        |               MIG M. |
-</span></span><span style="display:flex;"><span>|<span style="color:#719e07">=========================================</span>+<span style="color:#719e07">========================</span>+<span style="color:#719e07">======================</span>|
-</span></span><span style="display:flex;"><span>|   <span style="color:#2aa198">0</span>  NVIDIA GeForce RTX <span style="color:#2aa198">4090</span> D      Off |   00000000:31:00.0 Off |                  Off |
-</span></span><span style="display:flex;"><span>| 60%   37C    P0             59W /  425W |       1MiB /  24564MiB |      0%      Default |
-</span></span><span style="display:flex;"><span>|                                         |                        |                  N/A |
-</span></span><span style="display:flex;"><span>+-----------------------------------------+------------------------+----------------------+
-</span></span><span style="display:flex;"><span>|   <span style="color:#2aa198">1</span>  NVIDIA GeForce RTX <span style="color:#2aa198">4090</span> D      Off |   00000000:B1:00.0 Off |                  Off |
-</span></span><span style="display:flex;"><span>|100%   35C    P0             76W /  425W |       1MiB /  24564MiB |      1%      Default |
-</span></span><span style="display:flex;"><span>|                                         |                        |                  N/A |
-</span></span><span style="display:flex;"><span>+-----------------------------------------+------------------------+----------------------+
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>+-----------------------------------------------------------------------------------------+
-</span></span><span style="display:flex;"><span>| Processes:                                                                              |
-</span></span><span style="display:flex;"><span>|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
-</span></span><span style="display:flex;"><span>|        ID   ID                                                               Usage      |
-</span></span><span style="display:flex;"><span>|<span style="color:#719e07">=========================================================================================</span>|
-</span></span><span style="display:flex;"><span>|  No running processes found                                                             |
-</span></span><span style="display:flex;"><span>+-----------------------------------------------------------------------------------------+
-</span></span></code></pre></div></li>
-<li>
-<p>5 禁用 NVIDIA 自动更新</p>
-<p>Ubuntu 下，NVIDIA 驱动会自动更新，如果自动更新后，则需要系统重启才能生效。这样会导致一些服务的中断。我们可以通过以下操作来禁用自动更新：</p>
-<p>在 <code>/etc/apt/apt.conf.d/50unattended-upgrades</code> 文件中，将 <code>Unattended-Upgrade::Package-Blacklist</code> 选项中添加 <code>nvidia-*</code> 和 <code>libnvidia-</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Unattended-Upgrade::Package-Blacklist <span style="color:#719e07">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#34;nvidia-&#34;</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#34;libnvidia-&#34;</span>;
-</span></span><span style="display:flex;"><span>    ...
-</span></span><span style="display:flex;"><span><span style="color:#719e07">}</span>
-</span></span></code></pre></div></li>
-</ul>
-<h2 id="3-安装-cuda">3. 安装 CUDA</h2>
-<h3 id="31-下载-cuda-安装包">3.1 下载 CUDA 安装包</h3>
-<p>CUDA 是 NVIDIA 提供的一个并行计算平台和编程模型。我们可以通过 CUDA 来加速计算。但是在安装 CUDA 之前，我们需要确认安装的版本，新的驱动版本可能不支持旧的 CUDA 版本。</p>
-<p>在刚刚步骤中，我们可以看到 <code>nvidia-smi</code> 的输出中有 CUDA 的版本（右上角）。这里我们可以看到 CUDA 的版本为 12.4。</p>
-<p>我们可以在 NVIDIA 官网（https://developer.nvidia.com/cuda-toolkit-archive）上查看 CUDA 的版本。这里我们可以看到 12.4 的 CUDA 版本为 12.4.0 和 12.4.1。这里我们选择安装 12.4.1 版本。</p>
-<p>在页面中，会要求你选择系统的情况，这里我们选择 Linux -&gt; x86_64 -&gt; Ubuntu -&gt; 22.04 -&gt; runfile (local)。</p>
-<p>页面中会展示下载链接和安装的指令。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://developer.download.nvidia.com/compute/cuda/12.4.1/local_installers/cuda_12.4.1_550.54.15_linux.run
-</span></span><span style="display:flex;"><span>sudo sh cuda_12.4.1_550.54.15_linux.run
-</span></span></code></pre></div><h3 id="32-安装-cuda">3.2 安装 CUDA</h3>
-<p>使用 <code>wget</code> 下载 CUDA 安装包，然后使用 <code>sh</code> 执行安装。</p>
-<p>安装过程中会有一些提示，其中包括是否安装驱动，因为我们先前已经安装了驱动，所以我们要取消驱动安装的勾选（因为内带的驱动版本可能不是最新的）。</p>
-<h3 id="33-配置环境变量">3.3 配置环境变量</h3>
-<p>安装完成后，我们需要配置环境变量。主要是将 CUDA bin 的路径添加到环境变量中。</p>
-<ul>
-<li>
-<p>1 首先创建 <code>/etc/profile.d/cuda.sh</code> 文件</p>
-<p>并在里面填入内容：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#b58900">export</span> <span style="color:#268bd2">PATH</span><span style="color:#719e07">=</span>/usr/local/cuda-12.4/bin:<span style="color:#268bd2">$PATH</span>
-</span></span><span style="display:flex;"><span><span style="color:#b58900">export</span> <span style="color:#268bd2">LD_LIBRARY_PATH</span><span style="color:#719e07">=</span>/usr/local/cuda-12.4/lib64:<span style="color:#268bd2">$LD_LIBRARY_PATH</span>
-</span></span></code></pre></div><p>这里我们将 CUDA 12.4 的 bin 目录添加到 PATH 中，将 CUDA 12.4 的 lib64 目录添加到 LD_LIBRARY_PATH 中。保存文件。</p>
-</li>
-<li>
-<p>2 修改文件权限</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod +x /etc/profile.d/cuda.sh
-</span></span></code></pre></div><p>修改文件权限，使其可以被执行。</p>
-</li>
-<li>
-<p>3 使环境变量生效</p>
-<p>这里可以选择重启系统，或者执行以下命令使环境变量生效：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#b58900">source</span> /etc/profile
-</span></span></code></pre></div></li>
-<li>
-<p>4 验证</p>
-<p>验证 CUDA 是否安装成功，可以执行以下命令：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvcc --version
-</span></span></code></pre></div><p>如果有输出，说明 CUDA 安装成功。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ nvcc --version
-</span></span><span style="display:flex;"><span>nvcc: NVIDIA <span style="color:#719e07">(</span>R<span style="color:#719e07">)</span> Cuda compiler driver
-</span></span><span style="display:flex;"><span>Copyright <span style="color:#719e07">(</span>c<span style="color:#719e07">)</span> 2005-2024 NVIDIA Corporation
-</span></span><span style="display:flex;"><span>Built on Thu_Mar_28_02:18:24_PDT_2024
-</span></span><span style="display:flex;"><span>Cuda compilation tools, release 12.4, V12.4.131
-</span></span><span style="display:flex;"><span>Build cuda_12.4.r12.4/compiler.34097967_0
-</span></span></code></pre></div></li>
-</ul>
-<h2 id="4-安装-nvidia-container-toolkit">4. 安装 nvidia-container-toolkit</h2>
-<p>nvidia-container-toolkit 是一个用于 Docker 的工具，用于支持 NVIDIA GPU 的 Docker 容器。</p>
-<ul>
-<li>
-<p>1 添加 APT 的密钥和镜像</p>
-<p>直接执行以下命令来添加 APT 的密钥和镜像：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg <span style="color:#cb4b16">\
-</span></span></span><span style="display:flex;"><span><span style="color:#cb4b16"></span><span style="color:#719e07">&amp;&amp;</span> curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | <span style="color:#cb4b16">\
-</span></span></span><span style="display:flex;"><span><span style="color:#cb4b16"></span>    sed <span style="color:#2aa198">&#39;s#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g&#39;</span> | <span style="color:#cb4b16">\
-</span></span></span><span style="display:flex;"><span><span style="color:#cb4b16"></span>    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
-</span></span></code></pre></div></li>
-<li>
-<p>2 更新 APT，使新的源生效。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get update
-</span></span></code></pre></div></li>
-<li>
-<p>3 安装 nvidia-container-toolkit</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install -y nvidia-container-toolkit
-</span></span></code></pre></div><p>因为文件需要从 GitHub 下载，所以可能会比较慢，请耐心等待。</p>
-</li>
-<li>
-<p>4 修改 Docker 配置</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nvidia-ctk runtime configure --runtime<span style="color:#719e07">=</span>docker
-</span></span></code></pre></div><p>这个命令会修改 Docker 的配置文件，使其支持 NVIDIA GPU。具体的，它会在 <code>/etc/docker/daemon.json</code> 文件中添加一个叫 <code>nvidia</code> <code>runtimes</code> 的配置项。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">&#34;runtimes&#34;</span>: {
-</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">&#34;nvidia&#34;</span>: {
-</span></span><span style="display:flex;"><span>            <span style="color:#268bd2">&#34;path&#34;</span>: <span style="color:#2aa198">&#34;/usr/bin/nvidia-container-runtime&#34;</span>,
-</span></span><span style="display:flex;"><span>            <span style="color:#268bd2">&#34;runtimeArgs&#34;</span>: []
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>配置好后，你未来启动 Docker 时，可以使用 <code>--runtime=nvidia</code> 来指定使用 NVIDIA GPU。目前这个设置还不是默认的，所以需要手动指定。我们还需要额外增加一行 <code>&quot;default-runtime&quot;: &quot;nvidia&quot;,</code> 来指定默认的运行时。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">&#34;default-runtime&#34;</span>: <span style="color:#2aa198">&#34;nvidia&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">&#34;runtimes&#34;</span>: {
-</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">&#34;nvidia&#34;</span>: {
-</span></span><span style="display:flex;"><span>            <span style="color:#268bd2">&#34;path&#34;</span>: <span style="color:#2aa198">&#34;/usr/bin/nvidia-container-runtime&#34;</span>,
-</span></span><span style="display:flex;"><span>            <span style="color:#268bd2">&#34;runtimeArgs&#34;</span>: []
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>这个配置下，Docker 将默认使用 NVIDIA GPU 运行容器。</p>
-</li>
-<li>
-<p>5 重启 Docker</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart docker
-</span></span></code></pre></div><p>重启 Docker 使配置生效。</p>
-</li>
-<li>
-<p>6 验证</p>
-<p>执行以下命令，如果有输出 nvidia-smi 的信息，说明配置成功。（需要确保本地有 ubuntu 镜像）</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker run --rm --runtime<span style="color:#719e07">=</span>nvidia --gpus all ubuntu nvidia-smi
-</span></span></code></pre></div></li>
-</ul>
-<h2 id="6-构建-docker-镜像">6. 构建 Docker 镜像</h2>
-<p>我们将采用 EPTI 基础 Dockerfile 集（基于 <a href="https://github.com/jupyter/docker-stacks">docker-stacks</a> 和 nvidia/cuda 镜像构建）。包含了 miniconda，jupyterlab，pytorch 等常用的库。当你在执行构建时，需要修改 Dockerfile 中的 <code>FORM</code> 字段。</p>
-<p>这个集含多个 Dockerfile，他们的依赖关系为：</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
-</span></span><span style="display:flex;"><span>└── @/docker-stacks-foundation-gpu-cuda&lt;CUDA VERSION&gt;:latest
-</span></span><span style="display:flex;"><span>    └── @/base-gpu-notebook-cuda&lt;CUDA VERSION&gt;:latest
-</span></span><span style="display:flex;"><span>        └── @/pytorch-gpu-notebook-cuda&lt;CUDA VERSION&gt;:latest
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>@ = reg.epti.moe/epti-jupyter （这个是生产环境内使用的内部镜像，你可以改成自己的名字）
-</span></span></code></pre></div><p>其中：</p>
-<ol>
-<li>
-<p><code>reg.epti.moe/epti-jupyter/docker-stacks-foundation-gpu-cuda12.4</code> 相关文件存储在 foundation 文件夹啊中，进入后使用 <code>docker build . -t reg.epti.moe/epti-jupyter/docker-stacks-foundation-gpu-cuda12.4:latest</code> 指令来构建。</p>
-<ul>
-<li>基于 NVIDIA CUDA 12.4.1 的基础镜像（cudnn devel 版本）</li>
-<li>配置了基础操作系统环境，安装必要的系统包</li>
-<li>创建了名为 jovyan 的非 root 用户</li>
-<li>使用 Micromamba 安装和管理 Python（默认 3.11）及相关包</li>
-<li>配置了 Jupyter 运行所需的各种环境变量和目录权限</li>
-<li>设置了容器启动相关的配置，包括入口点和启动钩子</li>
-</ul>
-</li>
-<li>
-<p><code>reg.epti.moe/epti-jupyter/base-gpu-notebook-cuda12.4</code> 相关文件存储在 base 文件夹中，进入后使用 <code>docker build . -t reg.epti.moe/epti-jupyter/base-gpu-notebook-cuda12.4:latest</code> 指令来构建。</p>
-<ul>
-<li>基于 foundation 构建，安装系统包：fonts-liberation（字体），pandoc（文档转换），run-one（命令运行管理）</li>
-<li>Jupyter 组件安装：JupyterLab/Jupyter Notebook/JupyterHub/NBClassic</li>
-<li>配置设置：端口 8888/健康检查/启动脚本和配置文件</li>
-</ul>
-</li>
-<li>
-<p><code>reg.epti.moe/epti-jupyter/pytorch-gpu-notebook-cuda12.4</code> 相关文件存储在 pytorch 文件夹中，进入后使用 <code>docker build . -t reg.epti.moe/epti-jupyter/pytorch-gpu-notebook-cuda12.4:latest</code> 指令来构建。</p>
-<ul>
-<li>基于 base 构建，安装 PyTorch 和相关库</li>
-<li>安装了 torch、torchvision、torchaudio</li>
-<li>安装了 tensorboard、visual studio code 支持</li>
-</ul>
-</li>
-</ol>
-<h2 id="7-添加-docker-镜像到-jupyterhub-配置中">7. 添加 Docker 镜像到 JupyterHub 配置中</h2>
-<p>在 JupyterHub 的配置文件中，我们需要添加 Docker 镜像的配置。请使用 root 权限修改 <code>jupyterhub_config.py</code> 配置文件。找到 <code>c.DockerSpawner.allowed_images</code> 配置项，添加新的镜像。这里的格式是字典，键为镜像名称，值为镜像地址。以下是配置的一个例子。</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>c<span style="color:#719e07">.</span>DockerSpawner<span style="color:#719e07">.</span>allowed_images <span style="color:#719e07">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;[GPU] Pytorch 2.4.1 (Python 3.11, CUDA12.4)&#39;</span>: <span style="color:#2aa198">&#39;reg.epti.moe/epti-jupyter/pytorch-gpu-notebook-cuda12.4:latest&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;[ R ] 基础环境&#39;</span>: <span style="color:#2aa198">&#39;reg.epti.moe/epti-jupyter/r-notebook:latest&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;[PYTHON] 基础环境&#39;</span>: <span style="color:#2aa198">&#39;reg.epti.moe/epti-jupyter/minimal-notebook:latest&#39;</span>,
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="小结">小结</h2>
-<p>这里我们记录了在 Ubuntu 22.04 系统上配置新添加 NVIDIA GPU 的过程。主要包括了禁用 Nouveau 驱动、安装 NVIDIA 驱动、安装 CUDA、安装 nvidia-container-toolkit、构建 Docker 镜像、添加 Docker 镜像到 JupyterHub 配置中。这里我们使用了 EPTI 的基础镜像集，构建了一个 PyTorch 的 GPU 镜像。这个镜像可以用于 JupyterHub 的 GPU 计算环墋中。</p>
-
-</article>
-</main>
-<div class="pb-10 w-content">
-  <div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg">
-    <div class="px-4 py-5 sm:px-6">
-      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200">
-        <a id="article-info-card"></a>
-        Article Card
-      </h3>
-      <p class="mt-1 text-sm text-gray-500">
-        For "<span class="italic">服务器新装 GPU 的容器化配置笔记</span>"
-      </p>
-    </div>
-    <div class="border-t border-gray-200 dark:border-gray-700">
-      <dl>
-        <table class="border-collapse table-fixed w-full">
-          <tbody class="bg-white dark:bg-gray-800">
-            
-            <tr class="px-4 py-5">
-              <th
-                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
-                Author</td>
-              <td
-                class="border-b font-bold border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm ">
-                Zhenghao Wu</td>
-            </tr>
-            
-            
-            <tr class="px-4 py-5">
-              <th
-                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
-                Publish & Update Date</td>
-              <td
-                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                2024-11-24</td>
-            </tr>
-            
-            
-            <tr class="px-4 py-5">
-              <th
-                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
-                Tags</td>
-              <td
-                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/docker">Docker</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/container">Container</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/docker-images">Docker Images</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/self-host">Self-host</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/gpu">GPU</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/jupyterhub">JupyterHub</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/nvidia-gpu">NVIDIA GPU</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/cuda">CUDA</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/pytorch">PyTorch</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/rtx-4090d">RTX 4090D</a>
-                
-                <a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white"
-                  href="https://ecwuuuuu.com/tags/nvidia-a100">NVIDIA A100</a>
-                
-              </td>
-            </tr>
-            
-            
-            <tr class="px-4 py-5">
-              <th
-                class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">
-                Extra Materials</td>
-              <td
-                class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                  <ul role="list"
-                    class="border border-gray-200 dark:border-gray-700 rounded-md divide-y divide-gray-200 dark:divide-gray-700">
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link flex-shrink-0 h-5 w-5 text-gray-400"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          【2022新教程】Ubuntu server 20.04如何安装nvidia驱动和cuda-解决服务器ssh一段时间后连不上的问题
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="https://www.cnblogs.com/luk/p/15532628.html" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Check
-                        </a>
-                      </div>
-                    </li>
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link flex-shrink-0 h-5 w-5 text-gray-400"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          CUDA Tookit Documentation
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="https://developer.nvidia.com/cuda-toolkit-archive" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Check
-                        </a>
-                      </div>
-                    </li>
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link flex-shrink-0 h-5 w-5 text-gray-400"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          Installing the NVIDIA Container Toolkit
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Check
-                        </a>
-                      </div>
-                    </li>
-                    
-                    <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                      <div class="w-0 flex-1 flex items-center">
-                        
-                        
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link flex-shrink-0 h-5 w-5 text-gray-400"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-
-                        
-                        
-                        <span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">
-                          How to prevent NVIDIA drivers from automatically upgrading on Ubuntu?
-                        </span>
-                      </div>
-                      <div class="ml-4 flex-shrink-0">
-                        <a href="https://stackoverflow.com/a/76065388" class="font-medium text-indigo-600 hover:text-indigo-500">
-                          Check
-                        </a>
-                      </div>
-                    </li>
-                    
-                  </ul>
-                </dd>
-              </td>
-            </tr>
-            
-            
-            
-            
-            
-          </tbody>
-        </table>
-    </div>
-  </div>
-</div>
-
-
-<div class="pb-10 w-content ">
-  <script src="https://giscus.app/client.js"
-          data-repo="ecwu/ecwu.github.io"
-          data-repo-id="MDEwOlJlcG9zaXRvcnkxNjQzMzE1NjY="
-          data-category="Blog Post Discussion"
-          data-category-id="DIC_kwDOCcuALs4CObNl"
-          data-mapping="pathname"
-          data-reactions-enabled="1"
-          data-emit-metadata="0"
-          data-input-position="botton"
-          data-theme="preferred_color_scheme"
-          data-lang="en"
-          crossorigin="anonymous"
-          async>
-  </script>
-</div>
-
-
-
-
-<section class="mb-10">
-<hr>
-<h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2>
-<ul class="list-disc list-inside text-gray-900 dark:text-gray-200">
-    
-    <li><a href="https://ecwuuuuu.com/post/authentik-tutorial-video/">Authentik 视频教程 - 合集</a></li>
-    
-    <li><a href="https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/">Authentik 教程系列：服务的迁移</a></li>
-    
-    <li><a href="https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/">Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</a></li>
-    
-</ul>
-</section>
-
-<div>
-  <footer class="relative mb-6 text-gray-900 dark:text-gray-200">
-    <hr class="pb-5"><div class="flex justify-begin w-full mx-auto mb-2">
-  <ul class="flex flex-row justify-begin text-lg space-x-2">
-          
-
-      
-      <li>
-          <a href="https://ecwuuuuu.com/index.xml" aria-label="RSS"
-              class="round-button social-button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 fill-gray-700 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-200" viewBox="0 0 16 16">
-                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-              </svg>
-          </a>
-      </li>
-      
-  </ul>
-</div><p>
-      
-      Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/ecwu/ecwu-theme">ecwu-theme</a>.
-      Build by GitHub Actions at: 2025-10-27 07:01 CST.
-    </p>
-    <p>
-      
-      &copy;2025
-      ECWUUUUU.
-      All rights reserved.
-      
-
-    </p>
-    
-    <p>
-      <a href="http://beian.miit.gov.cn/"> 粤 ICP 备 17015575 号 - 1</a>
-    </p>
-    
-    <p class="text-sm my-4">
-       Google Analytics enabled   | <a href="https://ecwuuuuu.com/page/changelog">site changelog</a>
-    </p>
-  </footer>
-</div>
-
-
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-HSPDSQWH5L');
-        }
-      </script>
-
-
-    </body>
-</html>
+<!doctype html><html lang=en><head><link rel=icon type=image/x-icon href=https://ecwuuuuu.com/favicon.ico><link rel=stylesheet href=https://ecwuuuuu.com/css/style.min.744725dcb7cf600fb6c5cb9d56c898a6af45d86759410d7e6058efc92a19d2e7.css integrity="sha256-dEcl3LfPYA+2xcudVsiYpq9F2GdZQQ1+YFjvySoZ0uc="><meta charset=utf-8><title>服务器新装 GPU 的容器化配置笔记 - ECWU's Notebook</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Homepage and blog for Zhenghao Wu (ECWU), sharing thoughts on technology, everyday experiences, and photography. Engaging with the community through knowledge sharing."><meta name=keywords content="Docker,Container,Docker Images,Self-host,GPU,JupyterHub,NVIDIA GPU,CUDA,PyTorch,RTX 4090D,NVIDIA A100"><meta name=author content="ECWUUUUU"><script>(function(){const e=localStorage.getItem("current-theme");e===null?window.matchMedia("(prefers-color-scheme: dark)").matches?(localStorage.setItem("current-theme","dark"),document.documentElement.classList.add("dark")):(localStorage.setItem("current-theme","light"),document.documentElement.classList.remove("dark")):e==="dark"?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")})(),window.updateMermaidTheme=()=>{if(typeof mermaid!="undefined"){const e=document.documentElement.classList.contains("dark"),t=document.querySelectorAll("pre.mermaid");t.forEach(e=>{e.getAttribute("data-processed")?(e.removeAttribute("data-processed"),e.innerHTML=e.getAttribute("data-graph")):e.setAttribute("data-graph",e.textContent)}),e?(initMermaidDark(),mermaid.run()):(initMermaidLight(),mermaid.run())}};function change_color_mode(){localStorage.getItem("current-theme")==="light"?(document.documentElement.classList.add("dark"),localStorage.setItem("current-theme","dark"),change_discussion_color_mode(),updateMermaidTheme()):(document.documentElement.classList.remove("dark"),localStorage.setItem("current-theme","light"),change_discussion_color_mode(),updateMermaidTheme())}function change_discussion_color_mode(){const t=localStorage.getItem("current-theme")==="light"?"light":"dark",n={setConfig:{theme:t}},e=document.querySelector("iframe.giscus-frame");e&&e.contentWindow.postMessage({giscus:n},"https://giscus.app")}document.addEventListener("DOMContentLoaded",()=>{document.getElementById("header-theme-button").addEventListener("click",change_color_mode)})</script></head><body class="transition-colors duration-300"><div class=pt-6><div class="nav-title flex flex-row flex-wrap gap-2"><a href=https://ecwuuuuu.com/><svg class="w-36 fill-gray-900 dark:fill-gray-200" fill="currentcolor" viewBox="0 0 204.24 43.44"><path d="M0 43.08V.36h18.24v5.76H6.12v12.54h10.56v5.76H6.12v12.54h12.12v6.12H0z"/><path d="M41.64 30.9v2.64c0 1.32-.25 2.57-.75 3.75s-1.19 2.23-2.07 3.15-1.91 1.65-3.09 2.19-2.45.81-3.81.81c-1.16.0-2.34-.16-3.54-.48s-2.28-.88-3.24-1.68-1.75-1.83-2.37-3.09c-.62-1.26-.93-2.87-.93-4.83V9.84c0-1.4.24-2.7.72-3.9s1.16-2.24 2.04-3.12 1.93-1.57 3.15-2.07C28.97.25 30.32.0 31.8.0c2.88.0 5.22.94 7.02 2.82.88.92 1.57 2.01 2.07 3.27s.75 2.63.75 4.11v2.4h-6.12v-2.04c0-1.2-.34-2.24-1.02-3.12s-1.6-1.32-2.76-1.32c-1.52.0-2.53.47-3.03 1.41s-.75 2.13-.75 3.57v21.84c0 1.24.27 2.28.81 3.12s1.51 1.26 2.91 1.26c.4.0.83-.07 1.29-.21s.89-.37 1.29-.69c.36-.32.66-.76.9-1.32s.36-1.26.36-2.1v-2.1h6.12z"/><path d="M78.36.36 72 43.08h-5.76l-4.68-27.72h-.12l-4.62 27.72h-5.76L44.7.36h6.48l3.06 27.12h.12l4.8-27.12h4.68l4.98 27.78h.12l2.94-27.78H78.36z"/><path d="M102 .36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16-2.48.78-3.84.78-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36h6.12v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08 1.98-.36 2.7-1.08 1.08-1.84 1.08-3.36V.36H102z"/><path d="M127.56.36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16-2.48.78-3.84.78-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36h6.12v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08 1.98-.36 2.7-1.08 1.08-1.84 1.08-3.36V.36h6.12z"/><path d="M153.12.36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16c-1.2.52-2.48.78-3.84.78s-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36h6.12v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08 1.98-.36 2.7-1.08S147 34.4 147 32.88V.36h6.12z"/><path d="M178.68.36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16c-1.2.52-2.48.78-3.84.78s-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36H165v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08c1.08.0 1.98-.36 2.7-1.08s1.08-1.84 1.08-3.36V.36h6.12z"/><path d="M204.24.36v33.12c0 1.4-.25 2.69-.75 3.87s-1.21 2.23-2.13 3.15-1.98 1.64-3.18 2.16c-1.2.52-2.48.78-3.84.78s-2.63-.26-3.81-.78-2.23-1.24-3.15-2.16c-.92-.92-1.64-1.97-2.16-3.15s-.78-2.47-.78-3.87V.36h6.12v32.52c0 1.52.36 2.64 1.08 3.36s1.62 1.08 2.7 1.08 1.98-.36 2.7-1.08 1.08-1.84 1.08-3.36V.36h6.12z"/></svg><p class=sr-only>ECWU Homepage</p></a></div><nav aria-label=navbar class="mb-3 mr-8"><ol role=list class="flex flex-wrap"><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Home</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/post/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Posts</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/photography/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Photos</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/series/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Series</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/page/about/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>About</a><svg width="16" height="20" viewBox="0 0 16 20" fill="currentcolor" aria-hidden="true" class="mr-2 w-4 h-5 fill-gray-300"><path d="M5.697 4.34 8.98 16.532h1.327L7.025 4.341H5.697z"/></svg></div></li><li><div class="flex items-center justify-center"><a href=https://ecwuuuuu.com/page/friends/ class='mr-2 font-medium text-gray-900 dark:text-gray-200 visited:text-gray-900 dark:visited:text-gray-200'>Friends</a></div></li></ol></nav><div class="flex items-center space-x-2"><div class="w-6 h-6 inline-flex items-center justify-center rounded-lg bg-white dark:bg-black shadow-inner ring-1 ring-black/5"><i id=header-theme-button data-feather=sun class="site-header-navlink rounded cursor-pointer"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun h-4 w-4 block dark:hidden fill-gray-900 dark:fill-gray-200"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon h-4 w-4 hidden dark:block fill-gray-900 dark:fill-gray-200"><path d="M20.985 12.486a9 9 0 11-9.473-9.472c.405-.022.617.46.402.803a6 6 0 008.268 8.268c.344-.215.825-.004.803.401"/></svg></i></div><span class="dark:hidden text-sm">To Dark Mode</span>
+<span class="hidden dark:block dark:text-gray-200 text-sm">To Light Mode</span></div></div><figure class="ml-[-12.5vw] mt-12 mb-12 h-96 w-screen relative overflow-hidden"><img class="object-cover object-center w-full h-96" src="https://unsplash.com/photos/G7PV6gd-w4g/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mjh8fGNvbnRhaW5lcnxlbnwwfHx8fDE3MzI0NTk5OTd8MA&amp;force=true&amp;w=2400" alt="Featured Images"><figcaption class="text-sm absolute bottom-0 right-0 pr-5 bg-gray-900 text-gray-500 px-2">Photo by CHUTTERSNAP on Unsplash</figcaption></figure><div class="mb-12 mt-16 w-content"><h1 class="text-gray-900 dark:text-gray-200">服务器新装 GPU 的容器化配置笔记</h1><h2 class="text-gray-700 dark:text-gray-400">在 JupyterHub 环境下</h2><div class="text-gray-700 dark:text-gray-400"><div class=space-y-1><p><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-signature-icon lucide-signature h-5 w-5 inline-block"><path d="m21 17-2.156-1.868A.5.5.0 0018 15.5v.5a1 1 0 01-1 1h-2a1 1 0 01-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 000 5c4.153.0 4.745-11.295 5.708-13.5a2.5 2.5.0 113.31 3.284"/><path d="M3 21h18"/></svg> Zhenghao Wu</p><p><span class=mr-2><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-clock-icon lucide-calendar-clock h-5 w-5 inline-block"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/><path d="M21 7.5V6a2 2 0 00-2-2H5A2 2 0 003 6v14a2 2 0 002 2h3.5"/><path d="M3 10h5"/><path d="M8 2v4"/><circle cx="16" cy="16" r="6"/></svg> Sunday, November 24, 2024
+</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-clock-icon lucide-clipboard-clock h-5 w-5 inline-block"><path d="M16 14v2.2l1.6 1"/><path d="M16 4h2a2 2 0 012 2v.832"/><path d="M8 4H6A2 2 0 004 6v14a2 2 0 002 2h2"/><circle cx="16" cy="16" r="6"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> 7 min read</span></p><p><span class=mr-2><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag-icon lucide-flag h-5 w-5 inline-block"><path d="M4 22V4a1 1 0 01.4-.8A6 6 0 018 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0120 4v10a1 1 0 01-.4.8A6 6 0 0116 16c-3 0-5-2-8-2a6 6 0 00-4 1.528"/></svg>
+Status: Finished
+</span><span class=mr-2><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-badge-check-icon lucide-badge-check h-5 w-5 inline-block"><path d="M3.85 8.62a4 4 0 014.78-4.77 4 4 0 016.74.0 4 4 0 014.78 4.78 4 4 0 010 6.74 4 4 0 01-4.77 4.78 4 4 0 01-6.75.0 4 4 0 01-4.78-4.77 4 4 0 010-6.76z"/><path d="m9 12 2 2 4-4"/></svg>
+Confidence: Verified in practice
+</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waypoints-icon lucide-waypoints h-5 w-5 inline-block"><circle cx="12" cy="4.5" r="2.5"/><path d="m10.2 6.3-3.9 3.9"/><circle cx="4.5" cy="12" r="2.5"/><path d="M7 12h10"/><circle cx="19.5" cy="12" r="2.5"/><path d="m13.8 17.7 3.9-3.9"/><circle cx="12" cy="19.5" r="2.5"/></svg>
+Importance: 8</span></p><p><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text-icon lucide-scroll-text h-5 w-5 inline-block"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 00-2-2H4"/><path d="M8 21h12a2 2 0 002-2v-1a1 1 0 00-1-1H11a1 1 0 00-1 1v1a2 2 0 11-4 0V5A2 2 0 102 5v2a1 1 0 001 1h3"/></svg> <a href=#article-info-card>Post Details</a></p></div></div></div><main><article class="prose dark:prose-invert lg:prose-xl md:prose-lg prose-ul:leading-5 prose-ol:leading-5"><h2 id=前言>前言</h2><p>最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 <code>lspci | grep "NVIDIA"</code> 命令查看设备是否被识别。</p><p>下面为两个成功识别显卡设备的例子：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>$ lspci | grep <span style=color:#2aa198>&#34;NVIDIA&#34;</span>
+</span></span><span style=display:flex><span>af:00.0 3D controller: NVIDIA Corporation GA100 <span style=color:#719e07>[</span>A100 PCIe 80GB<span style=color:#719e07>]</span> <span style=color:#719e07>(</span>rev a1<span style=color:#719e07>)</span>
+</span></span><span style=display:flex><span>d8:00.0 3D controller: NVIDIA Corporation GA100 <span style=color:#719e07>[</span>A100 PCIe 80GB<span style=color:#719e07>]</span> <span style=color:#719e07>(</span>rev a1<span style=color:#719e07>)</span>
+</span></span><span style=display:flex><span><span style=color:#586e75># 专业卡会显示为 3D controller</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>$ lspci | grep <span style=color:#2aa198>&#34;NVIDIA&#34;</span>
+</span></span><span style=display:flex><span>31:00.0 VGA compatible controller: NVIDIA Corporation Device <span style=color:#2aa198>2685</span> <span style=color:#719e07>(</span>rev a1<span style=color:#719e07>)</span>
+</span></span><span style=display:flex><span>31:00.1 Audio device: NVIDIA Corporation Device 22ba <span style=color:#719e07>(</span>rev a1<span style=color:#719e07>)</span>
+</span></span><span style=display:flex><span>b1:00.0 VGA compatible controller: NVIDIA Corporation Device <span style=color:#2aa198>2685</span> <span style=color:#719e07>(</span>rev a1<span style=color:#719e07>)</span>
+</span></span><span style=display:flex><span>b1:00.1 Audio device: NVIDIA Corporation Device 22ba <span style=color:#719e07>(</span>rev a1<span style=color:#719e07>)</span>
+</span></span><span style=display:flex><span><span style=color:#586e75># 游戏卡会显示为 VGA compatible controller</span>
+</span></span></code></pre></div><p>另外系统版本为 Ubuntu 22.04。系统已经安装 Docker，且 Docker 版本大于 19.03。</p><h2 id=1-禁用-nouveau-驱动>1. 禁用 Nouveau 驱动</h2><p>Nouveau 驱动是一个开源的 NVIDIA 显卡驱动，但是在使用 NVIDIA 官方驱动时，需要禁用 Nouveau 驱动。否则会导致显卡驱动无法正常加载。</p><ul><li><p>1 编辑 <code>/etc/modprobe.d/blacklist-nouveau.conf</code> 文件，添加以下内容：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-txt data-lang=txt><span style=display:flex><span>blacklist nouveau
+</span></span><span style=display:flex><span>blacklist lbm-nouveau
+</span></span><span style=display:flex><span>options nouveau modeset=0
+</span></span><span style=display:flex><span>alias nouveau off
+</span></span><span style=display:flex><span>alias lbm-nouveau off
+</span></span></code></pre></div><p><code>/etc/modprobe.d</code> 目录里面存放了内核模块的配置文件。这里我们创建了一个名为 <code>blacklist-nouveau.conf</code> 的文件，里面存放了禁用 Nouveau 驱动的配置。</p></li><li><p>2 关闭 nouveau</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#b58900>echo</span> options nouveau <span style=color:#268bd2>modeset</span><span style=color:#719e07>=</span><span style=color:#2aa198>0</span> | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
+</span></span></code></pre></div><p>我们通过 <code>tee</code> 命令将 <code>options nouveau modeset=0</code> 写入到 <code>/etc/modprobe.d/nouveau-kms.conf</code> 文件中。这样就关闭了 nouveau 驱动。</p></li><li><p>3 更新 initramfs</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>sudo update-initramfs -u
+</span></span><span style=display:flex><span>sudo reboot
+</span></span></code></pre></div><p><code>update-initramfs</code> 命令用于更新 initramfs (initial RAM file system)。initramfs 是一个临时的根文件系统，用于在 Linux 内核引导时加载必要的驱动程序。我们需要更新 initramfs 以使新的内核模块配置生效。<code>-u</code> 参数表示更新。更新完成后，重启系统。</p></li><li><p>4 验证</p><p>重启后执行以下命令。如果没有输出，说明 Nouveau 驱动已经被禁用。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>lsmod | grep nouveau
+</span></span></code></pre></div></li></ul><h2 id=2-安装-nvidia-驱动>2. 安装 NVIDIA 驱动</h2><ul><li><p>1 安装依赖</p><p>NVIDIA 驱动需要一些依赖，我们需要先安装这些依赖。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>sudo apt-get install build-essential dkms
+</span></span></code></pre></div><p><code>build-essential</code> 包含了编译 C/C++ 程序所需要的工具，<code>dkms</code> 是一个动态内核模块框架。</p></li><li><p>2 确认 NVIDIA 驱动版本</p><p>首先我们需要确认显卡所需的驱动版本。可以在 NVIDIA 官网（https://www.nvidia.com/en-us/drivers/）上查看。
+这边可以看到 4090D 的推荐驱动为 550.135 版本。</p><p>这里你可以直接在官网上下载驱动，然后通过 <code>sh NVIDIA-Linux-x86_64-550.135.run</code> 来安装。但我们这里使用 <code>apt</code> 来安装。</p><p>首先通过 ubuntu-drivers 工具来查看推荐的驱动版本：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>ubuntu-drivers devices
+</span></span></code></pre></div><p>通过上面的命令，我们可以看到推荐的驱动版本。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>$ ubuntu-drivers <span style=color:#268bd2>devices</span>
+</span></span><span style=display:flex><span><span style=color:#719e07>==</span> /sys/devices/pci0000:b0/0000:b0:02.0/0000:b1:00.0 <span style=color:#719e07>==</span>
+</span></span><span style=display:flex><span>modalias : pci:v000010DEd00002685sv000010DEsd00001697bc03sc00i00
+</span></span><span style=display:flex><span>vendor   : NVIDIA Corporation
+</span></span><span style=display:flex><span>driver   : nvidia-driver-550-open - distro non-free
+</span></span><span style=display:flex><span>driver   : nvidia-driver-550-server-open - distro non-free
+</span></span><span style=display:flex><span>driver   : nvidia-driver-550 - distro non-free recommended
+</span></span><span style=display:flex><span>driver   : nvidia-driver-550-server - distro non-free
+</span></span><span style=display:flex><span>driver   : xserver-xorg-video-nouveau - distro free <span style=color:#b58900>builtin</span>
+</span></span></code></pre></div><p>我们可以看到推荐的驱动版本为 <code>nvidia-driver-550</code>，这与官网上的推荐驱动版本一致。这些驱动中我们要选择的是 <strong>nvidia-driver-550-server</strong>。</p></li><li><p>3 安装驱动</p><p>安装的操作比较简单，只需要执行以下命令即可：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>sudo apt-get install -y nvidia-driver-550-server
+</span></span></code></pre></div><p>安装完成后，重启系统。</p></li><li><p>4 验证</p><p>重启后执行以下命令，如果有输出，说明驱动安装成功。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>nvidia-smi
+</span></span></code></pre></div><p><code>nvidia-smi</code> 是 NVIDIA 提供的一个命令行工具，用于查看显卡信息。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>$ nvidia-smi
+</span></span><span style=display:flex><span>Fri Nov <span style=color:#2aa198>22</span> 15:12:11 <span style=color:#2aa198>2024</span>       
+</span></span><span style=display:flex><span>+-----------------------------------------------------------------------------------------+
+</span></span><span style=display:flex><span>| NVIDIA-SMI 550.127.05             Driver Version: 550.127.05     CUDA Version: 12.4     |
+</span></span><span style=display:flex><span>|-----------------------------------------+------------------------+----------------------+
+</span></span><span style=display:flex><span>| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+</span></span><span style=display:flex><span>| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+</span></span><span style=display:flex><span>|                                         |                        |               MIG M. |
+</span></span><span style=display:flex><span>|<span style=color:#719e07>=========================================</span>+<span style=color:#719e07>========================</span>+<span style=color:#719e07>======================</span>|
+</span></span><span style=display:flex><span>|   <span style=color:#2aa198>0</span>  NVIDIA GeForce RTX <span style=color:#2aa198>4090</span> D      Off |   00000000:31:00.0 Off |                  Off |
+</span></span><span style=display:flex><span>| 60%   37C    P0             59W /  425W |       1MiB /  24564MiB |      0%      Default |
+</span></span><span style=display:flex><span>|                                         |                        |                  N/A |
+</span></span><span style=display:flex><span>+-----------------------------------------+------------------------+----------------------+
+</span></span><span style=display:flex><span>|   <span style=color:#2aa198>1</span>  NVIDIA GeForce RTX <span style=color:#2aa198>4090</span> D      Off |   00000000:B1:00.0 Off |                  Off |
+</span></span><span style=display:flex><span>|100%   35C    P0             76W /  425W |       1MiB /  24564MiB |      1%      Default |
+</span></span><span style=display:flex><span>|                                         |                        |                  N/A |
+</span></span><span style=display:flex><span>+-----------------------------------------+------------------------+----------------------+
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>+-----------------------------------------------------------------------------------------+
+</span></span><span style=display:flex><span>| Processes:                                                                              |
+</span></span><span style=display:flex><span>|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+</span></span><span style=display:flex><span>|        ID   ID                                                               Usage      |
+</span></span><span style=display:flex><span>|<span style=color:#719e07>=========================================================================================</span>|
+</span></span><span style=display:flex><span>|  No running processes found                                                             |
+</span></span><span style=display:flex><span>+-----------------------------------------------------------------------------------------+
+</span></span></code></pre></div></li><li><p>5 禁用 NVIDIA 自动更新</p><p>Ubuntu 下，NVIDIA 驱动会自动更新，如果自动更新后，则需要系统重启才能生效。这样会导致一些服务的中断。我们可以通过以下操作来禁用自动更新：</p><p>在 <code>/etc/apt/apt.conf.d/50unattended-upgrades</code> 文件中，将 <code>Unattended-Upgrade::Package-Blacklist</code> 选项中添加 <code>nvidia-*</code> 和 <code>libnvidia-</code>。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>Unattended-Upgrade::Package-Blacklist <span style=color:#719e07>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;nvidia-&#34;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;libnvidia-&#34;</span>;
+</span></span><span style=display:flex><span>    ...
+</span></span><span style=display:flex><span><span style=color:#719e07>}</span>
+</span></span></code></pre></div></li></ul><h2 id=3-安装-cuda>3. 安装 CUDA</h2><h3 id=31-下载-cuda-安装包>3.1 下载 CUDA 安装包</h3><p>CUDA 是 NVIDIA 提供的一个并行计算平台和编程模型。我们可以通过 CUDA 来加速计算。但是在安装 CUDA 之前，我们需要确认安装的版本，新的驱动版本可能不支持旧的 CUDA 版本。</p><p>在刚刚步骤中，我们可以看到 <code>nvidia-smi</code> 的输出中有 CUDA 的版本（右上角）。这里我们可以看到 CUDA 的版本为 12.4。</p><p>我们可以在 NVIDIA 官网（https://developer.nvidia.com/cuda-toolkit-archive）上查看 CUDA 的版本。这里我们可以看到 12.4 的 CUDA 版本为 12.4.0 和 12.4.1。这里我们选择安装 12.4.1 版本。</p><p>在页面中，会要求你选择系统的情况，这里我们选择 Linux -> x86_64 -> Ubuntu -> 22.04 -> runfile (local)。</p><p>页面中会展示下载链接和安装的指令。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>wget https://developer.download.nvidia.com/compute/cuda/12.4.1/local_installers/cuda_12.4.1_550.54.15_linux.run
+</span></span><span style=display:flex><span>sudo sh cuda_12.4.1_550.54.15_linux.run
+</span></span></code></pre></div><h3 id=32-安装-cuda>3.2 安装 CUDA</h3><p>使用 <code>wget</code> 下载 CUDA 安装包，然后使用 <code>sh</code> 执行安装。</p><p>安装过程中会有一些提示，其中包括是否安装驱动，因为我们先前已经安装了驱动，所以我们要取消驱动安装的勾选（因为内带的驱动版本可能不是最新的）。</p><h3 id=33-配置环境变量>3.3 配置环境变量</h3><p>安装完成后，我们需要配置环境变量。主要是将 CUDA bin 的路径添加到环境变量中。</p><ul><li><p>1 首先创建 <code>/etc/profile.d/cuda.sh</code> 文件</p><p>并在里面填入内容：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#b58900>export</span> <span style=color:#268bd2>PATH</span><span style=color:#719e07>=</span>/usr/local/cuda-12.4/bin:<span style=color:#268bd2>$PATH</span>
+</span></span><span style=display:flex><span><span style=color:#b58900>export</span> <span style=color:#268bd2>LD_LIBRARY_PATH</span><span style=color:#719e07>=</span>/usr/local/cuda-12.4/lib64:<span style=color:#268bd2>$LD_LIBRARY_PATH</span>
+</span></span></code></pre></div><p>这里我们将 CUDA 12.4 的 bin 目录添加到 PATH 中，将 CUDA 12.4 的 lib64 目录添加到 LD_LIBRARY_PATH 中。保存文件。</p></li><li><p>2 修改文件权限</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>sudo chmod +x /etc/profile.d/cuda.sh
+</span></span></code></pre></div><p>修改文件权限，使其可以被执行。</p></li><li><p>3 使环境变量生效</p><p>这里可以选择重启系统，或者执行以下命令使环境变量生效：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#b58900>source</span> /etc/profile
+</span></span></code></pre></div></li><li><p>4 验证</p><p>验证 CUDA 是否安装成功，可以执行以下命令：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>nvcc --version
+</span></span></code></pre></div><p>如果有输出，说明 CUDA 安装成功。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>$ nvcc --version
+</span></span><span style=display:flex><span>nvcc: NVIDIA <span style=color:#719e07>(</span>R<span style=color:#719e07>)</span> Cuda compiler driver
+</span></span><span style=display:flex><span>Copyright <span style=color:#719e07>(</span>c<span style=color:#719e07>)</span> 2005-2024 NVIDIA Corporation
+</span></span><span style=display:flex><span>Built on Thu_Mar_28_02:18:24_PDT_2024
+</span></span><span style=display:flex><span>Cuda compilation tools, release 12.4, V12.4.131
+</span></span><span style=display:flex><span>Build cuda_12.4.r12.4/compiler.34097967_0
+</span></span></code></pre></div></li></ul><h2 id=4-安装-nvidia-container-toolkit>4. 安装 nvidia-container-toolkit</h2><p>nvidia-container-toolkit 是一个用于 Docker 的工具，用于支持 NVIDIA GPU 的 Docker 容器。</p><ul><li><p>1 添加 APT 的密钥和镜像</p><p>直接执行以下命令来添加 APT 的密钥和镜像：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg <span style=color:#cb4b16>\
+</span></span></span><span style=display:flex><span><span style=color:#cb4b16></span><span style=color:#719e07>&amp;&amp;</span> curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | <span style=color:#cb4b16>\
+</span></span></span><span style=display:flex><span><span style=color:#cb4b16></span>    sed <span style=color:#2aa198>&#39;s#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g&#39;</span> | <span style=color:#cb4b16>\
+</span></span></span><span style=display:flex><span><span style=color:#cb4b16></span>    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+</span></span></code></pre></div></li><li><p>2 更新 APT，使新的源生效。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>sudo apt-get update
+</span></span></code></pre></div></li><li><p>3 安装 nvidia-container-toolkit</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>sudo apt-get install -y nvidia-container-toolkit
+</span></span></code></pre></div><p>因为文件需要从 GitHub 下载，所以可能会比较慢，请耐心等待。</p></li><li><p>4 修改 Docker 配置</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>sudo nvidia-ctk runtime configure --runtime<span style=color:#719e07>=</span>docker
+</span></span></code></pre></div><p>这个命令会修改 Docker 的配置文件，使其支持 NVIDIA GPU。具体的，它会在 <code>/etc/docker/daemon.json</code> 文件中添加一个叫 <code>nvidia</code> <code>runtimes</code> 的配置项。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#268bd2>&#34;runtimes&#34;</span>: {
+</span></span><span style=display:flex><span>        <span style=color:#268bd2>&#34;nvidia&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#268bd2>&#34;path&#34;</span>: <span style=color:#2aa198>&#34;/usr/bin/nvidia-container-runtime&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#268bd2>&#34;runtimeArgs&#34;</span>: []
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>配置好后，你未来启动 Docker 时，可以使用 <code>--runtime=nvidia</code> 来指定使用 NVIDIA GPU。目前这个设置还不是默认的，所以需要手动指定。我们还需要额外增加一行 <code>"default-runtime": "nvidia",</code> 来指定默认的运行时。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#268bd2>&#34;default-runtime&#34;</span>: <span style=color:#2aa198>&#34;nvidia&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#268bd2>&#34;runtimes&#34;</span>: {
+</span></span><span style=display:flex><span>        <span style=color:#268bd2>&#34;nvidia&#34;</span>: {
+</span></span><span style=display:flex><span>            <span style=color:#268bd2>&#34;path&#34;</span>: <span style=color:#2aa198>&#34;/usr/bin/nvidia-container-runtime&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#268bd2>&#34;runtimeArgs&#34;</span>: []
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>这个配置下，Docker 将默认使用 NVIDIA GPU 运行容器。</p></li><li><p>5 重启 Docker</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>sudo systemctl restart docker
+</span></span></code></pre></div><p>重启 Docker 使配置生效。</p></li><li><p>6 验证</p><p>执行以下命令，如果有输出 nvidia-smi 的信息，说明配置成功。（需要确保本地有 ubuntu 镜像）</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-bash data-lang=bash><span style=display:flex><span>sudo docker run --rm --runtime<span style=color:#719e07>=</span>nvidia --gpus all ubuntu nvidia-smi
+</span></span></code></pre></div></li></ul><h2 id=6-构建-docker-镜像>6. 构建 Docker 镜像</h2><p>我们将采用 EPTI 基础 Dockerfile 集（基于 <a href=https://github.com/jupyter/docker-stacks>docker-stacks</a> 和 nvidia/cuda 镜像构建）。包含了 miniconda，jupyterlab，pytorch 等常用的库。当你在执行构建时，需要修改 Dockerfile 中的 <code>FORM</code> 字段。</p><p>这个集含多个 Dockerfile，他们的依赖关系为：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
+</span></span><span style=display:flex><span>└── @/docker-stacks-foundation-gpu-cuda&lt;CUDA VERSION&gt;:latest
+</span></span><span style=display:flex><span>    └── @/base-gpu-notebook-cuda&lt;CUDA VERSION&gt;:latest
+</span></span><span style=display:flex><span>        └── @/pytorch-gpu-notebook-cuda&lt;CUDA VERSION&gt;:latest
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>@ = reg.epti.moe/epti-jupyter （这个是生产环境内使用的内部镜像，你可以改成自己的名字）
+</span></span></code></pre></div><p>其中：</p><ol><li><p><code>reg.epti.moe/epti-jupyter/docker-stacks-foundation-gpu-cuda12.4</code> 相关文件存储在 foundation 文件夹啊中，进入后使用 <code>docker build . -t reg.epti.moe/epti-jupyter/docker-stacks-foundation-gpu-cuda12.4:latest</code> 指令来构建。</p><ul><li>基于 NVIDIA CUDA 12.4.1 的基础镜像（cudnn devel 版本）</li><li>配置了基础操作系统环境，安装必要的系统包</li><li>创建了名为 jovyan 的非 root 用户</li><li>使用 Micromamba 安装和管理 Python（默认 3.11）及相关包</li><li>配置了 Jupyter 运行所需的各种环境变量和目录权限</li><li>设置了容器启动相关的配置，包括入口点和启动钩子</li></ul></li><li><p><code>reg.epti.moe/epti-jupyter/base-gpu-notebook-cuda12.4</code> 相关文件存储在 base 文件夹中，进入后使用 <code>docker build . -t reg.epti.moe/epti-jupyter/base-gpu-notebook-cuda12.4:latest</code> 指令来构建。</p><ul><li>基于 foundation 构建，安装系统包：fonts-liberation（字体），pandoc（文档转换），run-one（命令运行管理）</li><li>Jupyter 组件安装：JupyterLab/Jupyter Notebook/JupyterHub/NBClassic</li><li>配置设置：端口 8888/健康检查/启动脚本和配置文件</li></ul></li><li><p><code>reg.epti.moe/epti-jupyter/pytorch-gpu-notebook-cuda12.4</code> 相关文件存储在 pytorch 文件夹中，进入后使用 <code>docker build . -t reg.epti.moe/epti-jupyter/pytorch-gpu-notebook-cuda12.4:latest</code> 指令来构建。</p><ul><li>基于 base 构建，安装 PyTorch 和相关库</li><li>安装了 torch、torchvision、torchaudio</li><li>安装了 tensorboard、visual studio code 支持</li></ul></li></ol><h2 id=7-添加-docker-镜像到-jupyterhub-配置中>7. 添加 Docker 镜像到 JupyterHub 配置中</h2><p>在 JupyterHub 的配置文件中，我们需要添加 Docker 镜像的配置。请使用 root 权限修改 <code>jupyterhub_config.py</code> 配置文件。找到 <code>c.DockerSpawner.allowed_images</code> 配置项，添加新的镜像。这里的格式是字典，键为镜像名称，值为镜像地址。以下是配置的一个例子。</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-python data-lang=python><span style=display:flex><span>c<span style=color:#719e07>.</span>DockerSpawner<span style=color:#719e07>.</span>allowed_images <span style=color:#719e07>=</span> {
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#39;[GPU] Pytorch 2.4.1 (Python 3.11, CUDA12.4)&#39;</span>: <span style=color:#2aa198>&#39;reg.epti.moe/epti-jupyter/pytorch-gpu-notebook-cuda12.4:latest&#39;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#39;[ R ] 基础环境&#39;</span>: <span style=color:#2aa198>&#39;reg.epti.moe/epti-jupyter/r-notebook:latest&#39;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#39;[PYTHON] 基础环境&#39;</span>: <span style=color:#2aa198>&#39;reg.epti.moe/epti-jupyter/minimal-notebook:latest&#39;</span>,
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=小结>小结</h2><p>这里我们记录了在 Ubuntu 22.04 系统上配置新添加 NVIDIA GPU 的过程。主要包括了禁用 Nouveau 驱动、安装 NVIDIA 驱动、安装 CUDA、安装 nvidia-container-toolkit、构建 Docker 镜像、添加 Docker 镜像到 JupyterHub 配置中。这里我们使用了 EPTI 的基础镜像集，构建了一个 PyTorch 的 GPU 镜像。这个镜像可以用于 JupyterHub 的 GPU 计算环墋中。</p></article></main><div class="pb-10 w-content"><div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg"><div class="px-4 py-5 sm:px-6"><h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-200"><a id=article-info-card></a>Article Card</h3><p class="mt-1 text-sm text-gray-500">For "<span class=italic>服务器新装 GPU 的容器化配置笔记</span>"</p></div><div class="border-t border-gray-200 dark:border-gray-700"><dl><table class="border-collapse table-fixed w-full"><tbody class="bg-white dark:bg-gray-800"><tr class="px-4 py-5"><th class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">Author</td><td class="border-b font-bold border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">Zhenghao Wu</td></tr><tr class="px-4 py-5"><th class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">Publish & Update Date</td><td class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm">2024-11-24</td></tr><tr class="px-4 py-5"><th class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">Tags</td><td class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm"><a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/docker>Docker</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/container>Container</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/docker-images>Docker Images</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/self-host>Self-host</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/gpu>GPU</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/jupyterhub>JupyterHub</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/nvidia-gpu>NVIDIA GPU</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/cuda>CUDA</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/pytorch>PyTorch</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/rtx-4090d>RTX 4090D</a>
+<a class="rounded inline-block mt-1 mb-1 py-1 px-2 text-xs font-medium text-white bg-gray-900 visited:text-white dark:visited:text-white" href=https://ecwuuuuu.com/tags/nvidia-a100>NVIDIA A100</a></td></tr><tr class="px-4 py-5"><th class="text-left border-b border-gray-100 dark:border-gray-700 pl-6 dark:text-gray-500 w-1/3 px-4 py-5 text-sm font-medium text-gray-500">Extra Materials</td><td class="font-bold border-b border-gray-100 dark:border-gray-700 p-4 pl-8 text-gray-500 dark:text-gray-400 mt-1 px-4 py-5 text-sm"><dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"><ul role=list class="border border-gray-200 dark:border-gray-700 rounded-md divide-y divide-gray-200 dark:divide-gray-700"><li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm"><div class="w-0 flex-1 flex items-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link flex-shrink-0 h-5 w-5 text-gray-400"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+<span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">【2022新教程】Ubuntu server 20.04如何安装nvidia驱动和cuda-解决服务器ssh一段时间后连不上的问题</span></div><div class="ml-4 flex-shrink-0"><a href=https://www.cnblogs.com/luk/p/15532628.html class="font-medium text-indigo-600 hover:text-indigo-500">Check</a></div></li><li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm"><div class="w-0 flex-1 flex items-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link flex-shrink-0 h-5 w-5 text-gray-400"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+<span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">CUDA Tookit Documentation</span></div><div class="ml-4 flex-shrink-0"><a href=https://developer.nvidia.com/cuda-toolkit-archive class="font-medium text-indigo-600 hover:text-indigo-500">Check</a></div></li><li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm"><div class="w-0 flex-1 flex items-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link flex-shrink-0 h-5 w-5 text-gray-400"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+<span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">Installing the NVIDIA Container Toolkit</span></div><div class="ml-4 flex-shrink-0"><a href=https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html class="font-medium text-indigo-600 hover:text-indigo-500">Check</a></div></li><li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm"><div class="w-0 flex-1 flex items-center"><svg viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link flex-shrink-0 h-5 w-5 text-gray-400"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+<span class="ml-2 flex-1 w-0 truncate text-gray-900 dark:text-gray-200">How to prevent NVIDIA drivers from automatically upgrading on Ubuntu?</span></div><div class="ml-4 flex-shrink-0"><a href=https://stackoverflow.com/a/76065388 class="font-medium text-indigo-600 hover:text-indigo-500">Check</a></div></li></ul></dd></td></tr></tbody></table></div></div></div><div class="pb-10 w-content"><script src=https://giscus.app/client.js data-repo=ecwu/ecwu.github.io data-repo-id="MDEwOlJlcG9zaXRvcnkxNjQzMzE1NjY=" data-category="Blog Post Discussion" data-category-id=DIC_kwDOCcuALs4CObNl data-mapping=pathname data-reactions-enabled=1 data-emit-metadata=0 data-input-position=botton data-theme=preferred_color_scheme data-lang=en crossorigin=anonymous async></script></div><section class=mb-10><hr><h2 class="text-gray-900 dark:text-gray-200">Related Posts</h2><ul class="list-disc list-inside text-gray-900 dark:text-gray-200"><li><a href=https://ecwuuuuu.com/post/authentik-tutorial-video/>Authentik 视频教程 - 合集</a></li><li><a href=https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/>Authentik 教程系列：服务的迁移</a></li><li><a href=https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</a></li></ul></section><div><footer class="relative mb-6 text-gray-900 dark:text-gray-200"><hr class=pb-5><div class="flex justify-begin w-full mx-auto mb-2"><ul class="flex flex-row justify-begin text-lg space-x-2"><li><a href=https://ecwuuuuu.com/index.xml aria-label=RSS class="round-button social-button"><svg width="16" height="16" fill="currentcolor" class="w-5 h-5 fill-gray-700 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-200" viewBox="0 0 16 16"><path d="M2 0A2 2 0 000 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2zm1.5 2.5c5.523.0 10 4.477 10 10a1 1 0 11-2 0 8 8 0 00-8-8 1 1 0 010-2zm0 4a6 6 0 016 6 1 1 0 11-2 0 4 4 0 00-4-4 1 1 0 010-2zm.5 7a1.5 1.5.0 110-3 1.5 1.5.0 010 3z"/></svg></a></li></ul></div><p>Powered by <a href=https://gohugo.io>Hugo</a> and <a href=https://github.com/ecwu/ecwu-theme>ecwu-theme</a>.
+Build by GitHub Actions at: 2025-10-27 07:12 CST.</p><p>&copy;2025
+ECWUUUUU.
+All rights reserved.</p><p><a href=http://beian.miit.gov.cn/>粤 ICP 备 17015575 号 - 1</a></p><p class="text-sm my-4">Google Analytics enabled | <a href=https://ecwuuuuu.com/page/changelog>site changelog</a></p></footer></div><script async src="https://www.googletagmanager.com/gtag/js?id=G-HSPDSQWH5L"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-HSPDSQWH5L")}</script></body></html>
