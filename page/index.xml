@@ -1,104 +1,104 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on ECWUUUUU</title><link>https://ecwuuuuu.com/page/</link><description>Recent content in Pages on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 01 Oct 2024 10:59:30 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Self-Host Projects</title><link>https://ecwuuuuu.com/page/keep/selfhost-project/</link><pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/selfhost-project/</guid><description/></item><item><title>Selected Music List</title><link>https://ecwuuuuu.com/page/keep/music-list/</link><pubDate>Tue, 27 Dec 2022 23:52:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/music-list/</guid><description/></item><item><title>Array</title><link>https://ecwuuuuu.com/page/algorithm/array/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/array/</guid><description>&lt;h2 id="1-两数之和">1. 两数之和&lt;/h2>
-&lt;p>&lt;a href="https://leetcode-cn.com/problems/two-sum">https://leetcode-cn.com/problems/two-sum&lt;/a>&lt;/p>
-&lt;p>给定一个整数数组 &lt;code>nums&lt;/code>，目标是找出数组中的两个整数，算数和为 &lt;code>target&lt;/code>，返回数组下标（只有一个答案，不能元素重复使用）。&lt;strong>其中最简单直接的方法就是暴力遍历&lt;/strong>，得到所有二元素数组的组合（但需要注意储存下标）。&lt;/p></description></item><item><title>Binary</title><link>https://ecwuuuuu.com/page/algorithm/binary/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/binary/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Dynamic Programming</title><link>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Graph</title><link>https://ecwuuuuu.com/page/algorithm/graph/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/graph/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Heap</title><link>https://ecwuuuuu.com/page/algorithm/heap/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/heap/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Interval</title><link>https://ecwuuuuu.com/page/algorithm/interval/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/interval/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Linked List</title><link>https://ecwuuuuu.com/page/algorithm/linked-list/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/linked-list/</guid><description>&lt;h2 id="2-两数相加">2. 两数相加&lt;/h2>
-&lt;p>&lt;a href="https://leetcode-cn.com/problems/add-two-numbers">https://leetcode-cn.com/problems/add-two-numbers&lt;/a>&lt;/p>
-&lt;p>给两个非空链表，每个节点储存一位数字，按逆序排序。返回一个相同形式的链表，表示两个链表的和。&lt;/p>
-&lt;p>数据在链表中是倒序的，这非常的便于处理计算时出现的进位。那最简单的方式就是从两个链表的入口开始计算，直到两个链表走到末尾。&lt;/p></description></item><item><title>Matrix</title><link>https://ecwuuuuu.com/page/algorithm/matrix/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/matrix/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Misc</title><link>https://ecwuuuuu.com/page/algorithm/misc/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/misc/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>String</title><link>https://ecwuuuuu.com/page/algorithm/string/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/string/</guid><description>&lt;h2 id="3-无重复字符的最长子串">3. 无重复字符的最长子串&lt;/h2>
-&lt;p>&lt;a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters&lt;/a>&lt;/p>
-&lt;p>给定一个字符串 &lt;code>s&lt;/code> ，请你找出其中不含有重复字符的&lt;strong>最长子串&lt;/strong>的&lt;em>长度&lt;/em>。&lt;/p>
-&lt;p>这个得出的字符串中不能存在存在的字符，且返回只需要返回最长的长度，所以我们可以使用双指针，来指向不含重复字符的字串。其中：&lt;/p></description></item><item><title>Tree</title><link>https://ecwuuuuu.com/page/algorithm/tree/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/tree/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>YouTube Channels</title><link>https://ecwuuuuu.com/page/keep/youtube-channel/</link><pubDate>Tue, 11 Jan 2022 21:58:05 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/youtube-channel/</guid><description/></item><item><title>Changelog</title><link>https://ecwuuuuu.com/page/changelog/</link><pubDate>Sun, 09 Jan 2022 14:49:18 +0800</pubDate><guid>https://ecwuuuuu.com/page/changelog/</guid><description>&lt;h2 id="about-this-site">About this site&lt;/h2>
-&lt;ul>
-&lt;li>Write with static site generator &lt;a href="https://gohugo.io/">Hugo&lt;/a>
-&lt;ul>
-&lt;li>Uses &lt;a href="https://github.com/ecwu/ecwu-theme">ecwu-theme&lt;/a> from Jan 2022, Theme introduction: &lt;a href="https://ecwuuuuu.com/post/blog-theme-ecwu-theme/">Blog Theme: ecwu-theme&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Build with &lt;a href="https://github.com/features/actions">GitHub Actions&lt;/a>&lt;/li>
-&lt;li>Site preview build with &lt;a href="https://pages.cloudflare.com/">Cloudflare Pages&lt;/a>
-&lt;ul>
-&lt;li>&lt;a href="https://ecwu-github-io-source.pages.dev/">https://ecwu-github-io-source.pages.dev/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Host by &lt;a href="https://pages.github.com/">GitHub Pages&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.cloudflare.com/">Cloudflare&lt;/a> &amp;amp; &lt;a href="https://www.qiniu.com/">Qiniu&lt;/a> for distributing files&lt;/li>
-&lt;li>Comment Plugin: &lt;a href="https://github.com/giscus/giscus">giscus&lt;/a>&lt;/li>
-&lt;li>Site Analytics: &lt;a href="https://support.google.com/analytics/answer/10089681?hl=en">Google Analytics v4&lt;/a>&lt;/li>
-&lt;li>LaTeX Render: &lt;a href="https://katex.org">KaTeX&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="changelog">Changelog&lt;/h2>
-&lt;h3 id="2025">2025&lt;/h3>
-&lt;h4 id="october-2025">October 2025&lt;/h4>
-&lt;ul>
-&lt;li>Update the Tailwind CSS to v4 (v4.1.+)&lt;/li>
-&lt;li>Adding Mermaid diagram support&lt;/li>
-&lt;/ul>
-&lt;h4 id="april-2025">April 2025&lt;/h4>
-&lt;ul>
-&lt;li>Adding a new &amp;ldquo;no-dark-invert&amp;rdquo; class for dark mode to prevent dark mode inversion for some images&lt;/li>
-&lt;/ul>
-&lt;h4 id="february-2025">February 2025&lt;/h4>
-&lt;ul>
-&lt;li>Update the Tailwind CSS to v4&lt;/li>
-&lt;li>Update the KaTeX to v0.16.21&lt;/li>
-&lt;li>Adjust the style for homepage card to match the design system&lt;/li>
-&lt;li>Adding support for youtube and bilibili embeds&lt;/li>
-&lt;/ul>
-&lt;h3 id="2024">2024&lt;/h3>
-&lt;h4 id="october-2024">October 2024&lt;/h4>
-&lt;ul>
-&lt;li>Update the build pipeline with Hugo 0.134.2&lt;/li>
-&lt;li>Change the tag for site logo/title from &lt;code>&amp;lt;h1&amp;gt;&lt;/code> to &lt;code>&amp;lt;div&amp;gt;&lt;/code> for better SEO&lt;/li>
-&lt;/ul>
-&lt;h4 id="may-2024">May 2024&lt;/h4>
-&lt;ul>
-&lt;li>Refreshing the design and layout for friends page, adding avatar for each item.&lt;/li>
-&lt;/ul>
-&lt;h3 id="2022">2022&lt;/h3>
-&lt;h4 id="october-2022">October 2022&lt;/h4>
-&lt;ul>
-&lt;li>Warp the main content with &lt;code>&amp;lt;main&amp;gt;&lt;/code> tags, improving RSS scraping results.&lt;/li>
-&lt;/ul>
-&lt;h4 id="april-2022">April 2022&lt;/h4>
-&lt;ul>
-&lt;li>Replace comment plugins: &lt;a href="https://utteranc.es">utterances&lt;/a> -&amp;gt; &lt;a href="https://github.com/giscus/giscus">giscus&lt;/a>&lt;/li>
-&lt;li>Migrate legacy comments from GitHub Issues to GitHub Discussion&lt;/li>
-&lt;/ul>
-&lt;h4 id="february-2022">February 2022&lt;/h4>
-&lt;ul>
-&lt;li>Adding shortcode for PDF (Tailwind Aspect-ratio plugin)&lt;/li>
-&lt;li>Refines and adding labels for Draft post&lt;/li>
-&lt;li>Adding shortcode for embeds html file&lt;/li>
-&lt;li>Adding video looping args for video shortcode&lt;/li>
-&lt;li>Fix a bug in article time and read time metadata display&lt;/li>
-&lt;/ul>
-&lt;h4 id="january-2022">January 2022&lt;/h4>
-&lt;ul>
-&lt;li>Enable the new &lt;a href="https://github.com/ecwu/ecwu-theme">ecwu-theme&lt;/a>, Written in &lt;a href="https://tailwindcss.com/">Tailwind CSS 3&lt;/a>&lt;/li>
-&lt;li>Adding Comment Plugin &lt;a href="https://utteranc.es">utterances&lt;/a>&lt;/li>
-&lt;li>Adding Site Analytics &lt;a href="https://support.google.com/analytics/answer/10089681?hl=en">Google Analytics v4&lt;/a>&lt;/li>
-&lt;li>New &lt;code>Terms&lt;/code>, &lt;code>Series&lt;/code> View and Pages.&lt;/li>
-&lt;li>New Article Info Card&lt;/li>
-&lt;li>New Gallery Implementation with JS.&lt;/li>
-&lt;li>Remove Sidenote&lt;/li>
-&lt;li>Adding shortcode for video (via CDN)&lt;/li>
-&lt;/ul>
-&lt;h3 id="pre-2022">Pre 2022&lt;/h3>
-&lt;ul>
-&lt;li>Using &lt;a href="https://github.com/shawnohare/hugo-tufte">hugo-tufte&lt;/a> theme with custom modifications&lt;/li>
-&lt;/ul></description></item><item><title>About Me</title><link>https://ecwuuuuu.com/page/about/</link><pubDate>Tue, 18 Feb 2020 23:57:58 +0800</pubDate><guid>https://ecwuuuuu.com/page/about/</guid><description>&lt;h2 id="zhenghao-wu-伍正豪-ecwu">Zhenghao Wu, 伍正豪, ECWU&lt;/h2>
-&lt;p>Education:&lt;/p>
-&lt;ul>
-&lt;li>PhD. Student, Computer Science &lt;a href="https://ucd.ie">University College Dublin&lt;/a> (Expected 2024-2028)&lt;/li>
-&lt;li>MSc. Big Data Technology, &lt;a href="https://hkust.edu.hk/">Hong Kong University of Science and Technology&lt;/a> (2020-2021)&lt;/li>
-&lt;li>BSc. Computer Science and Technology (Honours), &lt;a href="https://uic.edu.cn/">BNU-HKBU UIC&lt;/a>, Graduated with First-Class Honours (2016-2020)&lt;/li>
-&lt;/ul>
-&lt;p>Experience:&lt;/p>
-&lt;ul>
-&lt;li>Assistant Instructor in &lt;a href="https://fst.uic.edu.cn/ds_en/">Department of Statistics and Data Science&lt;/a> at BNU-HKBU UIC&lt;/li>
-&lt;li>Application Research Engineer Intern at Tencent&lt;/li>
-&lt;li>Co-founder and member of &lt;a href="https://uichcc.com">UICHCC Computer Club&lt;/a>&lt;/li>
-&lt;li>Member of UICAISIG&lt;/li>
-&lt;/ul>
-&lt;p>Hobbies: Tech, Photography (Analog and Digital), Music&lt;/p></description></item><item><title>List of stuff I enjoy</title><link>https://ecwuuuuu.com/page/keep/list-of-stuff-i-enjoy/</link><pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/list-of-stuff-i-enjoy/</guid><description/></item><item><title>Friends</title><link>https://ecwuuuuu.com/page/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ecwuuuuu.com/page/friends/</guid><description>&lt;!-- - [Terence Lau](https://www.cklau.cc/): Allow me to introduce Terence Lau, an accomplished academic who is currently pursuing his Ph.D. in Political Science at the prestigious Trinity College Dublin. Terence is not your typical Political Science enthusiast. His expertise extends beyond social sciences into more technical fields, making him quite a unique addition to the academic landscape. Terence has a deep understanding and expertise in statistics. This proficiency has served him well in his research work, allowing him to analyze and interpret complex data with precision and accuracy. His ability to manipulate numbers and draw meaningful insights from raw data is truly commendable. In addition to statistics, Terence possesses significant knowledge in the field of medical imaging. He understands the nuances of this specialized area and can skillfully interpret the information these images provide. This ability adds an interesting dimension to his research capabilities. Terence's intellectual curiosity does not stop there. He has delved into the intricate world of cryptography. His understanding of the complex algorithms and principles behind secure communication is second to none. He possesses an ability to decode and encode messages, ensuring secure transmission of information in his work and studies. Moreover, Terence has a keen interest in language processing, a field that combines computer science and linguistics. He uses computational techniques to analyze and understand human language, aiding his research in political science. Despite not having a formal degree in computer science, Terence has developed a strong understanding of the subject. His knowledge extends to various aspects of the discipline, making him a quasi-computer-science-expert. He leverages this knowledge to bolster his research capabilities, adding a technical edge to his work. -->
-&lt;blockquote>
-&lt;p>The order of the list has no special meaning.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on ECWUUUUU</title><link>https://ecwuuuuu.com/page/</link><description>Recent content in Pages on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 01 Oct 2024 10:59:30 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Self-Host Projects</title><link>https://ecwuuuuu.com/page/keep/selfhost-project/</link><pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/selfhost-project/</guid><description/></item><item><title>Selected Music List</title><link>https://ecwuuuuu.com/page/keep/music-list/</link><pubDate>Tue, 27 Dec 2022 23:52:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/music-list/</guid><description/></item><item><title>Array</title><link>https://ecwuuuuu.com/page/algorithm/array/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/array/</guid><description>&lt;h2 id="1-两数之和"&gt;1. 两数之和&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://leetcode-cn.com/problems/two-sum"&gt;https://leetcode-cn.com/problems/two-sum&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给定一个整数数组 &lt;code&gt;nums&lt;/code&gt;，目标是找出数组中的两个整数，算数和为 &lt;code&gt;target&lt;/code&gt;，返回数组下标（只有一个答案，不能元素重复使用）。&lt;strong&gt;其中最简单直接的方法就是暴力遍历&lt;/strong&gt;，得到所有二元素数组的组合（但需要注意储存下标）。&lt;/p&gt;</description></item><item><title>Binary</title><link>https://ecwuuuuu.com/page/algorithm/binary/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/binary/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Dynamic Programming</title><link>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Graph</title><link>https://ecwuuuuu.com/page/algorithm/graph/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/graph/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Heap</title><link>https://ecwuuuuu.com/page/algorithm/heap/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/heap/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Interval</title><link>https://ecwuuuuu.com/page/algorithm/interval/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/interval/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Linked List</title><link>https://ecwuuuuu.com/page/algorithm/linked-list/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/linked-list/</guid><description>&lt;h2 id="2-两数相加"&gt;2. 两数相加&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://leetcode-cn.com/problems/add-two-numbers"&gt;https://leetcode-cn.com/problems/add-two-numbers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给两个非空链表，每个节点储存一位数字，按逆序排序。返回一个相同形式的链表，表示两个链表的和。&lt;/p&gt;
+&lt;p&gt;数据在链表中是倒序的，这非常的便于处理计算时出现的进位。那最简单的方式就是从两个链表的入口开始计算，直到两个链表走到末尾。&lt;/p&gt;</description></item><item><title>Matrix</title><link>https://ecwuuuuu.com/page/algorithm/matrix/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/matrix/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Misc</title><link>https://ecwuuuuu.com/page/algorithm/misc/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/misc/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>String</title><link>https://ecwuuuuu.com/page/algorithm/string/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/string/</guid><description>&lt;h2 id="3-无重复字符的最长子串"&gt;3. 无重复字符的最长子串&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters"&gt;https://leetcode-cn.com/problems/longest-substring-without-repeating-characters&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给定一个字符串 &lt;code&gt;s&lt;/code&gt; ，请你找出其中不含有重复字符的&lt;strong&gt;最长子串&lt;/strong&gt;的&lt;em&gt;长度&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;这个得出的字符串中不能存在存在的字符，且返回只需要返回最长的长度，所以我们可以使用双指针，来指向不含重复字符的字串。其中：&lt;/p&gt;</description></item><item><title>Tree</title><link>https://ecwuuuuu.com/page/algorithm/tree/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/tree/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>YouTube Channels</title><link>https://ecwuuuuu.com/page/keep/youtube-channel/</link><pubDate>Tue, 11 Jan 2022 21:58:05 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/youtube-channel/</guid><description/></item><item><title>Changelog</title><link>https://ecwuuuuu.com/page/changelog/</link><pubDate>Sun, 09 Jan 2022 14:49:18 +0800</pubDate><guid>https://ecwuuuuu.com/page/changelog/</guid><description>&lt;h2 id="about-this-site"&gt;About this site&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Write with static site generator &lt;a href="https://gohugo.io/"&gt;Hugo&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Uses &lt;a href="https://github.com/ecwu/ecwu-theme"&gt;ecwu-theme&lt;/a&gt; from Jan 2022, Theme introduction: &lt;a href="https://ecwuuuuu.com/post/blog-theme-ecwu-theme/"&gt;Blog Theme: ecwu-theme&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Build with &lt;a href="https://github.com/features/actions"&gt;GitHub Actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Site preview build with &lt;a href="https://pages.cloudflare.com/"&gt;Cloudflare Pages&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://ecwu-github-io-source.pages.dev/"&gt;https://ecwu-github-io-source.pages.dev/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Host by &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt; &amp;amp; &lt;a href="https://www.qiniu.com/"&gt;Qiniu&lt;/a&gt; for distributing files&lt;/li&gt;
+&lt;li&gt;Comment Plugin: &lt;a href="https://github.com/giscus/giscus"&gt;giscus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Site Analytics: &lt;a href="https://support.google.com/analytics/answer/10089681?hl=en"&gt;Google Analytics v4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LaTeX Render: &lt;a href="https://katex.org"&gt;KaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;h3 id="2025"&gt;2025&lt;/h3&gt;
+&lt;h4 id="october-2025"&gt;October 2025&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Update the Tailwind CSS to v4 (v4.1.+)&lt;/li&gt;
+&lt;li&gt;Adding Mermaid diagram support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="april-2025"&gt;April 2025&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Adding a new &amp;ldquo;no-dark-invert&amp;rdquo; class for dark mode to prevent dark mode inversion for some images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="february-2025"&gt;February 2025&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Update the Tailwind CSS to v4&lt;/li&gt;
+&lt;li&gt;Update the KaTeX to v0.16.21&lt;/li&gt;
+&lt;li&gt;Adjust the style for homepage card to match the design system&lt;/li&gt;
+&lt;li&gt;Adding support for youtube and bilibili embeds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2024"&gt;2024&lt;/h3&gt;
+&lt;h4 id="october-2024"&gt;October 2024&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Update the build pipeline with Hugo 0.134.2&lt;/li&gt;
+&lt;li&gt;Change the tag for site logo/title from &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; to &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; for better SEO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="may-2024"&gt;May 2024&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Refreshing the design and layout for friends page, adding avatar for each item.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2022"&gt;2022&lt;/h3&gt;
+&lt;h4 id="october-2022"&gt;October 2022&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Warp the main content with &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; tags, improving RSS scraping results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="april-2022"&gt;April 2022&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Replace comment plugins: &lt;a href="https://utteranc.es"&gt;utterances&lt;/a&gt; -&amp;gt; &lt;a href="https://github.com/giscus/giscus"&gt;giscus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Migrate legacy comments from GitHub Issues to GitHub Discussion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="february-2022"&gt;February 2022&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Adding shortcode for PDF (Tailwind Aspect-ratio plugin)&lt;/li&gt;
+&lt;li&gt;Refines and adding labels for Draft post&lt;/li&gt;
+&lt;li&gt;Adding shortcode for embeds html file&lt;/li&gt;
+&lt;li&gt;Adding video looping args for video shortcode&lt;/li&gt;
+&lt;li&gt;Fix a bug in article time and read time metadata display&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="january-2022"&gt;January 2022&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable the new &lt;a href="https://github.com/ecwu/ecwu-theme"&gt;ecwu-theme&lt;/a&gt;, Written in &lt;a href="https://tailwindcss.com/"&gt;Tailwind CSS 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adding Comment Plugin &lt;a href="https://utteranc.es"&gt;utterances&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adding Site Analytics &lt;a href="https://support.google.com/analytics/answer/10089681?hl=en"&gt;Google Analytics v4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;New &lt;code&gt;Terms&lt;/code&gt;, &lt;code&gt;Series&lt;/code&gt; View and Pages.&lt;/li&gt;
+&lt;li&gt;New Article Info Card&lt;/li&gt;
+&lt;li&gt;New Gallery Implementation with JS.&lt;/li&gt;
+&lt;li&gt;Remove Sidenote&lt;/li&gt;
+&lt;li&gt;Adding shortcode for video (via CDN)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="pre-2022"&gt;Pre 2022&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Using &lt;a href="https://github.com/shawnohare/hugo-tufte"&gt;hugo-tufte&lt;/a&gt; theme with custom modifications&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>About Me</title><link>https://ecwuuuuu.com/page/about/</link><pubDate>Tue, 18 Feb 2020 23:57:58 +0800</pubDate><guid>https://ecwuuuuu.com/page/about/</guid><description>&lt;h2 id="zhenghao-wu-伍正豪-ecwu"&gt;Zhenghao Wu, 伍正豪, ECWU&lt;/h2&gt;
+&lt;p&gt;Education:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PhD. Student, Computer Science &lt;a href="https://ucd.ie"&gt;University College Dublin&lt;/a&gt; (Expected 2024-2028)&lt;/li&gt;
+&lt;li&gt;MSc. Big Data Technology, &lt;a href="https://hkust.edu.hk/"&gt;Hong Kong University of Science and Technology&lt;/a&gt; (2020-2021)&lt;/li&gt;
+&lt;li&gt;BSc. Computer Science and Technology (Honours), &lt;a href="https://uic.edu.cn/"&gt;BNU-HKBU UIC&lt;/a&gt;, Graduated with First-Class Honours (2016-2020)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Experience:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assistant Instructor in &lt;a href="https://fst.uic.edu.cn/ds_en/"&gt;Department of Statistics and Data Science&lt;/a&gt; at BNU-HKBU UIC&lt;/li&gt;
+&lt;li&gt;Application Research Engineer Intern at Tencent&lt;/li&gt;
+&lt;li&gt;Co-founder and member of &lt;a href="https://uichcc.com"&gt;UICHCC Computer Club&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Member of UICAISIG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hobbies: Tech, Photography (Analog and Digital), Music&lt;/p&gt;</description></item><item><title>List of stuff I enjoy</title><link>https://ecwuuuuu.com/page/keep/list-of-stuff-i-enjoy/</link><pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/list-of-stuff-i-enjoy/</guid><description/></item><item><title>Friends</title><link>https://ecwuuuuu.com/page/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ecwuuuuu.com/page/friends/</guid><description>&lt;!-- - [Terence Lau](https://www.cklau.cc/): Allow me to introduce Terence Lau, an accomplished academic who is currently pursuing his Ph.D. in Political Science at the prestigious Trinity College Dublin. Terence is not your typical Political Science enthusiast. His expertise extends beyond social sciences into more technical fields, making him quite a unique addition to the academic landscape. Terence has a deep understanding and expertise in statistics. This proficiency has served him well in his research work, allowing him to analyze and interpret complex data with precision and accuracy. His ability to manipulate numbers and draw meaningful insights from raw data is truly commendable. In addition to statistics, Terence possesses significant knowledge in the field of medical imaging. He understands the nuances of this specialized area and can skillfully interpret the information these images provide. This ability adds an interesting dimension to his research capabilities. Terence's intellectual curiosity does not stop there. He has delved into the intricate world of cryptography. His understanding of the complex algorithms and principles behind secure communication is second to none. He possesses an ability to decode and encode messages, ensuring secure transmission of information in his work and studies. Moreover, Terence has a keen interest in language processing, a field that combines computer science and linguistics. He uses computational techniques to analyze and understand human language, aiding his research in political science. Despite not having a formal degree in computer science, Terence has developed a strong understanding of the subject. His knowledge extends to various aspects of the discipline, making him a quasi-computer-science-expert. He leverages this knowledge to bolster his research capabilities, adding a technical edge to his work. --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The order of the list has no special meaning.&lt;/p&gt;</description></item></channel></rss>

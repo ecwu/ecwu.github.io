@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Machine Learning on ECWUUUUU</title><link>https://ecwuuuuu.com/categories/machine-learning/</link><description>Recent content in Machine Learning on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/categories/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>Sigmoid or Softmax for Binary Classification</title><link>https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/</link><pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate><guid>https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/</guid><description>&lt;p>Recently, been asked a question on using neural networks for binary classification.&lt;/p>
-&lt;blockquote>
-&lt;p>The output layer of the network can be &amp;hellip; &lt;strong>One output neuron with sigmoid activation function&lt;/strong> or &lt;strong>Two neurons and then apply a softmax activation function&lt;/strong>. But what is the difference between these two?&lt;/p>
-&lt;/blockquote>
-&lt;p>Let start with the equations of the two functions.&lt;/p>
-&lt;p>Sigmoid Activation Function
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Machine Learning on ECWUUUUU</title><link>https://ecwuuuuu.com/categories/machine-learning/</link><description>Recent content in Machine Learning on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/categories/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>Sigmoid or Softmax for Binary Classification</title><link>https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/</link><pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate><guid>https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/</guid><description>&lt;p&gt;Recently, been asked a question on using neural networks for binary classification.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The output layer of the network can be &amp;hellip; &lt;strong&gt;One output neuron with sigmoid activation function&lt;/strong&gt; or &lt;strong&gt;Two neurons and then apply a softmax activation function&lt;/strong&gt;. But what is the difference between these two?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Let start with the equations of the two functions.&lt;/p&gt;
+&lt;p&gt;Sigmoid Activation Function
 $$
 S(x) = \frac{1}{ 1+e^{-x}}
-$$&lt;/p>
-&lt;p>We input the value of the last layer $x$, and we can get a value in the range 0 to 1 as shown in the figure. If the value is greater than 0.5, we consider the model output as one class, or the other class if the value is less than 0.5.
-&lt;figure class="w-full">
- &lt;img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" class="rounded-lg">
+$$&lt;/p&gt;
+&lt;p&gt;We input the value of the last layer $x$, and we can get a value in the range 0 to 1 as shown in the figure. If the value is greater than 0.5, we consider the model output as one class, or the other class if the value is less than 0.5.
+&lt;figure class="w-full"&gt;
+ &lt;img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" class="rounded-lg"&gt;
 
- &lt;figcaption>
- &lt;strong>The logistic sigmoid function &lt;/strong>
+ &lt;figcaption&gt;
+ &lt;strong&gt;The logistic sigmoid function &lt;/strong&gt;
  
- &lt;a href="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg">
+ &lt;a href="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg"&gt;
  Wikimedia Commons
- &lt;/a>
- &lt;/figcaption>
-&lt;/figure>
-&lt;/p></description></item></channel></rss>
+ &lt;/a&gt;
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;</description></item></channel></rss>

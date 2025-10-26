@@ -1,85 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Passwordless on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/passwordless/</link><description>Recent content in Passwordless on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/passwordless/index.xml" rel="self" type="application/rss+xml"/><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p>我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th style="text-align: center">No.&lt;/th>
- &lt;th style="text-align: left">Topic&lt;/th>
- &lt;th style="text-align: center">BV&lt;/th>
- &lt;th style="text-align: center">YouTube&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td style="text-align: center">1&lt;/td>
- &lt;td style="text-align: left">介绍、安装和配置&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1pm41167WK">BV1pm41167WK&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=KdprVtJmfrs">KdprVtJmfrs&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">2&lt;/td>
- &lt;td style="text-align: left">配置反向代理（Traefik 为例）&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1VE42137Vi">BV1VE42137Vi&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=7eUDOPYv15c">7eUDOPYv15c&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">3&lt;/td>
- &lt;td style="text-align: left">OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1QC41157pX">BV1QC41157pX&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=_KGznY5dE90">_KGznY5dE90&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">4&lt;/td>
- &lt;td style="text-align: left">SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1um411B7kE">BV1um411B7kE&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=RuGA-Sm3PYo">RuGA-Sm3PYo&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">5&lt;/td>
- &lt;td style="text-align: left">LDAP 协议应用接入 - 以 EMBY 为例&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV12z421C7hU">BV12z421C7hU&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=eXcPcwNoNKw">eXcPcwNoNKw&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">6&lt;/td>
- &lt;td style="text-align: left">邮件发送和界面自定义配置&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1iE421T7me">BV1iE421T7me&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=86udpF3OXMw">86udpF3OXMw&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">7&lt;/td>
- &lt;td style="text-align: left">管理用户，组和应用访问权限&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Am41127Yy">BV1Am41127Yy&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=IJMVnHn-90g">IJMVnHn-90g&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">8&lt;/td>
- &lt;td style="text-align: left">配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Vp421Q7Qz">BV1Vp421Q7Qz&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=bRmKUN7XcO0">bRmKUN7XcO0&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">9&lt;/td>
- &lt;td style="text-align: left">ForwardAuth 配置接入任意应用&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Mb421a7fF">BV1Mb421a7fF&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=HUB0aOVCo1M">HUB0aOVCo1M&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">10&lt;/td>
- &lt;td style="text-align: left">配置多因素身份验证&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1sJ4m1u7Rq">BV1sJ4m1u7Rq&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=Ol7wF8AsrVA">Ol7wF8AsrVA&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">11&lt;/td>
- &lt;td style="text-align: left">配置 Passwordless 登录&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1tE421P7o1">BV1tE421P7o1&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=p13W__HVDI8">p13W__HVDI8&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">13&lt;/td>
- &lt;td style="text-align: left">RAC 远程访问控制 配置&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Bh9bYXEqF">BV1Bh9bYXEqF&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=VSZIoAqJRLQ">VSZIoAqJRLQ&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Passwordless on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/passwordless/</link><description>Recent content in Passwordless on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/passwordless/index.xml" rel="self" type="application/rss+xml"/><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p&gt;我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;No.&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Topic&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;BV&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;YouTube&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;介绍、安装和配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1pm41167WK"&gt;BV1pm41167WK&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=KdprVtJmfrs"&gt;KdprVtJmfrs&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;2&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置反向代理（Traefik 为例）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1VE42137Vi"&gt;BV1VE42137Vi&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=7eUDOPYv15c"&gt;7eUDOPYv15c&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1QC41157pX"&gt;BV1QC41157pX&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=_KGznY5dE90"&gt;_KGznY5dE90&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;4&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1um411B7kE"&gt;BV1um411B7kE&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=RuGA-Sm3PYo"&gt;RuGA-Sm3PYo&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;5&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;LDAP 协议应用接入 - 以 EMBY 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV12z421C7hU"&gt;BV12z421C7hU&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=eXcPcwNoNKw"&gt;eXcPcwNoNKw&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;6&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;邮件发送和界面自定义配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1iE421T7me"&gt;BV1iE421T7me&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=86udpF3OXMw"&gt;86udpF3OXMw&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;7&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;管理用户，组和应用访问权限&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Am41127Yy"&gt;BV1Am41127Yy&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=IJMVnHn-90g"&gt;IJMVnHn-90g&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;8&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Vp421Q7Qz"&gt;BV1Vp421Q7Qz&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=bRmKUN7XcO0"&gt;bRmKUN7XcO0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;9&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;ForwardAuth 配置接入任意应用&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Mb421a7fF"&gt;BV1Mb421a7fF&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=HUB0aOVCo1M"&gt;HUB0aOVCo1M&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;10&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置多因素身份验证&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1sJ4m1u7Rq"&gt;BV1sJ4m1u7Rq&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=Ol7wF8AsrVA"&gt;Ol7wF8AsrVA&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;11&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置 Passwordless 登录&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1tE421P7o1"&gt;BV1tE421P7o1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=p13W__HVDI8"&gt;p13W__HVDI8&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;13&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;RAC 远程访问控制 配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Bh9bYXEqF"&gt;BV1Bh9bYXEqF&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=VSZIoAqJRLQ"&gt;VSZIoAqJRLQ&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</description></item></channel></rss>

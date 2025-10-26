@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linksys on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/linksys/</link><description>Recent content in Linksys on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/linksys/index.xml" rel="self" type="application/rss+xml"/><item><title>More on IPv6 Firewall - EUI-64</title><link>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</link><pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate><guid>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</guid><description>&lt;h2 id="background">Background&lt;/h2>
-&lt;p>In the &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/">Synology DDNS Tutorial&lt;/a>, I have a &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/#a-firewall">section&lt;/a> on setting up firewall on an ASUS AC68U Router.&lt;/p>
-&lt;p>For a recent update on my home network, the Asus router has been replaced with two Linksys WI-FI 6 tri-band mesh routers (two &lt;a href="https://www.linksys.com/hk/whole-home-mesh-wifi/linksys-mx5-velop-ax-whole-home-wifi-6-system/p/p-mx5300/">MX5300&lt;/a> or it&amp;rsquo;s SKU MX10600-CN)。&lt;/p>
-&lt;p>I thought it will be easy to set up since I already have some experience and documentation, but the firewall is not working as intended.&lt;/p>
-&lt;h2 id="my-attempts">My Attempts&lt;/h2>
-&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linksys on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/linksys/</link><description>Recent content in Linksys on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/linksys/index.xml" rel="self" type="application/rss+xml"/><item><title>More on IPv6 Firewall - EUI-64</title><link>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</link><pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate><guid>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;In the &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/"&gt;Synology DDNS Tutorial&lt;/a&gt;, I have a &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/#a-firewall"&gt;section&lt;/a&gt; on setting up firewall on an ASUS AC68U Router.&lt;/p&gt;
+&lt;p&gt;For a recent update on my home network, the Asus router has been replaced with two Linksys WI-FI 6 tri-band mesh routers (two &lt;a href="https://www.linksys.com/hk/whole-home-mesh-wifi/linksys-mx5-velop-ax-whole-home-wifi-6-system/p/p-mx5300/"&gt;MX5300&lt;/a&gt; or it&amp;rsquo;s SKU MX10600-CN)。&lt;/p&gt;
+&lt;p&gt;I thought it will be easy to set up since I already have some experience and documentation, but the firewall is not working as intended.&lt;/p&gt;
+&lt;h2 id="my-attempts"&gt;My Attempts&lt;/h2&gt;
+&lt;p&gt;
 
 
 
 &lt;img src="https://www.linksys.com/support/images/KB25634-011_EN_v1.png" 
  
  
- >
-&lt;/p></description></item></channel></rss>
+ &gt;
+&lt;/p&gt;</description></item></channel></rss>

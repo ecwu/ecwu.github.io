@@ -1,89 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OIDC on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/oidc/</link><description>Recent content in OIDC on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/oidc/index.xml" rel="self" type="application/rss+xml"/><item><title>Authentik 教程系列：服务的迁移</title><link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link><pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid><description>&lt;h2 id="提醒">提醒&lt;/h2>
-&lt;p>&lt;strong>因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong>&lt;/p>
-&lt;h2 id="引入和备份操作">引入和备份操作&lt;/h2>
-&lt;p>这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。&lt;/p></description></item><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p>我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th style="text-align: center">No.&lt;/th>
- &lt;th style="text-align: left">Topic&lt;/th>
- &lt;th style="text-align: center">BV&lt;/th>
- &lt;th style="text-align: center">YouTube&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td style="text-align: center">1&lt;/td>
- &lt;td style="text-align: left">介绍、安装和配置&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1pm41167WK">BV1pm41167WK&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=KdprVtJmfrs">KdprVtJmfrs&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">2&lt;/td>
- &lt;td style="text-align: left">配置反向代理（Traefik 为例）&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1VE42137Vi">BV1VE42137Vi&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=7eUDOPYv15c">7eUDOPYv15c&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">3&lt;/td>
- &lt;td style="text-align: left">OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1QC41157pX">BV1QC41157pX&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=_KGznY5dE90">_KGznY5dE90&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">4&lt;/td>
- &lt;td style="text-align: left">SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1um411B7kE">BV1um411B7kE&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=RuGA-Sm3PYo">RuGA-Sm3PYo&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">5&lt;/td>
- &lt;td style="text-align: left">LDAP 协议应用接入 - 以 EMBY 为例&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV12z421C7hU">BV12z421C7hU&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=eXcPcwNoNKw">eXcPcwNoNKw&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">6&lt;/td>
- &lt;td style="text-align: left">邮件发送和界面自定义配置&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1iE421T7me">BV1iE421T7me&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=86udpF3OXMw">86udpF3OXMw&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">7&lt;/td>
- &lt;td style="text-align: left">管理用户，组和应用访问权限&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Am41127Yy">BV1Am41127Yy&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=IJMVnHn-90g">IJMVnHn-90g&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">8&lt;/td>
- &lt;td style="text-align: left">配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Vp421Q7Qz">BV1Vp421Q7Qz&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=bRmKUN7XcO0">bRmKUN7XcO0&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">9&lt;/td>
- &lt;td style="text-align: left">ForwardAuth 配置接入任意应用&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Mb421a7fF">BV1Mb421a7fF&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=HUB0aOVCo1M">HUB0aOVCo1M&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">10&lt;/td>
- &lt;td style="text-align: left">配置多因素身份验证&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1sJ4m1u7Rq">BV1sJ4m1u7Rq&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=Ol7wF8AsrVA">Ol7wF8AsrVA&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">11&lt;/td>
- &lt;td style="text-align: left">配置 Passwordless 登录&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1tE421P7o1">BV1tE421P7o1&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=p13W__HVDI8">p13W__HVDI8&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">13&lt;/td>
- &lt;td style="text-align: left">RAC 远程访问控制 配置&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Bh9bYXEqF">BV1Bh9bYXEqF&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=VSZIoAqJRLQ">VSZIoAqJRLQ&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table></description></item><item><title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</title><link>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</link><pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
-&lt;p>如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作&lt;code>转发验证&lt;/code>)。&lt;/p></description></item><item><title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title><link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</link><pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</guid><description>&lt;p>搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 &lt;a href="https://en.wikipedia.org/wiki/SAML_2.0">SAML 2.0&lt;/a>， &lt;a href="https://openid.net/developers/how-connect-works/">OAuth 2.0/OpenID Connect (OIDC)&lt;/a>， &lt;a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">LDAP&lt;/a>， &lt;a href="https://scim.cloud">SCIM&lt;/a>，和 &lt;a href="https://en.wikipedia.org/wiki/RADIUS">RADIUS&lt;/a>，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OIDC on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/oidc/</link><description>Recent content in OIDC on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/oidc/index.xml" rel="self" type="application/rss+xml"/><item><title>Authentik 教程系列：服务的迁移</title><link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link><pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid><description>&lt;h2 id="提醒"&gt;提醒&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="引入和备份操作"&gt;引入和备份操作&lt;/h2&gt;
+&lt;p&gt;这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。&lt;/p&gt;</description></item><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p&gt;我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;No.&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Topic&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;BV&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;YouTube&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;介绍、安装和配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1pm41167WK"&gt;BV1pm41167WK&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=KdprVtJmfrs"&gt;KdprVtJmfrs&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;2&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置反向代理（Traefik 为例）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1VE42137Vi"&gt;BV1VE42137Vi&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=7eUDOPYv15c"&gt;7eUDOPYv15c&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1QC41157pX"&gt;BV1QC41157pX&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=_KGznY5dE90"&gt;_KGznY5dE90&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;4&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1um411B7kE"&gt;BV1um411B7kE&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=RuGA-Sm3PYo"&gt;RuGA-Sm3PYo&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;5&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;LDAP 协议应用接入 - 以 EMBY 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV12z421C7hU"&gt;BV12z421C7hU&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=eXcPcwNoNKw"&gt;eXcPcwNoNKw&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;6&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;邮件发送和界面自定义配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1iE421T7me"&gt;BV1iE421T7me&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=86udpF3OXMw"&gt;86udpF3OXMw&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;7&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;管理用户，组和应用访问权限&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Am41127Yy"&gt;BV1Am41127Yy&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=IJMVnHn-90g"&gt;IJMVnHn-90g&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;8&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Vp421Q7Qz"&gt;BV1Vp421Q7Qz&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=bRmKUN7XcO0"&gt;bRmKUN7XcO0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;9&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;ForwardAuth 配置接入任意应用&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Mb421a7fF"&gt;BV1Mb421a7fF&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=HUB0aOVCo1M"&gt;HUB0aOVCo1M&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;10&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置多因素身份验证&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1sJ4m1u7Rq"&gt;BV1sJ4m1u7Rq&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=Ol7wF8AsrVA"&gt;Ol7wF8AsrVA&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;11&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置 Passwordless 登录&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1tE421P7o1"&gt;BV1tE421P7o1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=p13W__HVDI8"&gt;p13W__HVDI8&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;13&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;RAC 远程访问控制 配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Bh9bYXEqF"&gt;BV1Bh9bYXEqF&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=VSZIoAqJRLQ"&gt;VSZIoAqJRLQ&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</title><link>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</link><pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</guid><description>&lt;h2 id="简介"&gt;简介&lt;/h2&gt;
+&lt;p&gt;如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作&lt;code&gt;转发验证&lt;/code&gt;)。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title><link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</link><pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</guid><description>&lt;p&gt;搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 &lt;a href="https://en.wikipedia.org/wiki/SAML_2.0"&gt;SAML 2.0&lt;/a&gt;， &lt;a href="https://openid.net/developers/how-connect-works/"&gt;OAuth 2.0/OpenID Connect (OIDC)&lt;/a&gt;， &lt;a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol"&gt;LDAP&lt;/a&gt;， &lt;a href="https://scim.cloud"&gt;SCIM&lt;/a&gt;，和 &lt;a href="https://en.wikipedia.org/wiki/RADIUS"&gt;RADIUS&lt;/a&gt;，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。&lt;/p&gt;</description></item></channel></rss>

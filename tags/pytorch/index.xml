@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PyTorch on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/pytorch/</link><description>Recent content in PyTorch on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/pytorch/index.xml" rel="self" type="application/rss+xml"/><item><title>服务器新装 GPU 的容器化配置笔记</title><link>https://ecwuuuuu.com/post/gpu-container-setup-note/</link><pubDate>Sun, 24 Nov 2024 14:54:00 +0000</pubDate><guid>https://ecwuuuuu.com/post/gpu-container-setup-note/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 &lt;code>lspci | grep &amp;quot;NVIDIA&amp;quot;&lt;/code> 命令查看设备是否被识别。&lt;/p></description></item><item><title>PyTorch Tutorial</title><link>https://ecwuuuuu.com/post/pytorch-tutorial/</link><pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid><description>&lt;blockquote>
-&lt;p>A little bit of context&lt;/p>
-&lt;p>This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.&lt;/p>
-&lt;p>My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="introduction-to-pytorch">Introduction to PyTorch&lt;/h2>
-&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PyTorch on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/pytorch/</link><description>Recent content in PyTorch on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/pytorch/index.xml" rel="self" type="application/rss+xml"/><item><title>服务器新装 GPU 的容器化配置笔记</title><link>https://ecwuuuuu.com/post/gpu-container-setup-note/</link><pubDate>Sun, 24 Nov 2024 14:54:00 +0000</pubDate><guid>https://ecwuuuuu.com/post/gpu-container-setup-note/</guid><description>&lt;h2 id="前言"&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 &lt;code&gt;lspci | grep &amp;quot;NVIDIA&amp;quot;&lt;/code&gt; 命令查看设备是否被识别。&lt;/p&gt;</description></item><item><title>PyTorch Tutorial</title><link>https://ecwuuuuu.com/post/pytorch-tutorial/</link><pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;A little bit of context&lt;/p&gt;
+&lt;p&gt;This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.&lt;/p&gt;
+&lt;p&gt;My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="introduction-to-pytorch"&gt;Introduction to PyTorch&lt;/h2&gt;
+&lt;p&gt;
 
 
  
@@ -14,13 +14,13 @@
 &lt;img src="https://pytorch.org/assets/images/logo-white.svg" 
  alt="PyTorch" 
  class="no-dark-invert"
- >
-&lt;/p>
-&lt;ul>
-&lt;li>PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li>
-&lt;li>Its popularity and widespread adoption by the research and industry communities.&lt;/li>
-&lt;li>PyTorch is widely known for its ease of use, Pythonic interface, and excellent support for research-oriented tasks.&lt;/li>
-&lt;/ul>
-&lt;h3 id="key-technology">Key Technology&lt;/h3>
-&lt;h4 id="dynamic-computational-graph">Dynamic computational graph&lt;/h4>
-&lt;p>A &lt;strong>computational graph&lt;/strong> represents the flow of data through a computational model in the form of a directed acyclic graph (DAG). It serves as a visual representation of the mathematical operations performed on input data to produce the desired output.&lt;/p></description></item></channel></rss>
+ &gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li&gt;
+&lt;li&gt;Its popularity and widespread adoption by the research and industry communities.&lt;/li&gt;
+&lt;li&gt;PyTorch is widely known for its ease of use, Pythonic interface, and excellent support for research-oriented tasks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="key-technology"&gt;Key Technology&lt;/h3&gt;
+&lt;h4 id="dynamic-computational-graph"&gt;Dynamic computational graph&lt;/h4&gt;
+&lt;p&gt;A &lt;strong&gt;computational graph&lt;/strong&gt; represents the flow of data through a computational model in the form of a directed acyclic graph (DAG). It serves as a visual representation of the mathematical operations performed on input data to produce the desired output.&lt;/p&gt;</description></item></channel></rss>

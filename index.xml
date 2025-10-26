@@ -1,106 +1,106 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ECWUUUUU</title><link>https://ecwuuuuu.com/</link><description>Recent content on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 26 Oct 2025 22:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog Theme: ecwu-theme</title><link>https://ecwuuuuu.com/post/blog-theme-ecwu-theme/</link><pubDate>Sun, 26 Oct 2025 21:00:00 +0000</pubDate><guid>https://ecwuuuuu.com/post/blog-theme-ecwu-theme/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>Every developer who maintains a blog eventually faces the question: &lt;strong>Should I use an existing theme or build my own?&lt;/strong> For me, this wasn&amp;rsquo;t just about aesthetics - it was about creating the perfect reading experience for both technical tutorials and personal reflections.&lt;/p>
-&lt;p>After years of blogging on various platforms and using different Hugo themes, I found myself constantly wanting just one more feature, a slightly different margin, or better typography for code blocks. Rather than continuing to patch someone else&amp;rsquo;s theme, I decided to build &lt;strong>ecwu-theme&lt;/strong> from the ground up.&lt;/p></description></item><item><title>探索爱尔兰巴士实时交通数据</title><link>https://ecwuuuuu.com/post/ireland-gtfs-api/</link><pubDate>Sun, 24 Aug 2025 12:00:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/ireland-gtfs-api/</guid><description>&lt;p>直到最近才发现&lt;a href="https://www.nationaltransport.ie">爱尔兰交通管理局&lt;/a>有一个公开的交通数据。之前我是在使用 &lt;a href="https://transitapp.com/">Transit App&lt;/a> 来查询时刻表和车辆位置（也是才知道 TFI Live 也可以看到很详细的数据），但有时候这些应用并不能完全满足我的需求（可能只是我个人想要更多的数据，但它们本身是相当不错的软件）。&lt;/p></description></item><item><title>How I Rebuilt a 2018 Project in 2025</title><link>https://ecwuuuuu.com/post/revisit-uiccourse/</link><pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/revisit-uiccourse/</guid><description>&lt;h2 id="prelude-the-django-and-jquery-days">Prelude: The Django and jQuery Days&lt;/h2>
-&lt;p>In 2018, I was self-studying the Django web framework for a college course. To apply what I was learning, I decided to build a project to solve a real problem: our school&amp;rsquo;s course information system.&lt;/p>
-&lt;p>All official course information was contained within a single, large PDF file. And course details contains in more individual handbooks PDF files. Finding a specific course was a time-consuming process that required extensive scrolling and text searches. I believed I could create a more efficient and user-friendly solution.&lt;/p></description></item><item><title>Cinestill 800T &amp; Expired Kodak Portra 400</title><link>https://ecwuuuuu.com/photography/new-film-stock-new-thoughts/</link><pubDate>Sat, 18 Jan 2025 18:00:00 +0000</pubDate><guid>https://ecwuuuuu.com/photography/new-film-stock-new-thoughts/</guid><description>&lt;p>My New Year trip to Shenzhen was another photography trip. Alongside catching up with friends on a tight schedule, testing my first roll of CineStill 800T became a side mission. I also brought along a roll of expired Kodak Portra 400 and ILFORD HP5 Plus, as they had been sitting in my fridge for quite some time.&lt;/p>
-&lt;h2 id="cinestill-800t">Cinestill 800T&lt;/h2>
-&lt;p>The film isn’t a brand-new release; I heard about its big name from lots of film photograph KOLs at least 3 years ago. This film is basically Kodak&amp;rsquo;s Vision 3 5219 (500T) movie film. A distinctive feature of movie film is it comes with a Remjet layer, a black carbon coating designed to prevent light halation. which is a layer of black carbon coating (calls remjet) on the back of the film to prevents light halation. Traditionally, the film with a remjet layer require one extra step during develop process to remove it.&lt;/p></description></item><item><title>服务器新装 GPU 的容器化配置笔记</title><link>https://ecwuuuuu.com/post/gpu-container-setup-note/</link><pubDate>Sun, 24 Nov 2024 14:54:00 +0000</pubDate><guid>https://ecwuuuuu.com/post/gpu-container-setup-note/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 &lt;code>lspci | grep &amp;quot;NVIDIA&amp;quot;&lt;/code> 命令查看设备是否被识别。&lt;/p></description></item><item><title>Guangzhou, Shenzhen, Hong Kong, and Kodak Gold</title><link>https://ecwuuuuu.com/photography/gz-sz-hk-and-kodak-gold/</link><pubDate>Thu, 03 Oct 2024 23:59:00 +0100</pubDate><guid>https://ecwuuuuu.com/photography/gz-sz-hk-and-kodak-gold/</guid><description>&lt;p>After completing my master’s degree following the COVID-19 outbreak, I transitioned into full-time work. Life became busy, and I gradually set aside my film camera. Recently, I purchased Kodak Gold 200 in 120 format—Kodak’s latest film—during a visit to Guangzhou (新丽照相器材商店). I had planned to capture a few moments before leaving China. I took the film along on a three-day trip to Guangzhou, Shenzhen, and Hong Kong. Eventually, I had the film developed at GZNow Lab in Guangzhou.&lt;/p></description></item><item><title>Authentik 教程系列：服务的迁移</title><link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link><pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid><description>&lt;h2 id="提醒">提醒&lt;/h2>
-&lt;p>&lt;strong>因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong>&lt;/p>
-&lt;h2 id="引入和备份操作">引入和备份操作&lt;/h2>
-&lt;p>这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。&lt;/p></description></item><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p>我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th style="text-align: center">No.&lt;/th>
- &lt;th style="text-align: left">Topic&lt;/th>
- &lt;th style="text-align: center">BV&lt;/th>
- &lt;th style="text-align: center">YouTube&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td style="text-align: center">1&lt;/td>
- &lt;td style="text-align: left">介绍、安装和配置&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1pm41167WK">BV1pm41167WK&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=KdprVtJmfrs">KdprVtJmfrs&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">2&lt;/td>
- &lt;td style="text-align: left">配置反向代理（Traefik 为例）&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1VE42137Vi">BV1VE42137Vi&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=7eUDOPYv15c">7eUDOPYv15c&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">3&lt;/td>
- &lt;td style="text-align: left">OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1QC41157pX">BV1QC41157pX&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=_KGznY5dE90">_KGznY5dE90&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">4&lt;/td>
- &lt;td style="text-align: left">SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1um411B7kE">BV1um411B7kE&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=RuGA-Sm3PYo">RuGA-Sm3PYo&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">5&lt;/td>
- &lt;td style="text-align: left">LDAP 协议应用接入 - 以 EMBY 为例&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV12z421C7hU">BV12z421C7hU&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=eXcPcwNoNKw">eXcPcwNoNKw&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">6&lt;/td>
- &lt;td style="text-align: left">邮件发送和界面自定义配置&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1iE421T7me">BV1iE421T7me&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=86udpF3OXMw">86udpF3OXMw&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">7&lt;/td>
- &lt;td style="text-align: left">管理用户，组和应用访问权限&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Am41127Yy">BV1Am41127Yy&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=IJMVnHn-90g">IJMVnHn-90g&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">8&lt;/td>
- &lt;td style="text-align: left">配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Vp421Q7Qz">BV1Vp421Q7Qz&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=bRmKUN7XcO0">bRmKUN7XcO0&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">9&lt;/td>
- &lt;td style="text-align: left">ForwardAuth 配置接入任意应用&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Mb421a7fF">BV1Mb421a7fF&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=HUB0aOVCo1M">HUB0aOVCo1M&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">10&lt;/td>
- &lt;td style="text-align: left">配置多因素身份验证&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1sJ4m1u7Rq">BV1sJ4m1u7Rq&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=Ol7wF8AsrVA">Ol7wF8AsrVA&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">11&lt;/td>
- &lt;td style="text-align: left">配置 Passwordless 登录&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1tE421P7o1">BV1tE421P7o1&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=p13W__HVDI8">p13W__HVDI8&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: center">13&lt;/td>
- &lt;td style="text-align: left">RAC 远程访问控制 配置&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.bilibili.com/video/BV1Bh9bYXEqF">BV1Bh9bYXEqF&lt;/a>&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/watch?v=VSZIoAqJRLQ">VSZIoAqJRLQ&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table></description></item><item><title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</title><link>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</link><pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
-&lt;p>如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作&lt;code>转发验证&lt;/code>)。&lt;/p></description></item><item><title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title><link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</link><pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</guid><description>&lt;p>搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 &lt;a href="https://en.wikipedia.org/wiki/SAML_2.0">SAML 2.0&lt;/a>， &lt;a href="https://openid.net/developers/how-connect-works/">OAuth 2.0/OpenID Connect (OIDC)&lt;/a>， &lt;a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">LDAP&lt;/a>， &lt;a href="https://scim.cloud">SCIM&lt;/a>，和 &lt;a href="https://en.wikipedia.org/wiki/RADIUS">RADIUS&lt;/a>，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。&lt;/p></description></item><item><title>Authentik 教程系列：反向代理的配置</title><link>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</link><pubDate>Mon, 08 Apr 2024 19:55:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</guid><description>&lt;p>将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。&lt;/p>
-&lt;p>根据官方的文档，如果要使用反向代理，以下 header 必须传给 upstream。&lt;/p></description></item><item><title>Authentik 教程系列：简介和安装配置</title><link>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</link><pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</guid><description>&lt;p>如果你也像我一样喜欢折腾 HomeLab，我们可能有个共同的乐趣就是寻找各种需求的自部署方案；但当我们这些自部署的服务越来越多，去访问每一个服务都需要单独的账号和密码；如果用户不止你一人，多账号管理也会成为一个麻烦的事情。&lt;/p></description></item><item><title>PyTorch Tutorial</title><link>https://ecwuuuuu.com/post/pytorch-tutorial/</link><pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid><description>&lt;blockquote>
-&lt;p>A little bit of context&lt;/p>
-&lt;p>This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.&lt;/p>
-&lt;p>My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="introduction-to-pytorch">Introduction to PyTorch&lt;/h2>
-&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ECWUUUUU</title><link>https://ecwuuuuu.com/</link><description>Recent content on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 26 Oct 2025 22:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog Theme: ecwu-theme</title><link>https://ecwuuuuu.com/post/blog-theme-ecwu-theme/</link><pubDate>Sun, 26 Oct 2025 21:00:00 +0000</pubDate><guid>https://ecwuuuuu.com/post/blog-theme-ecwu-theme/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Every developer who maintains a blog eventually faces the question: &lt;strong&gt;Should I use an existing theme or build my own?&lt;/strong&gt; For me, this wasn&amp;rsquo;t just about aesthetics - it was about creating the perfect reading experience for both technical tutorials and personal reflections.&lt;/p&gt;
+&lt;p&gt;After years of blogging on various platforms and using different Hugo themes, I found myself constantly wanting just one more feature, a slightly different margin, or better typography for code blocks. Rather than continuing to patch someone else&amp;rsquo;s theme, I decided to build &lt;strong&gt;ecwu-theme&lt;/strong&gt; from the ground up.&lt;/p&gt;</description></item><item><title>探索爱尔兰巴士实时交通数据</title><link>https://ecwuuuuu.com/post/ireland-gtfs-api/</link><pubDate>Sun, 24 Aug 2025 12:00:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/ireland-gtfs-api/</guid><description>&lt;p&gt;直到最近才发现&lt;a href="https://www.nationaltransport.ie"&gt;爱尔兰交通管理局&lt;/a&gt;有一个公开的交通数据。之前我是在使用 &lt;a href="https://transitapp.com/"&gt;Transit App&lt;/a&gt; 来查询时刻表和车辆位置（也是才知道 TFI Live 也可以看到很详细的数据），但有时候这些应用并不能完全满足我的需求（可能只是我个人想要更多的数据，但它们本身是相当不错的软件）。&lt;/p&gt;</description></item><item><title>How I Rebuilt a 2018 Project in 2025</title><link>https://ecwuuuuu.com/post/revisit-uiccourse/</link><pubDate>Sat, 05 Jul 2025 14:10:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/revisit-uiccourse/</guid><description>&lt;h2 id="prelude-the-django-and-jquery-days"&gt;Prelude: The Django and jQuery Days&lt;/h2&gt;
+&lt;p&gt;In 2018, I was self-studying the Django web framework for a college course. To apply what I was learning, I decided to build a project to solve a real problem: our school&amp;rsquo;s course information system.&lt;/p&gt;
+&lt;p&gt;All official course information was contained within a single, large PDF file. And course details contains in more individual handbooks PDF files. Finding a specific course was a time-consuming process that required extensive scrolling and text searches. I believed I could create a more efficient and user-friendly solution.&lt;/p&gt;</description></item><item><title>Cinestill 800T &amp; Expired Kodak Portra 400</title><link>https://ecwuuuuu.com/photography/new-film-stock-new-thoughts/</link><pubDate>Sat, 18 Jan 2025 18:00:00 +0000</pubDate><guid>https://ecwuuuuu.com/photography/new-film-stock-new-thoughts/</guid><description>&lt;p&gt;My New Year trip to Shenzhen was another photography trip. Alongside catching up with friends on a tight schedule, testing my first roll of CineStill 800T became a side mission. I also brought along a roll of expired Kodak Portra 400 and ILFORD HP5 Plus, as they had been sitting in my fridge for quite some time.&lt;/p&gt;
+&lt;h2 id="cinestill-800t"&gt;Cinestill 800T&lt;/h2&gt;
+&lt;p&gt;The film isn’t a brand-new release; I heard about its big name from lots of film photograph KOLs at least 3 years ago. This film is basically Kodak&amp;rsquo;s Vision 3 5219 (500T) movie film. A distinctive feature of movie film is it comes with a Remjet layer, a black carbon coating designed to prevent light halation. which is a layer of black carbon coating (calls remjet) on the back of the film to prevents light halation. Traditionally, the film with a remjet layer require one extra step during develop process to remove it.&lt;/p&gt;</description></item><item><title>服务器新装 GPU 的容器化配置笔记</title><link>https://ecwuuuuu.com/post/gpu-container-setup-note/</link><pubDate>Sun, 24 Nov 2024 14:54:00 +0000</pubDate><guid>https://ecwuuuuu.com/post/gpu-container-setup-note/</guid><description>&lt;h2 id="前言"&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 &lt;code&gt;lspci | grep &amp;quot;NVIDIA&amp;quot;&lt;/code&gt; 命令查看设备是否被识别。&lt;/p&gt;</description></item><item><title>Guangzhou, Shenzhen, Hong Kong, and Kodak Gold</title><link>https://ecwuuuuu.com/photography/gz-sz-hk-and-kodak-gold/</link><pubDate>Thu, 03 Oct 2024 23:59:00 +0100</pubDate><guid>https://ecwuuuuu.com/photography/gz-sz-hk-and-kodak-gold/</guid><description>&lt;p&gt;After completing my master’s degree following the COVID-19 outbreak, I transitioned into full-time work. Life became busy, and I gradually set aside my film camera. Recently, I purchased Kodak Gold 200 in 120 format—Kodak’s latest film—during a visit to Guangzhou (新丽照相器材商店). I had planned to capture a few moments before leaving China. I took the film along on a three-day trip to Guangzhou, Shenzhen, and Hong Kong. Eventually, I had the film developed at GZNow Lab in Guangzhou.&lt;/p&gt;</description></item><item><title>Authentik 教程系列：服务的迁移</title><link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link><pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid><description>&lt;h2 id="提醒"&gt;提醒&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="引入和备份操作"&gt;引入和备份操作&lt;/h2&gt;
+&lt;p&gt;这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。&lt;/p&gt;</description></item><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p&gt;我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;No.&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Topic&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;BV&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;YouTube&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;介绍、安装和配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1pm41167WK"&gt;BV1pm41167WK&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=KdprVtJmfrs"&gt;KdprVtJmfrs&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;2&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置反向代理（Traefik 为例）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1VE42137Vi"&gt;BV1VE42137Vi&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=7eUDOPYv15c"&gt;7eUDOPYv15c&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1QC41157pX"&gt;BV1QC41157pX&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=_KGznY5dE90"&gt;_KGznY5dE90&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;4&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1um411B7kE"&gt;BV1um411B7kE&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=RuGA-Sm3PYo"&gt;RuGA-Sm3PYo&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;5&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;LDAP 协议应用接入 - 以 EMBY 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV12z421C7hU"&gt;BV12z421C7hU&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=eXcPcwNoNKw"&gt;eXcPcwNoNKw&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;6&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;邮件发送和界面自定义配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1iE421T7me"&gt;BV1iE421T7me&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=86udpF3OXMw"&gt;86udpF3OXMw&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;7&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;管理用户，组和应用访问权限&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Am41127Yy"&gt;BV1Am41127Yy&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=IJMVnHn-90g"&gt;IJMVnHn-90g&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;8&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Vp421Q7Qz"&gt;BV1Vp421Q7Qz&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=bRmKUN7XcO0"&gt;bRmKUN7XcO0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;9&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;ForwardAuth 配置接入任意应用&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Mb421a7fF"&gt;BV1Mb421a7fF&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=HUB0aOVCo1M"&gt;HUB0aOVCo1M&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;10&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置多因素身份验证&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1sJ4m1u7Rq"&gt;BV1sJ4m1u7Rq&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=Ol7wF8AsrVA"&gt;Ol7wF8AsrVA&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;11&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置 Passwordless 登录&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1tE421P7o1"&gt;BV1tE421P7o1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=p13W__HVDI8"&gt;p13W__HVDI8&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;13&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;RAC 远程访问控制 配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Bh9bYXEqF"&gt;BV1Bh9bYXEqF&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=VSZIoAqJRLQ"&gt;VSZIoAqJRLQ&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</title><link>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</link><pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</guid><description>&lt;h2 id="简介"&gt;简介&lt;/h2&gt;
+&lt;p&gt;如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作&lt;code&gt;转发验证&lt;/code&gt;)。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title><link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</link><pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</guid><description>&lt;p&gt;搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 &lt;a href="https://en.wikipedia.org/wiki/SAML_2.0"&gt;SAML 2.0&lt;/a&gt;， &lt;a href="https://openid.net/developers/how-connect-works/"&gt;OAuth 2.0/OpenID Connect (OIDC)&lt;/a&gt;， &lt;a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol"&gt;LDAP&lt;/a&gt;， &lt;a href="https://scim.cloud"&gt;SCIM&lt;/a&gt;，和 &lt;a href="https://en.wikipedia.org/wiki/RADIUS"&gt;RADIUS&lt;/a&gt;，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：反向代理的配置</title><link>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</link><pubDate>Mon, 08 Apr 2024 19:55:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</guid><description>&lt;p&gt;将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。&lt;/p&gt;
+&lt;p&gt;根据官方的文档，如果要使用反向代理，以下 header 必须传给 upstream。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：简介和安装配置</title><link>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</link><pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</guid><description>&lt;p&gt;如果你也像我一样喜欢折腾 HomeLab，我们可能有个共同的乐趣就是寻找各种需求的自部署方案；但当我们这些自部署的服务越来越多，去访问每一个服务都需要单独的账号和密码；如果用户不止你一人，多账号管理也会成为一个麻烦的事情。&lt;/p&gt;</description></item><item><title>PyTorch Tutorial</title><link>https://ecwuuuuu.com/post/pytorch-tutorial/</link><pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;A little bit of context&lt;/p&gt;
+&lt;p&gt;This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.&lt;/p&gt;
+&lt;p&gt;My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="introduction-to-pytorch"&gt;Introduction to PyTorch&lt;/h2&gt;
+&lt;p&gt;
 
 
  
@@ -109,20 +109,20 @@
 &lt;img src="https://pytorch.org/assets/images/logo-white.svg" 
  alt="PyTorch" 
  class="no-dark-invert"
- >
-&lt;/p>
-&lt;ul>
-&lt;li>PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li>
-&lt;li>Its popularity and widespread adoption by the research and industry communities.&lt;/li>
-&lt;li>PyTorch is widely known for its ease of use, Pythonic interface, and excellent support for research-oriented tasks.&lt;/li>
-&lt;/ul>
-&lt;h3 id="key-technology">Key Technology&lt;/h3>
-&lt;h4 id="dynamic-computational-graph">Dynamic computational graph&lt;/h4>
-&lt;p>A &lt;strong>computational graph&lt;/strong> represents the flow of data through a computational model in the form of a directed acyclic graph (DAG). It serves as a visual representation of the mathematical operations performed on input data to produce the desired output.&lt;/p></description></item><item><title>Homelab：我的赛博积木 - 展望</title><link>https://ecwuuuuu.com/post/homelab-journey-future/</link><pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-future/</guid><description>&lt;p>从“赛博积木”系列第一篇文章到现在，已经过了两年的时间。受自己需求、实际体验后的感受等多重因素的影响。现有的架构和最初的设计已经有了很大的变化。其中最大的变化应该是在 23 年 6 月新组装的个人服务器，直接影响了我许多服务的部署形式。&lt;/p></description></item><item><title>Homelab：我的赛博积木 - 访问</title><link>https://ecwuuuuu.com/post/homelab-journey-accessing/</link><pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-accessing/</guid><description>&lt;p>前面已经介绍了基础设施和已经部署的服务。对于部署在&lt;a href="https://ecwuuuuu.com/post/homelab-journey-internet/">公网的服务&lt;/a>，访问是方便的。在 Nginx 中通过反向代理将容器服务绑定在域名上，再配上 SSL 证书就可以实现安全方便的服务访问体验。真正让人头疼的是内网服务的访问和访问控制。&lt;/p></description></item><item><title>使用 input-overlay 工具在 OBS Studio 中展示鼠标和按键操作</title><link>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</link><pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate><guid>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</guid><description>&lt;blockquote>
-&lt;p>最近折腾了下 OBS Studio 的 &lt;a href="https://github.com/univrsal/input-overlay">input-overlay&lt;/a> 插件，考虑到该插件的中文教程不多，特将折腾过程记录为本文。&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="什么是-input-overlay">什么是 input-overlay&lt;/h2>
-&lt;p>
+ &gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li&gt;
+&lt;li&gt;Its popularity and widespread adoption by the research and industry communities.&lt;/li&gt;
+&lt;li&gt;PyTorch is widely known for its ease of use, Pythonic interface, and excellent support for research-oriented tasks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="key-technology"&gt;Key Technology&lt;/h3&gt;
+&lt;h4 id="dynamic-computational-graph"&gt;Dynamic computational graph&lt;/h4&gt;
+&lt;p&gt;A &lt;strong&gt;computational graph&lt;/strong&gt; represents the flow of data through a computational model in the form of a directed acyclic graph (DAG). It serves as a visual representation of the mathematical operations performed on input data to produce the desired output.&lt;/p&gt;</description></item><item><title>Homelab：我的赛博积木 - 展望</title><link>https://ecwuuuuu.com/post/homelab-journey-future/</link><pubDate>Sat, 07 Oct 2023 02:20:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-future/</guid><description>&lt;p&gt;从“赛博积木”系列第一篇文章到现在，已经过了两年的时间。受自己需求、实际体验后的感受等多重因素的影响。现有的架构和最初的设计已经有了很大的变化。其中最大的变化应该是在 23 年 6 月新组装的个人服务器，直接影响了我许多服务的部署形式。&lt;/p&gt;</description></item><item><title>Homelab：我的赛博积木 - 访问</title><link>https://ecwuuuuu.com/post/homelab-journey-accessing/</link><pubDate>Sat, 25 Feb 2023 02:20:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-accessing/</guid><description>&lt;p&gt;前面已经介绍了基础设施和已经部署的服务。对于部署在&lt;a href="https://ecwuuuuu.com/post/homelab-journey-internet/"&gt;公网的服务&lt;/a&gt;，访问是方便的。在 Nginx 中通过反向代理将容器服务绑定在域名上，再配上 SSL 证书就可以实现安全方便的服务访问体验。真正让人头疼的是内网服务的访问和访问控制。&lt;/p&gt;</description></item><item><title>使用 input-overlay 工具在 OBS Studio 中展示鼠标和按键操作</title><link>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</link><pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate><guid>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;最近折腾了下 OBS Studio 的 &lt;a href="https://github.com/univrsal/input-overlay"&gt;input-overlay&lt;/a&gt; 插件，考虑到该插件的中文教程不多，特将折腾过程记录为本文。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="什么是-input-overlay"&gt;什么是 input-overlay&lt;/h2&gt;
+&lt;p&gt;
 
 
  
@@ -131,847 +131,847 @@
 &lt;img src="https://github.com/univrsal/input-overlay/blob/master/docs/io.png?raw=true" 
  alt="input-overlay 使用中的效果" 
  class="no-dark-invert"
- >
-&lt;/p>
-&lt;p>&lt;a href="https://github.com/univrsal/input-overlay">input-overlay&lt;/a> 是由 &lt;a href="https://vrsal.xyz/">Alex (univrsal)&lt;/a> 开发的一个 OBS Studio 插件。安装后，可以在 OBS Studio 中增加新的来源（source）用于展示鼠标、键盘、甚至是各种游戏手柄的操作。可以在游戏操作教学、软件教程类直播中提升直播时的效果。&lt;/p></description></item><item><title>Homelab：我的赛博积木 - 组成与架构</title><link>https://ecwuuuuu.com/post/homelab-journey-architecture/</link><pubDate>Sun, 08 Jan 2023 23:17:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-architecture/</guid><description>&lt;h2 id="架构概览">架构概览&lt;/h2>
-&lt;p>经常能在 r/homelab 上看到 &amp;ldquo;&lt;a href="https://www.reddit.com/r/homelab/?f=flair_name%3A%22LabPorn%22">LabPorn&lt;/a>&amp;rdquo; 里其他大佬的机架。虽然很眼红，但目前自己的 HomeLab 只是几个简单的独立设备/资源组成。包括腾讯轻量云实例，群晖 NAS 和工控机。&lt;/p>
-&lt;h2 id="内网">内网&lt;/h2>
-&lt;p>我的地址在粤港澳大湾区，并在常住的广州，中山，和珠海配有三台设备。&lt;/p></description></item><item><title>Self-Host Projects</title><link>https://ecwuuuuu.com/page/keep/selfhost-project/</link><pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/selfhost-project/</guid><description/></item><item><title>Homelab：我的赛博积木 - 公网服务</title><link>https://ecwuuuuu.com/post/homelab-journey-internet/</link><pubDate>Fri, 30 Dec 2022 00:20:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-internet/</guid><description>&lt;p>与&lt;a href="https://ecwuuuuu.com/post/homelab-journey-intranet/">内网服务&lt;/a>不一样，部署在公网的服务目的性明确：希望能随时随地能访问到。这些服务部署在腾讯云轻量服务器，机房位于广州和香港。&lt;/p>
-&lt;h2 id="身份鉴权-ssoauthentik">身份鉴权 (SSO)：Authentik&lt;/h2>
-&lt;blockquote>
-&lt;p>涉及的服务：Authentik&lt;/p>
-&lt;/blockquote>
-&lt;p>部署在公网的服务，身份鉴权是很重要的一部分：有些资源、计算资源有必要授权后才可以访问。但如果各个系统的账号都分开控制，账号管理肯定非常麻烦。&lt;/p></description></item><item><title>Selected Music List</title><link>https://ecwuuuuu.com/page/keep/music-list/</link><pubDate>Tue, 27 Dec 2022 23:52:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/music-list/</guid><description/></item><item><title>Homelab：我的赛博积木 - 内网服务</title><link>https://ecwuuuuu.com/post/homelab-journey-intranet/</link><pubDate>Sat, 15 Oct 2022 12:07:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-intranet/</guid><description>&lt;p>我的计算设施中，云服务器和本地设备各占一半，本地设备无公网 IPv4。这样的情况使得我的服务是分地部署、内外网隔离的（但不是做到严格隔离，这部分细节会在外网服务中提到。）&lt;/p></description></item><item><title>Homelab：我的赛博积木</title><link>https://ecwuuuuu.com/post/homelab-journey-intro/</link><pubDate>Tue, 04 Oct 2022 22:43:40 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-intro/</guid><description>&lt;p>HomeLab 直译是在家里的实验室，赛博语境下指网络、计算设备组成的实验沙盒。可以用来学习计算机技术和部署自用的服务。个人感觉 HomeLab 这个概念更多是在国外使用，许多的爱好者集中在 Reddit 频道 &lt;a href="https://www.reddit.com/r/homelab/">r/homelab&lt;/a> 分享、交流项目和问题；在 YouTube 上也有不少博主提供手把手教学视频。这个应对国内的概念应该是 NAS 和 All in One (All in Boom 😀)，许多教程能在什么值得买和哔哩哔哩找到。&lt;/p></description></item><item><title>自建 GitLab 配置 SSH 和后续</title><link>https://ecwuuuuu.com/post/gitlab-updates/</link><pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate><guid>https://ecwuuuuu.com/post/gitlab-updates/</guid><description>&lt;blockquote>
-&lt;p>整体比较流水账，只做记录。&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="配置-ssh">配置 SSH&lt;/h2>
-&lt;p>部署了 GitLab 之后，一直在使用 HTTPS，体验不错。但是当时没有将 GitLab 的 SSH 访问成功配置。&lt;/p>
-&lt;p>当初的配置尝试过：1. 将 SSH 与服务器的 SSH 的端口共用。 2. 单独设置一个 SSH 端口并暴露出来。我的操作是直接在域名后面加端口号进行访问：&lt;code>git.ecwuuuuu.com:&amp;lt;port&amp;gt;&lt;/code> 但进行 Git 操作都没有成功过。在排查 Log 发现是链接失败后，对域名执行了 nslookup，发现 IP 并不是预期的服务器 IP，这里是因为我使用了 Cloudflare 的解析服务，真实的 IP 被隐藏了。所以操作行不通。&lt;/p></description></item><item><title>自建 GitLab 踩坑实录</title><link>https://ecwuuuuu.com/post/self-host-gitlab-instance/</link><pubDate>Fri, 06 May 2022 11:45:36 +0800</pubDate><guid>https://ecwuuuuu.com/post/self-host-gitlab-instance/</guid><description>&lt;p>之前自建了一个 Git 服务来托管自己的非公开代码。考虑要轻量，所以选择了 &lt;a href="https://gitea.io/en-us/">Gitea&lt;/a> 并通过 Docker + Nginx 的方式进行部署。&lt;/p>
-&lt;p>前段时间腾讯云免费提供了轻量服务器配置升级的活动，配置提升到了 4 核心 + 4G 内存。机器性能是一个过剩的状态，为了充分利用，所以我考虑将服务从 Gitea 换到 &lt;a href="https://about.gitlab.com/install/">GitLab&lt;/a>。这里把我的部署过程进行记录。&lt;/p></description></item><item><title>500 Hours in 307</title><link>https://ecwuuuuu.com/photography/500hrsin307/</link><pubDate>Thu, 07 Apr 2022 16:07:13 +0800</pubDate><guid>https://ecwuuuuu.com/photography/500hrsin307/</guid><description>&lt;p>This work is the final project of the Photography FE (Free Elective) Course. It shows how I am &amp;ldquo;living&amp;rdquo; in classroom 307 of the laboratory building.&lt;/p>
-&lt;p>In June 2019, about to be my senior year, I started my graduation project. Academic research requires long-term devotion, so classroom 307, as our stronghold, became where I spent the longest time in my last year of college (since COVID-19 destroyed the second semester). I spent more than 500 hours staying in that place. To study, do experiments, rest, and entertain.&lt;/p></description></item><item><title>Finding the Name for Color</title><link>https://ecwuuuuu.com/post/finding-the-name-for-color/</link><pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate><guid>https://ecwuuuuu.com/post/finding-the-name-for-color/</guid><description>&lt;p>This topic first came to my mind when I was in college as a freshman. I don&amp;rsquo;t quite remember what application I am going to embed this. But the goal is clear: for color in HEX or RGB format, find a name to describe it accurately.&lt;/p>
-&lt;p>Recently, I saw a forum thread. A color-blind person is looking for a solution to identifying the color. I immediately recall the experience I had almost five years ago.&lt;/p></description></item><item><title>More on IPv6 Firewall - EUI-64</title><link>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</link><pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate><guid>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</guid><description>&lt;h2 id="background">Background&lt;/h2>
-&lt;p>In the &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/">Synology DDNS Tutorial&lt;/a>, I have a &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/#a-firewall">section&lt;/a> on setting up firewall on an ASUS AC68U Router.&lt;/p>
-&lt;p>For a recent update on my home network, the Asus router has been replaced with two Linksys WI-FI 6 tri-band mesh routers (two &lt;a href="https://www.linksys.com/hk/whole-home-mesh-wifi/linksys-mx5-velop-ax-whole-home-wifi-6-system/p/p-mx5300/">MX5300&lt;/a> or it&amp;rsquo;s SKU MX10600-CN)。&lt;/p>
-&lt;p>I thought it will be easy to set up since I already have some experience and documentation, but the firewall is not working as intended.&lt;/p>
-&lt;h2 id="my-attempts">My Attempts&lt;/h2>
-&lt;p>
+ &gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/univrsal/input-overlay"&gt;input-overlay&lt;/a&gt; 是由 &lt;a href="https://vrsal.xyz/"&gt;Alex (univrsal)&lt;/a&gt; 开发的一个 OBS Studio 插件。安装后，可以在 OBS Studio 中增加新的来源（source）用于展示鼠标、键盘、甚至是各种游戏手柄的操作。可以在游戏操作教学、软件教程类直播中提升直播时的效果。&lt;/p&gt;</description></item><item><title>Homelab：我的赛博积木 - 组成与架构</title><link>https://ecwuuuuu.com/post/homelab-journey-architecture/</link><pubDate>Sun, 08 Jan 2023 23:17:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-architecture/</guid><description>&lt;h2 id="架构概览"&gt;架构概览&lt;/h2&gt;
+&lt;p&gt;经常能在 r/homelab 上看到 &amp;ldquo;&lt;a href="https://www.reddit.com/r/homelab/?f=flair_name%3A%22LabPorn%22"&gt;LabPorn&lt;/a&gt;&amp;rdquo; 里其他大佬的机架。虽然很眼红，但目前自己的 HomeLab 只是几个简单的独立设备/资源组成。包括腾讯轻量云实例，群晖 NAS 和工控机。&lt;/p&gt;
+&lt;h2 id="内网"&gt;内网&lt;/h2&gt;
+&lt;p&gt;我的地址在粤港澳大湾区，并在常住的广州，中山，和珠海配有三台设备。&lt;/p&gt;</description></item><item><title>Self-Host Projects</title><link>https://ecwuuuuu.com/page/keep/selfhost-project/</link><pubDate>Sun, 01 Jan 2023 22:55:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/selfhost-project/</guid><description/></item><item><title>Homelab：我的赛博积木 - 公网服务</title><link>https://ecwuuuuu.com/post/homelab-journey-internet/</link><pubDate>Fri, 30 Dec 2022 00:20:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-internet/</guid><description>&lt;p&gt;与&lt;a href="https://ecwuuuuu.com/post/homelab-journey-intranet/"&gt;内网服务&lt;/a&gt;不一样，部署在公网的服务目的性明确：希望能随时随地能访问到。这些服务部署在腾讯云轻量服务器，机房位于广州和香港。&lt;/p&gt;
+&lt;h2 id="身份鉴权-ssoauthentik"&gt;身份鉴权 (SSO)：Authentik&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;涉及的服务：Authentik&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;部署在公网的服务，身份鉴权是很重要的一部分：有些资源、计算资源有必要授权后才可以访问。但如果各个系统的账号都分开控制，账号管理肯定非常麻烦。&lt;/p&gt;</description></item><item><title>Selected Music List</title><link>https://ecwuuuuu.com/page/keep/music-list/</link><pubDate>Tue, 27 Dec 2022 23:52:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/music-list/</guid><description/></item><item><title>Homelab：我的赛博积木 - 内网服务</title><link>https://ecwuuuuu.com/post/homelab-journey-intranet/</link><pubDate>Sat, 15 Oct 2022 12:07:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-intranet/</guid><description>&lt;p&gt;我的计算设施中，云服务器和本地设备各占一半，本地设备无公网 IPv4。这样的情况使得我的服务是分地部署、内外网隔离的（但不是做到严格隔离，这部分细节会在外网服务中提到。）&lt;/p&gt;</description></item><item><title>Homelab：我的赛博积木</title><link>https://ecwuuuuu.com/post/homelab-journey-intro/</link><pubDate>Tue, 04 Oct 2022 22:43:40 +0800</pubDate><guid>https://ecwuuuuu.com/post/homelab-journey-intro/</guid><description>&lt;p&gt;HomeLab 直译是在家里的实验室，赛博语境下指网络、计算设备组成的实验沙盒。可以用来学习计算机技术和部署自用的服务。个人感觉 HomeLab 这个概念更多是在国外使用，许多的爱好者集中在 Reddit 频道 &lt;a href="https://www.reddit.com/r/homelab/"&gt;r/homelab&lt;/a&gt; 分享、交流项目和问题；在 YouTube 上也有不少博主提供手把手教学视频。这个应对国内的概念应该是 NAS 和 All in One (All in Boom 😀)，许多教程能在什么值得买和哔哩哔哩找到。&lt;/p&gt;</description></item><item><title>自建 GitLab 配置 SSH 和后续</title><link>https://ecwuuuuu.com/post/gitlab-updates/</link><pubDate>Wed, 13 Jul 2022 09:17:36 +0800</pubDate><guid>https://ecwuuuuu.com/post/gitlab-updates/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;整体比较流水账，只做记录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="配置-ssh"&gt;配置 SSH&lt;/h2&gt;
+&lt;p&gt;部署了 GitLab 之后，一直在使用 HTTPS，体验不错。但是当时没有将 GitLab 的 SSH 访问成功配置。&lt;/p&gt;
+&lt;p&gt;当初的配置尝试过：1. 将 SSH 与服务器的 SSH 的端口共用。 2. 单独设置一个 SSH 端口并暴露出来。我的操作是直接在域名后面加端口号进行访问：&lt;code&gt;git.ecwuuuuu.com:&amp;lt;port&amp;gt;&lt;/code&gt; 但进行 Git 操作都没有成功过。在排查 Log 发现是链接失败后，对域名执行了 nslookup，发现 IP 并不是预期的服务器 IP，这里是因为我使用了 Cloudflare 的解析服务，真实的 IP 被隐藏了。所以操作行不通。&lt;/p&gt;</description></item><item><title>自建 GitLab 踩坑实录</title><link>https://ecwuuuuu.com/post/self-host-gitlab-instance/</link><pubDate>Fri, 06 May 2022 11:45:36 +0800</pubDate><guid>https://ecwuuuuu.com/post/self-host-gitlab-instance/</guid><description>&lt;p&gt;之前自建了一个 Git 服务来托管自己的非公开代码。考虑要轻量，所以选择了 &lt;a href="https://gitea.io/en-us/"&gt;Gitea&lt;/a&gt; 并通过 Docker + Nginx 的方式进行部署。&lt;/p&gt;
+&lt;p&gt;前段时间腾讯云免费提供了轻量服务器配置升级的活动，配置提升到了 4 核心 + 4G 内存。机器性能是一个过剩的状态，为了充分利用，所以我考虑将服务从 Gitea 换到 &lt;a href="https://about.gitlab.com/install/"&gt;GitLab&lt;/a&gt;。这里把我的部署过程进行记录。&lt;/p&gt;</description></item><item><title>500 Hours in 307</title><link>https://ecwuuuuu.com/photography/500hrsin307/</link><pubDate>Thu, 07 Apr 2022 16:07:13 +0800</pubDate><guid>https://ecwuuuuu.com/photography/500hrsin307/</guid><description>&lt;p&gt;This work is the final project of the Photography FE (Free Elective) Course. It shows how I am &amp;ldquo;living&amp;rdquo; in classroom 307 of the laboratory building.&lt;/p&gt;
+&lt;p&gt;In June 2019, about to be my senior year, I started my graduation project. Academic research requires long-term devotion, so classroom 307, as our stronghold, became where I spent the longest time in my last year of college (since COVID-19 destroyed the second semester). I spent more than 500 hours staying in that place. To study, do experiments, rest, and entertain.&lt;/p&gt;</description></item><item><title>Finding the Name for Color</title><link>https://ecwuuuuu.com/post/finding-the-name-for-color/</link><pubDate>Wed, 23 Feb 2022 20:44:55 +0800</pubDate><guid>https://ecwuuuuu.com/post/finding-the-name-for-color/</guid><description>&lt;p&gt;This topic first came to my mind when I was in college as a freshman. I don&amp;rsquo;t quite remember what application I am going to embed this. But the goal is clear: for color in HEX or RGB format, find a name to describe it accurately.&lt;/p&gt;
+&lt;p&gt;Recently, I saw a forum thread. A color-blind person is looking for a solution to identifying the color. I immediately recall the experience I had almost five years ago.&lt;/p&gt;</description></item><item><title>More on IPv6 Firewall - EUI-64</title><link>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</link><pubDate>Sun, 13 Feb 2022 14:42:23 +0800</pubDate><guid>https://ecwuuuuu.com/post/more-on-ipv6-firewall/</guid><description>&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;In the &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/"&gt;Synology DDNS Tutorial&lt;/a&gt;, I have a &lt;a href="https://ecwuuuuu.com/post/nas-ipv6-ddns/#a-firewall"&gt;section&lt;/a&gt; on setting up firewall on an ASUS AC68U Router.&lt;/p&gt;
+&lt;p&gt;For a recent update on my home network, the Asus router has been replaced with two Linksys WI-FI 6 tri-band mesh routers (two &lt;a href="https://www.linksys.com/hk/whole-home-mesh-wifi/linksys-mx5-velop-ax-whole-home-wifi-6-system/p/p-mx5300/"&gt;MX5300&lt;/a&gt; or it&amp;rsquo;s SKU MX10600-CN)。&lt;/p&gt;
+&lt;p&gt;I thought it will be easy to set up since I already have some experience and documentation, but the firewall is not working as intended.&lt;/p&gt;
+&lt;h2 id="my-attempts"&gt;My Attempts&lt;/h2&gt;
+&lt;p&gt;
 
 
 
 &lt;img src="https://www.linksys.com/support/images/KB25634-011_EN_v1.png" 
  
  
- >
-&lt;/p></description></item><item><title>Algorithm Completion Project</title><link>https://ecwuuuuu.com/post/algorithm-completion-project/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/algorithm-completion-project/</guid><description>&lt;p>Checkout &lt;a href="https://ecwuuuuu.com/series/algorithm">Algorithm Series&lt;/a>, questions are arranged by categories (-)&lt;/p>
-&lt;h2 id="problem-list">Problem List&lt;/h2>
-&lt;blockquote>
-&lt;p>Retrived from &lt;a href="https://leetcode-cn.com/problemset/all/?listId=2cktkvj&amp;amp;page=1">Leetcode Top 100 Liked&lt;/a> (2022.01.25)&lt;/p>
-&lt;/blockquote>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th style="text-align: left">&lt;strong>编号&lt;/strong>&lt;/th>
- &lt;th style="text-align: center">&lt;strong>难度&lt;/strong>&lt;/th>
- &lt;th style="text-align: left">&lt;strong>标签&lt;/strong>&lt;/th>
- &lt;th style="text-align: center">&lt;strong>题解&lt;/strong>&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/two-sum">1. 两数之和&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">数组&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/add-two-numbers">2. 两数相加&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">链表 / 递归&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/linked-list/#2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters">3. 无重复字符的最长子串&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">字符串&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/string/#3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays">4. 寻找两个正序数组的中位数&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">数组&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#4-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/longest-palindromic-substring">5. 最长回文子串&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">字符串&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/string/#5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/regular-expression-matching">10. 正则表达式匹配&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/container-with-most-water">11. 盛最多水的容器&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">数组&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/3sum">15. 三数之和&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">数组&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number">17. 电话号码的字母组合&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">字符串 / 回溯&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/string/#17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list">19. 删除链表的倒数第 N 个结点&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">链表&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/linked-list/#19-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC-n-%E4%B8%AA%E7%BB%93%E7%82%B9">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/valid-parentheses">20. 有效的括号&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">字符串 / 栈&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/string/#20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/merge-two-sorted-lists">21. 合并两个有序链表&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">链表&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/linked-list/#21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/generate-parentheses">22. 括号生成&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/merge-k-sorted-lists">23. 合并 K 个升序链表&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/next-permutation">31. 下一个排列&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/longest-valid-parentheses">32. 最长有效括号&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array">33. 搜索旋转排序数组&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array">34. 在排序数组中查找元素的第一个和最后一个位置&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/combination-sum">39. 组合总和&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/trapping-rain-water">42. 接雨水&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/permutations">46. 全排列&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/rotate-image">48. 旋转图像&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/group-anagrams">49. 字母异位词分组&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/maximum-subarray">53. 最大子数组和&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">数组 / 动态规划&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#53-%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/jump-game">55. 跳跃游戏&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/merge-intervals">56. 合并区间&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/unique-paths">62. 不同路径&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/minimum-path-sum">64. 最小路径和&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/climbing-stairs">70. 爬楼梯&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/edit-distance">72. 编辑距离&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/sort-colors">75. 颜色分类&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/minimum-window-substring">76. 最小覆盖子串&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/subsets">78. 子集&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/word-search">79. 单词搜索&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram">84. 柱状图中最大的矩形&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/maximal-rectangle">85. 最大矩形&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal">94. 二叉树的中序遍历&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/unique-binary-search-trees">96. 不同的二叉搜索树&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/validate-binary-search-tree">98. 验证二叉搜索树&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/symmetric-tree">101. 对称二叉树&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/binary-tree-level-order-traversal">102. 二叉树的层序遍历&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree">104. 二叉树的最大深度&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal">105. 从前序与中序遍历序列构造二叉树&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list">114. 二叉树展开为链表&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock">121. 买卖股票的最佳时机&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/binary-tree-maximum-path-sum">124. 二叉树中的最大路径和&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/longest-consecutive-sequence">128. 最长连续序列&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/single-number">136. 只出现一次的数字&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">数组 / 位运算&lt;/td>
- &lt;td style="text-align: center">&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#136-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97">Py&lt;/a>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/word-break">139. 单词拆分&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/linked-list-cycle">141. 环形链表&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/linked-list-cycle-ii">142. 环形链表 II&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/lru-cache">146. LRU 缓存&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/sort-list">148. 排序链表&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/maximum-product-subarray">152. 乘积最大子数组&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/min-stack">155. 最小栈&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists">160. 相交链表&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/majority-element">169. 多数元素&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/house-robber">198. 打家劫舍&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/number-of-islands">200. 岛屿数量&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/reverse-linked-list">206. 反转链表&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/course-schedule">207. 课程表&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/implement-trie-prefix-tree">208. 实现 Trie (前缀树)&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/kth-largest-element-in-an-array">215. 数组中的第 K 个最大元素&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/maximal-square">221. 最大正方形&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/invert-binary-tree">226. 翻转二叉树&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/palindrome-linked-list">234. 回文链表&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree">236. 二叉树的最近公共祖先&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/product-of-array-except-self">238. 除自身以外数组的乘积&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/sliding-window-maximum">239. 滑动窗口最大值&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/search-a-2d-matrix-ii">240. 搜索二维矩阵 II&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/meeting-rooms-ii">253. 会议室 II&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/perfect-squares">279. 完全平方数&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/move-zeroes">283. 移动零&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/find-the-duplicate-number">287. 寻找重复数&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree">297. 二叉树的序列化与反序列化&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/longest-increasing-subsequence">300. 最长递增子序列&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/remove-invalid-parentheses">301. 删除无效的括号&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown">309. 最佳买卖股票时机含冷冻期&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/burst-balloons">312. 戳气球&lt;/a>&lt;/td>
- &lt;td style="text-align: center">困难&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/coin-change">322. 零钱兑换&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/house-robber-iii">337. 打家劫舍 III&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/counting-bits">338. 比特位计数&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/top-k-frequent-elements">347. 前 K 个高频元素&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/decode-string">394. 字符串解码&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/evaluate-division">399. 除法求值&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/queue-reconstruction-by-height">406. 根据身高重建队列&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/partition-equal-subset-sum">416. 分割等和子集&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/path-sum-iii">437. 路径总和 III&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/find-all-anagrams-in-a-string">438. 找到字符串中所有字母异位词&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array">448. 找到所有数组中消失的数字&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/hamming-distance">461. 汉明距离&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/target-sum">494. 目标和&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/convert-bst-to-greater-tree">538. 把二叉搜索树转换为累加树&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/diameter-of-binary-tree">543. 二叉树的直径&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/subarray-sum-equals-k">560. 和为 K 的子数组&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray">581. 最短无序连续子数组&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/merge-two-binary-trees">617. 合并二叉树&lt;/a>&lt;/td>
- &lt;td style="text-align: center">简单&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/task-scheduler">621. 任务调度器&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/palindromic-substrings">647. 回文子串&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">&lt;a href="https://leetcode-cn.com/problems/daily-temperatures">739. 每日温度&lt;/a>&lt;/td>
- &lt;td style="text-align: center">中等&lt;/td>
- &lt;td style="text-align: left">-&lt;/td>
- &lt;td style="text-align: center">-&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="题解形式">题解形式&lt;/h2>
-&lt;h3 id="888-题目昵称">888. 题目昵称&lt;/h3>
-&lt;p>&lt;a href="https://leetcode-cn.com/problems/">https://leetcode-cn.com/problems/&lt;/a>题目的Leetcode链接&lt;/p></description></item><item><title>Array</title><link>https://ecwuuuuu.com/page/algorithm/array/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/array/</guid><description>&lt;h2 id="1-两数之和">1. 两数之和&lt;/h2>
-&lt;p>&lt;a href="https://leetcode-cn.com/problems/two-sum">https://leetcode-cn.com/problems/two-sum&lt;/a>&lt;/p>
-&lt;p>给定一个整数数组 &lt;code>nums&lt;/code>，目标是找出数组中的两个整数，算数和为 &lt;code>target&lt;/code>，返回数组下标（只有一个答案，不能元素重复使用）。&lt;strong>其中最简单直接的方法就是暴力遍历&lt;/strong>，得到所有二元素数组的组合（但需要注意储存下标）。&lt;/p></description></item><item><title>Binary</title><link>https://ecwuuuuu.com/page/algorithm/binary/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/binary/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Dynamic Programming</title><link>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Graph</title><link>https://ecwuuuuu.com/page/algorithm/graph/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/graph/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Heap</title><link>https://ecwuuuuu.com/page/algorithm/heap/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/heap/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Interval</title><link>https://ecwuuuuu.com/page/algorithm/interval/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/interval/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Linked List</title><link>https://ecwuuuuu.com/page/algorithm/linked-list/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/linked-list/</guid><description>&lt;h2 id="2-两数相加">2. 两数相加&lt;/h2>
-&lt;p>&lt;a href="https://leetcode-cn.com/problems/add-two-numbers">https://leetcode-cn.com/problems/add-two-numbers&lt;/a>&lt;/p>
-&lt;p>给两个非空链表，每个节点储存一位数字，按逆序排序。返回一个相同形式的链表，表示两个链表的和。&lt;/p>
-&lt;p>数据在链表中是倒序的，这非常的便于处理计算时出现的进位。那最简单的方式就是从两个链表的入口开始计算，直到两个链表走到末尾。&lt;/p></description></item><item><title>Matrix</title><link>https://ecwuuuuu.com/page/algorithm/matrix/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/matrix/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>Misc</title><link>https://ecwuuuuu.com/page/algorithm/misc/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/misc/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>String</title><link>https://ecwuuuuu.com/page/algorithm/string/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/string/</guid><description>&lt;h2 id="3-无重复字符的最长子串">3. 无重复字符的最长子串&lt;/h2>
-&lt;p>&lt;a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters&lt;/a>&lt;/p>
-&lt;p>给定一个字符串 &lt;code>s&lt;/code> ，请你找出其中不含有重复字符的&lt;strong>最长子串&lt;/strong>的&lt;em>长度&lt;/em>。&lt;/p>
-&lt;p>这个得出的字符串中不能存在存在的字符，且返回只需要返回最长的长度，所以我们可以使用双指针，来指向不含重复字符的字串。其中：&lt;/p></description></item><item><title>Tree</title><link>https://ecwuuuuu.com/page/algorithm/tree/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/tree/</guid><description>&lt;p>TBA&lt;/p></description></item><item><title>【记录】智能门锁 - Introduction to Robotics 课程项目</title><link>https://ecwuuuuu.com/post/robotics-project/</link><pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/robotics-project/</guid><description>&lt;h2 id="整体构思">整体构思&lt;/h2>
-&lt;p>项目构思时浏览了很多网络上的 Arduino 项目建议。但列表中大多不够有趣，或时太复杂不容易实现。但其中遇到了一篇来自 Grathio Labs 的文章描述了使用敲门节奏驱动的智能门锁&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>。&lt;/p></description></item><item><title>YouTube Channels</title><link>https://ecwuuuuu.com/page/keep/youtube-channel/</link><pubDate>Tue, 11 Jan 2022 21:58:05 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/youtube-channel/</guid><description/></item><item><title>Figure: Hinata Shoyo</title><link>https://ecwuuuuu.com/photography/hinata-shoyo/</link><pubDate>Mon, 10 Jan 2022 22:04:44 +0800</pubDate><guid>https://ecwuuuuu.com/photography/hinata-shoyo/</guid><description>&lt;p>Note:&lt;/p>
-&lt;ul>
-&lt;li>Product Name: Good Smile Company &lt;a href="https://www.goodsmile.info/en/product/11123/POP+UP+PARADE+Shoyo+Hinata.html">POP UP PARADE Shoyo Hinata&lt;/a>&lt;/li>
-&lt;li>Two flashes used.&lt;/li>
-&lt;/ul>
-&lt;p>
+ &gt;
+&lt;/p&gt;</description></item><item><title>Algorithm Completion Project</title><link>https://ecwuuuuu.com/post/algorithm-completion-project/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/algorithm-completion-project/</guid><description>&lt;p&gt;Checkout &lt;a href="https://ecwuuuuu.com/series/algorithm"&gt;Algorithm Series&lt;/a&gt;, questions are arranged by categories (-)&lt;/p&gt;
+&lt;h2 id="problem-list"&gt;Problem List&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Retrived from &lt;a href="https://leetcode-cn.com/problemset/all/?listId=2cktkvj&amp;amp;page=1"&gt;Leetcode Top 100 Liked&lt;/a&gt; (2022.01.25)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;strong&gt;编号&lt;/strong&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;strong&gt;难度&lt;/strong&gt;&lt;/th&gt;
+ &lt;th&gt;&lt;strong&gt;标签&lt;/strong&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;strong&gt;题解&lt;/strong&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/two-sum"&gt;1. 两数之和&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;数组&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/add-two-numbers"&gt;2. 两数相加&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;链表 / 递归&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/linked-list/#2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters"&gt;3. 无重复字符的最长子串&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;字符串&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/string/#3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays"&gt;4. 寻找两个正序数组的中位数&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;数组&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#4-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/longest-palindromic-substring"&gt;5. 最长回文子串&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;字符串&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/string/#5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/regular-expression-matching"&gt;10. 正则表达式匹配&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/container-with-most-water"&gt;11. 盛最多水的容器&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;数组&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/3sum"&gt;15. 三数之和&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;数组&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number"&gt;17. 电话号码的字母组合&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;字符串 / 回溯&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/string/#17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list"&gt;19. 删除链表的倒数第 N 个结点&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;链表&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/linked-list/#19-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC-n-%E4%B8%AA%E7%BB%93%E7%82%B9"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/valid-parentheses"&gt;20. 有效的括号&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;字符串 / 栈&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/string/#20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/merge-two-sorted-lists"&gt;21. 合并两个有序链表&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;链表&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/linked-list/#21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/generate-parentheses"&gt;22. 括号生成&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/merge-k-sorted-lists"&gt;23. 合并 K 个升序链表&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/next-permutation"&gt;31. 下一个排列&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/longest-valid-parentheses"&gt;32. 最长有效括号&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array"&gt;33. 搜索旋转排序数组&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array"&gt;34. 在排序数组中查找元素的第一个和最后一个位置&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/combination-sum"&gt;39. 组合总和&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/trapping-rain-water"&gt;42. 接雨水&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/permutations"&gt;46. 全排列&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/rotate-image"&gt;48. 旋转图像&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/group-anagrams"&gt;49. 字母异位词分组&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/maximum-subarray"&gt;53. 最大子数组和&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;数组 / 动态规划&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#53-%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/jump-game"&gt;55. 跳跃游戏&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/merge-intervals"&gt;56. 合并区间&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/unique-paths"&gt;62. 不同路径&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/minimum-path-sum"&gt;64. 最小路径和&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/climbing-stairs"&gt;70. 爬楼梯&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/edit-distance"&gt;72. 编辑距离&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/sort-colors"&gt;75. 颜色分类&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/minimum-window-substring"&gt;76. 最小覆盖子串&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/subsets"&gt;78. 子集&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/word-search"&gt;79. 单词搜索&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram"&gt;84. 柱状图中最大的矩形&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/maximal-rectangle"&gt;85. 最大矩形&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal"&gt;94. 二叉树的中序遍历&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/unique-binary-search-trees"&gt;96. 不同的二叉搜索树&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/validate-binary-search-tree"&gt;98. 验证二叉搜索树&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/symmetric-tree"&gt;101. 对称二叉树&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/binary-tree-level-order-traversal"&gt;102. 二叉树的层序遍历&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/maximum-depth-of-binary-tree"&gt;104. 二叉树的最大深度&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal"&gt;105. 从前序与中序遍历序列构造二叉树&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list"&gt;114. 二叉树展开为链表&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock"&gt;121. 买卖股票的最佳时机&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/binary-tree-maximum-path-sum"&gt;124. 二叉树中的最大路径和&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/longest-consecutive-sequence"&gt;128. 最长连续序列&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/single-number"&gt;136. 只出现一次的数字&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;数组 / 位运算&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://ecwuuuuu.com/page/algorithm/array/#136-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97"&gt;Py&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/word-break"&gt;139. 单词拆分&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/linked-list-cycle"&gt;141. 环形链表&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/linked-list-cycle-ii"&gt;142. 环形链表 II&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/lru-cache"&gt;146. LRU 缓存&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/sort-list"&gt;148. 排序链表&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/maximum-product-subarray"&gt;152. 乘积最大子数组&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/min-stack"&gt;155. 最小栈&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists"&gt;160. 相交链表&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/majority-element"&gt;169. 多数元素&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/house-robber"&gt;198. 打家劫舍&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/number-of-islands"&gt;200. 岛屿数量&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/reverse-linked-list"&gt;206. 反转链表&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/course-schedule"&gt;207. 课程表&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/implement-trie-prefix-tree"&gt;208. 实现 Trie (前缀树)&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/kth-largest-element-in-an-array"&gt;215. 数组中的第 K 个最大元素&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/maximal-square"&gt;221. 最大正方形&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/invert-binary-tree"&gt;226. 翻转二叉树&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/palindrome-linked-list"&gt;234. 回文链表&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree"&gt;236. 二叉树的最近公共祖先&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/product-of-array-except-self"&gt;238. 除自身以外数组的乘积&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/sliding-window-maximum"&gt;239. 滑动窗口最大值&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/search-a-2d-matrix-ii"&gt;240. 搜索二维矩阵 II&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/meeting-rooms-ii"&gt;253. 会议室 II&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/perfect-squares"&gt;279. 完全平方数&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/move-zeroes"&gt;283. 移动零&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/find-the-duplicate-number"&gt;287. 寻找重复数&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree"&gt;297. 二叉树的序列化与反序列化&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/longest-increasing-subsequence"&gt;300. 最长递增子序列&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/remove-invalid-parentheses"&gt;301. 删除无效的括号&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown"&gt;309. 最佳买卖股票时机含冷冻期&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/burst-balloons"&gt;312. 戳气球&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;困难&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/coin-change"&gt;322. 零钱兑换&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/house-robber-iii"&gt;337. 打家劫舍 III&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/counting-bits"&gt;338. 比特位计数&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/top-k-frequent-elements"&gt;347. 前 K 个高频元素&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/decode-string"&gt;394. 字符串解码&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/evaluate-division"&gt;399. 除法求值&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/queue-reconstruction-by-height"&gt;406. 根据身高重建队列&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/partition-equal-subset-sum"&gt;416. 分割等和子集&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/path-sum-iii"&gt;437. 路径总和 III&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/find-all-anagrams-in-a-string"&gt;438. 找到字符串中所有字母异位词&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array"&gt;448. 找到所有数组中消失的数字&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/hamming-distance"&gt;461. 汉明距离&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/target-sum"&gt;494. 目标和&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/convert-bst-to-greater-tree"&gt;538. 把二叉搜索树转换为累加树&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/diameter-of-binary-tree"&gt;543. 二叉树的直径&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/subarray-sum-equals-k"&gt;560. 和为 K 的子数组&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray"&gt;581. 最短无序连续子数组&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/merge-two-binary-trees"&gt;617. 合并二叉树&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;简单&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/task-scheduler"&gt;621. 任务调度器&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/palindromic-substrings"&gt;647. 回文子串&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://leetcode-cn.com/problems/daily-temperatures"&gt;739. 每日温度&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;中等&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="题解形式"&gt;题解形式&lt;/h2&gt;
+&lt;h3 id="888-题目昵称"&gt;888. 题目昵称&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://leetcode-cn.com/problems/"&gt;https://leetcode-cn.com/problems/&lt;/a&gt;题目的Leetcode链接&lt;/p&gt;</description></item><item><title>Array</title><link>https://ecwuuuuu.com/page/algorithm/array/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/array/</guid><description>&lt;h2 id="1-两数之和"&gt;1. 两数之和&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://leetcode-cn.com/problems/two-sum"&gt;https://leetcode-cn.com/problems/two-sum&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给定一个整数数组 &lt;code&gt;nums&lt;/code&gt;，目标是找出数组中的两个整数，算数和为 &lt;code&gt;target&lt;/code&gt;，返回数组下标（只有一个答案，不能元素重复使用）。&lt;strong&gt;其中最简单直接的方法就是暴力遍历&lt;/strong&gt;，得到所有二元素数组的组合（但需要注意储存下标）。&lt;/p&gt;</description></item><item><title>Binary</title><link>https://ecwuuuuu.com/page/algorithm/binary/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/binary/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Dynamic Programming</title><link>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/dynamic-programming/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Graph</title><link>https://ecwuuuuu.com/page/algorithm/graph/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/graph/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Heap</title><link>https://ecwuuuuu.com/page/algorithm/heap/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/heap/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Interval</title><link>https://ecwuuuuu.com/page/algorithm/interval/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/interval/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Linked List</title><link>https://ecwuuuuu.com/page/algorithm/linked-list/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/linked-list/</guid><description>&lt;h2 id="2-两数相加"&gt;2. 两数相加&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://leetcode-cn.com/problems/add-two-numbers"&gt;https://leetcode-cn.com/problems/add-two-numbers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给两个非空链表，每个节点储存一位数字，按逆序排序。返回一个相同形式的链表，表示两个链表的和。&lt;/p&gt;
+&lt;p&gt;数据在链表中是倒序的，这非常的便于处理计算时出现的进位。那最简单的方式就是从两个链表的入口开始计算，直到两个链表走到末尾。&lt;/p&gt;</description></item><item><title>Matrix</title><link>https://ecwuuuuu.com/page/algorithm/matrix/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/matrix/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>Misc</title><link>https://ecwuuuuu.com/page/algorithm/misc/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/misc/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>String</title><link>https://ecwuuuuu.com/page/algorithm/string/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/string/</guid><description>&lt;h2 id="3-无重复字符的最长子串"&gt;3. 无重复字符的最长子串&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters"&gt;https://leetcode-cn.com/problems/longest-substring-without-repeating-characters&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给定一个字符串 &lt;code&gt;s&lt;/code&gt; ，请你找出其中不含有重复字符的&lt;strong&gt;最长子串&lt;/strong&gt;的&lt;em&gt;长度&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;这个得出的字符串中不能存在存在的字符，且返回只需要返回最长的长度，所以我们可以使用双指针，来指向不含重复字符的字串。其中：&lt;/p&gt;</description></item><item><title>Tree</title><link>https://ecwuuuuu.com/page/algorithm/tree/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/page/algorithm/tree/</guid><description>&lt;p&gt;TBA&lt;/p&gt;</description></item><item><title>【记录】智能门锁 - Introduction to Robotics 课程项目</title><link>https://ecwuuuuu.com/post/robotics-project/</link><pubDate>Fri, 21 Jan 2022 22:44:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/robotics-project/</guid><description>&lt;h2 id="整体构思"&gt;整体构思&lt;/h2&gt;
+&lt;p&gt;项目构思时浏览了很多网络上的 Arduino 项目建议。但列表中大多不够有趣，或时太复杂不容易实现。但其中遇到了一篇来自 Grathio Labs 的文章描述了使用敲门节奏驱动的智能门锁&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;</description></item><item><title>YouTube Channels</title><link>https://ecwuuuuu.com/page/keep/youtube-channel/</link><pubDate>Tue, 11 Jan 2022 21:58:05 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/youtube-channel/</guid><description/></item><item><title>Figure: Hinata Shoyo</title><link>https://ecwuuuuu.com/photography/hinata-shoyo/</link><pubDate>Mon, 10 Jan 2022 22:04:44 +0800</pubDate><guid>https://ecwuuuuu.com/photography/hinata-shoyo/</guid><description>&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Product Name: Good Smile Company &lt;a href="https://www.goodsmile.info/en/product/11123/POP+UP+PARADE+Shoyo+Hinata.html"&gt;POP UP PARADE Shoyo Hinata&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Two flashes used.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
 
-&lt;/article>
-&lt;div class="flex space-x-2 mb-4">
- &lt;svg class="flex-none w-5 h-5" viewBox="0 0 20 20" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
- &lt;path d="m9.813 9.25.346-5.138a1.276 1.276 0 0 0-2.54-.235L6.75 11.25 5.147 9.327a1.605 1.605 0 0 0-2.388-.085.018.018 0 0 0-.004.019l1.98 4.87a5 5 0 0 0 4.631 3.119h3.885a4 4 0 0 0 4-4v-1a3 3 0 0 0-3-3H9.813Z" class="stroke-slate-800 dark:stroke-slate-300">&lt;/path>
- &lt;path d="M3 5s.35-.47 1.25-.828m9.516-.422c2.078.593 3.484 1.5 3.484 1.5" class="stroke-slate-400 dark:stroke-sky-400">&lt;/path>
- &lt;/svg>
- &lt;p class="text-slate-700 text-sm font-medium dark:text-slate-200">&lt;kbd class="px-2 py-1 text-sm font-semibold dark:text-gray-200 dark:bg-gray-600 border dark:border-gray-400 rounded-md shadow-outer">Shift&lt;/kbd> + mouse scroll in the grid of images to see the rest.&lt;/p></description></item><item><title>Cleaning Up Git Repo For My Blog</title><link>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</link><pubDate>Mon, 10 Jan 2022 15:54:37 +0800</pubDate><guid>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</guid><description>&lt;h2 id="what-i-have-done">What I have done&lt;/h2>
-&lt;p>When creating the theme announced in the post &lt;a href="https://ecwuuuuu.com/post/new-theme-for-blog/">Switching to a new theme &amp;hellip; I guess&lt;/a>. I set up a new branch in the original &lt;a href="https://github.com/ecwu/ecwu.github.io.source">source repository&lt;/a> and uses Cloudflare pages to build the previews for the site. This can make sure all the original Github actions for the main site working normally.&lt;/p>
-&lt;p>Since the new branch &lt;code>new-theme&lt;/code> was created using attribute &lt;code>--orphan&lt;/code>, it will be impossible to do pull requests to the original default branch &lt;code>master&lt;/code>. So I did a workaround.&lt;/p></description></item><item><title>Changelog</title><link>https://ecwuuuuu.com/page/changelog/</link><pubDate>Sun, 09 Jan 2022 14:49:18 +0800</pubDate><guid>https://ecwuuuuu.com/page/changelog/</guid><description>&lt;h2 id="about-this-site">About this site&lt;/h2>
-&lt;ul>
-&lt;li>Write with static site generator &lt;a href="https://gohugo.io/">Hugo&lt;/a>
-&lt;ul>
-&lt;li>Uses &lt;a href="https://github.com/ecwu/ecwu-theme">ecwu-theme&lt;/a> from Jan 2022, Theme introduction: &lt;a href="https://ecwuuuuu.com/post/blog-theme-ecwu-theme/">Blog Theme: ecwu-theme&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Build with &lt;a href="https://github.com/features/actions">GitHub Actions&lt;/a>&lt;/li>
-&lt;li>Site preview build with &lt;a href="https://pages.cloudflare.com/">Cloudflare Pages&lt;/a>
-&lt;ul>
-&lt;li>&lt;a href="https://ecwu-github-io-source.pages.dev/">https://ecwu-github-io-source.pages.dev/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Host by &lt;a href="https://pages.github.com/">GitHub Pages&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.cloudflare.com/">Cloudflare&lt;/a> &amp;amp; &lt;a href="https://www.qiniu.com/">Qiniu&lt;/a> for distributing files&lt;/li>
-&lt;li>Comment Plugin: &lt;a href="https://github.com/giscus/giscus">giscus&lt;/a>&lt;/li>
-&lt;li>Site Analytics: &lt;a href="https://support.google.com/analytics/answer/10089681?hl=en">Google Analytics v4&lt;/a>&lt;/li>
-&lt;li>LaTeX Render: &lt;a href="https://katex.org">KaTeX&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="changelog">Changelog&lt;/h2>
-&lt;h3 id="2025">2025&lt;/h3>
-&lt;h4 id="october-2025">October 2025&lt;/h4>
-&lt;ul>
-&lt;li>Update the Tailwind CSS to v4 (v4.1.+)&lt;/li>
-&lt;li>Adding Mermaid diagram support&lt;/li>
-&lt;/ul>
-&lt;h4 id="april-2025">April 2025&lt;/h4>
-&lt;ul>
-&lt;li>Adding a new &amp;ldquo;no-dark-invert&amp;rdquo; class for dark mode to prevent dark mode inversion for some images&lt;/li>
-&lt;/ul>
-&lt;h4 id="february-2025">February 2025&lt;/h4>
-&lt;ul>
-&lt;li>Update the Tailwind CSS to v4&lt;/li>
-&lt;li>Update the KaTeX to v0.16.21&lt;/li>
-&lt;li>Adjust the style for homepage card to match the design system&lt;/li>
-&lt;li>Adding support for youtube and bilibili embeds&lt;/li>
-&lt;/ul>
-&lt;h3 id="2024">2024&lt;/h3>
-&lt;h4 id="october-2024">October 2024&lt;/h4>
-&lt;ul>
-&lt;li>Update the build pipeline with Hugo 0.134.2&lt;/li>
-&lt;li>Change the tag for site logo/title from &lt;code>&amp;lt;h1&amp;gt;&lt;/code> to &lt;code>&amp;lt;div&amp;gt;&lt;/code> for better SEO&lt;/li>
-&lt;/ul>
-&lt;h4 id="may-2024">May 2024&lt;/h4>
-&lt;ul>
-&lt;li>Refreshing the design and layout for friends page, adding avatar for each item.&lt;/li>
-&lt;/ul>
-&lt;h3 id="2022">2022&lt;/h3>
-&lt;h4 id="october-2022">October 2022&lt;/h4>
-&lt;ul>
-&lt;li>Warp the main content with &lt;code>&amp;lt;main&amp;gt;&lt;/code> tags, improving RSS scraping results.&lt;/li>
-&lt;/ul>
-&lt;h4 id="april-2022">April 2022&lt;/h4>
-&lt;ul>
-&lt;li>Replace comment plugins: &lt;a href="https://utteranc.es">utterances&lt;/a> -&amp;gt; &lt;a href="https://github.com/giscus/giscus">giscus&lt;/a>&lt;/li>
-&lt;li>Migrate legacy comments from GitHub Issues to GitHub Discussion&lt;/li>
-&lt;/ul>
-&lt;h4 id="february-2022">February 2022&lt;/h4>
-&lt;ul>
-&lt;li>Adding shortcode for PDF (Tailwind Aspect-ratio plugin)&lt;/li>
-&lt;li>Refines and adding labels for Draft post&lt;/li>
-&lt;li>Adding shortcode for embeds html file&lt;/li>
-&lt;li>Adding video looping args for video shortcode&lt;/li>
-&lt;li>Fix a bug in article time and read time metadata display&lt;/li>
-&lt;/ul>
-&lt;h4 id="january-2022">January 2022&lt;/h4>
-&lt;ul>
-&lt;li>Enable the new &lt;a href="https://github.com/ecwu/ecwu-theme">ecwu-theme&lt;/a>, Written in &lt;a href="https://tailwindcss.com/">Tailwind CSS 3&lt;/a>&lt;/li>
-&lt;li>Adding Comment Plugin &lt;a href="https://utteranc.es">utterances&lt;/a>&lt;/li>
-&lt;li>Adding Site Analytics &lt;a href="https://support.google.com/analytics/answer/10089681?hl=en">Google Analytics v4&lt;/a>&lt;/li>
-&lt;li>New &lt;code>Terms&lt;/code>, &lt;code>Series&lt;/code> View and Pages.&lt;/li>
-&lt;li>New Article Info Card&lt;/li>
-&lt;li>New Gallery Implementation with JS.&lt;/li>
-&lt;li>Remove Sidenote&lt;/li>
-&lt;li>Adding shortcode for video (via CDN)&lt;/li>
-&lt;/ul>
-&lt;h3 id="pre-2022">Pre 2022&lt;/h3>
-&lt;ul>
-&lt;li>Using &lt;a href="https://github.com/shawnohare/hugo-tufte">hugo-tufte&lt;/a> theme with custom modifications&lt;/li>
-&lt;/ul></description></item><item><title>(Switched!) Switching to a new theme ... I guess</title><link>https://ecwuuuuu.com/post/new-theme-for-blog/</link><pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate><guid>https://ecwuuuuu.com/post/new-theme-for-blog/</guid><description>&lt;p>This blogsite has been using &lt;a href="https://github.com/shawnohare/hugo-tufte">hugo-tufte&lt;/a> theme (with some customization) for a while. I choose the theme because I appreciate the aesthetic look of the original Tufte $\LaTeX$ template. Using a dedicated area on the right side of the page for sidenotes, supplements images, or thoughts. Diversify the layout of an article, and make the article fun to read.&lt;/p>
-&lt;p>A couple of months ago, under my willingness of making enhancements to the theme. And I start to do some research on how other people are doing sidenote on their blog (Like the &lt;a href="https://www.gwern.net/Sidenotes">great article&lt;/a> by Gwern Branwen). With some &amp;ldquo;deep thinking&amp;rdquo;. I start to realize. Maybe it is not a good idea to use footnotes on the Internet pages.&lt;/p></description></item><item><title>I am initiating a new domain!</title><link>https://ecwuuuuu.com/post/new-domain/</link><pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/new-domain/</guid><description>&lt;p>Starting from Aug 11, 2021. I am starting a new domain name for my website.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://ecwu.xyz">ecwu.xyz&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;p>Personally, the old domain name (ecwuuuuu.com) is good but is it a little bit longer in length and maybe difficult for people to memorize and use. So, I register this domain name to create some convenience for others (but mostly for myself :)).&lt;/p>
-&lt;p>Currently, I am don&amp;rsquo;t have a concrete plan for how to utilize these two domains. But I will probably migrate all my info page and service to the new domain. The domain email and blog will still keep in the old one. I will keep thinking about this, and sync the progress on this page in the future.&lt;/p></description></item><item><title>Drag</title><link>https://ecwuuuuu.com/photography/drag/</link><pubDate>Tue, 20 Jul 2021 13:57:20 +0800</pubDate><guid>https://ecwuuuuu.com/photography/drag/</guid><description>&lt;p>Hang out with friends in Shenzhen. In the evening, we saw a nice sunset in &lt;a href="http://en.sasac.gov.cn/2020/10/09/c_5587.htm">OH BAY&lt;/a>.&lt;/p>
-&lt;p>On the way back home, I saw more breathtaking scenery. And I captured it with my camera.&lt;/p>
-&lt;p>The images are shot using a slow shutter speed, and the shape of the objects is dragged by the movement of the cabin. I arrange the image in a linear (both in time and space) manner. Along with intertwined artificial lights, urban buildings, and twilight sky in the frame. I try to create an emotional transition from active to calm with these four images.&lt;/p></description></item><item><title>Sigmoid or Softmax for Binary Classification</title><link>https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/</link><pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate><guid>https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/</guid><description>&lt;p>Recently, been asked a question on using neural networks for binary classification.&lt;/p>
-&lt;blockquote>
-&lt;p>The output layer of the network can be &amp;hellip; &lt;strong>One output neuron with sigmoid activation function&lt;/strong> or &lt;strong>Two neurons and then apply a softmax activation function&lt;/strong>. But what is the difference between these two?&lt;/p>
-&lt;/blockquote>
-&lt;p>Let start with the equations of the two functions.&lt;/p>
-&lt;p>Sigmoid Activation Function
+&lt;/article&gt;
+&lt;div class="flex space-x-2 mb-4"&gt;
+ &lt;svg class="flex-none w-5 h-5" viewBox="0 0 20 20" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"&gt;
+ &lt;path d="m9.813 9.25.346-5.138a1.276 1.276 0 0 0-2.54-.235L6.75 11.25 5.147 9.327a1.605 1.605 0 0 0-2.388-.085.018.018 0 0 0-.004.019l1.98 4.87a5 5 0 0 0 4.631 3.119h3.885a4 4 0 0 0 4-4v-1a3 3 0 0 0-3-3H9.813Z" class="stroke-slate-800 dark:stroke-slate-300"&gt;&lt;/path&gt;
+ &lt;path d="M3 5s.35-.47 1.25-.828m9.516-.422c2.078.593 3.484 1.5 3.484 1.5" class="stroke-slate-400 dark:stroke-sky-400"&gt;&lt;/path&gt;
+ &lt;/svg&gt;
+ &lt;p class="text-slate-700 text-sm font-medium dark:text-slate-200"&gt;&lt;kbd class="px-2 py-1 text-sm font-semibold dark:text-gray-200 dark:bg-gray-600 border dark:border-gray-400 rounded-md shadow-outer"&gt;Shift&lt;/kbd&gt; + mouse scroll in the grid of images to see the rest.&lt;/p&gt;</description></item><item><title>Cleaning Up Git Repo For My Blog</title><link>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</link><pubDate>Mon, 10 Jan 2022 15:54:37 +0800</pubDate><guid>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</guid><description>&lt;h2 id="what-i-have-done"&gt;What I have done&lt;/h2&gt;
+&lt;p&gt;When creating the theme announced in the post &lt;a href="https://ecwuuuuu.com/post/new-theme-for-blog/"&gt;Switching to a new theme &amp;hellip; I guess&lt;/a&gt;. I set up a new branch in the original &lt;a href="https://github.com/ecwu/ecwu.github.io.source"&gt;source repository&lt;/a&gt; and uses Cloudflare pages to build the previews for the site. This can make sure all the original Github actions for the main site working normally.&lt;/p&gt;
+&lt;p&gt;Since the new branch &lt;code&gt;new-theme&lt;/code&gt; was created using attribute &lt;code&gt;--orphan&lt;/code&gt;, it will be impossible to do pull requests to the original default branch &lt;code&gt;master&lt;/code&gt;. So I did a workaround.&lt;/p&gt;</description></item><item><title>Changelog</title><link>https://ecwuuuuu.com/page/changelog/</link><pubDate>Sun, 09 Jan 2022 14:49:18 +0800</pubDate><guid>https://ecwuuuuu.com/page/changelog/</guid><description>&lt;h2 id="about-this-site"&gt;About this site&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Write with static site generator &lt;a href="https://gohugo.io/"&gt;Hugo&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Uses &lt;a href="https://github.com/ecwu/ecwu-theme"&gt;ecwu-theme&lt;/a&gt; from Jan 2022, Theme introduction: &lt;a href="https://ecwuuuuu.com/post/blog-theme-ecwu-theme/"&gt;Blog Theme: ecwu-theme&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Build with &lt;a href="https://github.com/features/actions"&gt;GitHub Actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Site preview build with &lt;a href="https://pages.cloudflare.com/"&gt;Cloudflare Pages&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://ecwu-github-io-source.pages.dev/"&gt;https://ecwu-github-io-source.pages.dev/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Host by &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt; &amp;amp; &lt;a href="https://www.qiniu.com/"&gt;Qiniu&lt;/a&gt; for distributing files&lt;/li&gt;
+&lt;li&gt;Comment Plugin: &lt;a href="https://github.com/giscus/giscus"&gt;giscus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Site Analytics: &lt;a href="https://support.google.com/analytics/answer/10089681?hl=en"&gt;Google Analytics v4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LaTeX Render: &lt;a href="https://katex.org"&gt;KaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;h3 id="2025"&gt;2025&lt;/h3&gt;
+&lt;h4 id="october-2025"&gt;October 2025&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Update the Tailwind CSS to v4 (v4.1.+)&lt;/li&gt;
+&lt;li&gt;Adding Mermaid diagram support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="april-2025"&gt;April 2025&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Adding a new &amp;ldquo;no-dark-invert&amp;rdquo; class for dark mode to prevent dark mode inversion for some images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="february-2025"&gt;February 2025&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Update the Tailwind CSS to v4&lt;/li&gt;
+&lt;li&gt;Update the KaTeX to v0.16.21&lt;/li&gt;
+&lt;li&gt;Adjust the style for homepage card to match the design system&lt;/li&gt;
+&lt;li&gt;Adding support for youtube and bilibili embeds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2024"&gt;2024&lt;/h3&gt;
+&lt;h4 id="october-2024"&gt;October 2024&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Update the build pipeline with Hugo 0.134.2&lt;/li&gt;
+&lt;li&gt;Change the tag for site logo/title from &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; to &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; for better SEO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="may-2024"&gt;May 2024&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Refreshing the design and layout for friends page, adding avatar for each item.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2022"&gt;2022&lt;/h3&gt;
+&lt;h4 id="october-2022"&gt;October 2022&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Warp the main content with &lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; tags, improving RSS scraping results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="april-2022"&gt;April 2022&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Replace comment plugins: &lt;a href="https://utteranc.es"&gt;utterances&lt;/a&gt; -&amp;gt; &lt;a href="https://github.com/giscus/giscus"&gt;giscus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Migrate legacy comments from GitHub Issues to GitHub Discussion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="february-2022"&gt;February 2022&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Adding shortcode for PDF (Tailwind Aspect-ratio plugin)&lt;/li&gt;
+&lt;li&gt;Refines and adding labels for Draft post&lt;/li&gt;
+&lt;li&gt;Adding shortcode for embeds html file&lt;/li&gt;
+&lt;li&gt;Adding video looping args for video shortcode&lt;/li&gt;
+&lt;li&gt;Fix a bug in article time and read time metadata display&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="january-2022"&gt;January 2022&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable the new &lt;a href="https://github.com/ecwu/ecwu-theme"&gt;ecwu-theme&lt;/a&gt;, Written in &lt;a href="https://tailwindcss.com/"&gt;Tailwind CSS 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adding Comment Plugin &lt;a href="https://utteranc.es"&gt;utterances&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adding Site Analytics &lt;a href="https://support.google.com/analytics/answer/10089681?hl=en"&gt;Google Analytics v4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;New &lt;code&gt;Terms&lt;/code&gt;, &lt;code&gt;Series&lt;/code&gt; View and Pages.&lt;/li&gt;
+&lt;li&gt;New Article Info Card&lt;/li&gt;
+&lt;li&gt;New Gallery Implementation with JS.&lt;/li&gt;
+&lt;li&gt;Remove Sidenote&lt;/li&gt;
+&lt;li&gt;Adding shortcode for video (via CDN)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="pre-2022"&gt;Pre 2022&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Using &lt;a href="https://github.com/shawnohare/hugo-tufte"&gt;hugo-tufte&lt;/a&gt; theme with custom modifications&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>(Switched!) Switching to a new theme ... I guess</title><link>https://ecwuuuuu.com/post/new-theme-for-blog/</link><pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate><guid>https://ecwuuuuu.com/post/new-theme-for-blog/</guid><description>&lt;p&gt;This blogsite has been using &lt;a href="https://github.com/shawnohare/hugo-tufte"&gt;hugo-tufte&lt;/a&gt; theme (with some customization) for a while. I choose the theme because I appreciate the aesthetic look of the original Tufte $\LaTeX$ template. Using a dedicated area on the right side of the page for sidenotes, supplements images, or thoughts. Diversify the layout of an article, and make the article fun to read.&lt;/p&gt;
+&lt;p&gt;A couple of months ago, under my willingness of making enhancements to the theme. And I start to do some research on how other people are doing sidenote on their blog (Like the &lt;a href="https://www.gwern.net/Sidenotes"&gt;great article&lt;/a&gt; by Gwern Branwen). With some &amp;ldquo;deep thinking&amp;rdquo;. I start to realize. Maybe it is not a good idea to use footnotes on the Internet pages.&lt;/p&gt;</description></item><item><title>I am initiating a new domain!</title><link>https://ecwuuuuu.com/post/new-domain/</link><pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/new-domain/</guid><description>&lt;p&gt;Starting from Aug 11, 2021. I am starting a new domain name for my website.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://ecwu.xyz"&gt;ecwu.xyz&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Personally, the old domain name (ecwuuuuu.com) is good but is it a little bit longer in length and maybe difficult for people to memorize and use. So, I register this domain name to create some convenience for others (but mostly for myself :)).&lt;/p&gt;
+&lt;p&gt;Currently, I am don&amp;rsquo;t have a concrete plan for how to utilize these two domains. But I will probably migrate all my info page and service to the new domain. The domain email and blog will still keep in the old one. I will keep thinking about this, and sync the progress on this page in the future.&lt;/p&gt;</description></item><item><title>Drag</title><link>https://ecwuuuuu.com/photography/drag/</link><pubDate>Tue, 20 Jul 2021 13:57:20 +0800</pubDate><guid>https://ecwuuuuu.com/photography/drag/</guid><description>&lt;p&gt;Hang out with friends in Shenzhen. In the evening, we saw a nice sunset in &lt;a href="http://en.sasac.gov.cn/2020/10/09/c_5587.htm"&gt;OH BAY&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On the way back home, I saw more breathtaking scenery. And I captured it with my camera.&lt;/p&gt;
+&lt;p&gt;The images are shot using a slow shutter speed, and the shape of the objects is dragged by the movement of the cabin. I arrange the image in a linear (both in time and space) manner. Along with intertwined artificial lights, urban buildings, and twilight sky in the frame. I try to create an emotional transition from active to calm with these four images.&lt;/p&gt;</description></item><item><title>Sigmoid or Softmax for Binary Classification</title><link>https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/</link><pubDate>Mon, 07 Jun 2021 13:06:14 +0800</pubDate><guid>https://ecwuuuuu.com/post/sigmoid-softmax-binary-class/</guid><description>&lt;p&gt;Recently, been asked a question on using neural networks for binary classification.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The output layer of the network can be &amp;hellip; &lt;strong&gt;One output neuron with sigmoid activation function&lt;/strong&gt; or &lt;strong&gt;Two neurons and then apply a softmax activation function&lt;/strong&gt;. But what is the difference between these two?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Let start with the equations of the two functions.&lt;/p&gt;
+&lt;p&gt;Sigmoid Activation Function
 $$
 S(x) = \frac{1}{ 1+e^{-x}}
-$$&lt;/p>
-&lt;p>We input the value of the last layer $x$, and we can get a value in the range 0 to 1 as shown in the figure. If the value is greater than 0.5, we consider the model output as one class, or the other class if the value is less than 0.5.
-&lt;figure class="w-full">
- &lt;img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" class="rounded-lg">
+$$&lt;/p&gt;
+&lt;p&gt;We input the value of the last layer $x$, and we can get a value in the range 0 to 1 as shown in the figure. If the value is greater than 0.5, we consider the model output as one class, or the other class if the value is less than 0.5.
+&lt;figure class="w-full"&gt;
+ &lt;img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" class="rounded-lg"&gt;
 
- &lt;figcaption>
- &lt;strong>The logistic sigmoid function &lt;/strong>
+ &lt;figcaption&gt;
+ &lt;strong&gt;The logistic sigmoid function &lt;/strong&gt;
  
- &lt;a href="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg">
+ &lt;a href="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg"&gt;
  Wikimedia Commons
- &lt;/a>
- &lt;/figcaption>
-&lt;/figure>
-&lt;/p></description></item><item><title>My Past NLP Projects</title><link>https://ecwuuuuu.com/post/nlp/</link><pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate><guid>https://ecwuuuuu.com/post/nlp/</guid><description>&lt;p>I started to learn NLP-related stuff in mid-2018. And gradually start to some serious research. My focus mainly on Natural Language Generation (NLG).&lt;/p>
-&lt;h2 id="beginning-semeval2019">Beginning: SemEval2019&lt;/h2>
-&lt;p>By the end of 2018, members of the AI learning group &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md">Lead by &lt;a href="https://dst.uic.edu.cn/en/faculty/faculty.htm#/wfsu/en">Prof. Weifeng Su&lt;/a>&lt;/span> decide to take part in the SemEval 2019. To study and learning more about NLP.&lt;/p>
-&lt;p>Our group chose task 6: Identifying and Categorizing Offensive Language in Social Media (OffensEval). Which the input text is users&amp;rsquo; tweets and we need to classify it.&lt;/p></description></item><item><title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title><link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link><pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid><description>&lt;blockquote>
-&lt;p>Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="some-background">Some Background&lt;/h2>
-&lt;p>I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md">
-China Mobile Limited; Chinese: 中国移动通信集团有限公司&lt;/span>, so no dedicated IPv4 address.&lt;/p></description></item><item><title>Outside Windowsill</title><link>https://ecwuuuuu.com/photography/outside-windowsill/</link><pubDate>Fri, 25 Dec 2020 21:30:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/outside-windowsill/</guid><description>&lt;p>The window of my room is facing west. Clear view, not blockage. A perfect place for seeing the gorgeous sunset.&lt;/p>
-&lt;p>I can’t really remember when and why I start taking photos from the window. Maybe because of the breathtaking scenery, or just some casual shots. But the first one I can find on my Instagram is taken in March 2014.&lt;/p>
-&lt;p>Haven’t thought about making it into a series or project since the beginning. But I have shot a lot of these since 2014 and I think it will be interesting to make it into a series. And this is the result, hope you enjoy it.&lt;/p></description></item><item><title>Beijing Daxing International Airport</title><link>https://ecwuuuuu.com/photography/pkx-airport/</link><pubDate>Thu, 16 Jul 2020 15:20:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/pkx-airport/</guid><description/></item><item><title>UIC night</title><link>https://ecwuuuuu.com/photography/uic-night/</link><pubDate>Mon, 13 Jul 2020 21:43:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/uic-night/</guid><description/></item><item><title>Larger format, heavier body</title><link>https://ecwuuuuu.com/post/120-film-and-rb67/</link><pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate><guid>https://ecwuuuuu.com/post/120-film-and-rb67/</guid><description>&lt;p>In my last photography-related post: &lt;a href="https://ecwuuuuu.com/post/try-the-film-for-the-first-time/">Try the Film For the First Time&lt;/a>. I have lots of fun with negatives. This makes me want to have my own camera to experience this medium that has existed for nearly 200 years. &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md">The film we are still using today was invented by Kodak in 1888, but photosensitive material that uses in photography can date back to 1835.&lt;/span>
-&lt;figure class="w-full">
- &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/View_from_the_Window_at_Le_Gras_colorized_2020_new.png/1600px-View_from_the_Window_at_Le_Gras_colorized_2020_new.png" class="rounded-lg">
+ &lt;/a&gt;
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>My Past NLP Projects</title><link>https://ecwuuuuu.com/post/nlp/</link><pubDate>Fri, 07 May 2021 00:13:30 +0800</pubDate><guid>https://ecwuuuuu.com/post/nlp/</guid><description>&lt;p&gt;I started to learn NLP-related stuff in mid-2018. And gradually start to some serious research. My focus mainly on Natural Language Generation (NLG).&lt;/p&gt;
+&lt;h2 id="beginning-semeval2019"&gt;Beginning: SemEval2019&lt;/h2&gt;
+&lt;p&gt;By the end of 2018, members of the AI learning group &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md"&gt;Lead by &lt;a href="https://dst.uic.edu.cn/en/faculty/faculty.htm#/wfsu/en"&gt;Prof. Weifeng Su&lt;/a&gt;&lt;/span&gt; decide to take part in the SemEval 2019. To study and learning more about NLP.&lt;/p&gt;
+&lt;p&gt;Our group chose task 6: Identifying and Categorizing Offensive Language in Social Media (OffensEval). Which the input text is users&amp;rsquo; tweets and we need to classify it.&lt;/p&gt;</description></item><item><title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title><link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link><pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="some-background"&gt;Some Background&lt;/h2&gt;
+&lt;p&gt;I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md"&gt;
+China Mobile Limited; Chinese: 中国移动通信集团有限公司&lt;/span&gt;, so no dedicated IPv4 address.&lt;/p&gt;</description></item><item><title>Outside Windowsill</title><link>https://ecwuuuuu.com/photography/outside-windowsill/</link><pubDate>Fri, 25 Dec 2020 21:30:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/outside-windowsill/</guid><description>&lt;p&gt;The window of my room is facing west. Clear view, not blockage. A perfect place for seeing the gorgeous sunset.&lt;/p&gt;
+&lt;p&gt;I can’t really remember when and why I start taking photos from the window. Maybe because of the breathtaking scenery, or just some casual shots. But the first one I can find on my Instagram is taken in March 2014.&lt;/p&gt;
+&lt;p&gt;Haven’t thought about making it into a series or project since the beginning. But I have shot a lot of these since 2014 and I think it will be interesting to make it into a series. And this is the result, hope you enjoy it.&lt;/p&gt;</description></item><item><title>Beijing Daxing International Airport</title><link>https://ecwuuuuu.com/photography/pkx-airport/</link><pubDate>Thu, 16 Jul 2020 15:20:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/pkx-airport/</guid><description/></item><item><title>UIC night</title><link>https://ecwuuuuu.com/photography/uic-night/</link><pubDate>Mon, 13 Jul 2020 21:43:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/uic-night/</guid><description/></item><item><title>Larger format, heavier body</title><link>https://ecwuuuuu.com/post/120-film-and-rb67/</link><pubDate>Tue, 09 Jun 2020 17:44:45 +0800</pubDate><guid>https://ecwuuuuu.com/post/120-film-and-rb67/</guid><description>&lt;p&gt;In my last photography-related post: &lt;a href="https://ecwuuuuu.com/post/try-the-film-for-the-first-time/"&gt;Try the Film For the First Time&lt;/a&gt;. I have lots of fun with negatives. This makes me want to have my own camera to experience this medium that has existed for nearly 200 years. &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md"&gt;The film we are still using today was invented by Kodak in 1888, but photosensitive material that uses in photography can date back to 1835.&lt;/span&gt;
+&lt;figure class="w-full"&gt;
+ &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/View_from_the_Window_at_Le_Gras_colorized_2020_new.png/1600px-View_from_the_Window_at_Le_Gras_colorized_2020_new.png" class="rounded-lg"&gt;
 
- &lt;figcaption>
- &lt;strong>View from the Window at Le Gras &lt;/strong>
+ &lt;figcaption&gt;
+ &lt;strong&gt;View from the Window at Le Gras &lt;/strong&gt;
  
- &lt;a href="https://commons.wikimedia.org/wiki/File:View_from_the_Window_at_Le_Gras_colorized_2020_new.png">
+ &lt;a href="https://commons.wikimedia.org/wiki/File:View_from_the_Window_at_Le_Gras_colorized_2020_new.png"&gt;
  Jonnychiwa [CC BY-SA 4.0]
- &lt;/a>
- &lt;/figcaption>
-&lt;/figure>
-&lt;/p></description></item><item><title>About Me</title><link>https://ecwuuuuu.com/page/about/</link><pubDate>Tue, 18 Feb 2020 23:57:58 +0800</pubDate><guid>https://ecwuuuuu.com/page/about/</guid><description>&lt;h2 id="zhenghao-wu-伍正豪-ecwu">Zhenghao Wu, 伍正豪, ECWU&lt;/h2>
-&lt;p>Education:&lt;/p>
-&lt;ul>
-&lt;li>PhD. Student, Computer Science &lt;a href="https://ucd.ie">University College Dublin&lt;/a> (Expected 2024-2028)&lt;/li>
-&lt;li>MSc. Big Data Technology, &lt;a href="https://hkust.edu.hk/">Hong Kong University of Science and Technology&lt;/a> (2020-2021)&lt;/li>
-&lt;li>BSc. Computer Science and Technology (Honours), &lt;a href="https://uic.edu.cn/">BNU-HKBU UIC&lt;/a>, Graduated with First-Class Honours (2016-2020)&lt;/li>
-&lt;/ul>
-&lt;p>Experience:&lt;/p>
-&lt;ul>
-&lt;li>Assistant Instructor in &lt;a href="https://fst.uic.edu.cn/ds_en/">Department of Statistics and Data Science&lt;/a> at BNU-HKBU UIC&lt;/li>
-&lt;li>Application Research Engineer Intern at Tencent&lt;/li>
-&lt;li>Co-founder and member of &lt;a href="https://uichcc.com">UICHCC Computer Club&lt;/a>&lt;/li>
-&lt;li>Member of UICAISIG&lt;/li>
-&lt;/ul>
-&lt;p>Hobbies: Tech, Photography (Analog and Digital), Music&lt;/p></description></item><item><title>Try the Film For the First Time</title><link>https://ecwuuuuu.com/post/try-the-film-for-the-first-time/</link><pubDate>Sat, 14 Sep 2019 00:07:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/try-the-film-for-the-first-time/</guid><description>&lt;p>The story starts from a disposable camera sent to me by &lt;a href="https://github.com/russelloop">Root&lt;/a> in 2017.&lt;/p></description></item><item><title>List of stuff I enjoy</title><link>https://ecwuuuuu.com/page/keep/list-of-stuff-i-enjoy/</link><pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/list-of-stuff-i-enjoy/</guid><description/></item><item><title>Barrelfish OS 和多内核操作系统</title><link>https://ecwuuuuu.com/post/barrelfish-operating-system/</link><pubDate>Wed, 09 Jan 2019 12:56:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/barrelfish-operating-system/</guid><description>&lt;p>大三的上学期有一门专业课叫操作系统（Operating System），它的课程小组项目是对某个操作系统进行研究。我们组抽到了 Barrelfish Operating System。&lt;/p></description></item><item><title>Television Studio Production @ HKBU</title><link>https://ecwuuuuu.com/photography/television-studio-production-at-hkbu/</link><pubDate>Mon, 20 Aug 2018 02:56:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/television-studio-production-at-hkbu/</guid><description>&lt;p>Television Studio Production 电视影棚制作&lt;/p></description></item><item><title>Hong Kong Flashback</title><link>https://ecwuuuuu.com/photography/photographs-took-in-hong-konng/</link><pubDate>Mon, 30 Jul 2018 13:56:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/photographs-took-in-hong-konng/</guid><description>&lt;p>一些我 2018 年暑假在香港期间拍摄的一些照片&lt;/p></description></item><item><title>[Slides Share] CDS Newcomer Gathering Sharing</title><link>https://ecwuuuuu.com/post/cds-newcomer-gathering-sharing/</link><pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/cds-newcomer-gathering-sharing/</guid><description>&lt;div class="aspect-w-16 aspect-h-10">
- &lt;object data="https://cdn.ecwuuuuu.com/pdf/share2018.pdf" type="application/pdf" class="rounded-lg w-full h-full"> 
- &lt;p>It appears you don't have a PDF plugin for this browser.
- No biggie... you can &lt;a href="https://cdn.ecwuuuuu.com/pdf/share2018.pdf">click here to
- download the PDF file.&lt;/a>&lt;/p> 
- &lt;/object>
-&lt;/div>
+ &lt;/a&gt;
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>About Me</title><link>https://ecwuuuuu.com/page/about/</link><pubDate>Tue, 18 Feb 2020 23:57:58 +0800</pubDate><guid>https://ecwuuuuu.com/page/about/</guid><description>&lt;h2 id="zhenghao-wu-伍正豪-ecwu"&gt;Zhenghao Wu, 伍正豪, ECWU&lt;/h2&gt;
+&lt;p&gt;Education:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PhD. Student, Computer Science &lt;a href="https://ucd.ie"&gt;University College Dublin&lt;/a&gt; (Expected 2024-2028)&lt;/li&gt;
+&lt;li&gt;MSc. Big Data Technology, &lt;a href="https://hkust.edu.hk/"&gt;Hong Kong University of Science and Technology&lt;/a&gt; (2020-2021)&lt;/li&gt;
+&lt;li&gt;BSc. Computer Science and Technology (Honours), &lt;a href="https://uic.edu.cn/"&gt;BNU-HKBU UIC&lt;/a&gt;, Graduated with First-Class Honours (2016-2020)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Experience:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assistant Instructor in &lt;a href="https://fst.uic.edu.cn/ds_en/"&gt;Department of Statistics and Data Science&lt;/a&gt; at BNU-HKBU UIC&lt;/li&gt;
+&lt;li&gt;Application Research Engineer Intern at Tencent&lt;/li&gt;
+&lt;li&gt;Co-founder and member of &lt;a href="https://uichcc.com"&gt;UICHCC Computer Club&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Member of UICAISIG&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hobbies: Tech, Photography (Analog and Digital), Music&lt;/p&gt;</description></item><item><title>Try the Film For the First Time</title><link>https://ecwuuuuu.com/post/try-the-film-for-the-first-time/</link><pubDate>Sat, 14 Sep 2019 00:07:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/try-the-film-for-the-first-time/</guid><description>&lt;p&gt;The story starts from a disposable camera sent to me by &lt;a href="https://github.com/russelloop"&gt;Root&lt;/a&gt; in 2017.&lt;/p&gt;</description></item><item><title>List of stuff I enjoy</title><link>https://ecwuuuuu.com/page/keep/list-of-stuff-i-enjoy/</link><pubDate>Mon, 15 Apr 2019 16:23:05 +0800</pubDate><guid>https://ecwuuuuu.com/page/keep/list-of-stuff-i-enjoy/</guid><description/></item><item><title>Barrelfish OS 和多内核操作系统</title><link>https://ecwuuuuu.com/post/barrelfish-operating-system/</link><pubDate>Wed, 09 Jan 2019 12:56:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/barrelfish-operating-system/</guid><description>&lt;p&gt;大三的上学期有一门专业课叫操作系统（Operating System），它的课程小组项目是对某个操作系统进行研究。我们组抽到了 Barrelfish Operating System。&lt;/p&gt;</description></item><item><title>Television Studio Production @ HKBU</title><link>https://ecwuuuuu.com/photography/television-studio-production-at-hkbu/</link><pubDate>Mon, 20 Aug 2018 02:56:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/television-studio-production-at-hkbu/</guid><description>&lt;p&gt;Television Studio Production 电视影棚制作&lt;/p&gt;</description></item><item><title>Hong Kong Flashback</title><link>https://ecwuuuuu.com/photography/photographs-took-in-hong-konng/</link><pubDate>Mon, 30 Jul 2018 13:56:01 +0800</pubDate><guid>https://ecwuuuuu.com/photography/photographs-took-in-hong-konng/</guid><description>&lt;p&gt;一些我 2018 年暑假在香港期间拍摄的一些照片&lt;/p&gt;</description></item><item><title>[Slides Share] CDS Newcomer Gathering Sharing</title><link>https://ecwuuuuu.com/post/cds-newcomer-gathering-sharing/</link><pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/cds-newcomer-gathering-sharing/</guid><description>&lt;div class="aspect-w-16 aspect-h-10"&gt;
+ &lt;object data="https://cdn.ecwuuuuu.com/pdf/share2018.pdf" type="application/pdf" class="rounded-lg w-full h-full"&gt; 
+ &lt;p&gt;It appears you don't have a PDF plugin for this browser.
+ No biggie... you can &lt;a href="https://cdn.ecwuuuuu.com/pdf/share2018.pdf"&gt;click here to
+ download the PDF file.&lt;/a&gt;&lt;/p&gt; 
+ &lt;/object&gt;
+&lt;/div&gt;
 
-&lt;blockquote>
-&lt;p>Not sure about the exact date I originally post the slides. I just set the date to 2018.01.01 so it won&amp;rsquo;t mess up the timeline.&lt;/p>
-&lt;/blockquote></description></item><item><title>[Slides Share] My Video Editing Workflow</title><link>https://ecwuuuuu.com/post/video-editing-workflow/</link><pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/video-editing-workflow/</guid><description>&lt;div class="aspect-w-16 aspect-h-10">
- &lt;object data="https://cdn.ecwuuuuu.com/pdf/My-Video-Editing-Workflow.pdf" type="application/pdf" class="rounded-lg w-full h-full"> 
- &lt;p>It appears you don't have a PDF plugin for this browser.
- No biggie... you can &lt;a href="https://cdn.ecwuuuuu.com/pdf/My-Video-Editing-Workflow.pdf">click here to
- download the PDF file.&lt;/a>&lt;/p> 
- &lt;/object>
-&lt;/div>
+&lt;blockquote&gt;
+&lt;p&gt;Not sure about the exact date I originally post the slides. I just set the date to 2018.01.01 so it won&amp;rsquo;t mess up the timeline.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>[Slides Share] My Video Editing Workflow</title><link>https://ecwuuuuu.com/post/video-editing-workflow/</link><pubDate>Mon, 01 Jan 2018 00:00:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/video-editing-workflow/</guid><description>&lt;div class="aspect-w-16 aspect-h-10"&gt;
+ &lt;object data="https://cdn.ecwuuuuu.com/pdf/My-Video-Editing-Workflow.pdf" type="application/pdf" class="rounded-lg w-full h-full"&gt; 
+ &lt;p&gt;It appears you don't have a PDF plugin for this browser.
+ No biggie... you can &lt;a href="https://cdn.ecwuuuuu.com/pdf/My-Video-Editing-Workflow.pdf"&gt;click here to
+ download the PDF file.&lt;/a&gt;&lt;/p&gt; 
+ &lt;/object&gt;
+&lt;/div&gt;
 
-&lt;blockquote>
-&lt;p>Not sure about the exact date I originally post the slides. I just set the date to 2018.01.01 so it won&amp;rsquo;t mess up the timeline.&lt;/p>
-&lt;/blockquote></description></item><item><title>Friends</title><link>https://ecwuuuuu.com/page/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ecwuuuuu.com/page/friends/</guid><description>&lt;!-- - [Terence Lau](https://www.cklau.cc/): Allow me to introduce Terence Lau, an accomplished academic who is currently pursuing his Ph.D. in Political Science at the prestigious Trinity College Dublin. Terence is not your typical Political Science enthusiast. His expertise extends beyond social sciences into more technical fields, making him quite a unique addition to the academic landscape. Terence has a deep understanding and expertise in statistics. This proficiency has served him well in his research work, allowing him to analyze and interpret complex data with precision and accuracy. His ability to manipulate numbers and draw meaningful insights from raw data is truly commendable. In addition to statistics, Terence possesses significant knowledge in the field of medical imaging. He understands the nuances of this specialized area and can skillfully interpret the information these images provide. This ability adds an interesting dimension to his research capabilities. Terence's intellectual curiosity does not stop there. He has delved into the intricate world of cryptography. His understanding of the complex algorithms and principles behind secure communication is second to none. He possesses an ability to decode and encode messages, ensuring secure transmission of information in his work and studies. Moreover, Terence has a keen interest in language processing, a field that combines computer science and linguistics. He uses computational techniques to analyze and understand human language, aiding his research in political science. Despite not having a formal degree in computer science, Terence has developed a strong understanding of the subject. His knowledge extends to various aspects of the discipline, making him a quasi-computer-science-expert. He leverages this knowledge to bolster his research capabilities, adding a technical edge to his work. -->
-&lt;blockquote>
-&lt;p>The order of the list has no special meaning.&lt;/p></description></item></channel></rss>
+&lt;blockquote&gt;
+&lt;p&gt;Not sure about the exact date I originally post the slides. I just set the date to 2018.01.01 so it won&amp;rsquo;t mess up the timeline.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Friends</title><link>https://ecwuuuuu.com/page/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ecwuuuuu.com/page/friends/</guid><description>&lt;!-- - [Terence Lau](https://www.cklau.cc/): Allow me to introduce Terence Lau, an accomplished academic who is currently pursuing his Ph.D. in Political Science at the prestigious Trinity College Dublin. Terence is not your typical Political Science enthusiast. His expertise extends beyond social sciences into more technical fields, making him quite a unique addition to the academic landscape. Terence has a deep understanding and expertise in statistics. This proficiency has served him well in his research work, allowing him to analyze and interpret complex data with precision and accuracy. His ability to manipulate numbers and draw meaningful insights from raw data is truly commendable. In addition to statistics, Terence possesses significant knowledge in the field of medical imaging. He understands the nuances of this specialized area and can skillfully interpret the information these images provide. This ability adds an interesting dimension to his research capabilities. Terence's intellectual curiosity does not stop there. He has delved into the intricate world of cryptography. His understanding of the complex algorithms and principles behind secure communication is second to none. He possesses an ability to decode and encode messages, ensuring secure transmission of information in his work and studies. Moreover, Terence has a keen interest in language processing, a field that combines computer science and linguistics. He uses computational techniques to analyze and understand human language, aiding his research in political science. Despite not having a formal degree in computer science, Terence has developed a strong understanding of the subject. His knowledge extends to various aspects of the discipline, making him a quasi-computer-science-expert. He leverages this knowledge to bolster his research capabilities, adding a technical edge to his work. --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The order of the list has no special meaning.&lt;/p&gt;</description></item></channel></rss>

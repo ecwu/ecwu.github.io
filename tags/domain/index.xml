@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Domain on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/domain/</link><description>Recent content in Domain on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/domain/index.xml" rel="self" type="application/rss+xml"/><item><title>I am initiating a new domain!</title><link>https://ecwuuuuu.com/post/new-domain/</link><pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/new-domain/</guid><description>&lt;p>Starting from Aug 11, 2021. I am starting a new domain name for my website.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://ecwu.xyz">ecwu.xyz&lt;/a>&lt;/p>
-&lt;/blockquote>
-&lt;p>Personally, the old domain name (ecwuuuuu.com) is good but is it a little bit longer in length and maybe difficult for people to memorize and use. So, I register this domain name to create some convenience for others (but mostly for myself :)).&lt;/p>
-&lt;p>Currently, I am don&amp;rsquo;t have a concrete plan for how to utilize these two domains. But I will probably migrate all my info page and service to the new domain. The domain email and blog will still keep in the old one. I will keep thinking about this, and sync the progress on this page in the future.&lt;/p></description></item><item><title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title><link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link><pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid><description>&lt;blockquote>
-&lt;p>Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="some-background">Some Background&lt;/h2>
-&lt;p>I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md">
-China Mobile Limited; Chinese: 中国移动通信集团有限公司&lt;/span>, so no dedicated IPv4 address.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Domain on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/domain/</link><description>Recent content in Domain on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/domain/index.xml" rel="self" type="application/rss+xml"/><item><title>I am initiating a new domain!</title><link>https://ecwuuuuu.com/post/new-domain/</link><pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/new-domain/</guid><description>&lt;p&gt;Starting from Aug 11, 2021. I am starting a new domain name for my website.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://ecwu.xyz"&gt;ecwu.xyz&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Personally, the old domain name (ecwuuuuu.com) is good but is it a little bit longer in length and maybe difficult for people to memorize and use. So, I register this domain name to create some convenience for others (but mostly for myself :)).&lt;/p&gt;
+&lt;p&gt;Currently, I am don&amp;rsquo;t have a concrete plan for how to utilize these two domains. But I will probably migrate all my info page and service to the new domain. The domain email and blog will still keep in the old one. I will keep thinking about this, and sync the progress on this page in the future.&lt;/p&gt;</description></item><item><title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title><link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link><pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="some-background"&gt;Some Background&lt;/h2&gt;
+&lt;p&gt;I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md"&gt;
+China Mobile Limited; Chinese: 中国移动通信集团有限公司&lt;/span&gt;, so no dedicated IPv4 address.&lt;/p&gt;</description></item></channel></rss>
