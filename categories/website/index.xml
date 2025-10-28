@@ -128,5 +128,7 @@
 &lt;p&gt;Spoiler alert: This is not the way I currently using to exposed my NAS to the WWW.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="some-background"&gt;Some Background&lt;/h2&gt;
-&lt;p&gt;I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;span class="px-2 py-1 text-gray-700 bg-gray-300 bg-stripes bg-stripes-white dark:text-gray-400 dark:bg-slate-700 dark:bg-stripes-slate-900 rounded-md"&gt;
+&lt;p&gt;I own a Synology DS918+ NAS, which was purchased in 2020. Both ports on the NAS are connected to my ASUS AC68U router for redundancy. The ISP in my house is CMCC &lt;label for="sidenote-0" class="sidenote-number"&gt;&lt;/label&gt;
+&lt;input type="checkbox" id="sidenote-0" class="sidenote-checkbox"/&gt;
+&lt;span class="sidenote"&gt;
 China Mobile Limited; Chinese: 中国移动通信集团有限公司&lt;/span&gt;, so no dedicated IPv4 address.&lt;/p&gt;</description></item></channel></rss>

@@ -23,6 +23,8 @@
 &lt;ul&gt;
 &lt;li&gt;Update the Tailwind CSS to v4 (v4.1.+)&lt;/li&gt;
 &lt;li&gt;Adding Mermaid diagram support&lt;/li&gt;
+&lt;li&gt;Restore Sidenote and Marginnote support with new implementation&lt;/li&gt;
+&lt;li&gt;Update KaTeX to v0.16.21&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="april-2025"&gt;April 2025&lt;/h4&gt;
 &lt;ul&gt;
@@ -71,7 +73,7 @@
 &lt;li&gt;New &lt;code&gt;Terms&lt;/code&gt;, &lt;code&gt;Series&lt;/code&gt; View and Pages.&lt;/li&gt;
 &lt;li&gt;New Article Info Card&lt;/li&gt;
 &lt;li&gt;New Gallery Implementation with JS.&lt;/li&gt;
-&lt;li&gt;Remove Sidenote&lt;/li&gt;
+&lt;li&gt;Remove Sidenote (bring backed in Oct 2025)&lt;/li&gt;
 &lt;li&gt;Adding shortcode for video (via CDN)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="pre-2022"&gt;Pre 2022&lt;/h3&gt;
