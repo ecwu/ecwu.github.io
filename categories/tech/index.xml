@@ -103,7 +103,7 @@
  fetchpriority="low"
  alt="PyTorch"
  src="https://pytorch.org/assets/images/logo-white.svg"
- &gt;&lt;figcaption&gt;no-dark-invert&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+ &gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li&gt;
 &lt;li&gt;Its popularity and widespread adoption by the research and industry communities.&lt;/li&gt;
