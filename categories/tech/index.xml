@@ -96,17 +96,14 @@
 &lt;p&gt;My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="introduction-to-pytorch"&gt;Introduction to PyTorch&lt;/h2&gt;
-&lt;p&gt;
-
-
- 
-
-
-&lt;img src="https://pytorch.org/assets/images/logo-white.svg" 
- alt="PyTorch" 
- class="no-dark-invert"
- &gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="PyTorch"
+ src="https://pytorch.org/assets/images/logo-white.svg"
+ &gt;&lt;figcaption&gt;no-dark-invert&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li&gt;
 &lt;li&gt;Its popularity and widespread adoption by the research and industry communities.&lt;/li&gt;
@@ -127,15 +124,14 @@
 &lt;p&gt;For a recent update on my home network, the Asus router has been replaced with two Linksys WI-FI 6 tri-band mesh routers (two &lt;a href="https://www.linksys.com/hk/whole-home-mesh-wifi/linksys-mx5-velop-ax-whole-home-wifi-6-system/p/p-mx5300/"&gt;MX5300&lt;/a&gt; or it&amp;rsquo;s SKU MX10600-CN)。&lt;/p&gt;
 &lt;p&gt;I thought it will be easy to set up since I already have some experience and documentation, but the firewall is not working as intended.&lt;/p&gt;
 &lt;h2 id="my-attempts"&gt;My Attempts&lt;/h2&gt;
-&lt;p&gt;
-
-
-
-&lt;img src="https://www.linksys.com/support/images/KB25634-011_EN_v1.png" 
- 
- 
- &gt;
-&lt;/p&gt;</description></item><item><title>Algorithm Completion Project</title><link>https://ecwuuuuu.com/post/algorithm-completion-project/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/algorithm-completion-project/</guid><description>&lt;p&gt;Checkout &lt;a href="https://ecwuuuuu.com/series/algorithm"&gt;Algorithm Series&lt;/a&gt;, questions are arranged by categories (-)&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt=""
+ src="https://www.linksys.com/support/images/KB25634-011_EN_v1.png"
+ &gt;&lt;/figure&gt;&lt;/p&gt;</description></item><item><title>Algorithm Completion Project</title><link>https://ecwuuuuu.com/post/algorithm-completion-project/</link><pubDate>Wed, 09 Feb 2022 15:30:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/algorithm-completion-project/</guid><description>&lt;p&gt;Checkout &lt;a href="https://ecwuuuuu.com/series/algorithm"&gt;Algorithm Series&lt;/a&gt;, questions are arranged by categories (-)&lt;/p&gt;
 &lt;h2 id="problem-list"&gt;Problem List&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Retrived from &lt;a href="https://leetcode-cn.com/problemset/all/?listId=2cktkvj&amp;amp;page=1"&gt;Leetcode Top 100 Liked&lt;/a&gt; (2022.01.25)&lt;/p&gt;

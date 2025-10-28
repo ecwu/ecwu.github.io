@@ -106,15 +106,14 @@
 &lt;p&gt;For a recent update on my home network, the Asus router has been replaced with two Linksys WI-FI 6 tri-band mesh routers (two &lt;a href="https://www.linksys.com/hk/whole-home-mesh-wifi/linksys-mx5-velop-ax-whole-home-wifi-6-system/p/p-mx5300/"&gt;MX5300&lt;/a&gt; or it&amp;rsquo;s SKU MX10600-CN)。&lt;/p&gt;
 &lt;p&gt;I thought it will be easy to set up since I already have some experience and documentation, but the firewall is not working as intended.&lt;/p&gt;
 &lt;h2 id="my-attempts"&gt;My Attempts&lt;/h2&gt;
-&lt;p&gt;
-
-
-
-&lt;img src="https://www.linksys.com/support/images/KB25634-011_EN_v1.png" 
- 
- 
- &gt;
-&lt;/p&gt;</description></item><item><title>Cleaning Up Git Repo For My Blog</title><link>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</link><pubDate>Mon, 10 Jan 2022 15:54:37 +0800</pubDate><guid>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</guid><description>&lt;h2 id="what-i-have-done"&gt;What I have done&lt;/h2&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt=""
+ src="https://www.linksys.com/support/images/KB25634-011_EN_v1.png"
+ &gt;&lt;/figure&gt;&lt;/p&gt;</description></item><item><title>Cleaning Up Git Repo For My Blog</title><link>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</link><pubDate>Mon, 10 Jan 2022 15:54:37 +0800</pubDate><guid>https://ecwuuuuu.com/post/cleaning-up-git-repo-for-my-blog/</guid><description>&lt;h2 id="what-i-have-done"&gt;What I have done&lt;/h2&gt;
 &lt;p&gt;When creating the theme announced in the post &lt;a href="https://ecwuuuuu.com/post/new-theme-for-blog/"&gt;Switching to a new theme &amp;hellip; I guess&lt;/a&gt;. I set up a new branch in the original &lt;a href="https://github.com/ecwu/ecwu.github.io.source"&gt;source repository&lt;/a&gt; and uses Cloudflare pages to build the previews for the site. This can make sure all the original Github actions for the main site working normally.&lt;/p&gt;
 &lt;p&gt;Since the new branch &lt;code&gt;new-theme&lt;/code&gt; was created using attribute &lt;code&gt;--orphan&lt;/code&gt;, it will be impossible to do pull requests to the original default branch &lt;code&gt;master&lt;/code&gt;. So I did a workaround.&lt;/p&gt;</description></item><item><title>(Switched!) Switching to a new theme ... I guess</title><link>https://ecwuuuuu.com/post/new-theme-for-blog/</link><pubDate>Wed, 22 Dec 2021 16:35:45 +0000</pubDate><guid>https://ecwuuuuu.com/post/new-theme-for-blog/</guid><description>&lt;p&gt;This blogsite has been using &lt;a href="https://github.com/shawnohare/hugo-tufte"&gt;hugo-tufte&lt;/a&gt; theme (with some customization) for a while. I choose the theme because I appreciate the aesthetic look of the original Tufte $\LaTeX$ template. Using a dedicated area on the right side of the page for sidenotes, supplements images, or thoughts. Diversify the layout of an article, and make the article fun to read.&lt;/p&gt;
 &lt;p&gt;A couple of months ago, under my willingness of making enhancements to the theme. And I start to do some research on how other people are doing sidenote on their blog (Like the &lt;a href="https://www.gwern.net/Sidenotes"&gt;great article&lt;/a&gt; by Gwern Branwen). With some &amp;ldquo;deep thinking&amp;rdquo;. I start to realize. Maybe it is not a good idea to use footnotes on the Internet pages.&lt;/p&gt;</description></item><item><title>I am initiating a new domain!</title><link>https://ecwuuuuu.com/post/new-domain/</link><pubDate>Wed, 01 Sep 2021 14:40:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/new-domain/</guid><description>&lt;p&gt;Starting from Aug 11, 2021. I am starting a new domain name for my website.&lt;/p&gt;

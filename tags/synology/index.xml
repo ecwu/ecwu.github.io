@@ -3,15 +3,14 @@
 &lt;p&gt;For a recent update on my home network, the Asus router has been replaced with two Linksys WI-FI 6 tri-band mesh routers (two &lt;a href="https://www.linksys.com/hk/whole-home-mesh-wifi/linksys-mx5-velop-ax-whole-home-wifi-6-system/p/p-mx5300/"&gt;MX5300&lt;/a&gt; or it&amp;rsquo;s SKU MX10600-CN)。&lt;/p&gt;
 &lt;p&gt;I thought it will be easy to set up since I already have some experience and documentation, but the firewall is not working as intended.&lt;/p&gt;
 &lt;h2 id="my-attempts"&gt;My Attempts&lt;/h2&gt;
-&lt;p&gt;
-
-
-
-&lt;img src="https://www.linksys.com/support/images/KB25634-011_EN_v1.png" 
- 
- 
- &gt;
-&lt;/p&gt;</description></item><item><title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title><link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link><pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt=""
+ src="https://www.linksys.com/support/images/KB25634-011_EN_v1.png"
+ &gt;&lt;/figure&gt;&lt;/p&gt;</description></item><item><title>Making Synology NAS accessible from the Internet using IPv6 and DDNS</title><link>https://ecwuuuuu.com/post/nas-ipv6-ddns/</link><pubDate>Sun, 04 Apr 2021 10:01:01 +0800</pubDate><guid>https://ecwuuuuu.com/post/nas-ipv6-ddns/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;Although I majored in computer science, my blog is filled with photography-related content. For balance, I take the opportunity of a recent explore and write down this note. :-)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
