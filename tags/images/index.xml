@@ -1,5 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Images on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/images/</link><description>Recent content in Images on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 24 Nov 2024 14:19:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/images/index.xml" rel="self" type="application/rss+xml"/><item><title>Authentik 教程系列：服务的迁移</title><link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link><pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid><description>&lt;h2 id="提醒"&gt;提醒&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Images on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/images/</link><description>Recent content in Images on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 24 Nov 2024 14:19:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/images/index.xml" rel="self" type="application/rss+xml"/><item><title>Authentik 教程系列：服务的迁移</title><link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link><pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md bg-gray-100 dark:bg-slate-800"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-start mt-0.5"
+ 
+ &gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-line-icon lucide-pen-line"&gt;&lt;path d="M13 21h8"/&gt;&lt;path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/&gt;&lt;/svg&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;
+ &lt;div style=""&gt;&lt;strong&gt;因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong&gt;&lt;/div&gt;
+ &lt;/span&gt;
+&lt;/div&gt;
 &lt;h2 id="引入和备份操作"&gt;引入和备份操作&lt;/h2&gt;
 &lt;p&gt;这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</title><link>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</link><pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</guid><description>&lt;h2 id="简介"&gt;简介&lt;/h2&gt;
 &lt;p&gt;如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作&lt;code&gt;转发验证&lt;/code&gt;)。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title><link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</link><pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</guid><description>&lt;p&gt;搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 &lt;a href="https://en.wikipedia.org/wiki/SAML_2.0"&gt;SAML 2.0&lt;/a&gt;， &lt;a href="https://openid.net/developers/how-connect-works/"&gt;OAuth 2.0/OpenID Connect (OIDC)&lt;/a&gt;， &lt;a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol"&gt;LDAP&lt;/a&gt;， &lt;a href="https://scim.cloud"&gt;SCIM&lt;/a&gt;，和 &lt;a href="https://en.wikipedia.org/wiki/RADIUS"&gt;RADIUS&lt;/a&gt;，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：反向代理的配置</title><link>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</link><pubDate>Mon, 08 Apr 2024 19:55:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</guid><description>&lt;p&gt;将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。&lt;/p&gt;
