@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Passwordless on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/passwordless/</link><description>Recent content in Passwordless on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/passwordless/index.xml" rel="self" type="application/rss+xml"/><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p&gt;我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Passwordless on ECWUUUUU</title><link>https://ecwuuuuu.com/tags/passwordless/</link><description>Recent content in Passwordless on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 21 Dec 2025 10:00:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/tags/passwordless/index.xml" rel="self" type="application/rss+xml"/><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p&gt;我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p&gt;
 &lt;table&gt;
  &lt;thead&gt;
  &lt;tr&gt;
@@ -76,10 +76,22 @@
  &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=p13W__HVDI8"&gt;p13W__HVDI8&lt;/a&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;12&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;服务的迁移&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/opus/1003423588679680017"&gt;Bilibili 图文&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;N/A&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
  &lt;td style="text-align: center"&gt;13&lt;/td&gt;
  &lt;td style="text-align: left"&gt;RAC 远程访问控制 配置&lt;/td&gt;
  &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Bh9bYXEqF"&gt;BV1Bh9bYXEqF&lt;/a&gt;&lt;/td&gt;
  &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=VSZIoAqJRLQ"&gt;VSZIoAqJRLQ&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;14&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;社交登录配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1uDBJBeEbp"&gt;BV1uDBJBeEbp&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=h3_87ZRoMJ0"&gt;h3_87ZRoMJ0&lt;/a&gt;&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;</description></item></channel></rss>
