@@ -1,4 +1,149 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on ECWUUUUU</title><link>https://ecwuuuuu.com/categories/tutorial/</link><description>Recent content in Tutorial on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://ecwuuuuu.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 input-overlay 工具在 OBS Studio 中展示鼠标和按键操作</title><link>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</link><pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate><guid>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</guid><description>&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on ECWUUUUU</title><link>https://ecwuuuuu.com/categories/tutorial/</link><description>Recent content in Tutorial on ECWUUUUU</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 02 Jan 2026 22:00:00 +0800</lastBuildDate><atom:link href="https://ecwuuuuu.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Authentik 教程系列：属性映射与简单的策略(Policy)</title><link>https://ecwuuuuu.com/post/authentik-tutorial-7-property-mappings-and-simple-policy/</link><pubDate>Mon, 22 Dec 2025 16:18:51 +0000</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-7-property-mappings-and-simple-policy/</guid><description>&lt;h2 id="属性映射property-mappings"&gt;属性映射（Property Mappings）&lt;/h2&gt;
+&lt;p&gt;属性映射是将用户的属性（如用户名、电子邮件等）从一种格式转换为另一种格式的过程。通过 Python 表达式来实现的，可以在 Authentik 的各种 Source 和 Provider 中使用。属性映射允许我们根据需要自定义用户属性，以满足不同服务的要求。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：社交登录</title><link>https://ecwuuuuu.com/post/authentik-tutorial-6-federation-and-social-login/</link><pubDate>Sun, 21 Dec 2025 22:19:29 +0000</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-6-federation-and-social-login/</guid><description>&lt;p&gt;今天我们来讲讲&lt;strong&gt;社交登录&lt;/strong&gt;（Social Login），也就是允许用户使用第三方账号（如 Google、GitHub、Facebook 等）登录到我们的 Authentik 系统中。随着教程的深入，要实现这些功能不再有简便的系统预设/流程可用，会涉及：
+&lt;strong&gt;Source 的概念，Flow 流程的详细配置，以及 Policy 策略的使用。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>服务器新装 GPU 的容器化配置笔记</title><link>https://ecwuuuuu.com/post/gpu-container-setup-note/</link><pubDate>Sun, 24 Nov 2024 14:54:00 +0000</pubDate><guid>https://ecwuuuuu.com/post/gpu-container-setup-note/</guid><description>&lt;h2 id="前言"&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近需要给一台以前配置的 CPU 服务器装上 GPU，这台机器之前已经配置好了存储和基于 Docker 和 JupyterHub 的计算环境。这里就记录一下装上 GPU 后的配置过程。本文只涉及系统和软件层面的调整。也就是新增的显卡已经安装到设备内，且设备已经能够被系统识别。可以通过 &lt;code&gt;lspci | grep &amp;quot;NVIDIA&amp;quot;&lt;/code&gt; 命令查看设备是否被识别。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：服务的迁移</title><link>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</link><pubDate>Sun, 08 Sep 2024 22:20:00 +0100</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-5-setup-migration/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md bg-gray-100 dark:bg-slate-800"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-start mt-0.5"
+ 
+ &gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-line-icon lucide-pen-line"&gt;&lt;path d="M13 21h8"/&gt;&lt;path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/&gt;&lt;/svg&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;
+ &lt;div style=""&gt;&lt;strong&gt;因为迁移涉及数据的操作，操作前请提前做好研究，做好备份！！！&lt;/strong&gt;&lt;/div&gt;
+ &lt;/span&gt;
+&lt;/div&gt;
+&lt;h2 id="引入和备份操作"&gt;引入和备份操作&lt;/h2&gt;
+&lt;p&gt;这应该是 Authentik 系列的最后一部分，最近暂时没有时间录制视频所以先记录成文字。生产环境的 Authentik 的需要迁移，正好在几天折腾了一下，搞清楚了流程。&lt;/p&gt;</description></item><item><title>Authentik 视频教程 - 合集</title><link>https://ecwuuuuu.com/post/authentik-tutorial-video/</link><pubDate>Thu, 08 Aug 2024 17:11:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-video/</guid><description>&lt;p&gt;我制作的的 Authentik 系列教程已经更新了 11 集。目前已经覆盖了部署安装，通过各种协议接入应用，具体的高级功能和流程的配置方法。目前在这里做一下汇总。&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;No.&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;Topic&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;BV&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;YouTube&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;介绍、安装和配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1pm41167WK"&gt;BV1pm41167WK&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=KdprVtJmfrs"&gt;KdprVtJmfrs&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;2&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置反向代理（Traefik 为例）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1VE42137Vi"&gt;BV1VE42137Vi&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=7eUDOPYv15c"&gt;7eUDOPYv15c&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;OAuth 协议应用接入 - 以 Gitea 和 Grafana 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1QC41157pX"&gt;BV1QC41157pX&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=_KGznY5dE90"&gt;_KGznY5dE90&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;4&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;SAML 协议应用接入 - 以 Cloudflare Zero Trust 和 GitLab 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1um411B7kE"&gt;BV1um411B7kE&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=RuGA-Sm3PYo"&gt;RuGA-Sm3PYo&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;5&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;LDAP 协议应用接入 - 以 EMBY 为例&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV12z421C7hU"&gt;BV12z421C7hU&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=eXcPcwNoNKw"&gt;eXcPcwNoNKw&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;6&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;邮件发送和界面自定义配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1iE421T7me"&gt;BV1iE421T7me&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=86udpF3OXMw"&gt;86udpF3OXMw&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;7&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;管理用户，组和应用访问权限&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Am41127Yy"&gt;BV1Am41127Yy&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=IJMVnHn-90g"&gt;IJMVnHn-90g&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;8&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置流程和阶段实现：自助注册 找回密码 邀请链接注册&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Vp421Q7Qz"&gt;BV1Vp421Q7Qz&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=bRmKUN7XcO0"&gt;bRmKUN7XcO0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;9&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;ForwardAuth 配置接入任意应用&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Mb421a7fF"&gt;BV1Mb421a7fF&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=HUB0aOVCo1M"&gt;HUB0aOVCo1M&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;10&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置多因素身份验证&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1sJ4m1u7Rq"&gt;BV1sJ4m1u7Rq&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=Ol7wF8AsrVA"&gt;Ol7wF8AsrVA&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;11&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;配置 Passwordless 登录&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1tE421P7o1"&gt;BV1tE421P7o1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=p13W__HVDI8"&gt;p13W__HVDI8&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;12&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;服务的迁移&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/opus/1003423588679680017"&gt;Bilibili 图文&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;N/A&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;13&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;RAC 远程访问控制 配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1Bh9bYXEqF"&gt;BV1Bh9bYXEqF&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=VSZIoAqJRLQ"&gt;VSZIoAqJRLQ&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;14&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;社交登录配置&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.bilibili.com/video/BV1uDBJBeEbp"&gt;BV1uDBJBeEbp&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://www.youtube.com/watch?v=h3_87ZRoMJ0"&gt;h3_87ZRoMJ0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;另外，我还有一些 Authentik 相关的 Gist 文章，记录了一些小技巧和配置方法，欢迎到&lt;a href="https://ecwuuuuu.com/series/gist/"&gt;我的 Gist 专栏&lt;/a&gt;查看。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：通过反向代理和 ForwardAuth 接入任何应用</title><link>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</link><pubDate>Wed, 01 May 2024 21:53:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-4-setup-forwardauth/</guid><description>&lt;h2 id="简介"&gt;简介&lt;/h2&gt;
+&lt;p&gt;如果应用不支持统一登录，或者应用比较的简单没用用户系统。想要将它们纳入自己的统一登录体系是比较麻烦。这种情况下 Authentik 提供了一种配合反向代理的鉴权方法：Forward Authentication (没找到中文翻译，我觉得可以译作&lt;code&gt;转发验证&lt;/code&gt;)。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：将应用通过 OIDC，SAML，LDAP 协议接入</title><link>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</link><pubDate>Sun, 21 Apr 2024 14:29:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-3-setup-oidc-saml-ldap/</guid><description>&lt;p&gt;搭建了统一登录平台之后，最重要的事情就是将应用接入。Authentik 支持五种协议接入，分别是 &lt;a href="https://en.wikipedia.org/wiki/SAML_2.0"&gt;SAML 2.0&lt;/a&gt;， &lt;a href="https://openid.net/developers/how-connect-works/"&gt;OAuth 2.0/OpenID Connect (OIDC)&lt;/a&gt;， &lt;a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol"&gt;LDAP&lt;/a&gt;， &lt;a href="https://scim.cloud"&gt;SCIM&lt;/a&gt;，和 &lt;a href="https://en.wikipedia.org/wiki/RADIUS"&gt;RADIUS&lt;/a&gt;，其中 OIDC，SAML，和 LDAP 能覆盖我们大多数的接入需求。在这篇文章我将用具体应用示例的方式演示如何将应用接入 Authentik。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：反向代理的配置</title><link>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</link><pubDate>Mon, 08 Apr 2024 19:55:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-2-setup-reverse-proxy/</guid><description>&lt;p&gt;将服务进行反向代理，我们可以配置通过域名来访问 Authentik。因为 Authentik 实现上不会通过配置写死 URL，所以反向代理的配置非常方便。&lt;/p&gt;
+&lt;p&gt;根据官方的文档，如果要使用反向代理，以下 header 必须传给 upstream。&lt;/p&gt;</description></item><item><title>Authentik 教程系列：简介和安装配置</title><link>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</link><pubDate>Mon, 08 Apr 2024 01:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/authentik-tutorial-1-introduction-and-install/</guid><description>&lt;p&gt;如果你也像我一样喜欢折腾 HomeLab，我们可能有个共同的乐趣就是寻找各种需求的自部署方案；但当我们这些自部署的服务越来越多，去访问每一个服务都需要单独的账号和密码；如果用户不止你一人，多账号管理也会成为一个麻烦的事情。&lt;/p&gt;</description></item><item><title>PyTorch Tutorial</title><link>https://ecwuuuuu.com/post/pytorch-tutorial/</link><pubDate>Fri, 05 Jan 2024 00:25:00 +0800</pubDate><guid>https://ecwuuuuu.com/post/pytorch-tutorial/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;A little bit of context&lt;/p&gt;
+&lt;p&gt;This is the tutorial material I prepared in fall 2023, for people with basic foundation of machine learning to get hands-on PyTorch quickly.&lt;/p&gt;
+&lt;p&gt;My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="introduction-to-pytorch"&gt;Introduction to PyTorch&lt;/h2&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="PyTorch"
+ src="https://pytorch.org/assets/images/logo-white.svg"
+ &gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li&gt;
+&lt;li&gt;Its popularity and widespread adoption by the research and industry communities.&lt;/li&gt;
+&lt;li&gt;PyTorch is widely known for its ease of use, Pythonic interface, and excellent support for research-oriented tasks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="key-technology"&gt;Key Technology&lt;/h3&gt;
+&lt;h4 id="dynamic-computational-graph"&gt;Dynamic computational graph&lt;/h4&gt;
+&lt;p&gt;A &lt;strong&gt;computational graph&lt;/strong&gt; represents the flow of data through a computational model in the form of a directed acyclic graph (DAG). It serves as a visual representation of the mathematical operations performed on input data to produce the desired output.&lt;/p&gt;</description></item><item><title>使用 input-overlay 工具在 OBS Studio 中展示鼠标和按键操作</title><link>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</link><pubDate>Tue, 31 Jan 2023 00:16:08 +0800</pubDate><guid>https://ecwuuuuu.com/post/obs-studio-show-keyboard-and-mouse-activity/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;最近折腾了下 OBS Studio 的 &lt;a href="https://github.com/univrsal/input-overlay"&gt;input-overlay&lt;/a&gt; 插件，考虑到该插件的中文教程不多，特将折腾过程记录为本文。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="什么是-input-overlay"&gt;什么是 input-overlay&lt;/h2&gt;
