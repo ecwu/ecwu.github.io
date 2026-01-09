@@ -18,6 +18,11 @@
 &lt;li&gt;LaTeX Render: &lt;a href="https://katex.org"&gt;KaTeX&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
+&lt;h3 id="2026"&gt;2026&lt;/h3&gt;
+&lt;h4 id="january-2026"&gt;January 2026&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Attempt to fix the issue where the full-width feature image slightly exceeds the screen width when the vertical scrollbar is present. (Possible cause: the mixed use of &lt;code&gt;vw&lt;/code&gt; and &lt;code&gt;%&lt;/code&gt; units, which the scrollbar affects the &lt;code&gt;vw&lt;/code&gt; calculation)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id="2025"&gt;2025&lt;/h3&gt;
 &lt;h4 id="october-2025"&gt;October 2025&lt;/h4&gt;
 &lt;ul&gt;
