@@ -30,7 +30,8 @@ S(x) = \frac{1}{ 1+e^{-x}}
 $$&lt;/p&gt;
 &lt;p&gt;We input the value of the last layer $x$, and we can get a value in the range 0 to 1 as shown in the figure. If the value is greater than 0.5, we consider the model output as one class, or the other class if the value is less than 0.5.
 &lt;figure class="w-full"&gt;
- &lt;img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" class="rounded-lg"&gt;
+ 
+ &lt;img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg" alt="The logistic sigmoid function" class="rounded-lg" loading="lazy" decoding="async"&gt;
 
  &lt;figcaption&gt;
  &lt;strong&gt;The logistic sigmoid function &lt;/strong&gt;

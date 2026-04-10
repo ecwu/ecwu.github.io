@@ -22,7 +22,8 @@
 &lt;input type="checkbox" id="sidenote-1" class="sidenote-checkbox"/&gt;
 &lt;span class="sidenote"&gt;The film we are still using today was invented by Kodak in 1888, but photosensitive material that uses in photography can date back to 1835.&lt;/span&gt;
 &lt;figure class="w-full"&gt;
- &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/View_from_the_Window_at_Le_Gras_colorized_2020_new.png/1600px-View_from_the_Window_at_Le_Gras_colorized_2020_new.png" class="rounded-lg"&gt;
+ 
+ &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/View_from_the_Window_at_Le_Gras_colorized_2020_new.png/1600px-View_from_the_Window_at_Le_Gras_colorized_2020_new.png" alt="View from the Window at Le Gras" class="rounded-lg" loading="lazy" decoding="async"&gt;
 
  &lt;figcaption&gt;
  &lt;strong&gt;View from the Window at Le Gras &lt;/strong&gt;
