@@ -4,14 +4,15 @@
 &lt;p&gt;My idea behind the whole document is to teach the reader how to do full model training from the ground up and introduce each component alongside the process.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="introduction-to-pytorch"&gt;Introduction to PyTorch&lt;/h2&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img
+&lt;p&gt;&lt;figure class="l-body"&gt;&lt;img
  class="my-0 rounded-md"
  loading="lazy"
  decoding="async"
  fetchpriority="low"
  alt="PyTorch"
  src="https://pytorch.org/assets/images/logo-white.svg"
- &gt;&lt;/figure&gt;&lt;/p&gt;
+ &gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;PyTorch is an open-source deep learning framework that provides a flexible and dynamic approach to building and training neural networks.&lt;/li&gt;
 &lt;li&gt;Its popularity and widespread adoption by the research and industry communities.&lt;/li&gt;
