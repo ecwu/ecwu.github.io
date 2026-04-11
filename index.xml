@@ -865,6 +865,10 @@
 &lt;/ul&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;h3 id="2026"&gt;2026&lt;/h3&gt;
+&lt;h4 id="april-2026"&gt;April 2026&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Reimplement gallery breakout layout in CSS so galleries can extend to the right edge of the content area without manipulating the outer &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; structure. The gallery shortcode is now a paired shortcode.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h4 id="january-2026"&gt;January 2026&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Attempt to fix the issue where the full-width feature image slightly exceeds the screen width when the vertical scrollbar is present. (Possible cause: the mixed use of &lt;code&gt;vw&lt;/code&gt; and &lt;code&gt;%&lt;/code&gt; units, which the scrollbar affects the &lt;code&gt;vw&lt;/code&gt; calculation)&lt;/li&gt;
