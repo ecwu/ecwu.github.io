@@ -868,10 +868,14 @@
 &lt;li&gt;Styled with &lt;a href="https://tailwindcss.com/"&gt;Tailwind CSS&lt;/a&gt; (v4.1.+ as of Oct 2025).&lt;/li&gt;
 &lt;li&gt;Implements &lt;a href="https://github.com/giscus/giscus"&gt;giscus&lt;/a&gt; for comments.&lt;/li&gt;
 &lt;li&gt;Analytics provided by &lt;a href="https://support.google.com/analytics/answer/10089681?hl=en"&gt;Google Analytics v4&lt;/a&gt; &amp;amp; &lt;a href="https://www.cloudflare.com/web-analytics/"&gt;Cloudflare Web Analytics&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;LLaTeX equations rendered with &lt;a href="https://katex.org"&gt;KaTeX&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;LaTeX equations rendered with &lt;a href="https://katex.org"&gt;KaTeX&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="changelog"&gt;Changelog&lt;/h2&gt;
 &lt;h3 id="2026"&gt;2026&lt;/h3&gt;
+&lt;h4 id="july-2026"&gt;July 2026&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;CDN provider added: &lt;a href="https://developers.cloudflare.com/r2/"&gt;CloudFlare R2&lt;/a&gt;, which is a S3-compatible object storage service. The site migrated the first batch of webp static assets to R2. Legacy assets are still hosted on Qiniu 七牛.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h4 id="april-2026"&gt;April 2026&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Reimplement gallery breakout layout in CSS so galleries can extend to the right edge of the content area without manipulating the outer &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; structure. The gallery shortcode is now a paired shortcode.&lt;/li&gt;
