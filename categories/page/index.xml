@@ -25,6 +25,7 @@
 &lt;h4 id="july-2026"&gt;July 2026&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;CDN provider added: &lt;a href="https://developers.cloudflare.com/r2/"&gt;CloudFlare R2&lt;/a&gt;, which is a S3-compatible object storage service. The site migrated the first batch of webp static assets to R2. Legacy assets are still hosted on Qiniu 七牛.&lt;/li&gt;
+&lt;li&gt;New shortcode for &lt;a href="https://vega.github.io/vega-lite/"&gt;Vega-Lite&lt;/a&gt; charts, which allows embedding interactive charts in content pages.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="april-2026"&gt;April 2026&lt;/h4&gt;
 &lt;ul&gt;
